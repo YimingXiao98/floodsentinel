@@ -1,0 +1,286 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1270,
+      "path": "aggregate.json",
+      "sha256": "624d7d4a2861d97ecf80dfd836d256da00c67b62c2551e730acb9da1b576de12"
+    },
+    {
+      "bytes": 4030225,
+      "path": "counties/duval_12031/result.json",
+      "sha256": "4a04008542f64d210b30e91e2ae5923f088891abc9595b9df2adf4719c75df7a"
+    },
+    {
+      "bytes": 3298334,
+      "path": "counties/harris_48201/result.json",
+      "sha256": "e904a5b3526bb800e738000743b05f0e9ad05bf1b247288dc8fb511195d43933"
+    },
+    {
+      "bytes": 3795192,
+      "path": "counties/hillsborough_12057/result.json",
+      "sha256": "cba4f5d707be032573d57544a419bd45ab28ab3eaa24bd97b7b5d9c4865d92fa"
+    },
+    {
+      "bytes": 3349576,
+      "path": "counties/miami_dade_12086/result.json",
+      "sha256": "4c4cbc7b1b4811b7fe475a93c63c34c472b5496ce37003f8118ea4abbf5fd1a6"
+    },
+    {
+      "bytes": 3374431,
+      "path": "counties/polk_12105/result.json",
+      "sha256": "3eb084a453fa7eb8d93dea59f09fc73892603c677fb36ff076250cfd493f02e9"
+    },
+    {
+      "bytes": 18555,
+      "path": "preflight_qc.json",
+      "sha256": "861fadeed0b2b6611ab8ffdcdfffb30c5c949223bea7500964020652e4826b91"
+    },
+    {
+      "bytes": 4755586,
+      "path": "tables.json",
+      "sha256": "827d104416ad8d5ee94ba8808c2844287b2a7ba2f6d178cbdd7a8832509ab725"
+    }
+  ],
+  "config": {
+    "analysis_interval_convention": "[analysis_start,analysis_end)",
+    "cadence_hours": [
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0
+    ],
+    "caller_environment_restored_after_generation": true,
+    "clear_gauge_requirement_sensitivity": [
+      1,
+      3,
+      5,
+      8
+    ],
+    "environment_sensitivity_overrides": {
+      "COUNTY_FLOOD_MIN_GAUGES": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "SENTINEL_READING_MAX_AGE_HOURS": [
+        3.0,
+        6.0,
+        12.0
+      ]
+    },
+    "evaluation_interval_seconds": 900,
+    "frozen_replay_environment": {
+      "COUNTY_FLOOD_FLOW_FALL_PCT": "50.0",
+      "COUNTY_FLOOD_FLOW_RISE_PCT": "50.0",
+      "COUNTY_FLOOD_MAX_GAUGES": "10",
+      "COUNTY_FLOOD_MIN_GAUGES": "5",
+      "COUNTY_FLOOD_STAGE_FALL_FT": "1.0",
+      "COUNTY_FLOOD_STAGE_PERSIST_FT": "0.1",
+      "COUNTY_FLOOD_STAGE_RISE_FT": "1.0",
+      "COUNTY_FLOOD_SUPPLEMENTARY_CONFIDENCE": "0.45",
+      "REPORT_GAUGE_FLOW_THRESHOLD_PCT": "20.0",
+      "REPORT_GAUGE_STAGE_THRESHOLD_FT": "0.1",
+      "SENTINEL_ABLATED_CONFIDENCE": "0.75",
+      "SENTINEL_ABLATION": "full",
+      "SENTINEL_READING_MAX_AGE_HOURS": "6.0",
+      "SENTINEL_TIER_WEIGHT": "1.0",
+      "SENTINEL_WATERSHED_LOCATION_PRECISION": "0.65",
+      "SENTINEL_WATERSHED_NEIGHBOURS": "off"
+    },
+    "nws_system_input": null,
+    "phase_offset_step_seconds": 900,
+    "policy_staleness_sensitivity_hours": [
+      3.0,
+      6.0,
+      12.0
+    ],
+    "primary_clear_gauge_requirement": 5,
+    "primary_policy_staleness_hours": 6.0,
+    "recovery_fold_sensitivity_hours": [
+      24.0,
+      48.0,
+      72.0
+    ],
+    "replay_argument_sensitivity_overrides": {
+      "max_staleness_hours": [
+        3.0,
+        6.0,
+        12.0
+      ]
+    },
+    "truth_age_sensitivity_hours": [
+      0.5,
+      1.0,
+      2.0,
+      6.0
+    ],
+    "truth_max_age_hours": 1.0
+  },
+  "county_results": [
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Harris",
+      "fips": "48201",
+      "result_path": "counties/harris_48201/result.json",
+      "state": "TX"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Duval",
+      "fips": "12031",
+      "result_path": "counties/duval_12031/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Hillsborough",
+      "fips": "12057",
+      "result_path": "counties/hillsborough_12057/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Polk",
+      "fips": "12105",
+      "result_path": "counties/polk_12105/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Miami-Dade",
+      "fips": "12086",
+      "result_path": "counties/miami_dade_12086/result.json",
+      "state": "FL"
+    }
+  ],
+  "implementation_manifest_rule": "sorted eval/*.py, watcher/**/*.py, watcher/ontology/stub_*.json, and skills/county-flood-data/county_flood/**/*.py; caches, tests, and results excluded",
+  "implementation_sha256": {
+    "eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eval/analyze_deployment.py": "324af2ca8b66258911d5e35ae711aa5c023f21c616121979134a67f352a107be",
+    "eval/baselines.py": "dee88a949bc180bea9fb1ae132ac4709666b172b5530c4eb512d63add761e6d1",
+    "eval/build_corpus.py": "e79094044a5f05cd90115000b866162276517d2f2af841790d585b1f9b69e3c2",
+    "eval/calibrate_stage_datums.py": "18bb139e00a99347286e2fde7172f35ede86214b4d0776c55d7587b21be74499",
+    "eval/figures.py": "285970bb9c360dd601606159735ce51d6832bb39b50a9d82872df10c983125f4",
+    "eval/ground_truth.py": "7d9b551502f91688d56c7fd70c48242174eb0de6b85c0c7e4644d35406c762e3",
+    "eval/metrics.py": "e6c65ec9656216a837b3cb71541f843ba65a8880ec992bdb88b5fcd6f69f55e8",
+    "eval/news_archive.py": "0958e18be9113b40188a2b2dbbd120b86d367e42c144eb4af31f161f638f644a",
+    "eval/news_corpus.py": "d7ad730c387efde9a50c9c126650a4b08cdcce56a324f8aff27b695e00b0aa48",
+    "eval/news_gdelt.py": "1d6f49a1ee031c8cb774e36eddcbbe907b67f3c88cc739cc866b1c90c5392ff1",
+    "eval/news_replay.py": "c19666312e1f86fb2b18655fb024564038d1ce3defd29a3279ed70e2d1af7781",
+    "eval/run_belief_null.py": "9f1e2a638e604524e3bef9621f0e0ad39c56a1482996bb9b3833afd5e9b79e4a",
+    "eval/run_replay.py": "93197316d2760058712dba51f2575bbae9b154899068fc4c71f9462f3534193c",
+    "eval/run_study.py": "c486d3b248302fe3c9d4e17c4768ca94ec5e42906e85128e071cf17ee60e9e07",
+    "eval/sensitivity.py": "a064f52e333b54809e1666d4709d26d087ad25a3976de2dd0582cf3224d6ba03",
+    "skills/county-flood-data/county_flood/__init__.py": "ed46a2dc46dd81d104e8d2d729655f62de830412ecb31b38aaa67d13550863b4",
+    "skills/county-flood-data/county_flood/aggregator.py": "f1216c7113502f57699ad8761c72c3ca68f537fba2161a98fb5ee7d1e438892f",
+    "skills/county-flood-data/county_flood/api_resolution.py": "f32eeb90dcfda919c1bf1d0dea820292223c207667db09ecb1169f4b3cd3949e",
+    "skills/county-flood-data/county_flood/confidence.py": "003a22c33caf5742e05224351317842781ece20b5d4c56cf9fcc4340285dd754",
+    "skills/county-flood-data/county_flood/geo.py": "328eed4319cec83255cf936621b5ba6cd935572799166941242c639ac2ded160",
+    "skills/county-flood-data/county_flood/models.py": "9951789df4506ccc835ae725d1aa360acb65ccfab7df869a6f6192943c03e8f6",
+    "skills/county-flood-data/county_flood/runner.py": "0d8a3dfbe817a66c1766de9ff6978a611f3782cb562025a0b48afcc00bed65af",
+    "skills/county-flood-data/county_flood/sources/__init__.py": "96709b372aefd3dbf9055871fa0d82f01df78921bfa618eae3b85154577a36ef",
+    "skills/county-flood-data/county_flood/sources/fema_disasters.py": "bd15b3c745d941295013972461648d85c4e67891d95be500d09f370aa66c2582",
+    "skills/county-flood-data/county_flood/sources/gauge_delta.py": "ac3d0cf2d69e5dcd066529061346b417b73f82d496901b87fc2cd600d771ac26",
+    "skills/county-flood-data/county_flood/sources/nwps.py": "2400725ad081dcd584590edd2b3a8f08ca2376d5c00bc85ec47a60a6afd48f3c",
+    "skills/county-flood-data/county_flood/sources/nwps_enrich.py": "56d6ce3641b353570bbaa54f7036e8506212036f80b25d4ad14954f065c64395",
+    "skills/county-flood-data/county_flood/sources/nws_alerts.py": "51dca7e3af285ed32b27624bfac58f1a3ef9da39f9aba2874309a8c5a42d2252",
+    "skills/county-flood-data/county_flood/sources/selection.py": "a151b8052ed57873f960a8436041c0a0658b3e68d6ed28d7ef3984033e009fae",
+    "skills/county-flood-data/county_flood/sources/stages.py": "3cd86dad30fc44ae93674fa9bbb00e590ec5c1e05a29ccb4192dd23ab16836d8",
+    "skills/county-flood-data/county_flood/sources/usgs.py": "782504d6c9e32a2c1e80760d38bd99267449f40670f75602eb281be79b6b6ece",
+    "skills/county-flood-data/county_flood/sources/usgs_ogc.py": "341c6a56cbe59429690034d5ce67680c5d6a6e111febd1bb1a37d5388a420ed3",
+    "watcher/__init__.py": "9806b402f1f4b93bca7b5efb542b8b9c2a333bab07efc4b7ebbd15912a86ca5c",
+    "watcher/article_evidence_bridge.py": "2c2d5a9c6f03f119cb7efdbf7c5566089fe7a71e9020dc1a24f958a294e07a17",
+    "watcher/claims/__init__.py": "ef17e5a74f0f4361654b5cb8662f22499122e2ad5e082893255c733bac9b62ab",
+    "watcher/claims/confidence.py": "feff0c51d1b34cb2ba8b238f1594e9b9c5db3f1423a8c98c2f93f00d90405321",
+    "watcher/claims/extract.py": "c980ac5b8a8a2b52f4dab9f017f131d9a59241f3261d19ff488364886777c1f7",
+    "watcher/claims/extract_articles.py": "5ca79c168a7574056d5c69709a2b1c8de38681b9d4181fb6e5796c8348da1d45",
+    "watcher/claims/extract_county_flood.py": "d3e793ce6006d8e42c3b8939034896726feaf26984fea5ce0510f05649f615a2",
+    "watcher/claims/extract_nws.py": "a1e36e39deb23fe37de88f395422be60693ee28a74827962b653d27cd0e165c6",
+    "watcher/claims/extract_usgs.py": "b5c874c35594fe8df673a25a83013fd84567ef9d0d4c88c4760a533684ea963e",
+    "watcher/claims/models.py": "87670a17fbc382a7622b1dff994999ac51511111c116c0b5bc38f6c9a266c212",
+    "watcher/claims/validate.py": "ea32cee67053adf22decfa098b78b40580f9c94bbd7dcb0a1a1873e97cdfeac6",
+    "watcher/cli.py": "241318aa231c3bc11e5eb29a84a4e23070eb9b26deb3ca647ed518eb535ec1b6",
+    "watcher/config.py": "98a83b99bb1f36ea4c0a238826498f8c9e0bf0cde648b2ab30479f54de5d8f9e",
+    "watcher/county_flood_bridge.py": "6e9d2ddd95b39d6245a094a80b46daa2994697c74960c0f32f008189742e0cda",
+    "watcher/county_flood_evidence.py": "c0641b119d129fe8b0637054fa825829270c72c0787ecff2983037b10e5b0db8",
+    "watcher/fetch.py": "b8d50ae0e78e168fe905d3dd2efea5125df9d64d1b4d80641cc3eebff87165c1",
+    "watcher/format_analyst.py": "2e814215b9d28ce281923a82d16a6da5e3ad1330a98a56418855e8089671e534",
+    "watcher/format_ontology.py": "bd2427087dd52122301497a27e8f7c25ffb48f5a35fbf30113d058279dce58ac",
+    "watcher/format_report.py": "220d1bd6972108b6adcf6273ca45278fb72f0d1f1fdf95ce15f44fcce060742c",
+    "watcher/format_slack.py": "41a456a3abbfe08ecdbd2507418f9e789c4422f7465efc9386e6c3610453954c",
+    "watcher/geo_util.py": "a5e24cb6ec65c526b72faa032e214a66cf7353eba0e9e2f28234ae84c18d59b7",
+    "watcher/heartbeat_cron.py": "115174daa4461edb8e0b4d8123845ba4e4aa1b12dfc59988ef92c0d44fd8a7c9",
+    "watcher/neo4j_client.py": "8057fdbe46e6cd0e7d281c6330b4d3f1b6fdae29029e80b03995e5876eef2a99",
+    "watcher/ontology/__init__.py": "53b0825a22b43a36ba64259947fc4c55b3e1125a28466dacf4e326f495fa469a",
+    "watcher/ontology/adapters.py": "0ef0292c889c0f6b15dd3c1ece87b9a165837fe8b8482f7de2078560dfb840b3",
+    "watcher/ontology/belief_schema.py": "9246b48f3ac455edcb878d4f8713e11597648e258cd7d64a86ea7c5beb05a5d7",
+    "watcher/ontology/bridge.py": "729cf145d3f5c56b8966db66f76c29e9c235fe99e5a3e65cfa9b615400bd4f22",
+    "watcher/ontology/ledger.py": "a1a297db93f793d7624cfed7b0f84abae7b6d641e21473206ea2299a1de0fce3",
+    "watcher/ontology/output_schema.py": "2cfa4fc1384b9c4fa1e7ae41b2981183fecff33c591a971903d646454dcc870f",
+    "watcher/ontology/stub_monitoring.json": "aecc66ce62f4588195321adb774b7d5f224c313c2ad8753e50e96e891e1305f7",
+    "watcher/ontology/stub_sources.json": "436457e0beecfd1c4062dccf0ba09648284a9d7fe3b6da2eb2fc472be52fe282",
+    "watcher/phase_engine.py": "e291d73df1bcdb5a3ed0dddc49d3a2de8b54096e9d0e2e45cf3c47078e757c1c",
+    "watcher/replay.py": "4483d355666898891e2c3e2f2b52b2a2cd5d4c556aff3229d3b7f8aca5830afd",
+    "watcher/report_delta.py": "9200109eef331c68081b90deff40f9947a7707cdc1e281174bcd297991070c32",
+    "watcher/seen_articles.py": "21d9c409365cdf4a7ae23da66205b504380454f023967bd42af532fb257086fd",
+    "watcher/slack_delivery.py": "49c39af8f56ee6865f0d073026c148ee97702dc2d12834235ff2ccbbc86c60f4",
+    "watcher/slack_logger.py": "e7e90849c77c0409627e855d1d46b5307370df98c0d7cc199efd7186faf2fc43",
+    "watcher/sources/__init__.py": "a9fa66bf5c5aecdd680dfd92ddcfd3cdd5a950d1411c0bbb66fcc664b149d476",
+    "watcher/sources/county_api_resolver.py": "08e9fcd6867312df026de6dbfd1c1f598e79b1323e52badbf758e9501a5be925",
+    "watcher/timezone_util.py": "0070240c8485358c8eab8f16de053c19779ed4de7ee3201470ffe84148ea5467"
+  },
+  "input_artifacts": [
+    {
+      "county": "Harris",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study/harris_harvey_2017.json",
+      "sha256": "48c9fd6c0ee26c22be3566916f1ae219a11fc3d8e7fce3f2993388a822a7f9c0"
+    },
+    {
+      "county": "Harris",
+      "kind": "nws_timing_reference",
+      "path": "eval/truth/harris_harvey_2017.json",
+      "sha256": "db64d05668743688850cca87103c50b8ebc6b6b66dfb4a6c872684e04b7cdaa1"
+    },
+    {
+      "county": "Duval",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study/duval_irma_2017.json",
+      "sha256": "d5c992f92b3e4c370119ca1ea7395ddb7b57295e9e8dce4460a67ab1d6f66d5a"
+    },
+    {
+      "county": "Duval",
+      "kind": "datum_calibration",
+      "path": "eval/corpus/study/duval_stage_datum_calibration.json",
+      "sha256": "6768ce2985fdbf434d656dc8be0bf84e01701c025cb6c357db3c7c8d0808acbc"
+    },
+    {
+      "county": "Hillsborough",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study/hillsborough_irma_2017.json",
+      "sha256": "efd3594bcb471b7c1d6671b787699e57943be470d4b40ba9b1c66c33550be99a"
+    },
+    {
+      "county": "Polk",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study/polk_irma_2017.json",
+      "sha256": "240ff9520f6683fa2fee816e5ce0b1a3be152116a51968cc7ba6725d23a965df"
+    },
+    {
+      "county": "Miami-Dade",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study/miamidade_irma_2017.json",
+      "sha256": "4410d0437160ef8556127fb8c590c905f788ddd95f02f943e02ccd659dd4b76c"
+    }
+  ],
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.6",
+    "version_detail": "3.14.6 | packaged by Anaconda, Inc. | (main, Jun 18 2026, 21:28:09) [GCC 14.3.0]"
+  },
+  "schema": "sentinel-study-artifact-manifest/3",
+  "source_manifest": "eval/corpus/study/manifest.json",
+  "source_manifest_sha256": "d711a0bb33e8bcb131028938d4da345b90217aebadd5ffae31151982cb11ead2"
+}

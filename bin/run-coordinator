@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+# Run coordinator cycle from natural-language input; Slack delivery is automatic.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SENTINEL_CLI="${ROOT}/bin/sentinel-cli"
+GEO_DIR="${ROOT}/skills/county-flood-data"
+SERVICES_DIR="${ROOT}/skills/disaster-scout/services"
+export SENTINEL_OUTPUT_ONTOLOGY="${SENTINEL_OUTPUT_ONTOLOGY:-v1}"
+
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: run-coordinator <request> [--no-slack]" >&2
+  echo 'Example: run-coordinator "Monitor Miami-Dade County, Florida"' >&2
+  exit 1
+fi
+
+exec "$PYTHON" - "$SENTINEL_CLI" "$GEO_DIR" "$SERVICES_DIR" "$@" <<'PY'
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+sentinel_cli, geo_dir, services_dir = sys.argv[1:4]
+tokens = sys.argv[4:]
+no_slack = False
+if "--no-slack" in tokens:
+    no_slack = True
+    tokens = [t for t in tokens if t != "--no-slack"]
+raw = " ".join(tokens).strip()
+if not raw:
+    print("ERROR: missing request text", file=sys.stderr)
+    sys.exit(1)
+
+FIPS_RE = re.compile(r"(?:--fips\s+|fips[:\s]+)(\d{5})", re.I)
+DISASTER_PREFIX = re.compile(
+    r"^(?:(?:monitor|check|watch|analyze|analyse|run|situation)(?:\s+report)?(?:\s+for)?\s+|report\s+for\s+)?"
+    r"(?:flood(?:ing|s)?\s+)?"
+    r"(?:for\s+)?",
+    re.I,
+)
+
+
+def _resolve_location(text: str):
+    fips_match = FIPS_RE.search(text)
+    if fips_match:
+        return None, None, fips_match.group(1)
+
+    cleaned = DISASTER_PREFIX.sub("", text).strip()
+    geo = Path(geo_dir)
+    if geo.is_dir() and str(geo) not in sys.path:
+        sys.path.insert(0, str(geo))
+    try:
+        from county_flood.geo import parse_location, resolve_fips  # type: ignore
+
+        parsed = parse_location(cleaned)
+        if parsed:
+            county, state = parsed
+            return county, state, resolve_fips(county, state)
+    except Exception:
+        pass
+
+    services = Path(services_dir)
+    if services.is_dir() and str(services) not in sys.path:
+        sys.path.insert(0, str(services))
+    try:
+        from county_resolver import resolve_from_prompt, resolve_county  # type: ignore
+
+        resolved = resolve_from_prompt(cleaned)
+        if resolved:
+            return (
+                resolved.get("county_name"),
+                resolved.get("state"),
+                resolved.get("county_fips"),
+            )
+        m = re.match(r"^(.+?)\s+County,\s*(.+)$", cleaned, re.I)
+        if m:
+            resolved = resolve_county(m.group(1).strip(), m.group(2).strip())
+            if resolved:
+                return (
+                    resolved.get("county_name"),
+                    resolved.get("state"),
+                    resolved.get("county_fips"),
+                )
+    except Exception:
+        pass
+    return None, None, None
+
+
+def _run(cmd: list[str]) -> int:
+    return subprocess.run(cmd, check=False).returncode
+
+
+county, state, fips = _resolve_location(raw)
+cmd = [sentinel_cli, "run-coordinator"]
+if no_slack:
+    cmd.append("--no-slack")
+if fips:
+    cmd.extend(["--fips", str(fips).zfill(5)])
+elif county and state:
+    cmd.extend(["--county", county, "--state", state])
+else:
+    print(f"ERROR: could not resolve county/state/FIPS from: {raw!r}", file=sys.stderr)
+    sys.exit(1)
+
+sys.exit(_run(cmd))
+PY

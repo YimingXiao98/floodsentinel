@@ -1,0 +1,3825 @@
+{
+  "schema": "sentinel-stage-datum-calibration/1",
+  "generated_at": "2026-08-20T04:49:31.538118Z",
+  "purpose": "Align USGS 00065 gage heights with the NOAA/NWPS stage datum of the joined flood thresholds without using the Irma study window as calibration data.",
+  "study_window_utc_half_open": [
+    "2017-09-08T04:00:00Z",
+    "2017-09-21T04:00:00Z"
+  ],
+  "calibration_window_utc_half_open": [
+    "2017-07-01T04:00:00Z",
+    "2017-11-01T04:00:00Z"
+  ],
+  "calibration_exclusion": "Every anchor satisfies matched_time < study_start or matched_time >= study_end.",
+  "source_query_local_dates": [
+    "2017-07-01",
+    "2017-11-01"
+  ],
+  "source_filtering": {
+    "noaa_nwps": "retrieve the complete official historical-crest list, then retain exact-time USGS matches inside the calibration window",
+    "usgs_iv": "request parameter codes 00065 and 63160 for the listed local calendar dates, then retain observations inside the UTC calibration window",
+    "excluded_crest_flag": "flood.crests.historic[].olddatum == true"
+  },
+  "time_interpretation": {
+    "nwps_field": "flood.crests.historic[].occurredTime",
+    "reported_encoding": "timestamp string with trailing Z",
+    "interpretation": "station wall clock in America/New_York, as identified by the NWPS gauge timeZone EST5EDT; convert wall clock to UTC before exact-time matching",
+    "usgs_field": "value.timeSeries[].values[].value[].dateTime",
+    "usgs_interpretation": "honor the explicit ISO-8601 UTC offset",
+    "match_tolerance_seconds": 0
+  },
+  "official_sources": {
+    "noaa_nwps_api": "https://api.water.noaa.gov/nwps/v1/docs/",
+    "usgs_iv_api": "https://waterservices.usgs.gov/docs/instantaneous-values/instantaneous-values-details/"
+  },
+  "sites": [
+    {
+      "site_no": "02246459",
+      "nwps_lid": "JAKF1",
+      "name": "Cedar River at San Juan Ave Jacksonville (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 12.15,
+      "expected_calibration_anchors": 50,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/JAKF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246459&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "Mean Higher High Water",
+          "abbrev": "MHHW*",
+          "description": "The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch. For stations with shorter series, comparison of simultaneous observations with a control tide station is made in order to derive the equivalent datum of the National Tidal Datum Epoch.",
+          "value": 0
+        },
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0.69
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 50,
+        "median": 12.15,
+        "minimum": 12.15,
+        "maximum": 12.2,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 50,
+        "median": 0.69,
+        "minimum": 0.69,
+        "maximum": 0.74,
+        "mad": 0.0
+      },
+      "study_window_validation_residual_ft": {
+        "n": 22,
+        "median": 0.0,
+        "minimum": -0.0,
+        "maximum": 0.01,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.01
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-09-21T12:00:00Z",
+          "matched_time_utc": "2017-09-21T16:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.4,
+          "usgs_00065_ft": 13.56,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.16,
+          "usgs_63160_ft": 2.1,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.7
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T01:00:00Z",
+          "matched_time_utc": "2017-09-22T05:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.39,
+          "usgs_00065_ft": 13.56,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.17,
+          "usgs_63160_ft": 2.1,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.71
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T13:15:00Z",
+          "matched_time_utc": "2017-09-22T17:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.41,
+          "usgs_00065_ft": 13.58,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.17,
+          "usgs_63160_ft": 2.12,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.71
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T01:00:00Z",
+          "matched_time_utc": "2017-09-23T05:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.45,
+          "usgs_00065_ft": 13.62,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.17,
+          "usgs_63160_ft": 2.16,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.71
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T14:30:00Z",
+          "matched_time_utc": "2017-09-23T18:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.47,
+          "usgs_00065_ft": 13.64,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.17,
+          "usgs_63160_ft": 2.18,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.71
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T02:15:00Z",
+          "matched_time_utc": "2017-09-24T06:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.51,
+          "usgs_00065_ft": 13.68,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.17,
+          "usgs_63160_ft": 2.22,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.71
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T14:30:00Z",
+          "matched_time_utc": "2017-09-24T18:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.53,
+          "usgs_00065_ft": 13.71,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.18,
+          "usgs_63160_ft": 2.25,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.72
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T02:30:00Z",
+          "matched_time_utc": "2017-09-25T06:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.56,
+          "usgs_00065_ft": 13.74,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.18,
+          "usgs_63160_ft": 2.28,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.72
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T15:45:00Z",
+          "matched_time_utc": "2017-09-25T19:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.64,
+          "usgs_00065_ft": 13.82,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.18,
+          "usgs_63160_ft": 2.36,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.72
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T03:15:00Z",
+          "matched_time_utc": "2017-09-26T07:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.61,
+          "usgs_00065_ft": 13.79,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.18,
+          "usgs_63160_ft": 2.33,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.72
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T16:30:00Z",
+          "matched_time_utc": "2017-09-26T20:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.54,
+          "usgs_00065_ft": 13.72,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.18,
+          "usgs_63160_ft": 2.26,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.72
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-27T03:45:00Z",
+          "matched_time_utc": "2017-09-27T07:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.49,
+          "usgs_00065_ft": 13.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.18,
+          "usgs_63160_ft": 2.21,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.72
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-27T17:00:00Z",
+          "matched_time_utc": "2017-09-27T21:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.51,
+          "usgs_00065_ft": 13.7,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.19,
+          "usgs_63160_ft": 2.24,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.73
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-28T04:45:00Z",
+          "matched_time_utc": "2017-09-28T08:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.41,
+          "usgs_00065_ft": 13.6,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.19,
+          "usgs_63160_ft": 2.14,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.73
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-28T17:30:00Z",
+          "matched_time_utc": "2017-09-28T21:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.42,
+          "usgs_00065_ft": 13.61,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.19,
+          "usgs_63160_ft": 2.15,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.73
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-29T19:00:00Z",
+          "matched_time_utc": "2017-09-29T23:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.34,
+          "usgs_00065_ft": 13.53,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.19,
+          "usgs_63160_ft": 2.07,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.73
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-30T20:00:00Z",
+          "matched_time_utc": "2017-10-01T00:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.62,
+          "usgs_00065_ft": 13.82,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.2,
+          "usgs_63160_ft": 2.36,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.74
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T09:00:00Z",
+          "matched_time_utc": "2017-10-01T13:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.25,
+          "usgs_00065_ft": 14.4,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.94,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T20:30:00Z",
+          "matched_time_utc": "2017-10-02T00:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.55,
+          "usgs_00065_ft": 14.7,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 3.24,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T08:45:00Z",
+          "matched_time_utc": "2017-10-02T12:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.39,
+          "usgs_00065_ft": 14.54,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 3.08,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T22:15:00Z",
+          "matched_time_utc": "2017-10-03T02:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.34,
+          "usgs_00065_ft": 14.49,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 3.03,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T09:15:00Z",
+          "matched_time_utc": "2017-10-03T13:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.34,
+          "usgs_00065_ft": 14.49,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 3.03,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T22:30:00Z",
+          "matched_time_utc": "2017-10-04T02:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.36,
+          "usgs_00065_ft": 14.51,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 3.05,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T10:44:00Z",
+          "matched_time_utc": "2017-10-04T14:44:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.24,
+          "usgs_00065_ft": 14.39,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.93,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T23:15:00Z",
+          "matched_time_utc": "2017-10-05T03:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.18,
+          "usgs_00065_ft": 14.33,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.87,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T11:14:00Z",
+          "matched_time_utc": "2017-10-05T15:14:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.27,
+          "usgs_00065_ft": 14.42,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.96,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T23:30:00Z",
+          "matched_time_utc": "2017-10-06T03:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.17,
+          "usgs_00065_ft": 14.32,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.86,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T11:45:00Z",
+          "matched_time_utc": "2017-10-06T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.06,
+          "usgs_00065_ft": 14.21,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.75,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T23:45:00Z",
+          "matched_time_utc": "2017-10-07T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.9,
+          "usgs_00065_ft": 14.05,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.59,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T12:15:00Z",
+          "matched_time_utc": "2017-10-07T16:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.85,
+          "usgs_00065_ft": 14.0,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.54,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T00:45:00Z",
+          "matched_time_utc": "2017-10-08T04:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.72,
+          "usgs_00065_ft": 13.87,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.41,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T13:00:00Z",
+          "matched_time_utc": "2017-10-08T17:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.66,
+          "usgs_00065_ft": 13.81,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.35,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T01:45:00Z",
+          "matched_time_utc": "2017-10-09T05:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.46,
+          "usgs_00065_ft": 13.61,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.15,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T14:00:00Z",
+          "matched_time_utc": "2017-10-09T18:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.4,
+          "usgs_00065_ft": 13.55,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.09,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-14T19:15:00Z",
+          "matched_time_utc": "2017-10-14T23:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.51,
+          "usgs_00065_ft": 13.66,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.2,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T07:45:00Z",
+          "matched_time_utc": "2017-10-15T11:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.4,
+          "usgs_00065_ft": 13.55,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.09,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T20:45:00Z",
+          "matched_time_utc": "2017-10-16T00:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.43,
+          "usgs_00065_ft": 13.58,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.12,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-16T09:00:00Z",
+          "matched_time_utc": "2017-10-16T13:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.32,
+          "usgs_00065_ft": 13.47,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.01,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-16T21:45:00Z",
+          "matched_time_utc": "2017-10-17T01:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.5,
+          "usgs_00065_ft": 13.65,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.19,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T10:45:00Z",
+          "matched_time_utc": "2017-10-17T14:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.59,
+          "usgs_00065_ft": 13.74,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.28,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T22:45:00Z",
+          "matched_time_utc": "2017-10-18T02:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.79,
+          "usgs_00065_ft": 13.94,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.48,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T11:00:00Z",
+          "matched_time_utc": "2017-10-18T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.97,
+          "usgs_00065_ft": 14.12,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.66,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T00:00:00Z",
+          "matched_time_utc": "2017-10-19T04:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.9,
+          "usgs_00065_ft": 14.05,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.59,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T11:45:00Z",
+          "matched_time_utc": "2017-10-19T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.92,
+          "usgs_00065_ft": 14.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.61,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T00:00:00Z",
+          "matched_time_utc": "2017-10-20T04:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.86,
+          "usgs_00065_ft": 14.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.55,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T12:15:00Z",
+          "matched_time_utc": "2017-10-20T16:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.75,
+          "usgs_00065_ft": 13.9,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.44,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T00:15:00Z",
+          "matched_time_utc": "2017-10-21T04:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.63,
+          "usgs_00065_ft": 13.78,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.32,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T12:30:00Z",
+          "matched_time_utc": "2017-10-21T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.58,
+          "usgs_00065_ft": 13.73,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.27,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-22T01:15:00Z",
+          "matched_time_utc": "2017-10-22T05:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.41,
+          "usgs_00065_ft": 13.56,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.1,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-22T13:45:00Z",
+          "matched_time_utc": "2017-10-22T17:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.36,
+          "usgs_00065_ft": 13.51,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 12.15,
+          "usgs_63160_ft": 2.05,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.69
+        }
+      ]
+    },
+    {
+      "site_no": "02246825",
+      "nwps_lid": "CCJF1",
+      "name": "Clapboard Creek near Sheffield Road (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 1.84,
+      "expected_calibration_anchors": 37,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/CCJF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246825&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 37,
+        "median": 1.84,
+        "minimum": 1.84,
+        "maximum": 1.84,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null,
+        "mad": null
+      },
+      "study_window_validation_residual_ft": {
+        "n": 18,
+        "median": 0.0,
+        "minimum": -0.0,
+        "maximum": 0.0,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.0
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-09-21T11:15:00Z",
+          "matched_time_utc": "2017-09-21T15:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.25,
+          "usgs_00065_ft": 3.09,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-21T23:45:00Z",
+          "matched_time_utc": "2017-09-22T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.17,
+          "usgs_00065_ft": 3.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T12:00:00Z",
+          "matched_time_utc": "2017-09-22T16:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.18,
+          "usgs_00065_ft": 3.02,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T12:45:00Z",
+          "matched_time_utc": "2017-09-23T16:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.17,
+          "usgs_00065_ft": 3.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T13:15:00Z",
+          "matched_time_utc": "2017-09-24T17:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.2,
+          "usgs_00065_ft": 3.04,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T14:00:00Z",
+          "matched_time_utc": "2017-09-25T18:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.34,
+          "usgs_00065_ft": 3.18,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T15:00:00Z",
+          "matched_time_utc": "2017-09-26T19:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.24,
+          "usgs_00065_ft": 3.08,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-27T15:45:00Z",
+          "matched_time_utc": "2017-09-27T19:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.18,
+          "usgs_00065_ft": 3.02,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-30T18:15:00Z",
+          "matched_time_utc": "2017-09-30T22:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.17,
+          "usgs_00065_ft": 3.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T06:45:00Z",
+          "matched_time_utc": "2017-10-01T10:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.36,
+          "usgs_00065_ft": 3.2,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T19:45:00Z",
+          "matched_time_utc": "2017-10-01T23:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.84,
+          "usgs_00065_ft": 3.68,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T07:45:00Z",
+          "matched_time_utc": "2017-10-02T11:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.61,
+          "usgs_00065_ft": 3.45,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T20:15:00Z",
+          "matched_time_utc": "2017-10-03T00:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.82,
+          "usgs_00065_ft": 3.66,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T08:30:00Z",
+          "matched_time_utc": "2017-10-03T12:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.64,
+          "usgs_00065_ft": 3.48,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T21:15:00Z",
+          "matched_time_utc": "2017-10-04T01:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.83,
+          "usgs_00065_ft": 3.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T09:30:00Z",
+          "matched_time_utc": "2017-10-04T13:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.7,
+          "usgs_00065_ft": 3.54,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T21:45:00Z",
+          "matched_time_utc": "2017-10-05T01:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.83,
+          "usgs_00065_ft": 3.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T10:00:00Z",
+          "matched_time_utc": "2017-10-05T14:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.91,
+          "usgs_00065_ft": 3.75,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T22:45:00Z",
+          "matched_time_utc": "2017-10-06T02:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.8,
+          "usgs_00065_ft": 3.64,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T10:45:00Z",
+          "matched_time_utc": "2017-10-06T14:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.73,
+          "usgs_00065_ft": 3.57,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T23:15:00Z",
+          "matched_time_utc": "2017-10-07T03:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.57,
+          "usgs_00065_ft": 3.41,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T11:30:00Z",
+          "matched_time_utc": "2017-10-07T15:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.67,
+          "usgs_00065_ft": 3.51,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T23:45:00Z",
+          "matched_time_utc": "2017-10-08T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.39,
+          "usgs_00065_ft": 3.23,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T12:15:00Z",
+          "matched_time_utc": "2017-10-08T16:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.57,
+          "usgs_00065_ft": 3.41,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T13:00:00Z",
+          "matched_time_utc": "2017-10-09T17:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.32,
+          "usgs_00065_ft": 3.16,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-10T14:00:00Z",
+          "matched_time_utc": "2017-10-10T18:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.17,
+          "usgs_00065_ft": 3.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-14T18:15:00Z",
+          "matched_time_utc": "2017-10-14T22:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.23,
+          "usgs_00065_ft": 3.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T19:15:00Z",
+          "matched_time_utc": "2017-10-15T23:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.19,
+          "usgs_00065_ft": 3.03,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-16T20:15:00Z",
+          "matched_time_utc": "2017-10-17T00:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.18,
+          "usgs_00065_ft": 3.02,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T08:48:00Z",
+          "matched_time_utc": "2017-10-17T12:48:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.51,
+          "usgs_00065_ft": 3.35,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T21:30:00Z",
+          "matched_time_utc": "2017-10-18T01:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.63,
+          "usgs_00065_ft": 3.47,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T09:45:00Z",
+          "matched_time_utc": "2017-10-18T13:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.76,
+          "usgs_00065_ft": 3.6,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T22:00:00Z",
+          "matched_time_utc": "2017-10-19T02:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.56,
+          "usgs_00065_ft": 3.4,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T10:15:00Z",
+          "matched_time_utc": "2017-10-19T14:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.7,
+          "usgs_00065_ft": 3.54,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T22:30:00Z",
+          "matched_time_utc": "2017-10-20T02:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.33,
+          "usgs_00065_ft": 3.17,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T11:00:00Z",
+          "matched_time_utc": "2017-10-20T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.4,
+          "usgs_00065_ft": 3.24,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T11:30:00Z",
+          "matched_time_utc": "2017-10-21T15:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.22,
+          "usgs_00065_ft": 3.06,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.84,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        }
+      ]
+    },
+    {
+      "site_no": "02246160",
+      "nwps_lid": "JULF1",
+      "name": "Julington Creek at Old Saint Augustine Road (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 0.85,
+      "expected_calibration_anchors": 22,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/JULF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246160&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "Mean Higher High Water",
+          "abbrev": "MHHW*",
+          "description": "The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch. For stations with shorter series, comparison of simultaneous observations with a control tide station is made in order to derive the equivalent datum of the National Tidal Datum Epoch.",
+          "value": 0
+        },
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 22,
+        "median": 0.85,
+        "minimum": 0.85,
+        "maximum": 0.85,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null,
+        "mad": null
+      },
+      "study_window_validation_residual_ft": {
+        "n": 1,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.0
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-10-01T12:30:00Z",
+          "matched_time_utc": "2017-10-01T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.78,
+          "usgs_00065_ft": 2.63,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T23:45:00Z",
+          "matched_time_utc": "2017-10-02T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.22,
+          "usgs_00065_ft": 3.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T10:45:00Z",
+          "matched_time_utc": "2017-10-02T14:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.1,
+          "usgs_00065_ft": 2.95,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T23:45:00Z",
+          "matched_time_utc": "2017-10-03T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.96,
+          "usgs_00065_ft": 2.81,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T12:00:00Z",
+          "matched_time_utc": "2017-10-03T16:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.85,
+          "usgs_00065_ft": 2.7,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T01:15:00Z",
+          "matched_time_utc": "2017-10-04T05:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.84,
+          "usgs_00065_ft": 2.69,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T13:00:00Z",
+          "matched_time_utc": "2017-10-04T17:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.73,
+          "usgs_00065_ft": 2.58,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T02:15:00Z",
+          "matched_time_utc": "2017-10-05T06:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.75,
+          "usgs_00065_ft": 2.6,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T14:30:00Z",
+          "matched_time_utc": "2017-10-05T18:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.72,
+          "usgs_00065_ft": 2.57,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T02:45:00Z",
+          "matched_time_utc": "2017-10-06T06:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.7,
+          "usgs_00065_ft": 2.55,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T15:00:00Z",
+          "matched_time_utc": "2017-10-06T19:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.63,
+          "usgs_00065_ft": 2.48,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T03:00:00Z",
+          "matched_time_utc": "2017-10-07T07:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.47,
+          "usgs_00065_ft": 2.32,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T15:45:00Z",
+          "matched_time_utc": "2017-10-07T19:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.37,
+          "usgs_00065_ft": 2.22,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T04:00:00Z",
+          "matched_time_utc": "2017-10-08T08:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.22,
+          "usgs_00065_ft": 2.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T13:30:00Z",
+          "matched_time_utc": "2017-10-17T17:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.25,
+          "usgs_00065_ft": 2.1,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T02:00:00Z",
+          "matched_time_utc": "2017-10-18T06:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.52,
+          "usgs_00065_ft": 2.37,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T14:00:00Z",
+          "matched_time_utc": "2017-10-18T18:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.58,
+          "usgs_00065_ft": 2.43,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T02:15:00Z",
+          "matched_time_utc": "2017-10-19T06:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.58,
+          "usgs_00065_ft": 2.43,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T14:30:00Z",
+          "matched_time_utc": "2017-10-19T18:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.59,
+          "usgs_00065_ft": 2.44,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T02:15:00Z",
+          "matched_time_utc": "2017-10-20T06:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.53,
+          "usgs_00065_ft": 2.38,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T14:45:00Z",
+          "matched_time_utc": "2017-10-20T18:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.41,
+          "usgs_00065_ft": 2.26,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T03:00:00Z",
+          "matched_time_utc": "2017-10-21T07:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.28,
+          "usgs_00065_ft": 2.13,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 0.85,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        }
+      ]
+    },
+    {
+      "site_no": "02231291",
+      "nwps_lid": "NATF1",
+      "name": "Nassau River near Tisonia (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 13.49,
+      "expected_calibration_anchors": 3,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/NATF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02231291&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [],
+      "offset_summary_ft": {
+        "n": 3,
+        "median": 13.49,
+        "minimum": 13.49,
+        "maximum": 13.49,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null,
+        "mad": null
+      },
+      "study_window_validation_residual_ft": {
+        "n": 3,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.0
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-10-01T09:00:00Z",
+          "matched_time_utc": "2017-10-01T13:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.39,
+          "usgs_00065_ft": 14.88,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 13.49,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T20:45:00Z",
+          "matched_time_utc": "2017-10-02T00:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.52,
+          "usgs_00065_ft": 15.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 13.49,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T22:30:00Z",
+          "matched_time_utc": "2017-10-18T02:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.36,
+          "usgs_00065_ft": 14.85,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 13.49,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        }
+      ]
+    },
+    {
+      "site_no": "02246318",
+      "nwps_lid": "ORKF1",
+      "name": "Ortega River at Argyle Forest Boulevard (in NAVD88)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 1.07,
+      "expected_calibration_anchors": 1,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/ORKF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246318&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 1,
+        "median": 1.07,
+        "minimum": 1.07,
+        "maximum": 1.07,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 1,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mad": 0.0
+      },
+      "study_window_validation_residual_ft": {
+        "n": 1,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.0
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-07-30T16:15:00Z",
+          "matched_time_utc": "2017-07-30T20:15:00Z",
+          "calibration_segment": "pre_event",
+          "nwps_stage_ft": 10.28,
+          "usgs_00065_ft": 11.35,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": 10.28,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.0
+        }
+      ]
+    },
+    {
+      "site_no": "02246518",
+      "nwps_lid": "PCUF1",
+      "name": "Pottsburg Creek at Beach Boulevard (US 90) (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 1.08,
+      "expected_calibration_anchors": 45,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/PCUF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246518&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "Mean Higher High Water",
+          "abbrev": "MHHW*",
+          "description": "The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch. For stations with shorter series, comparison of simultaneous observations with a control tide station is made in order to derive the equivalent datum of the National Tidal Datum Epoch.",
+          "value": 0
+        },
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 45,
+        "median": 1.08,
+        "minimum": 1.02,
+        "maximum": 1.12,
+        "mad": 0.01
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null,
+        "mad": null
+      },
+      "study_window_validation_residual_ft": {
+        "n": 19,
+        "median": -0.01,
+        "minimum": -0.04,
+        "maximum": 0.0,
+        "mad": 0.01,
+        "maximum_absolute_residual_ft": 0.04
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-09-21T00:00:00Z",
+          "matched_time_utc": "2017-09-21T04:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.55,
+          "usgs_00065_ft": 2.62,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-21T12:30:00Z",
+          "matched_time_utc": "2017-09-21T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.51,
+          "usgs_00065_ft": 2.56,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.05,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T00:45:00Z",
+          "matched_time_utc": "2017-09-22T04:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.45,
+          "usgs_00065_ft": 2.51,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.06,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T13:00:00Z",
+          "matched_time_utc": "2017-09-22T17:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.47,
+          "usgs_00065_ft": 2.55,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T01:15:00Z",
+          "matched_time_utc": "2017-09-23T05:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.51,
+          "usgs_00065_ft": 2.59,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T13:45:00Z",
+          "matched_time_utc": "2017-09-23T17:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.5,
+          "usgs_00065_ft": 2.58,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T02:15:00Z",
+          "matched_time_utc": "2017-09-24T06:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.53,
+          "usgs_00065_ft": 2.6,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T14:30:00Z",
+          "matched_time_utc": "2017-09-24T18:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.59,
+          "usgs_00065_ft": 2.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T03:00:00Z",
+          "matched_time_utc": "2017-09-25T07:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.6,
+          "usgs_00065_ft": 2.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T15:30:00Z",
+          "matched_time_utc": "2017-09-25T19:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.73,
+          "usgs_00065_ft": 2.78,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.05,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T03:45:00Z",
+          "matched_time_utc": "2017-09-26T07:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.52,
+          "usgs_00065_ft": 2.57,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.05,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T16:15:00Z",
+          "matched_time_utc": "2017-09-26T20:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.63,
+          "usgs_00065_ft": 2.7,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-27T17:00:00Z",
+          "matched_time_utc": "2017-09-27T21:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.56,
+          "usgs_00065_ft": 2.64,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-28T17:45:00Z",
+          "matched_time_utc": "2017-09-28T21:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.44,
+          "usgs_00065_ft": 2.52,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-30T19:30:00Z",
+          "matched_time_utc": "2017-09-30T23:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.65,
+          "usgs_00065_ft": 2.73,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T08:30:00Z",
+          "matched_time_utc": "2017-10-01T12:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.01,
+          "usgs_00065_ft": 3.06,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.05,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T20:45:00Z",
+          "matched_time_utc": "2017-10-02T00:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.31,
+          "usgs_00065_ft": 3.38,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T08:30:00Z",
+          "matched_time_utc": "2017-10-02T12:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.14,
+          "usgs_00065_ft": 3.2,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.06,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T21:15:00Z",
+          "matched_time_utc": "2017-10-03T01:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.21,
+          "usgs_00065_ft": 3.29,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T09:30:00Z",
+          "matched_time_utc": "2017-10-03T13:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.11,
+          "usgs_00065_ft": 3.18,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T22:30:00Z",
+          "matched_time_utc": "2017-10-04T02:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.21,
+          "usgs_00065_ft": 3.28,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T10:15:00Z",
+          "matched_time_utc": "2017-10-04T14:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.09,
+          "usgs_00065_ft": 3.17,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T23:15:00Z",
+          "matched_time_utc": "2017-10-05T03:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.14,
+          "usgs_00065_ft": 3.25,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.11,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T11:15:00Z",
+          "matched_time_utc": "2017-10-05T15:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.17,
+          "usgs_00065_ft": 3.29,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.12,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T23:45:00Z",
+          "matched_time_utc": "2017-10-06T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.12,
+          "usgs_00065_ft": 3.22,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.1,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T11:45:00Z",
+          "matched_time_utc": "2017-10-06T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.03,
+          "usgs_00065_ft": 3.15,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.12,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T00:15:00Z",
+          "matched_time_utc": "2017-10-07T04:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.87,
+          "usgs_00065_ft": 2.97,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.1,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T12:45:00Z",
+          "matched_time_utc": "2017-10-07T16:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.89,
+          "usgs_00065_ft": 2.98,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.09,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T00:45:00Z",
+          "matched_time_utc": "2017-10-08T04:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.67,
+          "usgs_00065_ft": 2.77,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.1,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T13:15:00Z",
+          "matched_time_utc": "2017-10-08T17:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.74,
+          "usgs_00065_ft": 2.83,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.09,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T01:45:00Z",
+          "matched_time_utc": "2017-10-09T05:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.42,
+          "usgs_00065_ft": 2.5,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T14:15:00Z",
+          "matched_time_utc": "2017-10-09T18:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.52,
+          "usgs_00065_ft": 2.59,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-14T19:30:00Z",
+          "matched_time_utc": "2017-10-14T23:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.58,
+          "usgs_00065_ft": 2.65,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T08:00:00Z",
+          "matched_time_utc": "2017-10-15T12:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.43,
+          "usgs_00065_ft": 2.5,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.07,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T20:30:00Z",
+          "matched_time_utc": "2017-10-16T00:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.5,
+          "usgs_00065_ft": 2.59,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.09,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-16T22:00:00Z",
+          "matched_time_utc": "2017-10-17T02:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.65,
+          "usgs_00065_ft": 2.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.02,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T10:00:00Z",
+          "matched_time_utc": "2017-10-17T14:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.83,
+          "usgs_00065_ft": 2.92,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.09,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T22:30:00Z",
+          "matched_time_utc": "2017-10-18T02:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.97,
+          "usgs_00065_ft": 3.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.1,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T11:00:00Z",
+          "matched_time_utc": "2017-10-18T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.05,
+          "usgs_00065_ft": 3.13,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T23:15:00Z",
+          "matched_time_utc": "2017-10-19T03:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.91,
+          "usgs_00065_ft": 3.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.1,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T11:45:00Z",
+          "matched_time_utc": "2017-10-19T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.01,
+          "usgs_00065_ft": 3.12,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.11,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T23:30:00Z",
+          "matched_time_utc": "2017-10-20T03:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.77,
+          "usgs_00065_ft": 2.87,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.1,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T12:15:00Z",
+          "matched_time_utc": "2017-10-20T16:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.75,
+          "usgs_00065_ft": 2.84,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.09,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T00:30:00Z",
+          "matched_time_utc": "2017-10-21T04:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.54,
+          "usgs_00065_ft": 2.6,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.06,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T12:30:00Z",
+          "matched_time_utc": "2017-10-21T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.56,
+          "usgs_00065_ft": 2.64,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.08,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        }
+      ]
+    },
+    {
+      "site_no": "02246500",
+      "nwps_lid": "SJLF1",
+      "name": "St. Johns River at Jacksonville (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 11.71,
+      "expected_calibration_anchors": 50,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/SJLF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246500&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        },
+        {
+          "statement": "Coastal flood impacts are dependent upon waves as well as tide level.  High waves can result in flooding even if the tide level is below flood stage.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "Mean Higher High Water",
+          "abbrev": "MHHW*",
+          "description": "The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch. For stations with shorter series, comparison of simultaneous observations with a control tide station is made in order to derive the equivalent datum of the National Tidal Datum Epoch.",
+          "value": 0
+        },
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0.63
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 50,
+        "median": 11.71,
+        "minimum": 11.71,
+        "maximum": 11.71,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 50,
+        "median": 0.63,
+        "minimum": 0.63,
+        "maximum": 0.63,
+        "mad": 0.0
+      },
+      "study_window_validation_residual_ft": {
+        "n": 20,
+        "median": -0.0,
+        "minimum": -0.0,
+        "maximum": 0.0,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.0
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-09-21T11:45:00Z",
+          "matched_time_utc": "2017-09-21T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.36,
+          "usgs_00065_ft": 13.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.99,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T00:00:00Z",
+          "matched_time_utc": "2017-09-22T04:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.34,
+          "usgs_00065_ft": 13.05,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.97,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-22T12:30:00Z",
+          "matched_time_utc": "2017-09-22T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.32,
+          "usgs_00065_ft": 13.03,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.95,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T00:45:00Z",
+          "matched_time_utc": "2017-09-23T04:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.41,
+          "usgs_00065_ft": 13.12,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.04,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-23T13:30:00Z",
+          "matched_time_utc": "2017-09-23T17:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.39,
+          "usgs_00065_ft": 13.1,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.02,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T01:45:00Z",
+          "matched_time_utc": "2017-09-24T05:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.46,
+          "usgs_00065_ft": 13.17,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.09,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-24T14:15:00Z",
+          "matched_time_utc": "2017-09-24T18:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.48,
+          "usgs_00065_ft": 13.19,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.11,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T02:00:00Z",
+          "matched_time_utc": "2017-09-25T06:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.54,
+          "usgs_00065_ft": 13.25,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.17,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-25T15:00:00Z",
+          "matched_time_utc": "2017-09-25T19:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.64,
+          "usgs_00065_ft": 13.35,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.27,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T02:45:00Z",
+          "matched_time_utc": "2017-09-26T06:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.56,
+          "usgs_00065_ft": 13.27,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.19,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-26T15:30:00Z",
+          "matched_time_utc": "2017-09-26T19:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.54,
+          "usgs_00065_ft": 13.25,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.17,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-27T03:30:00Z",
+          "matched_time_utc": "2017-09-27T07:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.45,
+          "usgs_00065_ft": 13.16,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.08,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-27T16:30:00Z",
+          "matched_time_utc": "2017-09-27T20:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.49,
+          "usgs_00065_ft": 13.2,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.12,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-28T04:15:00Z",
+          "matched_time_utc": "2017-09-28T08:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.36,
+          "usgs_00065_ft": 13.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.99,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-28T17:00:00Z",
+          "matched_time_utc": "2017-09-28T21:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.39,
+          "usgs_00065_ft": 13.1,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.02,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-09-30T19:30:00Z",
+          "matched_time_utc": "2017-09-30T23:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.53,
+          "usgs_00065_ft": 13.24,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.16,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T08:15:00Z",
+          "matched_time_utc": "2017-10-01T12:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.05,
+          "usgs_00065_ft": 13.76,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.68,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T20:30:00Z",
+          "matched_time_utc": "2017-10-02T00:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.4,
+          "usgs_00065_ft": 14.11,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 3.03,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T08:15:00Z",
+          "matched_time_utc": "2017-10-02T12:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.27,
+          "usgs_00065_ft": 13.98,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.9,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T21:00:00Z",
+          "matched_time_utc": "2017-10-03T01:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.22,
+          "usgs_00065_ft": 13.93,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.85,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T08:45:00Z",
+          "matched_time_utc": "2017-10-03T12:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.19,
+          "usgs_00065_ft": 13.9,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.82,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T22:00:00Z",
+          "matched_time_utc": "2017-10-04T02:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.29,
+          "usgs_00065_ft": 14.0,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.92,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T10:15:00Z",
+          "matched_time_utc": "2017-10-04T14:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.21,
+          "usgs_00065_ft": 13.92,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.84,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T22:45:00Z",
+          "matched_time_utc": "2017-10-05T02:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.22,
+          "usgs_00065_ft": 13.93,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.85,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T11:00:00Z",
+          "matched_time_utc": "2017-10-05T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.24,
+          "usgs_00065_ft": 13.95,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.87,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T22:45:00Z",
+          "matched_time_utc": "2017-10-06T02:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.19,
+          "usgs_00065_ft": 13.9,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.82,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T11:45:00Z",
+          "matched_time_utc": "2017-10-06T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.11,
+          "usgs_00065_ft": 13.82,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.74,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T00:00:00Z",
+          "matched_time_utc": "2017-10-07T04:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.95,
+          "usgs_00065_ft": 13.66,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.58,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T12:00:00Z",
+          "matched_time_utc": "2017-10-07T16:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.91,
+          "usgs_00065_ft": 13.62,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.54,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T00:15:00Z",
+          "matched_time_utc": "2017-10-08T04:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.79,
+          "usgs_00065_ft": 13.5,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.42,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-08T12:30:00Z",
+          "matched_time_utc": "2017-10-08T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.74,
+          "usgs_00065_ft": 13.45,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.37,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T00:30:00Z",
+          "matched_time_utc": "2017-10-09T04:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.36,
+          "usgs_00065_ft": 13.07,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.99,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-09T12:30:00Z",
+          "matched_time_utc": "2017-10-09T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.3,
+          "usgs_00065_ft": 13.01,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.93,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-14T06:30:00Z",
+          "matched_time_utc": "2017-10-14T10:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.32,
+          "usgs_00065_ft": 13.03,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 1.95,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-14T19:00:00Z",
+          "matched_time_utc": "2017-10-14T23:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.55,
+          "usgs_00065_ft": 13.26,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.18,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T07:15:00Z",
+          "matched_time_utc": "2017-10-15T11:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.45,
+          "usgs_00065_ft": 13.16,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.08,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-15T20:00:00Z",
+          "matched_time_utc": "2017-10-16T00:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.48,
+          "usgs_00065_ft": 13.19,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.11,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-16T08:00:00Z",
+          "matched_time_utc": "2017-10-16T12:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.37,
+          "usgs_00065_ft": 13.08,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.0,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-16T21:00:00Z",
+          "matched_time_utc": "2017-10-17T01:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.45,
+          "usgs_00065_ft": 13.16,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.08,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T09:30:00Z",
+          "matched_time_utc": "2017-10-17T13:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.66,
+          "usgs_00065_ft": 13.37,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.29,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-17T22:15:00Z",
+          "matched_time_utc": "2017-10-18T02:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.87,
+          "usgs_00065_ft": 13.58,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.5,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T11:00:00Z",
+          "matched_time_utc": "2017-10-18T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.0,
+          "usgs_00065_ft": 13.71,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.63,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T22:45:00Z",
+          "matched_time_utc": "2017-10-19T02:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.96,
+          "usgs_00065_ft": 13.67,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.59,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T11:00:00Z",
+          "matched_time_utc": "2017-10-19T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.99,
+          "usgs_00065_ft": 13.7,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.62,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T23:15:00Z",
+          "matched_time_utc": "2017-10-20T03:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.88,
+          "usgs_00065_ft": 13.59,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.51,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T11:45:00Z",
+          "matched_time_utc": "2017-10-20T15:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.78,
+          "usgs_00065_ft": 13.49,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.41,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-20T23:45:00Z",
+          "matched_time_utc": "2017-10-21T03:45:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.64,
+          "usgs_00065_ft": 13.35,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.27,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-21T12:00:00Z",
+          "matched_time_utc": "2017-10-21T16:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.59,
+          "usgs_00065_ft": 13.3,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.22,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-22T00:30:00Z",
+          "matched_time_utc": "2017-10-22T04:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.4,
+          "usgs_00065_ft": 13.11,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.03,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-22T12:30:00Z",
+          "matched_time_utc": "2017-10-22T16:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.38,
+          "usgs_00065_ft": 13.09,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 11.71,
+          "usgs_63160_ft": 2.01,
+          "usgs_63160_qualifiers": [
+            "A"
+          ],
+          "usgs_63160_minus_nwps_ft": 0.63
+        }
+      ]
+    },
+    {
+      "site_no": "02246621",
+      "nwps_lid": "TRJF1",
+      "name": "Trout River (FL) at Lem Turner Road (in MHHW)",
+      "input_parameter": {
+        "code": "00065",
+        "description": "USGS gage height, feet"
+      },
+      "output_reference": "NOAA/NWPS operational stage used by flood categories",
+      "transform": "stage_ft = stage_raw_ft - offset_ft",
+      "prespecified_offset_ft": 1.25,
+      "expected_calibration_anchors": 14,
+      "source_urls": {
+        "noaa_nwps": "https://api.water.noaa.gov/nwps/v1/gauges/TRJF1",
+        "usgs_iv": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02246621&startDT=2017-07-01&endDT=2017-11-01&parameterCd=00065%2C63160&siteStatus=all"
+      },
+      "nwps_time_zone": "EST5EDT",
+      "nwps_hydronotes": [
+        {
+          "statement": "Water levels are referenced to the Mean Higher High Water (MHHW) Datum. This datum can be used to approximate sea water inundation of normally dry ground near the coast. For specific impacts, please refer to the statements on this page.",
+          "effective": "0101",
+          "expiration": "1231"
+        }
+      ],
+      "nwps_vertical_datums_at_retrieval": [
+        {
+          "label": "Mean Higher High Water",
+          "abbrev": "MHHW*",
+          "description": "The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch. For stations with shorter series, comparison of simultaneous observations with a control tide station is made in order to derive the equivalent datum of the National Tidal Datum Epoch.",
+          "value": 0
+        },
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 1.25
+        }
+      ],
+      "offset_summary_ft": {
+        "n": 14,
+        "median": 1.25,
+        "minimum": 1.25,
+        "maximum": 1.25,
+        "mad": 0.0
+      },
+      "parameter_63160_minus_nwps_summary_ft": {
+        "n": 0,
+        "median": null,
+        "minimum": null,
+        "maximum": null,
+        "mad": null
+      },
+      "study_window_validation_residual_ft": {
+        "n": 6,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mad": 0.0,
+        "maximum_absolute_residual_ft": 0.0
+      },
+      "calibration_anchors": [
+        {
+          "nwps_occurred_time_reported": "2017-10-01T08:00:00Z",
+          "matched_time_utc": "2017-10-01T12:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.77,
+          "usgs_00065_ft": 3.02,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-01T20:15:00Z",
+          "matched_time_utc": "2017-10-02T00:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.11,
+          "usgs_00065_ft": 3.36,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T08:15:00Z",
+          "matched_time_utc": "2017-10-02T12:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.92,
+          "usgs_00065_ft": 3.17,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-02T21:00:00Z",
+          "matched_time_utc": "2017-10-03T01:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.05,
+          "usgs_00065_ft": 3.3,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T09:00:00Z",
+          "matched_time_utc": "2017-10-03T13:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.93,
+          "usgs_00065_ft": 3.18,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-03T22:00:00Z",
+          "matched_time_utc": "2017-10-04T02:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.07,
+          "usgs_00065_ft": 3.32,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T09:41:00Z",
+          "matched_time_utc": "2017-10-04T13:41:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.99,
+          "usgs_00065_ft": 3.24,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-04T22:30:00Z",
+          "matched_time_utc": "2017-10-05T02:30:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.01,
+          "usgs_00065_ft": 3.26,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T11:00:00Z",
+          "matched_time_utc": "2017-10-05T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.22,
+          "usgs_00065_ft": 3.47,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-05T23:00:00Z",
+          "matched_time_utc": "2017-10-06T03:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 2.01,
+          "usgs_00065_ft": 3.26,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-06T11:15:00Z",
+          "matched_time_utc": "2017-10-06T15:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.94,
+          "usgs_00065_ft": 3.19,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-07T12:00:00Z",
+          "matched_time_utc": "2017-10-07T16:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.81,
+          "usgs_00065_ft": 3.06,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-18T10:15:00Z",
+          "matched_time_utc": "2017-10-18T14:15:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.87,
+          "usgs_00065_ft": 3.12,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        },
+        {
+          "nwps_occurred_time_reported": "2017-10-19T11:00:00Z",
+          "matched_time_utc": "2017-10-19T15:00:00Z",
+          "calibration_segment": "post_event",
+          "nwps_stage_ft": 1.81,
+          "usgs_00065_ft": 3.06,
+          "usgs_00065_qualifiers": [
+            "A"
+          ],
+          "offset_ft": 1.25,
+          "usgs_63160_ft": null,
+          "usgs_63160_qualifiers": null,
+          "usgs_63160_minus_nwps_ft": null
+        }
+      ]
+    }
+  ]
+}

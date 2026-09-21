@@ -1,0 +1,935 @@
+{
+  "input": {
+    "bytes": 86176521,
+    "path": "logs/sentinel-heartbeat-cron.log",
+    "sha256": "403fe1c3d70cec8246b5157444684ab6ad79eea512ddcb8270b4066e54756150"
+  },
+  "item1_timing": {
+    "negative_span_count_by_name": {},
+    "per_source_fetch_latency_fields": [],
+    "poll_wall_seconds_polls_with_results": {
+      "max": 136.128,
+      "median": 58.4,
+      "min": 8.045,
+      "n": 454,
+      "q1": 36.596,
+      "q3": 63.164,
+      "sum": 23301.68
+    },
+    "recorded_duration_fields": [],
+    "slack_message_ids_not_parseable_as_ts": 0,
+    "slack_message_ids_seen": 1054,
+    "spans_seconds_all_due_cycles": {
+      "compute": {
+        "max": 72.361,
+        "median": 9.903,
+        "min": 6.652,
+        "n": 689,
+        "q1": 8.211,
+        "q3": 11.675,
+        "sum": 7311.966
+      },
+      "end_to_end": {
+        "max": 101.179,
+        "median": 37.068,
+        "min": 8.045,
+        "n": 689,
+        "q1": 22.626,
+        "q3": 41.196,
+        "sum": 23301.68
+      },
+      "news_stage": {
+        "max": 17.09,
+        "median": 5.493,
+        "min": 4.796,
+        "n": 689,
+        "q1": 5.163,
+        "q3": 5.867,
+        "sum": 3885.529
+      },
+      "official_fetch_stage": {
+        "max": 66.236,
+        "median": 3.937,
+        "min": 1.496,
+        "n": 689,
+        "q1": 2.714,
+        "q3": 5.482,
+        "sum": 3247.798
+      },
+      "phase_to_run_at": {
+        "max": 0.859,
+        "median": 0.044,
+        "min": 0.023,
+        "n": 689,
+        "q1": 0.037,
+        "q3": 0.058,
+        "sum": 44.433
+      },
+      "post_evidence_stage": {
+        "max": 1.384,
+        "median": 0.177,
+        "min": 0.025,
+        "n": 689,
+        "q1": 0.101,
+        "q3": 0.346,
+        "sum": 178.639
+      },
+      "slack_delivery": {
+        "max": 90.526,
+        "median": 28.989,
+        "min": 13.29,
+        "n": 602,
+        "q1": 14.897,
+        "q3": 30.818,
+        "sum": 15989.714
+      }
+    },
+    "spans_seconds_first_result_in_poll": {
+      "compute": {
+        "max": 72.361,
+        "median": 10.532,
+        "min": 6.874,
+        "n": 454,
+        "q1": 8.821,
+        "q3": 12.086,
+        "sum": 5083.83
+      },
+      "end_to_end": {
+        "max": 101.179,
+        "median": 38.273,
+        "min": 8.045,
+        "n": 454,
+        "q1": 22.052,
+        "q3": 42.224,
+        "sum": 15142.288
+      },
+      "news_stage": {
+        "max": 17.09,
+        "median": 5.617,
+        "min": 4.833,
+        "n": 454,
+        "q1": 5.256,
+        "q3": 6.001,
+        "sum": 2621.021
+      },
+      "official_fetch_stage": {
+        "max": 66.236,
+        "median": 4.316,
+        "min": 1.742,
+        "n": 454,
+        "q1": 3.073,
+        "q3": 5.85,
+        "sum": 2341.0
+      },
+      "phase_to_run_at": {
+        "max": 0.859,
+        "median": 0.047,
+        "min": 0.023,
+        "n": 454,
+        "q1": 0.037,
+        "q3": 0.063,
+        "sum": 32.145
+      },
+      "post_evidence_stage": {
+        "max": 1.384,
+        "median": 0.18,
+        "min": 0.025,
+        "n": 454,
+        "q1": 0.113,
+        "q3": 0.342,
+        "sum": 121.809
+      },
+      "slack_delivery": {
+        "max": 90.526,
+        "median": 29.574,
+        "min": 13.645,
+        "n": 367,
+        "q1": 15.472,
+        "q3": 31.363,
+        "sum": 10058.458
+      }
+    },
+    "timestamp_fields_used": {
+      "article_at": "results[].article_evidence.generated_at (stamped when the news detector returns)",
+      "cycle_start": "poll run_at for the first result of a poll; otherwise the previous result's end (its last Slack message_id ts, or its run_at when nothing was delivered)",
+      "fetched_at": "results[].fetched_at (county_flood_payload.generated_at, stamped when the official payload is assembled after all three official sources return)",
+      "phase_at": "results[].phase_decision.evaluated_at_utc",
+      "run_at": "results[].run_at (stamped at the end of _run_coordinator_cycle, after Neo4j persistence and the delta report, before Slack delivery)",
+      "slack_ts": "results[].slack_delivery.results[].message_id and results[].fold_slack_delivery.message_id (Slack-assigned ts, epoch seconds)"
+    }
+  },
+  "item2_source_requests": {
+    "code_constants": {
+      "USGS_IV_BATCH_SIZE": 50
+    },
+    "coordinator_failed_fetches_by_class": {
+      "http_400": 11,
+      "http_503": 22
+    },
+    "county_api_mapping_cache_hit": {
+      "False": 43,
+      "True": 613,
+      "no_mapping": 33
+    },
+    "county_flood_payload_absent": 33,
+    "county_flood_payload_present": 656,
+    "cycles_with_any_source_error": 431,
+    "cycles_with_extraction_failure": 288,
+    "cycles_with_only_no_iv_data_errors": 307,
+    "extraction_failure_total": 288,
+    "extraction_failures_by_reason": {
+      "no_gauges": 288
+    },
+    "extraction_failures_by_source": {
+      "src_county_flood_usgs_04005": 76,
+      "src_county_flood_usgs_12033": 6,
+      "src_county_flood_usgs_48201": 137,
+      "src_county_flood_usgs_53033": 69
+    },
+    "fetch_errors_by_provider": {
+      "nwps": 2,
+      "nws_alerts": 3,
+      "usgs": 1773
+    },
+    "fetch_errors_by_provider_and_class": {
+      "nwps:timeout": 2,
+      "nws_alerts:http_503": 3,
+      "usgs:http_400": 76,
+      "usgs:http_503": 12,
+      "usgs:no_iv_data": 1685
+    },
+    "gauge_rows_by_source": {
+      "nwps": 7689,
+      "usgs": 3529
+    },
+    "gauge_rows_with_non_null_error": 0,
+    "per_cycle_fields": {
+      "article_evidence.articles_above_threshold": {
+        "max": 4.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 689,
+        "q1": 0.0,
+        "q3": 1.0,
+        "sum": 287.0
+      },
+      "article_evidence.search_summary.candidates_fetched": {
+        "max": 6.0,
+        "median": 1.0,
+        "min": 0.0,
+        "n": 689,
+        "q1": 0.0,
+        "q3": 1.0,
+        "sum": 694.0
+      },
+      "article_evidence.search_summary.candidates_found": {
+        "max": 6.0,
+        "median": 1.0,
+        "min": 0.0,
+        "n": 689,
+        "q1": 0.0,
+        "q3": 1.0,
+        "sum": 716.0
+      },
+      "article_evidence.search_summary.candidates_scored": {
+        "max": 6.0,
+        "median": 1.0,
+        "min": 0.0,
+        "n": 689,
+        "q1": 0.0,
+        "q3": 1.0,
+        "sum": 672.0
+      },
+      "article_evidence.search_summary.queries_run": {
+        "max": 5.0,
+        "median": 5.0,
+        "min": 5.0,
+        "n": 689,
+        "q1": 5.0,
+        "q3": 5.0,
+        "sum": 3445.0
+      },
+      "code_implied_official_http_get_lower_bound": {
+        "max": 34.0,
+        "median": 13.0,
+        "min": 8.0,
+        "n": 656,
+        "q1": 8.0,
+        "q3": 33.0,
+        "sum": 13439.0
+      },
+      "len(gauges)": {
+        "max": 60.0,
+        "median": 9.0,
+        "min": 6.0,
+        "n": 656,
+        "q1": 7.0,
+        "q3": 10.0,
+        "sum": 11218.0
+      },
+      "nwps.csv_match_count": {
+        "max": 32.0,
+        "median": 11.0,
+        "min": 6.0,
+        "n": 656,
+        "q1": 6.0,
+        "q3": 30.0,
+        "sum": 12014.0
+      },
+      "nws_alerts.alert_count": {
+        "max": 1.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 656,
+        "q1": 0.0,
+        "q3": 0.0,
+        "sum": 5.0
+      },
+      "summary.gauges_queried": {
+        "max": 99.0,
+        "median": 20.0,
+        "min": 10.0,
+        "n": 656,
+        "q1": 10.0,
+        "q3": 20.0,
+        "sum": 19397.0
+      },
+      "summary.gauges_scored": {
+        "max": 29.0,
+        "median": 3.0,
+        "min": 2.0,
+        "n": 656,
+        "q1": 2.0,
+        "q3": 10.0,
+        "sum": 5641.0
+      },
+      "summary.gauges_unscored": {
+        "max": 31.0,
+        "median": 5.0,
+        "min": 0.0,
+        "n": 656,
+        "q1": 3.0,
+        "q3": 7.0,
+        "sum": 5440.0
+      },
+      "summary.gauges_with_data": {
+        "max": 60.0,
+        "median": 9.0,
+        "min": 6.0,
+        "n": 656,
+        "q1": 7.0,
+        "q3": 10.0,
+        "sum": 11218.0
+      },
+      "usgs.discovered_sites": {
+        "max": 75.0,
+        "median": 28.0,
+        "min": 3.0,
+        "n": 656,
+        "q1": 3.0,
+        "q3": 62.0,
+        "sum": 23350.0
+      },
+      "usgs.registry_sites": {
+        "max": 5.0,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 656,
+        "q1": 0.0,
+        "q3": 5.0,
+        "sum": 1230.0
+      },
+      "usgs.sites_selected": {
+        "max": 69.0,
+        "median": 10.0,
+        "min": 4.0,
+        "n": 656,
+        "q1": 4.0,
+        "q3": 10.0,
+        "sum": 11637.0
+      }
+    },
+    "source_fetch_error_total": 1811,
+    "sources_attempted_per_cycle": {
+      "3": 689
+    },
+    "sources_succeeded_per_cycle": {
+      "0": 33,
+      "3": 656
+    }
+  },
+  "item3_slack": {
+    "delivery_failures": 0,
+    "delivery_not_recorded": 0,
+    "fold_deliveries": 1,
+    "logical_reports_delivered": 602,
+    "message_id_not_last_part": 0,
+    "parts_per_delivered_report": {
+      "max": 5.0,
+      "median": 2.0,
+      "min": 1.0,
+      "n": 602,
+      "q1": 1.0,
+      "q3": 2.0,
+      "sum": 1054.0
+    },
+    "skipped_by_reason": {
+      "no_material_change": 87
+    },
+    "slack_messages_chars_delivered_cycles": 2401399,
+    "slack_messages_prepared_all_cycles": 1147,
+    "slack_messages_prepared_delivered_cycles": 1054,
+    "transport_parts_not_ok": 0,
+    "transport_parts_ok": 1054,
+    "transport_parts_sent": 1054
+  },
+  "item4_cadence": {
+    "clock_definitions_seconds": {
+      "1 h": 3600,
+      "15 min": 900,
+      "3 h": 10800,
+      "6 h": 21600
+    },
+    "clock_rule": "floor(active_duration_seconds / interval) + 1 acquisitions per mission",
+    "counties": [
+      {
+        "active_duration_days": 19.802,
+        "clock_acquisitions_required": {
+          "1 h": 476,
+          "15 min": 1901,
+          "3 h": 159,
+          "6 h": 80
+        },
+        "clock_per_day": {
+          "1 h": 24.038,
+          "15 min": 96.0,
+          "3 h": 8.029,
+          "6 h": 4.04
+        },
+        "county": "Coconino",
+        "due_acquisitions": 76,
+        "due_per_day": 3.838,
+        "fips": "04005",
+        "mission_ids": [
+          "evt_coconino_flood_20260728T213432Z"
+        ],
+        "observed_over_clock": {
+          "1 h": 0.1597,
+          "15 min": 0.04,
+          "3 h": 0.478,
+          "6 h": 0.95
+        },
+        "state": "AZ"
+      },
+      {
+        "active_duration_days": 4.667,
+        "clock_acquisitions_required": {
+          "1 h": 114,
+          "15 min": 450,
+          "3 h": 39,
+          "6 h": 20
+        },
+        "clock_per_day": {
+          "1 h": 24.427,
+          "15 min": 96.422,
+          "3 h": 8.357,
+          "6 h": 4.285
+        },
+        "county": "Escambia",
+        "due_acquisitions": 290,
+        "due_per_day": 62.138,
+        "fips": "12033",
+        "mission_ids": [
+          "evt_escambia_flood_20260723T003944Z",
+          "evt_escambia_flood_20260726T051204Z"
+        ],
+        "observed_over_clock": {
+          "1 h": 2.5439,
+          "15 min": 0.6444,
+          "3 h": 7.4359,
+          "6 h": 14.5
+        },
+        "state": "FL"
+      },
+      {
+        "active_duration_days": 4.23,
+        "clock_acquisitions_required": {
+          "1 h": 102,
+          "15 min": 407,
+          "3 h": 35,
+          "6 h": 18
+        },
+        "clock_per_day": {
+          "1 h": 24.113,
+          "15 min": 96.217,
+          "3 h": 8.274,
+          "6 h": 4.255
+        },
+        "county": "Harris",
+        "due_acquisitions": 251,
+        "due_per_day": 59.338,
+        "fips": "48201",
+        "mission_ids": [
+          "evt_harris_flood_20260723T153125Z",
+          "evt_harris_flood_20260726T012445Z"
+        ],
+        "observed_over_clock": {
+          "1 h": 2.4608,
+          "15 min": 0.6167,
+          "3 h": 7.1714,
+          "6 h": 13.9444
+        },
+        "state": "TX"
+      },
+      {
+        "active_duration_days": 18.802,
+        "clock_acquisitions_required": {
+          "1 h": 452,
+          "15 min": 1805,
+          "3 h": 151,
+          "6 h": 76
+        },
+        "clock_per_day": {
+          "1 h": 24.04,
+          "15 min": 96.0,
+          "3 h": 8.031,
+          "6 h": 4.042
+        },
+        "county": "King",
+        "due_acquisitions": 72,
+        "due_per_day": 3.829,
+        "fips": "53033",
+        "mission_ids": [
+          "evt_king_flood_20260729T213339Z"
+        ],
+        "observed_over_clock": {
+          "1 h": 0.1593,
+          "15 min": 0.0399,
+          "3 h": 0.4768,
+          "6 h": 0.9474
+        },
+        "state": "WA"
+      }
+    ],
+    "cycle_due_reason_unparsed": {
+      "first_run": 1
+    },
+    "heartbeat_interval_seconds_on_due_results": {
+      "21600": 148,
+      "43200": 3,
+      "800": 538
+    },
+    "missions": [
+      {
+        "active_duration_days": 19.802,
+        "active_duration_seconds": 1710899.877,
+        "cadence_skips": 1826,
+        "clock_acquisitions_required": {
+          "1 h": 476,
+          "15 min": 1901,
+          "3 h": 159,
+          "6 h": 80
+        },
+        "county": "Coconino",
+        "due_acquisitions": 76,
+        "due_per_day": 3.838,
+        "fips": "04005",
+        "first_poll_at": "2026-07-28T21:45:01.921572Z",
+        "heartbeat_intervals_seconds": {
+          "21600": 1902
+        },
+        "last_poll_at": "2026-08-17T17:00:01.798467Z",
+        "mission_id": "evt_coconino_flood_20260728T213432Z",
+        "opportunities": 1902,
+        "state": "AZ"
+      },
+      {
+        "active_duration_days": 1.0,
+        "active_duration_seconds": 86400.096,
+        "cadence_skips": 1,
+        "clock_acquisitions_required": {
+          "1 h": 25,
+          "15 min": 97,
+          "3 h": 9,
+          "6 h": 5
+        },
+        "county": "Escambia",
+        "due_acquisitions": 96,
+        "due_per_day": 96.0,
+        "fips": "12033",
+        "first_poll_at": "2026-07-23T02:15:02.248033Z",
+        "heartbeat_intervals_seconds": {
+          "800": 97
+        },
+        "last_poll_at": "2026-07-24T02:15:02.343996Z",
+        "mission_id": "evt_escambia_flood_20260723T003944Z",
+        "opportunities": 97,
+        "state": "FL"
+      },
+      {
+        "active_duration_days": 3.667,
+        "active_duration_seconds": 316800.044,
+        "cadence_skips": 159,
+        "clock_acquisitions_required": {
+          "1 h": 89,
+          "15 min": 353,
+          "3 h": 30,
+          "6 h": 15
+        },
+        "county": "Escambia",
+        "due_acquisitions": 194,
+        "due_per_day": 52.909,
+        "fips": "12033",
+        "first_poll_at": "2026-07-26T05:15:02.183979Z",
+        "heartbeat_intervals_seconds": {
+          "800": 256,
+          "43200": 97
+        },
+        "last_poll_at": "2026-07-29T21:15:02.228134Z",
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 353,
+        "state": "FL"
+      },
+      {
+        "active_duration_days": 0.438,
+        "active_duration_seconds": 37800.398,
+        "cadence_skips": 0,
+        "clock_acquisitions_required": {
+          "1 h": 11,
+          "15 min": 43,
+          "3 h": 4,
+          "6 h": 2
+        },
+        "county": "Harris",
+        "due_acquisitions": 43,
+        "due_per_day": 98.285,
+        "fips": "48201",
+        "first_poll_at": "2026-07-23T15:45:01.946227Z",
+        "heartbeat_intervals_seconds": {
+          "800": 43
+        },
+        "last_poll_at": "2026-07-24T02:15:02.343996Z",
+        "mission_id": "evt_harris_flood_20260723T153125Z",
+        "opportunities": 43,
+        "state": "TX"
+      },
+      {
+        "active_duration_days": 3.792,
+        "active_duration_seconds": 327599.614,
+        "cadence_skips": 157,
+        "clock_acquisitions_required": {
+          "1 h": 91,
+          "15 min": 364,
+          "3 h": 31,
+          "6 h": 16
+        },
+        "county": "Harris",
+        "due_acquisitions": 208,
+        "due_per_day": 54.857,
+        "fips": "48201",
+        "first_poll_at": "2026-07-26T01:30:02.419258Z",
+        "heartbeat_intervals_seconds": {
+          "800": 271,
+          "43200": 94
+        },
+        "last_poll_at": "2026-07-29T20:30:02.033149Z",
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 365,
+        "state": "TX"
+      },
+      {
+        "active_duration_days": 18.802,
+        "active_duration_seconds": 1624499.86,
+        "cadence_skips": 1734,
+        "clock_acquisitions_required": {
+          "1 h": 452,
+          "15 min": 1805,
+          "3 h": 151,
+          "6 h": 76
+        },
+        "county": "King",
+        "due_acquisitions": 72,
+        "due_per_day": 3.829,
+        "fips": "53033",
+        "first_poll_at": "2026-07-29T21:45:01.938587Z",
+        "heartbeat_intervals_seconds": {
+          "21600": 1806
+        },
+        "last_poll_at": "2026-08-17T17:00:01.798467Z",
+        "mission_id": "evt_king_flood_20260729T213339Z",
+        "opportunities": 1806,
+        "state": "WA"
+      }
+    ],
+    "phase_by_interval_on_due_results": {
+      "active_incident:800": 4,
+      "early_watch:21600": 148,
+      "early_watch:800": 344,
+      "elevated_watch:800": 189,
+      "folded:43200": 1,
+      "imminent:800": 1,
+      "recovery:43200": 2
+    },
+    "realized_elapsed_seconds_by_configured_interval": {
+      "21600": {
+        "max": 35165.0,
+        "median": 22488.0,
+        "median_over_configured": 1.0411,
+        "min": 22221.0,
+        "n": 152,
+        "q1": 22486.0,
+        "q3": 22489.0,
+        "sum": 3442644.0
+      },
+      "43200": {
+        "max": 44095.0,
+        "median": 44089.0,
+        "median_over_configured": 1.0206,
+        "min": 44088.0,
+        "n": 3,
+        "q1": 44088.0,
+        "q3": 44095.0,
+        "sum": 132272.0
+      },
+      "800": {
+        "max": 1799.0,
+        "median": 890.0,
+        "median_over_configured": 1.1125,
+        "min": 800.0,
+        "n": 533,
+        "q1": 858.0,
+        "q3": 924.5,
+        "sum": 475664.0
+      }
+    },
+    "totals": {
+      "clock_acquisitions_required": {
+        "1 h": 1144,
+        "15 min": 4563,
+        "3 h": 384,
+        "6 h": 194
+      },
+      "due_acquisitions": 689,
+      "due_per_mission_day": 14.505,
+      "mission_active_days_summed": 47.501,
+      "observed_over_clock": {
+        "1 h": 0.6023,
+        "15 min": 0.151,
+        "3 h": 1.7943,
+        "6 h": 3.5515
+      }
+    }
+  },
+  "item5_absence_checks": {
+    "article_llm_verdict_non_null": 0,
+    "article_llm_verdict_null": 953,
+    "cron_block_fields": {
+      "action": "str",
+      "active_mission_count": "int",
+      "command": "str",
+      "enabled": "bool",
+      "ok": "bool",
+      "openclaw_agent_job": "dict",
+      "os_crontab": "dict",
+      "schedule": "str",
+      "via": "str"
+    },
+    "csv_truncated_flags": {
+      "nwps:False": 378,
+      "nwps:True": 278,
+      "usgs:True": 656
+    },
+    "http_status_codes_only_inside_error_strings": {
+      "coordinator:400": 11,
+      "coordinator:503": 22,
+      "nws_alerts:503": 3,
+      "usgs:400": 76,
+      "usgs:503": 12
+    },
+    "key_path_probes": {
+      "byte_counts": {
+        "results[].source_snapshots[].byte_length": "int",
+        "results[].stored_readings_summary.latest[].byte_length": "int"
+      },
+      "cost": {},
+      "http_status": {},
+      "quota_or_rate_limit": {},
+      "timing": {
+        "results[].neo4j_deactivate.ended_at": "str"
+      },
+      "token_or_llm_usage": {
+        "results[].article_evidence.high_confidence_articles[].llm_verdict": "NoneType",
+        "results[].article_evidence.top_sources[].llm_verdict": "NoneType"
+      }
+    },
+    "ontology_ledger_key_present": false,
+    "source_snapshot_byte_length_by_source_family": {
+      "src_county_flood_nwps": {
+        "max": 17503.0,
+        "median": 7692.0,
+        "min": 4957.0,
+        "n": 656,
+        "q1": 5395.0,
+        "q3": 8502.0,
+        "sum": 5640786.0
+      },
+      "src_county_flood_nws_alerts": {
+        "max": 693.0,
+        "median": 245.0,
+        "min": 241.0,
+        "n": 656,
+        "q1": 243.0,
+        "q3": 245.0,
+        "sum": 162202.0
+      },
+      "src_county_flood_usgs": {
+        "max": 24644.0,
+        "median": 1317.0,
+        "min": 585.0,
+        "n": 656,
+        "q1": 591.0,
+        "q3": 1319.0,
+        "sum": 3191678.0
+      }
+    },
+    "verification_trigger_key_present": false
+  },
+  "parse": {
+    "distinct_key_paths": 1161,
+    "due_cycles": 689,
+    "first_poll_at": "2026-07-23T02:15:02.248033Z",
+    "heartbeat_polls": 2272,
+    "json_objects": 2273,
+    "last_poll_at": "2026-08-17T17:00:01.798467Z",
+    "non_poll_objects": 1,
+    "poll_gap_seconds": {
+      "max": 170100.075,
+      "median": 899.742,
+      "min": 898.673,
+      "n": 2271,
+      "q1": 899.656,
+      "q3": 900.59,
+      "sum": 2213099.55
+    },
+    "poll_gaps_over_1800_seconds": [
+      {
+        "from_poll_run_at": "2026-07-24T02:15:02.343996Z",
+        "gap_seconds": 170100.075,
+        "mission_windows_spanning_gap": [],
+        "to_poll_run_at": "2026-07-26T01:30:02.419258Z"
+      }
+    ],
+    "results_per_poll": {
+      "0": 1818,
+      "1": 219,
+      "2": 235
+    }
+  },
+  "reconciliation": {
+    "all_checks_match": true,
+    "all_mission_windows_match": true,
+    "available": true,
+    "checks": {
+      "coordinator_failed_fetches": {
+        "deployment_summary": 33,
+        "match": true,
+        "this_script": 33
+      },
+      "county_api_fetch_errors": {
+        "deployment_summary": 1778,
+        "match": true,
+        "this_script": 1778
+      },
+      "due_cycles": {
+        "deployment_summary": 689,
+        "match": true,
+        "this_script": 689
+      },
+      "extraction_failures_no_gauges": {
+        "deployment_summary": 288,
+        "match": true,
+        "this_script": 288
+      },
+      "fold_deliveries": {
+        "deployment_summary": 1,
+        "match": true,
+        "this_script": 1
+      },
+      "heartbeat_polls": {
+        "deployment_summary": 2272,
+        "match": true,
+        "this_script": 2272
+      },
+      "input.sha256": {
+        "deployment_summary": "403fe1c3d70cec8246b5157444684ab6ad79eea512ddcb8270b4066e54756150",
+        "match": true,
+        "this_script": "403fe1c3d70cec8246b5157444684ab6ad79eea512ddcb8270b4066e54756150"
+      },
+      "materiality_skips": {
+        "deployment_summary": 87,
+        "match": true,
+        "this_script": 87
+      },
+      "no_iv_data": {
+        "deployment_summary": 1685,
+        "match": true,
+        "this_script": 1685
+      },
+      "report_deliveries": {
+        "deployment_summary": 602,
+        "match": true,
+        "this_script": 602
+      },
+      "report_messages_sent": {
+        "deployment_summary": 1054,
+        "match": true,
+        "this_script": 1054
+      },
+      "source_fetch_error_total": {
+        "deployment_summary": 1811,
+        "match": true,
+        "this_script": 1811
+      }
+    },
+    "mission_window_checks": [
+      {
+        "first_poll_at_match": true,
+        "last_poll_at_match": true,
+        "mission_id": "evt_coconino_flood_20260728T213432Z",
+        "opportunities_match": true
+      },
+      {
+        "first_poll_at_match": true,
+        "last_poll_at_match": true,
+        "mission_id": "evt_escambia_flood_20260723T003944Z",
+        "opportunities_match": true
+      },
+      {
+        "first_poll_at_match": true,
+        "last_poll_at_match": true,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities_match": true
+      },
+      {
+        "first_poll_at_match": true,
+        "last_poll_at_match": true,
+        "mission_id": "evt_harris_flood_20260723T153125Z",
+        "opportunities_match": true
+      },
+      {
+        "first_poll_at_match": true,
+        "last_poll_at_match": true,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities_match": true
+      },
+      {
+        "first_poll_at_match": true,
+        "last_poll_at_match": true,
+        "mission_id": "evt_king_flood_20260729T213339Z",
+        "opportunities_match": true
+      }
+    ],
+    "published_path": "eval/results/deployment_summary.json"
+  },
+  "schema": "disaster-sentinel/deployment-cost/1"
+}

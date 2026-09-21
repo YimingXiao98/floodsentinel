@@ -1,0 +1,211 @@
+[
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Rowan (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "159",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Alleghany (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "005",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Caldwell (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "027",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Yadkin (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "197",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Wilkes (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "193",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Beaufort (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "013",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Sampson (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "163",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Edgecombe (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "065",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Hertford (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "091",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Davidson (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "057",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Ashe (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "009",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Duplin (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "061",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Wilson (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "195",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Iredell (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "097",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Davie (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "059",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Robeson (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "155",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Burke (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "023",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Stokes (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "169",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM ETA",
+  "declarationType": "DR",
+  "designatedArea": "Alexander (County)",
+  "disasterNumber": 4588,
+  "fipsCountyCode": "003",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-11-12T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NC"
+ }
+]

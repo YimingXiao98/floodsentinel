@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Disable heartbeat cron when no active MissionSpecs remain.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONPATH="${ROOT}${PYTHONPATH:+:$PYTHONPATH}"
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+exec "$PYTHON" - <<'PY'
+from watcher.heartbeat_cron import disable_heartbeat_cron_if_idle
+from watcher.neo4j_client import list_active_missions
+import json
+print(json.dumps(disable_heartbeat_cron_if_idle(len(list_active_missions())), indent=2))
+PY

@@ -1,0 +1,154 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Chatham",
+  "state": "NC",
+  "fips": "37037",
+  "generated_at": "2026-08-20T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2018-10-08",
+    "end": "2018-10-20"
+  },
+  "fetch_window": {
+    "start": "2018-10-05",
+    "end": "2018-10-20"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "NCC037",
+    "zones": [
+      "NCZ040"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "NCC037": 7,
+    "NCZ040": 2
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 4,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2018-RAH-FF-A-0008",
+      "product_id": "201810092004-KRAH-WGUS62-FFARAH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2018-RAH-FL-W-0027",
+      "product_id": "201810110233-KRAH-WGUS42-FLWRAH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2018-RAH-FA-Y-0189",
+      "product_id": "201810111517-KRAH-WGUS82-FLSRAH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2018-RAH-FL-W-0029",
+      "product_id": "201810111600-KRAH-WGUS42-FLWRAH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2018-RAH-FF-W-0068",
+      "product_id": "201810111625-KRAH-WGUS52-FFWRAH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 5,
+  "events": [
+    {
+      "event_key": "2018-RAH-FF-A-0008",
+      "wfo": "RAH",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 8,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "201810092004-KRAH-WGUS62-FFARAH",
+      "available_at": "2018-10-09T20:04:00Z",
+      "begins_at": "2018-10-11T10:00:00Z",
+      "audit_final_expire": "2018-10-12T00:24:00Z",
+      "ugcs": [
+        "NCZ040"
+      ]
+    },
+    {
+      "event_key": "2018-RAH-FL-W-0027",
+      "wfo": "RAH",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 27,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BYNN7",
+      "product_id": "201810110233-KRAH-WGUS42-FLWRAH",
+      "available_at": "2018-10-11T02:33:00Z",
+      "begins_at": "2018-10-12T04:20:00Z",
+      "audit_final_expire": "2018-10-13T17:54:00Z",
+      "ugcs": [
+        "NCC037"
+      ]
+    },
+    {
+      "event_key": "2018-RAH-FA-Y-0189",
+      "wfo": "RAH",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 189,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "201810111517-KRAH-WGUS82-FLSRAH",
+      "available_at": "2018-10-11T15:17:00Z",
+      "begins_at": "2018-10-11T15:17:00Z",
+      "audit_final_expire": "2018-10-11T21:15:00Z",
+      "ugcs": [
+        "NCC037"
+      ]
+    },
+    {
+      "event_key": "2018-RAH-FL-W-0029",
+      "wfo": "RAH",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 29,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MONN7",
+      "product_id": "201810111600-KRAH-WGUS42-FLWRAH",
+      "available_at": "2018-10-11T16:00:00Z",
+      "begins_at": "2018-10-12T10:35:00Z",
+      "audit_final_expire": "2018-10-12T10:25:00Z",
+      "ugcs": [
+        "NCC037"
+      ]
+    },
+    {
+      "event_key": "2018-RAH-FF-W-0068",
+      "wfo": "RAH",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 68,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201810111625-KRAH-WGUS52-FFWRAH",
+      "available_at": "2018-10-11T16:25:00Z",
+      "begins_at": "2018-10-11T16:25:00Z",
+      "audit_final_expire": "2018-10-12T01:30:00Z",
+      "ugcs": [
+        "NCC037"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+[
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "Lafayette (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "055",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "Calcasieu (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "019",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "Ascension (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "005",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "East Baton Rouge (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "033",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "Iberville (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "047",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "Assumption (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "007",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, TORNADOES, AND FLOODING",
+  "declarationType": "DR",
+  "designatedArea": "Lafourche (Parish)",
+  "disasterNumber": 4606,
+  "fipsCountyCode": "057",
+  "fipsStateCode": "22",
+  "incidentBeginDate": "2021-05-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "LA"
+ }
+]

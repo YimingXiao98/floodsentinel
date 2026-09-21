@@ -1,0 +1,1201 @@
+{
+ "checks": [
+  {
+   "check": "eval/results/study_v4_additive/aggregate.json and post_hoc_comparators agree with per-county result.json rows for 24 county-events",
+   "ok": true
+  },
+  {
+   "check": "Study 3 pooled hybrid unobserved hours",
+   "expected": 60.25,
+   "ok": true,
+   "reproduced": 60.25
+  },
+  {
+   "check": "Study 3 pooled adaptive unobserved hours",
+   "expected": 109.5,
+   "ok": true,
+   "reproduced": 109.5
+  },
+  {
+   "check": "Study 3 pooled matched-budget offset median unobserved hours",
+   "expected": 82.625,
+   "ok": true,
+   "reproduced": 82.625
+  },
+  {
+   "check": "Study 3 pooled uniform 3 h clock offset median unobserved hours",
+   "expected": 60.625,
+   "ok": true,
+   "reproduced": 60.625
+  },
+  {
+   "check": "Study 3 pooled hybrid episodes observed",
+   "expected": 33,
+   "ok": true,
+   "reproduced": 33
+  },
+  {
+   "check": "Study 3 pooled adaptive episodes observed",
+   "expected": 32,
+   "ok": true,
+   "reproduced": 32
+  },
+  {
+   "check": "Study 3 pooled matched-budget offset median episodes observed",
+   "expected": 34,
+   "ok": true,
+   "reproduced": 34.0
+  },
+  {
+   "check": "Study 3 pooled uniform 3 h clock offset median episodes observed",
+   "expected": 34,
+   "ok": true,
+   "reproduced": 34.0
+  },
+  {
+   "check": "Study 3 reference episodes",
+   "expected": 46,
+   "ok": true,
+   "reproduced": 46
+  },
+  {
+   "check": "eval/results/study_v3_hybrid_rev2/aggregate.json and post_hoc_comparators agree with per-county result.json rows for 9 county-events",
+   "ok": true
+  },
+  {
+   "check": "Study 2 pooled hybrid unobserved hours",
+   "expected": 9.0,
+   "ok": true,
+   "reproduced": 9.0
+  },
+  {
+   "check": "Study 2 pooled adaptive unobserved hours",
+   "expected": 23.5,
+   "ok": true,
+   "reproduced": 23.5
+  },
+  {
+   "check": "Study 2 pooled matched-budget offset median unobserved hours",
+   "expected": 21.875,
+   "ok": true,
+   "reproduced": 21.875
+  },
+  {
+   "check": "Study 2 pooled uniform 3 h clock offset median unobserved hours",
+   "expected": 14.25,
+   "ok": true,
+   "reproduced": 14.25
+  },
+  {
+   "check": "Study 2 pooled hybrid episodes observed",
+   "expected": 9,
+   "ok": true,
+   "reproduced": 9
+  },
+  {
+   "check": "Study 2 pooled adaptive episodes observed",
+   "expected": 8,
+   "ok": true,
+   "reproduced": 8
+  },
+  {
+   "check": "Study 2 reference episodes",
+   "expected": 10,
+   "ok": true,
+   "reproduced": 10
+  },
+  {
+   "check": "robustness median across offsets of pooled hybrid unobserved hours",
+   "expected": 52.625,
+   "ok": true,
+   "reproduced": 52.625
+  },
+  {
+   "check": "robustness median across offsets of pooled hybrid episodes observed",
+   "expected": 35.0,
+   "ok": true,
+   "reproduced": 35.0
+  },
+  {
+   "check": "robustness median across offsets of pooled phase_free unobserved hours",
+   "expected": 56.0,
+   "ok": true,
+   "reproduced": 56.0
+  },
+  {
+   "check": "robustness median across offsets of pooled phase_free episodes observed",
+   "expected": 33.0,
+   "ok": true,
+   "reproduced": 33.0
+  },
+  {
+   "check": "robustness median across offsets of pooled adaptive unobserved hours",
+   "expected": 103.875,
+   "ok": true,
+   "reproduced": 103.875
+  },
+  {
+   "check": "robustness median across offsets of pooled adaptive episodes observed",
+   "expected": 33.5,
+   "ok": true,
+   "reproduced": 33.5
+  },
+  {
+   "check": "robustness offset-0 pooled hybrid unobserved hours equals frozen Study 3 hybrid",
+   "expected": 60.25,
+   "ok": true,
+   "reproduced": 60.25
+  },
+  {
+   "check": "robustness offset-0 pooled adaptive unobserved hours equals frozen Study 3 adaptive",
+   "expected": 109.5,
+   "ok": true,
+   "reproduced": 109.5
+  },
+  {
+   "check": "robustness offset-0 pooled phase-free unobserved hours",
+   "expected": 60.25,
+   "ok": true,
+   "reproduced": 60.25
+  },
+  {
+   "check": "robustness median over offsets of pooled hybrid minus phase-free unobserved hours",
+   "expected": -2.25,
+   "ok": true,
+   "reproduced": -2.25
+  }
+ ],
+ "method": {
+  "caveats": [
+   "county-events are treated as exchangeable; the four Study 3 county-events with recurring episodes (Marion, Sarasota, Marshall, Seminole) dominate the pooled differences, so intervals are wide and asymmetric",
+   "matched-budget and uniform-clock comparators enter as per-county-event offset medians, exactly as in the frozen reports; the offset spread within a county-event is not resampled",
+   "Study 2 has nine units and its intervals are descriptive"
+  ],
+  "draws": 10000,
+  "generator": "numpy.random.default_rng(seed).integers; one index matrix per study, shared by all comparisons within that study; the robustness comparisons reuse the Study 3 matrix",
+  "interval": "percentile 95% (2.5th and 97.5th percentiles of the resampled statistic, numpy.percentile with linear interpolation)",
+  "resampling_unit": "county-event",
+  "seed": 20260918,
+  "statistics": [
+   "pooled difference: sum over resampled county-events of A minus B",
+   "mean paired difference: pooled difference divided by n (interval scales identically)",
+   "episodes observed: same construction on per-county-event episode counts"
+  ]
+ },
+ "robustness_phase_free": {
+  "comparisons": {
+   "phase_free_minus_adaptive": {
+    "a": "phase_free",
+    "b": "adaptive",
+    "offset_0_draw_identical_to_frozen_study_run": {
+     "pooled_a_unobserved_hours": 60.25,
+     "pooled_b_unobserved_hours": 109.5,
+     "unobserved_hours": {
+      "bootstrap_share_below_zero": 1.0,
+      "county_events_negative": 20,
+      "county_events_positive": 1,
+      "county_events_zero": 3,
+      "mean_paired_difference": {
+       "ci95": [
+        -2.7083333333333335,
+        -1.4479166666666667
+       ],
+       "includes_zero": false,
+       "point": -2.0520833333333335
+      },
+      "n_county_events": 24,
+      "pooled_difference": {
+       "ci95": [
+        -65.0,
+        -34.75
+       ],
+       "includes_zero": false,
+       "point": -49.25
+      }
+     }
+    },
+    "offset_averaged": {
+     "episodes_observed": {
+      "bootstrap_share_below_zero": 0.5156,
+      "county_events_negative": 2,
+      "county_events_positive": 3,
+      "county_events_zero": 19,
+      "mean_paired_difference": {
+       "ci95": [
+        -0.07986111111111112,
+        0.07643229166666604
+       ],
+       "includes_zero": true,
+       "point": -0.0017361111111111095
+      },
+      "n_county_events": 24,
+      "pooled_difference": {
+       "ci95": [
+        -1.9166666666666667,
+        1.834374999999985
+       ],
+       "includes_zero": true,
+       "point": -0.04166666666666663
+      }
+     },
+     "pooled_a_unobserved_hours_mean_over_offsets": 55.791666666666664,
+     "pooled_b_unobserved_hours_mean_over_offsets": 100.9375,
+     "unobserved_hours": {
+      "bootstrap_share_below_zero": 1.0,
+      "county_events_negative": 22,
+      "county_events_positive": 2,
+      "county_events_zero": 0,
+      "mean_paired_difference": {
+       "ci95": [
+        -2.2626085069444444,
+        -1.4726453993055557
+       ],
+       "includes_zero": false,
+       "point": -1.8810763888888886
+      },
+      "n_county_events": 24,
+      "pooled_difference": {
+       "ci95": [
+        -54.30260416666667,
+        -35.34348958333334
+       ],
+       "includes_zero": false,
+       "point": -45.14583333333333
+      }
+     }
+    },
+    "offsets_whose_interval_includes_zero": 0,
+    "per_offset_ci_lower_range": [
+     -83.75,
+     -41.0
+    ],
+    "per_offset_ci_upper_range": [
+     -45.75,
+     -9.743750000000091
+    ],
+    "per_offset_pooled_unobserved_hours": [
+     {
+      "ci95": [
+       -65.0,
+       -34.75
+      ],
+      "includes_zero": false,
+      "offset_seconds": 0,
+      "pooled_point": -49.25
+     },
+     {
+      "ci95": [
+       -59.256249999999994,
+       -35.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 900,
+      "pooled_point": -47.0
+     },
+     {
+      "ci95": [
+       -61.75,
+       -33.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 1800,
+      "pooled_point": -47.5
+     },
+     {
+      "ci95": [
+       -65.25,
+       -35.75
+      ],
+      "includes_zero": false,
+      "offset_seconds": 2700,
+      "pooled_point": -50.75
+     },
+     {
+      "ci95": [
+       -65.25,
+       -34.5
+      ],
+      "includes_zero": false,
+      "offset_seconds": 3600,
+      "pooled_point": -50.0
+     },
+     {
+      "ci95": [
+       -70.5,
+       -39.75
+      ],
+      "includes_zero": false,
+      "offset_seconds": 4500,
+      "pooled_point": -55.25
+     },
+     {
+      "ci95": [
+       -75.0,
+       -45.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 5400,
+      "pooled_point": -60.5
+     },
+     {
+      "ci95": [
+       -81.25,
+       -44.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 6300,
+      "pooled_point": -62.25
+     },
+     {
+      "ci95": [
+       -83.75,
+       -45.75
+      ],
+      "includes_zero": false,
+      "offset_seconds": 7200,
+      "pooled_point": -64.5
+     },
+     {
+      "ci95": [
+       -80.75,
+       -38.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 8100,
+      "pooled_point": -59.5
+     },
+     {
+      "ci95": [
+       -80.75,
+       -29.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 9000,
+      "pooled_point": -56.0
+     },
+     {
+      "ci95": [
+       -79.75,
+       -37.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 9900,
+      "pooled_point": -58.0
+     },
+     {
+      "ci95": [
+       -71.0,
+       -30.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 10800,
+      "pooled_point": -50.0
+     },
+     {
+      "ci95": [
+       -64.25,
+       -23.5
+      ],
+      "includes_zero": false,
+      "offset_seconds": 11700,
+      "pooled_point": -43.0
+     },
+     {
+      "ci95": [
+       -63.75,
+       -22.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 12600,
+      "pooled_point": -42.25
+     },
+     {
+      "ci95": [
+       -55.25,
+       -22.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 13500,
+      "pooled_point": -38.5
+     },
+     {
+      "ci95": [
+       -46.25,
+       -17.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 14400,
+      "pooled_point": -31.5
+     },
+     {
+      "ci95": [
+       -43.75,
+       -13.5
+      ],
+      "includes_zero": false,
+      "offset_seconds": 15300,
+      "pooled_point": -28.0
+     },
+     {
+      "ci95": [
+       -41.0,
+       -12.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 16200,
+      "pooled_point": -25.5
+     },
+     {
+      "ci95": [
+       -41.75,
+       -9.743750000000091
+      ],
+      "includes_zero": false,
+      "offset_seconds": 17100,
+      "pooled_point": -25.0
+     },
+     {
+      "ci95": [
+       -45.5,
+       -13.493750000000091
+      ],
+      "includes_zero": false,
+      "offset_seconds": 18000,
+      "pooled_point": -28.75
+     },
+     {
+      "ci95": [
+       -51.25,
+       -20.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 18900,
+      "pooled_point": -35.25
+     },
+     {
+      "ci95": [
+       -49.25,
+       -19.0
+      ],
+      "includes_zero": false,
+      "offset_seconds": 19800,
+      "pooled_point": -33.5
+     },
+     {
+      "ci95": [
+       -58.25,
+       -26.25
+      ],
+      "includes_zero": false,
+      "offset_seconds": 20700,
+      "pooled_point": -41.75
+     }
+    ]
+   },
+   "phase_free_minus_hybrid": {
+    "a": "phase_free",
+    "b": "hybrid",
+    "offset_0_draw_identical_to_frozen_study_run": {
+     "pooled_a_unobserved_hours": 60.25,
+     "pooled_b_unobserved_hours": 60.25,
+     "unobserved_hours": {
+      "bootstrap_share_below_zero": 0.3476,
+      "county_events_negative": 1,
+      "county_events_positive": 1,
+      "county_events_zero": 22,
+      "mean_paired_difference": {
+       "ci95": [
+        -0.03125,
+        0.03125
+       ],
+       "includes_zero": true,
+       "point": 0.0
+      },
+      "n_county_events": 24,
+      "pooled_difference": {
+       "ci95": [
+        -0.75,
+        0.75
+       ],
+       "includes_zero": true,
+       "point": 0.0
+      }
+     }
+    },
+    "offset_averaged": {
+     "episodes_observed": {
+      "bootstrap_share_below_zero": 0.9575,
+      "county_events_negative": 3,
+      "county_events_positive": 0,
+      "county_events_zero": 21,
+      "mean_paired_difference": {
+       "ci95": [
+        -0.11822916666666651,
+        0.0
+       ],
+       "includes_zero": true,
+       "point": -0.05555555555555555
+      },
+      "n_county_events": 24,
+      "pooled_difference": {
+       "ci95": [
+        -2.8374999999999964,
+        0.0
+       ],
+       "includes_zero": true,
+       "point": -1.3333333333333333
+      }
+     },
+     "pooled_a_unobserved_hours_mean_over_offsets": 55.791666666666664,
+     "pooled_b_unobserved_hours_mean_over_offsets": 53.333333333333336,
+     "unobserved_hours": {
+      "bootstrap_share_below_zero": 0.0278,
+      "county_events_negative": 1,
+      "county_events_positive": 3,
+      "county_events_zero": 20,
+      "mean_paired_difference": {
+       "ci95": [
+        -0.0008680555555555555,
+        0.24826388888888892
+       ],
+       "includes_zero": true,
+       "point": 0.10243055555555557
+      },
+      "n_county_events": 24,
+      "pooled_difference": {
+       "ci95": [
+        -0.020833333333333332,
+        5.958333333333334
+       ],
+       "includes_zero": true,
+       "point": 2.4583333333333335
+      }
+     }
+    },
+    "offsets_whose_interval_includes_zero": 24,
+    "per_offset_ci_lower_range": [
+     -2.25,
+     0.0
+    ],
+    "per_offset_ci_upper_range": [
+     0.0,
+     21.5
+    ],
+    "per_offset_pooled_unobserved_hours": [
+     {
+      "ci95": [
+       -0.75,
+       0.75
+      ],
+      "includes_zero": true,
+      "offset_seconds": 0,
+      "pooled_point": 0.0
+     },
+     {
+      "ci95": [
+       -0.75,
+       0.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 900,
+      "pooled_point": -0.25
+     },
+     {
+      "ci95": [
+       -0.75,
+       4.5
+      ],
+      "includes_zero": true,
+      "offset_seconds": 1800,
+      "pooled_point": 1.25
+     },
+     {
+      "ci95": [
+       0.0,
+       7.75
+      ],
+      "includes_zero": true,
+      "offset_seconds": 2700,
+      "pooled_point": 3.25
+     },
+     {
+      "ci95": [
+       -0.75,
+       3.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 3600,
+      "pooled_point": 0.75
+     },
+     {
+      "ci95": [
+       0.0,
+       3.25
+      ],
+      "includes_zero": true,
+      "offset_seconds": 4500,
+      "pooled_point": 1.25
+     },
+     {
+      "ci95": [
+       0.0,
+       5.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 5400,
+      "pooled_point": 2.0
+     },
+     {
+      "ci95": [
+       0.0,
+       6.75
+      ],
+      "includes_zero": true,
+      "offset_seconds": 6300,
+      "pooled_point": 2.5
+     },
+     {
+      "ci95": [
+       0.0,
+       8.75
+      ],
+      "includes_zero": true,
+      "offset_seconds": 7200,
+      "pooled_point": 3.0
+     },
+     {
+      "ci95": [
+       0.0,
+       18.5
+      ],
+      "includes_zero": true,
+      "offset_seconds": 8100,
+      "pooled_point": 7.5
+     },
+     {
+      "ci95": [
+       0.0,
+       21.5
+      ],
+      "includes_zero": true,
+      "offset_seconds": 9000,
+      "pooled_point": 7.75
+     },
+     {
+      "ci95": [
+       -1.0,
+       9.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 9900,
+      "pooled_point": 3.25
+     },
+     {
+      "ci95": [
+       -0.75,
+       3.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 10800,
+      "pooled_point": 0.75
+     },
+     {
+      "ci95": [
+       0.0,
+       3.25
+      ],
+      "includes_zero": true,
+      "offset_seconds": 11700,
+      "pooled_point": 1.25
+     },
+     {
+      "ci95": [
+       0.0,
+       5.25
+      ],
+      "includes_zero": true,
+      "offset_seconds": 12600,
+      "pooled_point": 2.25
+     },
+     {
+      "ci95": [
+       0.0,
+       6.75
+      ],
+      "includes_zero": true,
+      "offset_seconds": 13500,
+      "pooled_point": 2.5
+     },
+     {
+      "ci95": [
+       0.0,
+       8.25
+      ],
+      "includes_zero": true,
+      "offset_seconds": 14400,
+      "pooled_point": 2.75
+     },
+     {
+      "ci95": [
+       0.0,
+       10.25
+      ],
+      "includes_zero": true,
+      "offset_seconds": 15300,
+      "pooled_point": 3.5
+     },
+     {
+      "ci95": [
+       0.0,
+       6.25
+      ],
+      "includes_zero": true,
+      "offset_seconds": 16200,
+      "pooled_point": 2.25
+     },
+     {
+      "ci95": [
+       0.0,
+       11.5
+      ],
+      "includes_zero": true,
+      "offset_seconds": 17100,
+      "pooled_point": 4.75
+     },
+     {
+      "ci95": [
+       -2.25,
+       6.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 18000,
+      "pooled_point": 1.25
+     },
+     {
+      "ci95": [
+       -2.25,
+       6.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 18900,
+      "pooled_point": 1.25
+     },
+     {
+      "ci95": [
+       0.0,
+       6.5
+      ],
+      "includes_zero": true,
+      "offset_seconds": 19800,
+      "pooled_point": 2.25
+     },
+     {
+      "ci95": [
+       0.0,
+       6.0
+      ],
+      "includes_zero": true,
+      "offset_seconds": 20700,
+      "pooled_point": 2.0
+     }
+    ]
+   }
+  },
+  "offsets": 24,
+  "source": [
+   "eval/results/robustness_checks/summary.json"
+  ],
+  "unit": "county-event; each county-event's difference is first averaged over the 24 mission-start offsets (offsets treated as strata), then county-events are resampled",
+  "why_no_single_median_offset": "the reported 56.00 / 52.63 / 103.88 h are medians across 24 offsets of each policy's pooled value; with an even number of offsets the median is the mean of two middle draws, and the middle draws differ across policies, so no single offset realizes all three medians"
+ },
+ "schema": "sentinel-posthoc-bootstrap/1",
+ "status": "post hoc; nothing prespecified; descriptive sampling-uncertainty bands for differences already reported in the frozen studies",
+ "study2_v3_rev2": {
+  "comparisons": {
+   "hybrid_minus_adaptive": {
+    "a": "re-anchoring hybrid",
+    "b": "phase adaptation",
+    "episodes_observed": {
+     "bootstrap_share_below_zero": 0.0,
+     "county_events_negative": 0,
+     "county_events_positive": 1,
+     "county_events_zero": 8,
+     "mean_paired_difference": {
+      "ci95": [
+       0.0,
+       0.3333333333333333
+      ],
+      "includes_zero": true,
+      "point": 0.1111111111111111
+     },
+     "n_county_events": 9,
+     "pooled_difference": {
+      "ci95": [
+       0.0,
+       3.0
+      ],
+      "includes_zero": true,
+      "point": 1.0
+     }
+    },
+    "label": "hybrid minus phase adaptation",
+    "pooled_a_episodes_observed": 9.0,
+    "pooled_a_unobserved_hours": 9.0,
+    "pooled_b_episodes_observed": 8.0,
+    "pooled_b_unobserved_hours": 23.5,
+    "unobserved_hours": {
+     "bootstrap_share_below_zero": 0.9876,
+     "county_events_negative": 7,
+     "county_events_positive": 1,
+     "county_events_zero": 1,
+     "mean_paired_difference": {
+      "ci95": [
+       -3.0833333333333335,
+       -0.19444444444444445
+      ],
+      "includes_zero": false,
+      "point": -1.6111111111111112
+     },
+     "n_county_events": 9,
+     "pooled_difference": {
+      "ci95": [
+       -27.75,
+       -1.75
+      ],
+      "includes_zero": false,
+      "point": -14.5
+     }
+    }
+   },
+   "hybrid_minus_fixed_3h_median": {
+    "a": "re-anchoring hybrid",
+    "b": "uniform 3 h clock, offset median",
+    "episodes_observed": {
+     "bootstrap_share_below_zero": 0.0,
+     "county_events_negative": 0,
+     "county_events_positive": 0,
+     "county_events_zero": 9,
+     "mean_paired_difference": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "includes_zero": true,
+      "point": 0.0
+     },
+     "n_county_events": 9,
+     "pooled_difference": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "includes_zero": true,
+      "point": 0.0
+     }
+    },
+    "label": "hybrid minus uniform 3 h clock offset median",
+    "pooled_a_episodes_observed": 9.0,
+    "pooled_a_unobserved_hours": 9.0,
+    "pooled_b_episodes_observed": 9.0,
+    "pooled_b_unobserved_hours": 14.25,
+    "unobserved_hours": {
+     "bootstrap_share_below_zero": 0.9579,
+     "county_events_negative": 6,
+     "county_events_positive": 3,
+     "county_events_zero": 0,
+     "mean_paired_difference": {
+      "ci95": [
+       -1.1527777777777777,
+       0.05590277777777272
+      ],
+      "includes_zero": true,
+      "point": -0.5833333333333334
+     },
+     "n_county_events": 9,
+     "pooled_difference": {
+      "ci95": [
+       -10.375,
+       0.5031249999999545
+      ],
+      "includes_zero": true,
+      "point": -5.25
+     }
+    }
+   },
+   "hybrid_minus_matched_median": {
+    "a": "re-anchoring hybrid",
+    "b": "budget-matched fixed clock, offset median",
+    "episodes_observed": {
+     "bootstrap_share_below_zero": 0.0,
+     "county_events_negative": 0,
+     "county_events_positive": 1,
+     "county_events_zero": 8,
+     "mean_paired_difference": {
+      "ci95": [
+       0.0,
+       0.3333333333333333
+      ],
+      "includes_zero": true,
+      "point": 0.1111111111111111
+     },
+     "n_county_events": 9,
+     "pooled_difference": {
+      "ci95": [
+       0.0,
+       3.0
+      ],
+      "includes_zero": true,
+      "point": 1.0
+     }
+    },
+    "label": "hybrid minus budget-matched offset median",
+    "pooled_a_episodes_observed": 9.0,
+    "pooled_a_unobserved_hours": 9.0,
+    "pooled_b_episodes_observed": 8.0,
+    "pooled_b_unobserved_hours": 21.875,
+    "unobserved_hours": {
+     "bootstrap_share_below_zero": 0.9999,
+     "county_events_negative": 8,
+     "county_events_positive": 1,
+     "county_events_zero": 0,
+     "mean_paired_difference": {
+      "ci95": [
+       -2.3333333333333335,
+       -0.5833333333333334
+      ],
+      "includes_zero": false,
+      "point": -1.4305555555555556
+     },
+     "n_county_events": 9,
+     "pooled_difference": {
+      "ci95": [
+       -21.0,
+       -5.25
+      ],
+      "includes_zero": false,
+      "point": -12.875
+     }
+    }
+   }
+  },
+  "county_event_order": [
+   "baldwin_01003_2020-09-13",
+   "chatham_37037_2018-10-08",
+   "east_baton_rouge_22033_2016-08-10",
+   "horry_45051_2018-09-11",
+   "mecklenburg_37119_2024-09-22",
+   "montgomery_48339_2024-07-06",
+   "osceola_12097_2024-10-07",
+   "somerset_34035_2021-08-27",
+   "wake_37183_2016-10-06"
+  ],
+  "descriptive_only": "n = 9 county-events; percentile intervals from nine units are reported as descriptive bands, not as a test",
+  "n_county_events": 9,
+  "source": [
+   "eval/results/study_v3_hybrid_rev2/counties/*/result.json",
+   "eval/results/study_v3_hybrid_rev2/aggregate.json",
+   "eval/results/post_hoc_comparators/summary.json"
+  ]
+ },
+ "study3_v4_additive": {
+  "comparisons": {
+   "hybrid_minus_adaptive": {
+    "a": "additive hybrid",
+    "b": "phase adaptation",
+    "episodes_observed": {
+     "bootstrap_share_below_zero": 0.0,
+     "county_events_negative": 0,
+     "county_events_positive": 1,
+     "county_events_zero": 23,
+     "mean_paired_difference": {
+      "ci95": [
+       0.0,
+       0.125
+      ],
+      "includes_zero": true,
+      "point": 0.041666666666666664
+     },
+     "n_county_events": 24,
+     "pooled_difference": {
+      "ci95": [
+       0.0,
+       3.0
+      ],
+      "includes_zero": true,
+      "point": 1.0
+     }
+    },
+    "label": "additive hybrid minus phase adaptation",
+    "pooled_a_episodes_observed": 33.0,
+    "pooled_a_unobserved_hours": 60.25,
+    "pooled_b_episodes_observed": 32.0,
+    "pooled_b_unobserved_hours": 109.5,
+    "unobserved_hours": {
+     "bootstrap_share_below_zero": 1.0,
+     "county_events_negative": 20,
+     "county_events_positive": 0,
+     "county_events_zero": 4,
+     "mean_paired_difference": {
+      "ci95": [
+       -2.7291666666666665,
+       -1.4479166666666667
+      ],
+      "includes_zero": false,
+      "point": -2.0520833333333335
+     },
+     "n_county_events": 24,
+     "pooled_difference": {
+      "ci95": [
+       -65.5,
+       -34.75
+      ],
+      "includes_zero": false,
+      "point": -49.25
+     }
+    }
+   },
+   "hybrid_minus_fixed_3h_median": {
+    "a": "additive hybrid",
+    "b": "uniform 3 h clock, offset median",
+    "episodes_observed": {
+     "bootstrap_share_below_zero": 0.5361,
+     "county_events_negative": 1,
+     "county_events_positive": 1,
+     "county_events_zero": 22,
+     "mean_paired_difference": {
+      "ci95": [
+       -0.25,
+       0.125
+      ],
+      "includes_zero": true,
+      "point": -0.041666666666666664
+     },
+     "n_county_events": 24,
+     "pooled_difference": {
+      "ci95": [
+       -6.0,
+       3.0
+      ],
+      "includes_zero": true,
+      "point": -1.0
+     }
+    },
+    "label": "additive hybrid minus uniform 3 h clock offset median",
+    "pooled_a_episodes_observed": 33.0,
+    "pooled_a_unobserved_hours": 60.25,
+    "pooled_b_episodes_observed": 34.0,
+    "pooled_b_unobserved_hours": 60.625,
+    "unobserved_hours": {
+     "bootstrap_share_below_zero": 0.5517,
+     "county_events_negative": 17,
+     "county_events_positive": 7,
+     "county_events_zero": 0,
+     "mean_paired_difference": {
+      "ci95": [
+       -0.6822916666666666,
+       0.8072916666666666
+      ],
+      "includes_zero": true,
+      "point": -0.015625
+     },
+     "n_county_events": 24,
+     "pooled_difference": {
+      "ci95": [
+       -16.375,
+       19.375
+      ],
+      "includes_zero": true,
+      "point": -0.375
+     }
+    }
+   },
+   "hybrid_minus_matched_median": {
+    "a": "additive hybrid",
+    "b": "budget-matched fixed clock, offset median",
+    "episodes_observed": {
+     "bootstrap_share_below_zero": 0.5156,
+     "county_events_negative": 1,
+     "county_events_positive": 2,
+     "county_events_zero": 21,
+     "mean_paired_difference": {
+      "ci95": [
+       -0.3333333333333333,
+       0.16666666666666666
+      ],
+      "includes_zero": true,
+      "point": -0.041666666666666664
+     },
+     "n_county_events": 24,
+     "pooled_difference": {
+      "ci95": [
+       -8.0,
+       4.0
+      ],
+      "includes_zero": true,
+      "point": -1.0
+     }
+    },
+    "label": "additive hybrid minus budget-matched offset median",
+    "pooled_a_episodes_observed": 33.0,
+    "pooled_a_unobserved_hours": 60.25,
+    "pooled_b_episodes_observed": 34.0,
+    "pooled_b_unobserved_hours": 82.625,
+    "unobserved_hours": {
+     "bootstrap_share_below_zero": 0.9685,
+     "county_events_negative": 20,
+     "county_events_positive": 4,
+     "county_events_zero": 0,
+     "mean_paired_difference": {
+      "ci95": [
+       -1.7552083333333333,
+       0.06770833333333333
+      ],
+      "includes_zero": true,
+      "point": -0.9322916666666666
+     },
+     "n_county_events": 24,
+     "pooled_difference": {
+      "ci95": [
+       -42.125,
+       1.625
+      ],
+      "includes_zero": true,
+      "point": -22.375
+     }
+    }
+   }
+  },
+  "county_event_order": [
+   "acadia_22001_2020-10-07",
+   "ascension_22005_2016-03-06",
+   "ascension_22005_2021-05-15",
+   "berkeley_45015_2019-08-26",
+   "braxton_54007_2016-06-20",
+   "caguas_72025_2017-09-17",
+   "cherokee_48073_2016-04-15",
+   "delaware_36025_2024-08-03",
+   "douglas_31055_2024-06-14",
+   "harrison_28047_2020-10-26",
+   "lee_21129_2022-07-24",
+   "marion_12083_2022-09-26",
+   "marshall_27089_2023-04-10",
+   "new_castle_10003_2020-08-01",
+   "newton_48351_2020-08-25",
+   "orange_48361_2019-09-15",
+   "penobscot_23019_2023-12-14",
+   "ponce_72113_2022-09-15",
+   "robeson_37155_2020-11-06",
+   "sarasota_12115_2023-08-27",
+   "seminole_12117_2022-11-08",
+   "st__tammany_22103_2024-09-09",
+   "steuben_36101_2021-08-14",
+   "washington_50023_2023-07-07"
+  ],
+  "n_county_events": 24,
+  "source": [
+   "eval/results/study_v4_additive/counties/*/result.json",
+   "eval/results/study_v4_additive/aggregate.json",
+   "eval/results/post_hoc_comparators/summary.json"
+  ]
+ }
+}

@@ -1,0 +1,170 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Douglas",
+  "state": "NE",
+  "fips": "31055",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2024-06-14",
+    "end": "2024-06-26"
+  },
+  "fetch_window": {
+    "start": "2024-06-11",
+    "end": "2024-06-26"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "NEC055",
+    "zones": [
+      "NEZ052"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "NEC055": 20,
+    "NEZ052": 4
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 18,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2024-OAX-FL-A-0003",
+      "product_id": "202406211628-KOAX-WGUS63-FFAOAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-OAX-FL-W-0020",
+      "product_id": "202406221720-KOAX-WGUS43-FLWOAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-OAX-FL-W-0026",
+      "product_id": "202406230634-KOAX-WGUS43-FLWOAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-OAX-FF-W-0028",
+      "product_id": "202406252233-KOAX-WGUS53-FFWOAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-OAX-FF-W-0029",
+      "product_id": "202406252333-KOAX-WGUS53-FFWOAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 6,
+  "events": [
+    {
+      "event_key": "2024-OAX-FL-A-0003",
+      "wfo": "OAX",
+      "phenomena": "FL",
+      "significance": "A",
+      "etn": 3,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "OMHN1",
+      "product_id": "202406211628-KOAX-WGUS63-FFAOAX",
+      "available_at": "2024-06-21T16:28:00Z",
+      "begins_at": "2024-06-24T17:24:00Z",
+      "audit_final_expire": "2024-06-22T17:20:00Z",
+      "ugcs": [
+        "NEZ052"
+      ]
+    },
+    {
+      "event_key": "2024-OAX-FL-W-0020",
+      "wfo": "OAX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 20,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "OMHN1",
+      "product_id": "202406221720-KOAX-WGUS43-FLWOAX",
+      "available_at": "2024-06-22T17:20:00Z",
+      "begins_at": "2024-06-24T21:00:00Z",
+      "audit_final_expire": "2024-07-04T14:34:00Z",
+      "ugcs": [
+        "NEC055"
+      ]
+    },
+    {
+      "event_key": "2024-OAX-FL-W-0026",
+      "wfo": "OAX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 26,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LESN1",
+      "product_id": "202406230634-KOAX-WGUS43-FLWOAX",
+      "available_at": "2024-06-23T06:34:00Z",
+      "begins_at": "2024-06-23T06:34:00Z",
+      "audit_final_expire": "2024-06-23T23:18:00Z",
+      "ugcs": [
+        "NEC055"
+      ]
+    },
+    {
+      "event_key": "2024-OAX-FF-W-0028",
+      "wfo": "OAX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 28,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202406252233-KOAX-WGUS53-FFWOAX",
+      "available_at": "2024-06-25T22:33:00Z",
+      "begins_at": "2024-06-25T22:33:00Z",
+      "audit_final_expire": "2024-06-26T01:45:00Z",
+      "ugcs": [
+        "NEC055"
+      ]
+    },
+    {
+      "event_key": "2024-OAX-FF-W-0029",
+      "wfo": "OAX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 29,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202406252333-KOAX-WGUS53-FFWOAX",
+      "available_at": "2024-06-25T23:33:00Z",
+      "begins_at": "2024-06-25T23:33:00Z",
+      "audit_final_expire": "2024-06-26T02:45:00Z",
+      "ugcs": [
+        "NEC055"
+      ]
+    },
+    {
+      "event_key": "2024-OAX-FA-Y-0048",
+      "wfo": "OAX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 48,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202406260409-KOAX-WGUS83-FLSOAX",
+      "available_at": "2024-06-26T04:09:00Z",
+      "begins_at": "2024-06-26T04:09:00Z",
+      "audit_final_expire": "2024-06-26T07:15:00Z",
+      "ugcs": [
+        "NEC055"
+      ]
+    }
+  ]
+}

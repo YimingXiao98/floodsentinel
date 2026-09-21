@@ -1,0 +1,190 @@
+{
+ "schema": "sentinel-vtec-trigger-corpus/1",
+ "county": "Seminole",
+ "state": "FL",
+ "fips": "12117",
+ "generated_at": "2026-08-28T00:00:00Z",
+ "source": {
+  "archive": "Iowa Environmental Mesonet VTEC archive",
+  "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+  "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+  "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+ },
+ "window": {
+  "start": "2022-11-08",
+  "end": "2022-11-20"
+ },
+ "fetch_window": {
+  "start": "2022-11-05",
+  "end": "2022-11-20"
+ },
+ "fetch_lookback_days": 3,
+ "ugcs": {
+  "county": "FLC117",
+  "zones": [
+   "FLZ046"
+  ]
+ },
+ "per_ugc_raw_event_counts": {
+  "FLC117": 1,
+  "FLZ046": 3
+ },
+ "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+ "anomalies": {
+  "non_flood_phenomena": 2,
+  "missing_product_timestamp": 0,
+  "missing_event_identity": 0,
+  "available_after_final_expire": 0
+ },
+ "raw_product_sample_validation": [
+  {
+   "event_key": "2022-MLB-FA-A-0003",
+   "product_id": "202211081901-KMLB-WGUS62-FFAMLB",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  },
+  {
+   "event_key": "2022-MLB-FL-W-0010",
+   "product_id": "202211111757-KMLB-WGUS42-FLWMLB",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  }
+ ],
+ "n_events": 2,
+ "events": [
+  {
+   "event_key": "2022-MLB-FA-A-0003",
+   "wfo": "MLB",
+   "phenomena": "FA",
+   "significance": "A",
+   "etn": 3,
+   "name": "Flood Watch",
+   "hvtec_nwsli": "00000",
+   "product_id": "202211081901-KMLB-WGUS62-FFAMLB",
+   "available_at": "2022-11-08T19:01:00Z",
+   "begins_at": "2022-11-09T12:00:00Z",
+   "audit_final_expire": "2022-11-10T18:00:00Z",
+   "ugcs": [
+    "FLZ046"
+   ]
+  },
+  {
+   "event_key": "T2-c25994c0f1b6",
+   "wfo": "T2",
+   "phenomena": "T2",
+   "significance": "W",
+   "etn": 1,
+   "name": "Admitted positive news indication (title-only proxy)",
+   "hvtec_nwsli": null,
+   "product_id": null,
+   "available_at": "2022-11-09T19:15:00Z",
+   "begins_at": "2022-11-09T19:15:00Z",
+   "audit_final_expire": null,
+   "ugcs": [],
+   "url": "https://wusfnews.wusf.usf.edu/weather/2022-11-09/every-evacuation-order-called-ahead-of-tropical-storm-nicole-so-far",
+   "title": "Every evacuation order called ahead of tropical storm nicole so far",
+   "page_score": 1.0
+  },
+  {
+   "event_key": "T2-88abd3757303",
+   "wfo": "T2",
+   "phenomena": "T2",
+   "significance": "W",
+   "etn": 2,
+   "name": "Admitted positive news indication (title-only proxy)",
+   "hvtec_nwsli": null,
+   "product_id": null,
+   "available_at": "2022-11-09T21:15:00Z",
+   "begins_at": "2022-11-09T21:15:00Z",
+   "audit_final_expire": null,
+   "ugcs": [],
+   "url": "https://www.wuwf.org/2022-11-09/every-evacuation-order-called-ahead-of-tropical-storm-nicole-so-far",
+   "title": "Every evacuation order called ahead of tropical storm nicole so far",
+   "page_score": 1.0
+  },
+  {
+   "event_key": "T2-9b11bea59aef",
+   "wfo": "T2",
+   "phenomena": "T2",
+   "significance": "W",
+   "etn": 3,
+   "name": "Admitted positive news indication (title-only proxy)",
+   "hvtec_nwsli": null,
+   "product_id": null,
+   "available_at": "2022-11-09T21:30:00Z",
+   "begins_at": "2022-11-09T21:30:00Z",
+   "audit_final_expire": null,
+   "ugcs": [],
+   "url": "https://www.wfit.org/2022-11-09/every-evacuation-order-called-ahead-of-tropical-storm-nicole-so-far",
+   "title": "Every evacuation order called ahead of tropical storm nicole so far",
+   "page_score": 1.0
+  },
+  {
+   "event_key": "T2-e4da83aad752",
+   "wfo": "T2",
+   "phenomena": "T2",
+   "significance": "W",
+   "etn": 4,
+   "name": "Admitted positive news indication (title-only proxy)",
+   "hvtec_nwsli": null,
+   "product_id": null,
+   "available_at": "2022-11-10T17:15:00Z",
+   "begins_at": "2022-11-10T17:15:00Z",
+   "audit_final_expire": null,
+   "ugcs": [],
+   "url": "https://www.washingtonpost.com/nation/2022/11/10/nicole-lashes-florida-with-flooding-areas-still-recovering-ian/",
+   "title": "Nicole lashes florida with flooding areas still recovering ian",
+   "page_score": 1.0
+  },
+  {
+   "event_key": "T2-dd364a2d7319",
+   "wfo": "T2",
+   "phenomena": "T2",
+   "significance": "W",
+   "etn": 5,
+   "name": "Admitted positive news indication (title-only proxy)",
+   "hvtec_nwsli": null,
+   "product_id": null,
+   "available_at": "2022-11-10T19:00:00Z",
+   "begins_at": "2022-11-10T19:00:00Z",
+   "audit_final_expire": null,
+   "ugcs": [],
+   "url": "https://gulfnews.com/world/americas/us-hurricane-nicole-lashes-florida-with-flooding-in-areas-still-recovering-from-ian-1.1668104855831",
+   "title": "Us hurricane nicole lashes florida with flooding in areas still recovering from ian 1.",
+   "page_score": 1.0
+  },
+  {
+   "event_key": "2022-MLB-FL-W-0010",
+   "wfo": "MLB",
+   "phenomena": "FL",
+   "significance": "W",
+   "etn": 10,
+   "name": "Flood Warning",
+   "hvtec_nwsli": "LWAF1",
+   "product_id": "202211111757-KMLB-WGUS42-FLWMLB",
+   "available_at": "2022-11-11T17:57:00Z",
+   "begins_at": "2022-11-11T18:10:00Z",
+   "audit_final_expire": "2022-11-12T17:35:00Z",
+   "ugcs": [
+    "FLC117"
+   ]
+  },
+  {
+   "event_key": "T2-5685ad71233b",
+   "wfo": "T2",
+   "phenomena": "T2",
+   "significance": "W",
+   "etn": 6,
+   "name": "Admitted positive news indication (title-only proxy)",
+   "hvtec_nwsli": null,
+   "product_id": null,
+   "available_at": "2022-11-16T17:15:00Z",
+   "begins_at": "2022-11-16T17:15:00Z",
+   "audit_final_expire": null,
+   "ugcs": [],
+   "url": "http://www.orlandosentinel.com/business/real-estate/os-bz-orlando-hurricane-ian-flooding-next-time-20221116-xqkwyak7c5eopfxwvedhietmd4-story.html",
+   "title": "Os bz orlando hurricane ian flooding next time 20221116 xqkwyak7c5eopfxwvedhietmd4 story",
+   "page_score": 1.0
+  }
+ ]
+}

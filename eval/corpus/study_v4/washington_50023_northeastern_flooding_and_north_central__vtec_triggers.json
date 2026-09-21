@@ -1,0 +1,458 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Washington",
+  "state": "VT",
+  "fips": "50023",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2023-07-07",
+    "end": "2023-07-19"
+  },
+  "fetch_window": {
+    "start": "2023-07-04",
+    "end": "2023-07-19"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "VTC023",
+    "zones": [
+      "VTZ008"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "VTC023": 31,
+    "VTZ008": 5
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 12,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2023-BTV-FA-A-0001",
+      "product_id": "202307071252-KBTV-WGUS61-FFABTV",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-BTV-FA-A-0002",
+      "product_id": "202307081908-KBTV-WGUS61-FFABTV",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-BTV-FL-W-0005",
+      "product_id": "202307101313-KBTV-WGUS41-FLWBTV",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0030",
+      "product_id": "202307102200-KBTV-WGUS51-FFWBTV",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0036",
+      "product_id": "202307132334-KBTV-WGUS51-FFWBTV",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 24,
+  "events": [
+    {
+      "event_key": "2023-BTV-FA-A-0001",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 1,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307071252-KBTV-WGUS61-FFABTV",
+      "available_at": "2023-07-07T12:52:00Z",
+      "begins_at": "2023-07-07T16:00:00Z",
+      "audit_final_expire": "2023-07-08T00:10:00Z",
+      "ugcs": [
+        "VTZ008"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-W-0014",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 14,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307071628-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-07T16:28:00Z",
+      "begins_at": "2023-07-07T16:28:00Z",
+      "audit_final_expire": "2023-07-07T19:30:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0008",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 8,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307071707-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-07T17:07:00Z",
+      "begins_at": "2023-07-07T17:07:00Z",
+      "audit_final_expire": "2023-07-07T20:15:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0015",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 15,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307071954-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-07T19:54:00Z",
+      "begins_at": "2023-07-07T19:54:00Z",
+      "audit_final_expire": "2023-07-07T23:00:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-A-0002",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 2,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307081908-KBTV-WGUS61-FFABTV",
+      "available_at": "2023-07-08T19:08:00Z",
+      "begins_at": "2023-07-09T18:00:00Z",
+      "audit_final_expire": "2023-07-11T14:02:00Z",
+      "ugcs": [
+        "VTZ008"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0019",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 19,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307092017-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-09T20:17:00Z",
+      "begins_at": "2023-07-09T20:17:00Z",
+      "audit_final_expire": "2023-07-09T23:23:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0024",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 24,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307100624-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-10T06:24:00Z",
+      "begins_at": "2023-07-10T06:24:00Z",
+      "audit_final_expire": "2023-07-10T18:30:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0027",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 27,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307101103-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-10T11:03:00Z",
+      "begins_at": "2023-07-10T11:03:00Z",
+      "audit_final_expire": "2023-07-10T20:00:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FL-W-0005",
+      "wfo": "BTV",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 5,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MOOV1",
+      "product_id": "202307101313-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-10T13:13:00Z",
+      "begins_at": "2023-07-10T15:26:00Z",
+      "audit_final_expire": "2023-07-11T03:13:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FL-W-0006",
+      "wfo": "BTV",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 6,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WATV1",
+      "product_id": "202307101314-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-10T13:14:00Z",
+      "begins_at": "2023-07-10T14:40:00Z",
+      "audit_final_expire": "2023-07-12T07:01:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FL-W-0007",
+      "wfo": "BTV",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 7,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MONV1",
+      "product_id": "202307101526-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-10T15:26:00Z",
+      "begins_at": "2023-07-10T19:32:00Z",
+      "audit_final_expire": "2023-07-12T02:09:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-W-0019",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 19,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307101825-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-10T18:25:00Z",
+      "begins_at": "2023-07-10T18:25:00Z",
+      "audit_final_expire": "2023-07-11T14:30:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0030",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 30,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307102200-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-10T22:00:00Z",
+      "begins_at": "2023-07-10T22:00:00Z",
+      "audit_final_expire": "2023-07-11T01:00:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-W-0021",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 21,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307110054-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-11T00:54:00Z",
+      "begins_at": "2023-07-11T00:54:00Z",
+      "audit_final_expire": "2023-07-11T12:44:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0033",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 33,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307110816-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-11T08:16:00Z",
+      "begins_at": "2023-07-11T08:16:00Z",
+      "audit_final_expire": "2023-07-11T11:08:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-A-0003",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 3,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307121659-KBTV-WGUS61-FFABTV",
+      "available_at": "2023-07-12T16:59:00Z",
+      "begins_at": "2023-07-13T18:00:00Z",
+      "audit_final_expire": "2023-07-14T00:51:00Z",
+      "ugcs": [
+        "VTZ008"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0036",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 36,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307132334-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-13T23:34:00Z",
+      "begins_at": "2023-07-13T23:34:00Z",
+      "audit_final_expire": "2023-07-14T02:22:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0040",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 40,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307150157-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-15T01:57:00Z",
+      "begins_at": "2023-07-15T01:57:00Z",
+      "audit_final_expire": "2023-07-15T04:50:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-A-0004",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 4,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307150703-KBTV-WGUS61-FFABTV",
+      "available_at": "2023-07-15T07:03:00Z",
+      "begins_at": "2023-07-16T10:00:00Z",
+      "audit_final_expire": "2023-07-17T07:27:00Z",
+      "ugcs": [
+        "VTZ008"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FF-W-0041",
+      "wfo": "BTV",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 41,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307161356-KBTV-WGUS51-FFWBTV",
+      "available_at": "2023-07-16T13:56:00Z",
+      "begins_at": "2023-07-16T13:56:00Z",
+      "audit_final_expire": "2023-07-16T16:07:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-W-0026",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 26,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307162217-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-16T22:17:00Z",
+      "begins_at": "2023-07-16T22:17:00Z",
+      "audit_final_expire": "2023-07-17T01:15:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-W-0027",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 27,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307170121-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-17T01:21:00Z",
+      "begins_at": "2023-07-17T01:21:00Z",
+      "audit_final_expire": "2023-07-17T05:00:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-W-0028",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 28,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307170456-KBTV-WGUS41-FLWBTV",
+      "available_at": "2023-07-17T04:56:00Z",
+      "begins_at": "2023-07-17T04:56:00Z",
+      "audit_final_expire": "2023-07-17T11:19:00Z",
+      "ugcs": [
+        "VTC023"
+      ]
+    },
+    {
+      "event_key": "2023-BTV-FA-A-0005",
+      "wfo": "BTV",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 5,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202307171902-KBTV-WGUS61-FFABTV",
+      "available_at": "2023-07-17T19:02:00Z",
+      "begins_at": "2023-07-18T16:00:00Z",
+      "audit_final_expire": "2023-07-19T04:10:00Z",
+      "ugcs": [
+        "VTZ008"
+      ]
+    }
+  ]
+}

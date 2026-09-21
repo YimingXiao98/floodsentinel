@@ -1,0 +1,175 @@
+#!/usr/bin/env bash
+# disaster-coordinator wrapper: flood requests delegate to coordinator CLI.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SENTINEL_CLI="${ROOT}/bin/sentinel-cli"
+RUN_COUNTY_FLOOD="${ROOT}/bin/run-county-flood"
+SERVICES_DIR="${ROOT}/skills/disaster-scout/services"
+GEO_DIR="${ROOT}/skills/county-flood-data"
+export SENTINEL_OUTPUT_ONTOLOGY="${SENTINEL_OUTPUT_ONTOLOGY:-v1}"
+
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: run-disaster-coordinator <request>" >&2
+  echo 'Example: run-disaster-coordinator "flood Miami-Dade County, Florida"' >&2
+  exit 1
+fi
+
+exec "$PYTHON" - "$SENTINEL_CLI" "$RUN_COUNTY_FLOOD" "$SERVICES_DIR" "$GEO_DIR" "$@" <<'PY'
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+sentinel_cli, run_county_flood, services_dir, geo_dir = sys.argv[1:5]
+raw = " ".join(sys.argv[5:]).strip()
+if not raw:
+    print("ERROR: missing request text", file=sys.stderr)
+    sys.exit(1)
+
+FLOOD_ALIASES = {"flood", "flooding", "floods", "river", "flash flood", "flash-flood"}
+DISASTER_PREFIX = re.compile(
+    r"^(?:(?:monitor|watch|check|run|discover)\s+)?"
+    r"(?P<type>flood(?:ing|s)?|hurricane|wildfire|earthquake|tornado)\s+",
+    re.I,
+)
+
+def _import_resolver():
+    services = Path(services_dir)
+    if services.is_dir() and str(services) not in sys.path:
+        sys.path.insert(0, str(services))
+    try:
+        from county_resolver import resolve_county, resolve_from_prompt  # type: ignore
+        return resolve_county, resolve_from_prompt
+    except Exception:
+        return None, None
+
+def _parse_location(text: str):
+    geo = Path(geo_dir)
+    if geo.is_dir():
+        county_flood = geo / "county_flood"
+        if county_flood.is_dir() and str(geo) not in sys.path:
+            sys.path.insert(0, str(geo))
+        try:
+            from county_flood.geo import parse_location, resolve_fips  # type: ignore
+
+            parsed = parse_location(text)
+            if parsed:
+                county, state = parsed
+                fips = resolve_fips(county, state)
+                return county, state, fips
+        except Exception:
+            pass
+
+    resolve_county, resolve_from_prompt = _import_resolver()
+    if resolve_from_prompt:
+        resolved = resolve_from_prompt(text)
+        if resolved:
+            return (
+                resolved.get("county_name"),
+                resolved.get("state"),
+                resolved.get("county_fips"),
+            )
+    if resolve_county:
+        m = re.match(r"^(.+?)\s+County,\s*(.+)$", text, re.I)
+        if m:
+            resolved = resolve_county(m.group(1).strip(), m.group(2).strip())
+            if resolved:
+                return (
+                    resolved.get("county_name"),
+                    resolved.get("state"),
+                    resolved.get("county_fips"),
+                )
+        m = re.match(r"^(.+?),\s*(.+)$", text)
+        if m:
+            county = m.group(1).strip()
+            for suffix in (" County", " Parish", " Borough"):
+                if county.endswith(suffix):
+                    county = county[: -len(suffix)]
+            resolved = resolve_county(county, m.group(2).strip())
+            if resolved:
+                return (
+                    resolved.get("county_name"),
+                    resolved.get("state"),
+                    resolved.get("county_fips"),
+                )
+    return None, None, None
+
+def _disaster_type(text: str) -> str | None:
+    m = DISASTER_PREFIX.match(text.strip())
+    if m:
+        return m.group("type").lower()
+    lowered = text.lower()
+    for alias in FLOOD_ALIASES:
+        if alias in lowered:
+            return "flood"
+    return None
+
+def _location_text(text: str) -> str:
+    m = DISASTER_PREFIX.match(text.strip())
+    if m:
+        return text[m.end() :].strip()
+    lowered = text.lower()
+    for alias in sorted(FLOOD_ALIASES, key=len, reverse=True):
+        if alias in lowered:
+            idx = lowered.index(alias)
+            return (text[:idx] + text[idx + len(alias) :]).strip(" ,")
+    return text.strip()
+
+def _run(cmd: list[str]) -> tuple[int, str]:
+    try:
+        out = subprocess.run(cmd, capture_output=True, text=True, check=False)
+        text = (out.stdout or "").strip()
+        if out.returncode != 0 and not text:
+            text = (out.stderr or "").strip()
+        return out.returncode, text
+    except Exception as exc:
+        return 1, str(exc)
+
+disaster = _disaster_type(raw)
+location_text = _location_text(raw)
+
+if disaster and disaster not in {"flood", "flooding", "floods"}:
+    print(
+        f"disaster-coordinator: non-flood type '{disaster}' still uses the legacy "
+        "scout → verify-sources LLM workflow. Use /skill scout for source discovery."
+    )
+    sys.exit(0)
+
+if not location_text:
+    print("ERROR: could not parse location from request", file=sys.stderr)
+    sys.exit(1)
+
+county, state, fips = _parse_location(location_text)
+if not county and not state and not fips:
+    print(f"ERROR: could not resolve county/state from: {location_text!r}", file=sys.stderr)
+    sys.exit(1)
+
+if fips:
+    code, text = _run([sentinel_cli, "run-coordinator", "--fips", str(fips).zfill(5)])
+    if code == 0 and text:
+        print(text)
+        sys.exit(0)
+
+if county and state:
+    code, text = _run(
+        [sentinel_cli, "run-coordinator", "--county", county, "--state", state]
+    )
+    if code == 0 and text:
+        print(text)
+        sys.exit(0)
+
+# Fallback: county-flood-data (no Neo4j) so the user still gets gauge readings.
+code, text = _run([run_county_flood, location_text])
+print(text or f"ERROR: coordinator and county-flood-data both failed for {location_text!r}")
+sys.exit(code)
+PY

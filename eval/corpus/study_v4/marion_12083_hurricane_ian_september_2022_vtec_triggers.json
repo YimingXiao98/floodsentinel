@@ -1,0 +1,95 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Marion",
+  "state": "FL",
+  "fips": "12083",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2022-09-26",
+    "end": "2022-10-08"
+  },
+  "fetch_window": {
+    "start": "2022-09-23",
+    "end": "2022-10-08"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "FLC083",
+    "zones": [
+      "FLZ140",
+      "FLZ240",
+      "FLZ340"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "FLC083": 0,
+    "FLZ140": 4,
+    "FLZ240": 4,
+    "FLZ340": 3
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 6,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2022-JAX-FA-A-0005",
+      "product_id": "202209270850-KJAX-WGUS62-FFAJAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2022-JAX-FA-A-0006",
+      "product_id": "202209290927-KJAX-WGUS62-FFAJAX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 2,
+  "events": [
+    {
+      "event_key": "2022-JAX-FA-A-0005",
+      "wfo": "JAX",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 5,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202209270850-KJAX-WGUS62-FFAJAX",
+      "available_at": "2022-09-27T08:50:00Z",
+      "begins_at": "2022-09-27T08:50:00Z",
+      "audit_final_expire": "2022-09-29T09:23:00Z",
+      "ugcs": [
+        "FLZ140",
+        "FLZ240",
+        "FLZ340"
+      ]
+    },
+    {
+      "event_key": "2022-JAX-FA-A-0006",
+      "wfo": "JAX",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 6,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202209290927-KJAX-WGUS62-FFAJAX",
+      "available_at": "2022-09-29T09:27:00Z",
+      "begins_at": "2022-09-29T09:27:00Z",
+      "audit_final_expire": "2022-09-29T13:56:00Z",
+      "ugcs": [
+        "FLZ140",
+        "FLZ240"
+      ]
+    }
+  ]
+}

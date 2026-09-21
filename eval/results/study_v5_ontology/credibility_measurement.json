@@ -1,0 +1,223 @@
+{
+  "auc": 0.4929,
+  "auc_ci95_cluster_bootstrap": [
+    0.4758,
+    0.5069
+  ],
+  "bootstrap": {
+    "cluster": "county_event",
+    "draws": 10000,
+    "seed": 20260830
+  },
+  "brier": 0.1044,
+  "by_tier": {
+    "T0": {
+      "accuracy": 0.8824,
+      "auc": 0.4929,
+      "n_claims": 7353
+    }
+  },
+  "discriminates": false,
+  "distinct_confidences": 2,
+  "ece": 0.0266,
+  "n_claims_graded": 7353,
+  "n_correct": 6488,
+  "n_county_events": 24,
+  "per_county_calibration": [
+    {
+      "brier": 0.1703,
+      "county": "Marion",
+      "ece": 0.1055,
+      "event": "Hurricane Ian (September 2022)",
+      "n_claims": 1088
+    },
+    {
+      "brier": 0.1587,
+      "county": "Caguas",
+      "ece": 0.0913,
+      "event": "Hurricane Maria (September 2017)",
+      "n_claims": 255
+    },
+    {
+      "brier": 0.026,
+      "county": "Newton",
+      "ece": 0.0717,
+      "event": "Hurricane Laura (August 2020)",
+      "n_claims": 141
+    },
+    {
+      "brier": 0.1853,
+      "county": "Orange",
+      "ece": 0.124,
+      "event": "Tropical Storm Imelda (September 2019)",
+      "n_claims": 871
+    },
+    {
+      "brier": 0.0267,
+      "county": "New Castle",
+      "ece": 0.0708,
+      "event": "Hurricane Isaias (August 2020)",
+      "n_claims": 270
+    },
+    {
+      "brier": 0.0478,
+      "county": "Harrison",
+      "ece": 0.0449,
+      "event": "Hurricane Zeta (October 2020)",
+      "n_claims": 208
+    },
+    {
+      "brier": 0.1519,
+      "county": "Sarasota",
+      "ece": 0.079,
+      "event": "Hurricane Idalia (August 2023)",
+      "n_claims": 317
+    },
+    {
+      "brier": 0.027,
+      "county": "Cherokee",
+      "ece": 0.0705,
+      "event": "Houston Flooding (April 2016)",
+      "n_claims": 222
+    },
+    {
+      "brier": 0.0121,
+      "county": "Acadia",
+      "ece": 0.11,
+      "event": "Hurricane Delta (October 2020)",
+      "n_claims": 67
+    },
+    {
+      "brier": 0.0638,
+      "county": "Ascension",
+      "ece": 0.0252,
+      "event": "Texas and Louisiana Flooding (March 2016)",
+      "n_claims": 118
+    },
+    {
+      "brier": 0.0153,
+      "county": "Ponce",
+      "ece": 0.0848,
+      "event": "Hurricane Fiona (September 2022)",
+      "n_claims": 244
+    },
+    {
+      "brier": 0.0259,
+      "county": "Delaware",
+      "ece": 0.0764,
+      "event": "Hurricane Debby (August 2024)",
+      "n_claims": 294
+    },
+    {
+      "brier": 0.1502,
+      "county": "Washington",
+      "ece": 0.0809,
+      "event": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+      "n_claims": 207
+    },
+    {
+      "brier": 0.021,
+      "county": "Berkeley",
+      "ece": 0.0778,
+      "event": "Hurricane Dorian (September 2019)",
+      "n_claims": 132
+    },
+    {
+      "brier": 0.0317,
+      "county": "Robeson",
+      "ece": 0.0647,
+      "event": "Tropical Storm Eta (November 2020)",
+      "n_claims": 106
+    },
+    {
+      "brier": 0.1566,
+      "county": "Ascension",
+      "ece": 0.0888,
+      "event": "Louisiana Flooding (May 2021)",
+      "n_claims": 88
+    },
+    {
+      "brier": 0.174,
+      "county": "Lee",
+      "ece": 0.1101,
+      "event": "Kentucky and Missouri Flooding (July 2022)",
+      "n_claims": 128
+    },
+    {
+      "brier": 0.0871,
+      "county": "Steuben",
+      "ece": 0.0034,
+      "event": "Tropical Storm Fred (August 2021)",
+      "n_claims": 477
+    },
+    {
+      "brier": 0.1139,
+      "county": "Penobscot",
+      "ece": 0.0363,
+      "event": "East Coast Storm and Flooding (December 2023)",
+      "n_claims": 410
+    },
+    {
+      "brier": 0.1104,
+      "county": "St. Tammany",
+      "ece": 0.032,
+      "event": "Hurricane Francine (September 2024)",
+      "n_claims": 416
+    },
+    {
+      "brier": 0.0209,
+      "county": "Braxton",
+      "ece": 0.078,
+      "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "n_claims": 399
+    },
+    {
+      "brier": 0.1113,
+      "county": "Marshall",
+      "ece": 0.0332,
+      "event": "Fort Lauderdale Flash Flood (April 2023)",
+      "n_claims": 214
+    },
+    {
+      "brier": 0.0507,
+      "county": "Douglas",
+      "ece": 0.0414,
+      "event": "Upper Midwest Flooding (June 2024)",
+      "n_claims": 620
+    },
+    {
+      "brier": 0.2488,
+      "county": "Seminole",
+      "ece": 0.2021,
+      "event": "Hurricane Nicole (November 2022)",
+      "n_claims": 61
+    }
+  ],
+  "pooled_accuracy": 0.8824,
+  "prespecified_statement": "the composite discriminates iff the AUC bootstrap interval excludes 0.5",
+  "protocol": "eval/ONTOLOGY_STUDY_PROTOCOL.md",
+  "protocol_sha256": "b21d0ccb14bf847c01032ab356f2e2f2f837a899675b595e78a1b0929f9ca702",
+  "reliability_bins": [
+    {
+      "accuracy": 0.9315,
+      "mean_confidence": 0.89,
+      "n": 219,
+      "range": [
+        0.8,
+        0.9
+      ]
+    },
+    {
+      "accuracy": 0.8809,
+      "mean_confidence": 0.907,
+      "n": 7134,
+      "range": [
+        0.9,
+        1.0
+      ]
+    }
+  ],
+  "role": "measurement of the credibility composite's scores; no claim about operational decisions",
+  "schema": "sentinel-v5-credibility-measurement/1",
+  "v4_manifest_sha256": "47917d84775fe990b6aa9bb6acf452d10f67b4235d0b7da417832dd6743b78fd"
+}

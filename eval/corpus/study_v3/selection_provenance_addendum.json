@@ -1,0 +1,75 @@
+{
+  "schema": "sentinel-v3-selection-provenance-addendum/1",
+  "purpose": "binds the OpenFEMA DisasterDeclarationsSummaries responses that drove held-out candidate enumeration, which the frozen selection artifact references but does not itself checksum",
+  "selection": "eval/corpus/study_v3/holdout_selection.json",
+  "selection_sha256": "18502e920a32312dba7f140d19e040b37b2d487cd911b0b38b56c3f46140cafc",
+  "selection_prescreen_v1": "eval/corpus/study_v3/holdout_selection_prescreen_v1.json",
+  "selection_prescreen_v1_sha256": "2d0cf2e76c7b41e63c4a0c0c1619616c7f94ea642544bd955770be9ffc7552c2",
+  "ncei_events_csv": "eval/corpus/study_v3/ncei_events_us.csv",
+  "ncei_events_csv_sha256": "fbe9bbcba93bd90e8e49aed9ca6f93869c5d136b1903ea00c50f8bc9ef36b976",
+  "registry_csv": "skills/county-flood-data/nwps_all_gauges_report.csv",
+  "registry_csv_sha256": "a38823604d8b1bef8e211fd422e5ee32a0b7fb3668e1f510de80ac678ea3f964",
+  "fema_query_cache": [
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_beryl_july_2024.json",
+      "sha256": "94225b43e5b6947c92a963035769a4fa6dcf6922b4013be016f97b35a4c1f0cb",
+      "bytes": 28620
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_florence_september_2018.json",
+      "sha256": "0d7f8e3f3a094ac823738265c2802edea4cc815dba667dbf9e3bb46e17fca8c3",
+      "bytes": 26896
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_helene_september_2024.json",
+      "sha256": "7d6a48211e88977804dcb1351451d296e455387fbc8cb7c6bc10af8abe99d4dc",
+      "bytes": 89327
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_ian_september_2022.json",
+      "sha256": "1008e65fbefadb3b34d628f7aa4e2eabb05854b619439b95e07ef2cc1d1cdb9e",
+      "bytes": 35570
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_ida_august_2021.json",
+      "sha256": "f5b2f544ab2ba0eb9cbe7b65dedc05c68dc009619f7d116d584a37bd192baed1",
+      "bytes": 59690
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_laura_august_2020.json",
+      "sha256": "97623c203ed393b009949374ca7137ac08998280c2369197e816d19f214e70b2",
+      "bytes": 23890
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_maria_september_2017.json",
+      "sha256": "74a23d9a068205dac4524681e63297bcb12e31a7c9852c3ab7d19057a7add0f5",
+      "bytes": 23932
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_matthew_october_2016.json",
+      "sha256": "e2addeb0e88a509f9698625e760e63d1eb0f9294ecc7438e5cf164e045bd91f7",
+      "bytes": 36300
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_michael_october_2018.json",
+      "sha256": "2566fe6088b53c52355aafe2d5b0776c96826884b9795ad91a597726e4ba264a",
+      "bytes": 44279
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_milton_october_2024.json",
+      "sha256": "0ba4bd49db84d49d9d6d1b5d796fdbf8278f4f61f5b28dcea7bd7ed952a3296d",
+      "bytes": 17936
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_hurricane_sally_september_2020.json",
+      "sha256": "05e586fe8f93e3c262670968e4978b566f03454ecf52bf7f385b87eb20bc76c2",
+      "bytes": 8751
+    },
+    {
+      "path": "eval/corpus/study_v3/cache/fema_louisiana_flooding_august_2016.json",
+      "sha256": "4e2360a6d93f0109d15cad5a0b81a608b6deec9e24df3c7dd22acd8abc1c8571",
+      "bytes": 7852
+    }
+  ],
+  "note": "cache files are the verbatim API responses used during selection; they are hashed here rather than inside the frozen selection artifact so the freeze is preserved"
+}

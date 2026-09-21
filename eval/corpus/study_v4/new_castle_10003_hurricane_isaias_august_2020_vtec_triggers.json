@@ -1,0 +1,538 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "New Castle",
+  "state": "DE",
+  "fips": "10003",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2020-08-01",
+    "end": "2020-08-13"
+  },
+  "fetch_window": {
+    "start": "2020-07-29",
+    "end": "2020-08-13"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "DEC003",
+    "zones": [
+      "DEZ001"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "DEC003": 39,
+    "DEZ001": 9
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 19,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2020-PHI-FF-A-0005",
+      "product_id": "202008021933-KPHI-WGUS61-FFAPHI",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0037",
+      "product_id": "202008041323-KPHI-WGUS51-FFWPHI",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-PHI-FA-W-0025",
+      "product_id": "202008041759-KPHI-WGUS41-FLWPHI",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0133",
+      "product_id": "202008072243-KPHI-WGUS81-FLSPHI",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0034",
+      "product_id": "202008080327-KPHI-WGUS41-FLWPHI",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 29,
+  "events": [
+    {
+      "event_key": "2020-PHI-FF-A-0005",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 5,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008021933-KPHI-WGUS61-FFAPHI",
+      "available_at": "2020-08-02T19:33:00Z",
+      "begins_at": "2020-08-04T02:00:00Z",
+      "audit_final_expire": "2020-08-04T19:18:00Z",
+      "ugcs": [
+        "DEZ001"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0116",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 116,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008040917-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-04T09:17:00Z",
+      "begins_at": "2020-08-04T09:17:00Z",
+      "audit_final_expire": "2020-08-04T13:15:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0032",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 32,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008041128-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-04T11:28:00Z",
+      "begins_at": "2020-08-04T11:28:00Z",
+      "audit_final_expire": "2020-08-04T14:30:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0036",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 36,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008041258-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-04T12:58:00Z",
+      "begins_at": "2020-08-04T12:58:00Z",
+      "audit_final_expire": "2020-08-04T16:00:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0015",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 15,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CHBD1",
+      "product_id": "202008041306-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-04T13:06:00Z",
+      "begins_at": "2020-08-04T13:25:00Z",
+      "audit_final_expire": "2020-08-05T00:28:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0037",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 37,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008041323-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-04T13:23:00Z",
+      "begins_at": "2020-08-04T13:23:00Z",
+      "audit_final_expire": "2020-08-04T17:15:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0039",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 39,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008041402-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-04T14:02:00Z",
+      "begins_at": "2020-08-04T14:02:00Z",
+      "audit_final_expire": "2020-08-04T18:00:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0016",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 16,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "DPKD1",
+      "product_id": "202008041438-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-04T14:38:00Z",
+      "begins_at": "2020-08-04T15:07:00Z",
+      "audit_final_expire": "2020-08-05T04:47:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0018",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 18,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "RCCD1",
+      "product_id": "202008041627-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-04T16:27:00Z",
+      "begins_at": "2020-08-04T16:27:00Z",
+      "audit_final_expire": "2020-08-05T02:54:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0021",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 21,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WMND1",
+      "product_id": "202008041648-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-04T16:48:00Z",
+      "begins_at": "2020-08-04T23:00:00Z",
+      "audit_final_expire": "2020-08-05T17:00:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-W-0025",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 25,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008041759-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-04T17:59:00Z",
+      "begins_at": "2020-08-04T17:59:00Z",
+      "audit_final_expire": "2020-08-05T03:01:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-A-0006",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 6,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008060737-KPHI-WGUS61-FFAPHI",
+      "available_at": "2020-08-06T07:37:00Z",
+      "begins_at": "2020-08-06T07:37:00Z",
+      "audit_final_expire": "2020-08-08T01:07:00Z",
+      "ugcs": [
+        "DEZ001"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0120",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 120,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008061043-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-06T10:43:00Z",
+      "begins_at": "2020-08-06T10:43:00Z",
+      "audit_final_expire": "2020-08-06T13:45:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0043",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 43,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008061113-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-06T11:13:00Z",
+      "begins_at": "2020-08-06T11:13:00Z",
+      "audit_final_expire": "2020-08-06T14:09:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0047",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 47,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008072103-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-07T21:03:00Z",
+      "begins_at": "2020-08-07T21:03:00Z",
+      "audit_final_expire": "2020-08-08T01:51:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0133",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 133,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008072243-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-07T22:43:00Z",
+      "begins_at": "2020-08-07T22:43:00Z",
+      "audit_final_expire": "2020-08-08T02:45:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0049",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 49,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008072321-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-07T23:21:00Z",
+      "begins_at": "2020-08-07T23:21:00Z",
+      "audit_final_expire": "2020-08-08T04:01:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0032",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 32,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WMND1",
+      "product_id": "202008072328-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-07T23:28:00Z",
+      "begins_at": "2020-08-08T03:00:00Z",
+      "audit_final_expire": "2020-08-08T01:29:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0033",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 33,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "RCCD1",
+      "product_id": "202008080000-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-08T00:00:00Z",
+      "begins_at": "2020-08-08T00:00:00Z",
+      "audit_final_expire": "2020-08-08T08:05:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-W-0034",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 34,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008080144-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-08T01:44:00Z",
+      "begins_at": "2020-08-08T01:44:00Z",
+      "audit_final_expire": "2020-08-08T09:10:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FL-W-0034",
+      "wfo": "PHI",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 34,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "DPKD1",
+      "product_id": "202008080327-KPHI-WGUS41-FLWPHI",
+      "available_at": "2020-08-08T03:27:00Z",
+      "begins_at": "2020-08-08T03:27:00Z",
+      "audit_final_expire": "2020-08-08T09:25:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-A-0007",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 7,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008111948-KPHI-WGUS61-FFAPHI",
+      "available_at": "2020-08-11T19:48:00Z",
+      "begins_at": "2020-08-12T15:00:00Z",
+      "audit_final_expire": "2020-08-13T00:16:00Z",
+      "ugcs": [
+        "DEZ001"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0137",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 137,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008121643-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-12T16:43:00Z",
+      "begins_at": "2020-08-12T16:43:00Z",
+      "audit_final_expire": "2020-08-12T19:45:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0138",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 138,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008121655-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-12T16:55:00Z",
+      "begins_at": "2020-08-12T16:55:00Z",
+      "audit_final_expire": "2020-08-12T19:45:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0052",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 52,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008121706-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-12T17:06:00Z",
+      "begins_at": "2020-08-12T17:06:00Z",
+      "audit_final_expire": "2020-08-12T20:00:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0139",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 139,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008121737-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-12T17:37:00Z",
+      "begins_at": "2020-08-12T17:37:00Z",
+      "audit_final_expire": "2020-08-12T20:30:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-W-0055",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 55,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008121840-KPHI-WGUS51-FFWPHI",
+      "available_at": "2020-08-12T18:40:00Z",
+      "begins_at": "2020-08-12T18:40:00Z",
+      "audit_final_expire": "2020-08-12T21:36:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FF-A-0008",
+      "wfo": "PHI",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 8,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008130702-KPHI-WGUS61-FFAPHI",
+      "available_at": "2020-08-13T07:02:00Z",
+      "begins_at": "2020-08-13T12:00:00Z",
+      "audit_final_expire": "2020-08-14T00:19:00Z",
+      "ugcs": [
+        "DEZ001"
+      ]
+    },
+    {
+      "event_key": "2020-PHI-FA-Y-0147",
+      "wfo": "PHI",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 147,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008131546-KPHI-WGUS81-FLSPHI",
+      "available_at": "2020-08-13T15:46:00Z",
+      "begins_at": "2020-08-13T15:46:00Z",
+      "audit_final_expire": "2020-08-13T18:45:00Z",
+      "ugcs": [
+        "DEC003"
+      ]
+    }
+  ]
+}

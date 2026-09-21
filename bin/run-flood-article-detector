@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Run flood-article-detector from a natural-language request string.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SKILL_DIR="${ROOT}/skills/flood-article-detector"
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: run-flood-article-detector <request>" >&2
+  echo 'Example: run-flood-article-detector "flood Miami-Dade County, Florida"' >&2
+  exit 1
+fi
+
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+
+REQUEST="$*"
+export PYTHONPATH="${SKILL_DIR}${PYTHONPATH:+:$PYTHONPATH}"
+
+exec "$PYTHON" "${SKILL_DIR}/main.py" --request "$REQUEST" --format json

@@ -1,0 +1,38 @@
+{
+  "NWSSource": {
+    "source_name": "NWS Active Alerts API (County Zone)",
+    "source_url": "https://api.weather.gov/alerts/active",
+    "source_type": "official_forecast",
+    "source_type_iri": "ds:NWSSource",
+    "trust_tier": "T0",
+    "trust_tier_level": 0,
+    "parser_adapter": "nws_alerts_json",
+    "update_cadence": "15m",
+    "coverage_scope": "county_via_validated_zone",
+    "resolution_strategy": "nws_alerts_by_county_zone",
+    "url_template": "https://api.weather.gov/alerts/active?zone={zone}",
+    "fallback_url": "https://api.weather.gov/alerts/active",
+    "fetch_headers": {
+      "User-Agent": "DisasterSentinel/1.0 (flood monitoring)",
+      "Accept": "application/geo+json, application/json"
+    }
+  },
+  "USGSGaugeSource": {
+    "source_name": "USGS NWIS Instantaneous Values API",
+    "source_url": "https://waterservices.usgs.gov/nwis/iv/",
+    "source_type": "hydrology_gauges",
+    "source_type_iri": "ds:USGSGaugeSource",
+    "trust_tier": "T0",
+    "trust_tier_level": 0,
+    "parser_adapter": "usgs_iv_json",
+    "update_cadence": "15m",
+    "coverage_scope": "county_stream_gauges",
+    "resolution_strategy": "usgs_nwis_sites_by_county_fips",
+    "url_template": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites={sites}&parameterCd=00060,00065&siteStatus=active",
+    "fallback_url": "https://api.waterdata.usgs.gov/ogcapi/features/collections/monitoring-locations/items?limit=10",
+    "fetch_headers": {
+      "User-Agent": "DisasterSentinel/1.0 (flood monitoring)",
+      "Accept": "application/json"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv*/
+# Regenerable GDELT news corpora (see README, "News corpora")
+eval/corpus/*_gdelt.json
+eval/corpus/study_v5/*_gdelt.json
+# Scratch output directories for reproduction runs
+scratch/

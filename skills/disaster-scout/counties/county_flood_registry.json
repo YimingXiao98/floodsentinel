@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "description": "Optional curated county flood API mappings. Key = 5-digit county FIPS. Auto-discovery runs when a county is absent.",
+  "counties": {
+    "48201": {
+      "county_name": "Harris",
+      "state": "TX",
+      "nws_zone": "TXC201",
+      "usgs_sites": [
+        "08075000",
+        "08074500",
+        "08073600",
+        "08067505",
+        "08067520"
+      ],
+      "notes": "Example — Buffalo Bayou + county stream gauges. Replace or extend for production."
+    }
+  }
+}

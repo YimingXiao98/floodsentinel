@@ -1,0 +1,57 @@
+[
+ {
+  "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+  "declarationType": "DR",
+  "designatedArea": "Cape May (County)",
+  "disasterNumber": 4597,
+  "fipsCountyCode": "009",
+  "fipsStateCode": "34",
+  "incidentBeginDate": "2021-01-31T00:00:00.000Z",
+  "incidentType": "Snowstorm",
+  "state": "NJ"
+ },
+ {
+  "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+  "declarationType": "DR",
+  "designatedArea": "Ocean (County)",
+  "disasterNumber": 4597,
+  "fipsCountyCode": "029",
+  "fipsStateCode": "34",
+  "incidentBeginDate": "2021-01-31T00:00:00.000Z",
+  "incidentType": "Snowstorm",
+  "state": "NJ"
+ },
+ {
+  "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+  "declarationType": "DR",
+  "designatedArea": "Sussex (County)",
+  "disasterNumber": 4597,
+  "fipsCountyCode": "037",
+  "fipsStateCode": "34",
+  "incidentBeginDate": "2021-01-31T00:00:00.000Z",
+  "incidentType": "Snowstorm",
+  "state": "NJ"
+ },
+ {
+  "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+  "declarationType": "DR",
+  "designatedArea": "Warren (County)",
+  "disasterNumber": 4597,
+  "fipsCountyCode": "041",
+  "fipsStateCode": "34",
+  "incidentBeginDate": "2021-01-31T00:00:00.000Z",
+  "incidentType": "Snowstorm",
+  "state": "NJ"
+ },
+ {
+  "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+  "declarationType": "DR",
+  "designatedArea": "Morris (County)",
+  "disasterNumber": 4597,
+  "fipsCountyCode": "027",
+  "fipsStateCode": "34",
+  "incidentBeginDate": "2021-01-31T00:00:00.000Z",
+  "incidentType": "Snowstorm",
+  "state": "NJ"
+ }
+]

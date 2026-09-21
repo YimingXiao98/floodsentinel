@@ -1,0 +1,325 @@
+{
+  "early_watch": {
+    "hazard": "flood",
+    "phase": "early_watch",
+    "heartbeat_interval_seconds": 21600,
+    "required_source_types": [
+      {
+        "type": "NWPSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://api.water.noaa.gov/nwps/v1/gauges"
+        ],
+        "url_template": "county-flood-data --source nws"
+      },
+      {
+        "type": "USGSGaugeSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://waterservices.usgs.gov/nwis/iv/"
+        ],
+        "url_template": "county-flood-data --source usgs"
+      }
+    ],
+    "required_claim_types": [
+      {
+        "type": "GaugeObservation",
+        "legacy_type": "gauge_rising",
+        "minimum_confidence": 0.55
+      },
+      {
+        "type": "ForecastShift",
+        "legacy_type": "forecast_shift",
+        "minimum_confidence": 0.55
+      },
+      {
+        "type": "Warning",
+        "legacy_type": "warning",
+        "minimum_confidence": 0.55
+      }
+    ],
+    "phase_transition_rules": [
+      {
+        "from": "early_watch",
+        "to": "elevated_watch",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "severity >= minor (stage >= 2)"
+      },
+      {
+        "from": "early_watch",
+        "to": "elevated_watch",
+        "claim_type": "Warning",
+        "legacy_claim_type": "warning",
+        "condition": "severity >= minor (stage >= 2)"
+      }
+    ],
+    "decision_contexts": []
+  },
+  "elevated_watch": {
+    "hazard": "flood",
+    "phase": "elevated_watch",
+    "heartbeat_interval_seconds": 21600,
+    "required_source_types": [
+      {
+        "type": "NWPSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://api.water.noaa.gov/nwps/v1/gauges"
+        ],
+        "url_template": "county-flood-data --source nws"
+      },
+      {
+        "type": "USGSGaugeSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://waterservices.usgs.gov/nwis/iv/"
+        ],
+        "url_template": "county-flood-data --source usgs"
+      }
+    ],
+    "required_claim_types": [
+      {
+        "type": "GaugeObservation",
+        "legacy_type": "gauge_rising",
+        "minimum_confidence": 0.55
+      },
+      {
+        "type": "Warning",
+        "legacy_type": "warning",
+        "minimum_confidence": 0.6
+      }
+    ],
+    "phase_transition_rules": [
+      {
+        "from": "elevated_watch",
+        "to": "imminent",
+        "claim_type": "Warning",
+        "legacy_claim_type": "warning",
+        "condition": "severity >= moderate"
+      },
+      {
+        "from": "elevated_watch",
+        "to": "imminent",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "severity >= moderate"
+      },
+      {
+        "from": "elevated_watch",
+        "to": "recovery",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "all clear (severity < minor, no_flooding)"
+      }
+    ],
+    "decision_contexts": []
+  },
+  "imminent": {
+    "hazard": "flood",
+    "phase": "imminent",
+    "heartbeat_interval_seconds": 7200,
+    "required_source_types": [
+      {
+        "type": "NWPSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://api.water.noaa.gov/nwps/v1/gauges"
+        ],
+        "url_template": "county-flood-data --source nws"
+      },
+      {
+        "type": "USGSGaugeSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://waterservices.usgs.gov/nwis/iv/"
+        ],
+        "url_template": "county-flood-data --source usgs"
+      },
+      {
+        "type": "NWSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "nws_alerts_by_county_zone",
+        "seed_urls": [
+          "https://api.weather.gov/alerts/active"
+        ],
+        "url_template": "https://api.weather.gov/alerts/active?zone={zone}"
+      }
+    ],
+    "required_claim_types": [
+      {
+        "type": "Warning",
+        "legacy_type": "warning",
+        "minimum_confidence": 0.65
+      },
+      {
+        "type": "InundationClaim",
+        "legacy_type": "inundation",
+        "minimum_confidence": 0.6
+      }
+    ],
+    "phase_transition_rules": [
+      {
+        "from": "imminent",
+        "to": "active_incident",
+        "claim_type": "Warning",
+        "legacy_claim_type": "warning",
+        "condition": "severity >= severe"
+      },
+      {
+        "from": "imminent",
+        "to": "recovery",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "all clear (severity < minor, no_flooding)"
+      }
+    ],
+    "decision_contexts": []
+  },
+  "active_incident": {
+    "hazard": "flood",
+    "phase": "active_incident",
+    "heartbeat_interval_seconds": 7200,
+    "required_source_types": [
+      {
+        "type": "NWPSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://api.water.noaa.gov/nwps/v1/gauges"
+        ],
+        "url_template": "county-flood-data --source nws"
+      },
+      {
+        "type": "USGSGaugeSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://waterservices.usgs.gov/nwis/iv/"
+        ],
+        "url_template": "county-flood-data --source usgs"
+      },
+      {
+        "type": "NWSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "nws_alerts_by_county_zone",
+        "seed_urls": [
+          "https://api.weather.gov/alerts/active"
+        ],
+        "url_template": "https://api.weather.gov/alerts/active?zone={zone}"
+      }
+    ],
+    "required_claim_types": [
+      {
+        "type": "Warning",
+        "legacy_type": "warning",
+        "minimum_confidence": 0.7
+      },
+      {
+        "type": "EvacuationClaim",
+        "legacy_type": "evacuation",
+        "minimum_confidence": 0.65
+      }
+    ],
+    "phase_transition_rules": [
+      {
+        "from": "active_incident",
+        "to": "recovery",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "all clear (severity < minor, no_flooding)"
+      }
+    ],
+    "decision_contexts": []
+  },
+  "recovery": {
+    "hazard": "flood",
+    "phase": "recovery",
+    "heartbeat_interval_seconds": 43200,
+    "required_source_types": [
+      {
+        "type": "NWPSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://api.water.noaa.gov/nwps/v1/gauges"
+        ],
+        "url_template": "county-flood-data --source nws"
+      },
+      {
+        "type": "USGSGaugeSource",
+        "trust_tier": "T0",
+        "discovery_hint": "county_flood_data_skill",
+        "seed_urls": [
+          "https://waterservices.usgs.gov/nwis/iv/"
+        ],
+        "url_template": "county-flood-data --source usgs"
+      },
+      {
+        "type": "NWSSource",
+        "trust_tier": "T0",
+        "discovery_hint": "nws_alerts_by_county_zone",
+        "seed_urls": [
+          "https://api.weather.gov/alerts/active"
+        ],
+        "url_template": "https://api.weather.gov/alerts/active?zone={zone}"
+      }
+    ],
+    "required_claim_types": [
+      {
+        "type": "GaugeObservation",
+        "legacy_type": "gauge_rising",
+        "minimum_confidence": 0.55
+      },
+      {
+        "type": "Warning",
+        "legacy_type": "warning",
+        "minimum_confidence": 0.6
+      },
+      {
+        "type": "ForecastShift",
+        "legacy_type": "forecast_shift",
+        "minimum_confidence": 0.5
+      }
+    ],
+    "phase_transition_rules": [
+      {
+        "from": "recovery",
+        "to": "active_incident",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "severity >= minor"
+      },
+      {
+        "from": "recovery",
+        "to": "active_incident",
+        "claim_type": "Warning",
+        "legacy_claim_type": "warning",
+        "condition": "severity >= minor"
+      },
+      {
+        "from": "recovery",
+        "to": "folded",
+        "claim_type": "GaugeObservation",
+        "legacy_claim_type": "gauge_rising",
+        "condition": "due all-clear evaluations span >= 48 hours"
+      }
+    ],
+    "decision_contexts": []
+  },
+  "folded": {
+    "hazard": "flood",
+    "phase": "folded",
+    "heartbeat_interval_seconds": 86400,
+    "required_source_types": [],
+    "required_claim_types": [],
+    "phase_transition_rules": [],
+    "decision_contexts": []
+  }
+}

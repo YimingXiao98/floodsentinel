@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Route Slack /openclaw slash-command text to coordinator (natural language).
+# Slash-prefixed bodies (/help, /skill …) are handled by OpenClaw before this runs.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+RUN_COORDINATOR="${ROOT}/bin/run-coordinator"
+export SENTINEL_OUTPUT_ONTOLOGY="${SENTINEL_OUTPUT_ONTOLOGY:-v1}"
+
+if [[ $# -lt 1 ]]; then
+  cat <<'EOF'
+OpenClaw FloodSentinel — send a flood monitoring request in natural language.
+
+Examples:
+  /openclaw there is a flood approaching Harris County, Texas
+  /openclaw Monitor Miami-Dade County, Florida
+
+Other commands (prefix with /):
+  /openclaw /help
+  /openclaw /skill analyst Situation report for King County, Washington
+EOF
+  exit 0
+fi
+
+TEXT="$*"
+TRIMMED="${TEXT#"${TEXT%%[![:space:]]*}"}"
+TRIMMED="${TRIMMED%"${TRIMMED##*[![:space:]]}"}"
+
+if [[ -z "$TRIMMED" ]]; then
+  cat <<'EOF'
+OpenClaw FloodSentinel — send a flood monitoring request in natural language.
+
+Examples:
+  /openclaw there is a flood approaching Harris County, Texas
+  /openclaw Monitor Miami-Dade County, Florida
+EOF
+  exit 0
+fi
+
+if [[ "$TRIMMED" == /* ]]; then
+  echo "ERROR: slash-prefixed commands are handled by OpenClaw directly" >&2
+  exit 2
+fi
+
+exec "$RUN_COORDINATOR" "$TRIMMED"

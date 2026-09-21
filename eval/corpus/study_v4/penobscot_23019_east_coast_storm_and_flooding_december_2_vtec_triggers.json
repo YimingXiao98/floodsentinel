@@ -1,0 +1,452 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Penobscot",
+  "state": "ME",
+  "fips": "23019",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2023-12-14",
+    "end": "2023-12-26"
+  },
+  "fetch_window": {
+    "start": "2023-12-11",
+    "end": "2023-12-26"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "MEC019",
+    "zones": [
+      "MEZ005",
+      "MEZ011",
+      "MEZ015"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "MEC019": 20,
+    "MEZ005": 6,
+    "MEZ011": 8,
+    "MEZ015": 7
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 12,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2023-CAR-FA-A-0009",
+      "product_id": "202312110838-KCAR-WGUS61-FFACAR",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0064",
+      "product_id": "202312111324-KCAR-WGUS81-FLSCAR",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-CAR-FA-A-0011",
+      "product_id": "202312161949-KCAR-WGUS61-FFACAR",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-CAR-FL-W-0006",
+      "product_id": "202312181717-KCAR-WGUS41-FLWCAR",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0069",
+      "product_id": "202312182104-KCAR-WGUS81-FLSCAR",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 23,
+  "events": [
+    {
+      "event_key": "2023-CAR-FA-A-0009",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 9,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312110838-KCAR-WGUS61-FFACAR",
+      "available_at": "2023-12-11T08:38:00Z",
+      "begins_at": "2023-12-11T08:38:00Z",
+      "audit_final_expire": "2023-12-12T12:00:00Z",
+      "ugcs": [
+        "MEZ005",
+        "MEZ011",
+        "MEZ015"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-W-0002",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 2,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111038-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-11T10:38:00Z",
+      "begins_at": "2023-12-11T10:38:00Z",
+      "audit_final_expire": "2023-12-11T16:00:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-A-0010",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 10,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111141-KCAR-WGUS61-FFACAR",
+      "available_at": "2023-12-11T11:41:00Z",
+      "begins_at": "2023-12-11T11:41:00Z",
+      "audit_final_expire": "2023-12-11T18:31:00Z",
+      "ugcs": [
+        "MEZ005",
+        "MEZ011",
+        "MEZ015"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-W-0003",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 3,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111214-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-11T12:14:00Z",
+      "begins_at": "2023-12-11T12:14:00Z",
+      "audit_final_expire": "2023-12-11T18:15:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0064",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 64,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111324-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-11T13:24:00Z",
+      "begins_at": "2023-12-11T13:24:00Z",
+      "audit_final_expire": "2023-12-11T16:30:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-W-0004",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 4,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111337-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-11T13:37:00Z",
+      "begins_at": "2023-12-11T13:37:00Z",
+      "audit_final_expire": "2023-12-11T19:00:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0065",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 65,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111627-KCAR-WGUS81-FLSCAR-RRA",
+      "available_at": "2023-12-11T16:27:00Z",
+      "begins_at": "2023-12-11T16:27:00Z",
+      "audit_final_expire": "2023-12-11T19:15:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-W-0005",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 5,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312111807-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-11T18:07:00Z",
+      "begins_at": "2023-12-11T18:07:00Z",
+      "audit_final_expire": "2023-12-11T21:15:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-A-0011",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 11,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312161949-KCAR-WGUS61-FFACAR",
+      "available_at": "2023-12-16T19:49:00Z",
+      "begins_at": "2023-12-18T12:00:00Z",
+      "audit_final_expire": "2023-12-19T05:58:00Z",
+      "ugcs": [
+        "MEZ005",
+        "MEZ011",
+        "MEZ015"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0066",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 66,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312181536-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-18T15:36:00Z",
+      "begins_at": "2023-12-18T15:36:00Z",
+      "audit_final_expire": "2023-12-18T21:30:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FL-W-0003",
+      "wfo": "CAR",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 3,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BPRM1",
+      "product_id": "202312181717-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-18T17:17:00Z",
+      "begins_at": "2023-12-18T18:44:00Z",
+      "audit_final_expire": "2023-12-18T20:21:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FL-W-0005",
+      "wfo": "CAR",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 5,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MFDM1",
+      "product_id": "202312181717-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-18T17:17:00Z",
+      "begins_at": "2023-12-19T18:00:00Z",
+      "audit_final_expire": "2023-12-20T10:49:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FL-W-0006",
+      "wfo": "CAR",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 6,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WENM1",
+      "product_id": "202312181717-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-18T17:17:00Z",
+      "begins_at": "2023-12-19T16:37:00Z",
+      "audit_final_expire": "2023-12-21T00:35:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0067",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 67,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312181730-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-18T17:30:00Z",
+      "begins_at": "2023-12-18T17:30:00Z",
+      "audit_final_expire": "2023-12-18T18:48:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FF-W-0015",
+      "wfo": "CAR",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 15,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312181848-KCAR-WGUS51-FFWCAR",
+      "available_at": "2023-12-18T18:48:00Z",
+      "begins_at": "2023-12-18T18:48:00Z",
+      "audit_final_expire": "2023-12-19T00:45:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0068",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 68,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312181952-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-18T19:52:00Z",
+      "begins_at": "2023-12-18T19:52:00Z",
+      "audit_final_expire": "2023-12-19T19:28:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0069",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 69,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312182104-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-18T21:04:00Z",
+      "begins_at": "2023-12-18T21:04:00Z",
+      "audit_final_expire": "2023-12-19T07:30:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0070",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 70,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312182124-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-18T21:24:00Z",
+      "begins_at": "2023-12-18T21:24:00Z",
+      "audit_final_expire": "2023-12-19T00:23:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-W-0006",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 6,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312190044-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-19T00:44:00Z",
+      "begins_at": "2023-12-19T00:44:00Z",
+      "audit_final_expire": "2023-12-19T13:28:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FL-W-0007",
+      "wfo": "CAR",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 7,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "EDDM1",
+      "product_id": "202312190252-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-19T02:52:00Z",
+      "begins_at": "2023-12-20T11:20:00Z",
+      "audit_final_expire": "2023-12-20T02:22:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FL-W-0008",
+      "wfo": "CAR",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 8,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GRNM1",
+      "product_id": "202312190718-KCAR-WGUS41-FLWCAR",
+      "available_at": "2023-12-19T07:18:00Z",
+      "begins_at": "2023-12-19T08:35:00Z",
+      "audit_final_expire": "2023-12-20T10:08:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0071",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 71,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312190753-KCAR-WGUS81-FLSCAR",
+      "available_at": "2023-12-19T07:53:00Z",
+      "begins_at": "2023-12-19T07:53:00Z",
+      "audit_final_expire": "2023-12-19T19:34:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    },
+    {
+      "event_key": "2023-CAR-FA-Y-0072",
+      "wfo": "CAR",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 72,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202312191328-KCAR-WGUS81-FLSCAR-RRA",
+      "available_at": "2023-12-19T13:28:00Z",
+      "begins_at": "2023-12-19T13:28:00Z",
+      "audit_final_expire": "2023-12-19T19:30:00Z",
+      "ugcs": [
+        "MEC019"
+      ]
+    }
+  ]
+}

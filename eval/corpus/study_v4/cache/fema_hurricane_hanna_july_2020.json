@@ -1,0 +1,222 @@
+[
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "New Hanover (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "129",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Carteret (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "031",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Onslow (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "133",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Pamlico (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "137",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Hertford (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "091",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Lenoir (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "107",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Beaufort (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "013",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Columbus (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "047",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Pender (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "141",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Brunswick (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "019",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Hyde (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "095",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Craven (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "049",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Chowan (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "041",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Pitt (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "147",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Jones (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "103",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Bertie (County)",
+  "disasterNumber": 4568,
+  "fipsCountyCode": "015",
+  "fipsStateCode": "37",
+  "incidentBeginDate": "2020-07-31T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "NC"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Rincon (Municipio)",
+  "disasterNumber": 4560,
+  "fipsCountyCode": "117",
+  "fipsStateCode": "72",
+  "incidentBeginDate": "2020-07-29T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "PR"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Aguada (Municipio)",
+  "disasterNumber": 4560,
+  "fipsCountyCode": "003",
+  "fipsStateCode": "72",
+  "incidentBeginDate": "2020-07-29T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "PR"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Hormigueros (Municipio)",
+  "disasterNumber": 4560,
+  "fipsCountyCode": "067",
+  "fipsStateCode": "72",
+  "incidentBeginDate": "2020-07-29T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "PR"
+ },
+ {
+  "declarationTitle": "HURRICANE ISAIAS",
+  "declarationType": "DR",
+  "designatedArea": "Mayaguez (Municipio)",
+  "disasterNumber": 4560,
+  "fipsCountyCode": "097",
+  "fipsStateCode": "72",
+  "incidentBeginDate": "2020-07-29T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "PR"
+ }
+]

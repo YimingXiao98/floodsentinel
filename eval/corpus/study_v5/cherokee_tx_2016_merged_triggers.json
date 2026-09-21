@@ -1,0 +1,186 @@
+{
+ "schema": "sentinel-vtec-trigger-corpus/1",
+ "county": "Cherokee",
+ "state": "TX",
+ "fips": "48073",
+ "generated_at": "2026-08-28T00:00:00Z",
+ "source": {
+  "archive": "Iowa Environmental Mesonet VTEC archive",
+  "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+  "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+  "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+ },
+ "window": {
+  "start": "2016-04-15",
+  "end": "2016-04-27"
+ },
+ "fetch_window": {
+  "start": "2016-04-12",
+  "end": "2016-04-27"
+ },
+ "fetch_lookback_days": 3,
+ "ugcs": {
+  "county": "TXC073",
+  "zones": [
+   "TXZ149"
+  ]
+ },
+ "per_ugc_raw_event_counts": {
+  "TXC073": 8,
+  "TXZ149": 4
+ },
+ "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+ "anomalies": {
+  "non_flood_phenomena": 5,
+  "missing_product_timestamp": 0,
+  "missing_event_identity": 0,
+  "available_after_final_expire": 0
+ },
+ "raw_product_sample_validation": [
+  {
+   "event_key": "2016-SHV-FF-A-0003",
+   "product_id": "201604180654-KSHV-WGUS64-FFASHV",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  },
+  {
+   "event_key": "2016-SHV-FA-Y-0009",
+   "product_id": "201604181245-KSHV-WGUS84-FLSSHV",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0066",
+   "product_id": "201604181310-KSHV-WGUS44-FLWSHV",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0067",
+   "product_id": "201604181310-KSHV-WGUS44-FLWSHV",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0069",
+   "product_id": "201604181324-KSHV-WGUS44-FLWSHV",
+   "raw_product_found": true,
+   "vtec_token_present": true
+  }
+ ],
+ "n_events": 7,
+ "events": [
+  {
+   "event_key": "2016-SHV-FF-A-0003",
+   "wfo": "SHV",
+   "phenomena": "FF",
+   "significance": "A",
+   "etn": 3,
+   "name": "Flash Flood Watch",
+   "hvtec_nwsli": "00000",
+   "product_id": "201604180654-KSHV-WGUS64-FFASHV",
+   "available_at": "2016-04-18T06:54:00Z",
+   "begins_at": "2016-04-18T08:00:00Z",
+   "audit_final_expire": "2016-04-19T08:31:00Z",
+   "ugcs": [
+    "TXZ149"
+   ]
+  },
+  {
+   "event_key": "2016-SHV-FA-Y-0009",
+   "wfo": "SHV",
+   "phenomena": "FA",
+   "significance": "Y",
+   "etn": 9,
+   "name": "Flood Advisory",
+   "hvtec_nwsli": "00000",
+   "product_id": "201604181245-KSHV-WGUS84-FLSSHV",
+   "available_at": "2016-04-18T12:45:00Z",
+   "begins_at": "2016-04-18T12:45:00Z",
+   "audit_final_expire": "2016-04-18T15:45:00Z",
+   "ugcs": [
+    "TXC073"
+   ]
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0066",
+   "wfo": "SHV",
+   "phenomena": "FL",
+   "significance": "W",
+   "etn": 66,
+   "name": "Flood Warning",
+   "hvtec_nwsli": "NCST2",
+   "product_id": "201604181310-KSHV-WGUS44-FLWSHV",
+   "available_at": "2016-04-18T13:10:00Z",
+   "begins_at": "2016-04-19T01:45:00Z",
+   "audit_final_expire": "2016-05-16T12:00:00Z",
+   "ugcs": [
+    "TXC073"
+   ]
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0067",
+   "wfo": "SHV",
+   "phenomena": "FL",
+   "significance": "W",
+   "etn": 67,
+   "name": "Flood Warning",
+   "hvtec_nwsli": "ATOT2",
+   "product_id": "201604181310-KSHV-WGUS44-FLWSHV",
+   "available_at": "2016-04-18T13:10:00Z",
+   "begins_at": "2016-04-18T16:49:00Z",
+   "audit_final_expire": "2016-05-17T14:54:00Z",
+   "ugcs": [
+    "TXC073"
+   ]
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0069",
+   "wfo": "SHV",
+   "phenomena": "FL",
+   "significance": "W",
+   "etn": 69,
+   "name": "Flood Warning",
+   "hvtec_nwsli": "JKST2",
+   "product_id": "201604181324-KSHV-WGUS44-FLWSHV",
+   "available_at": "2016-04-18T13:24:00Z",
+   "begins_at": "2016-04-19T05:41:00Z",
+   "audit_final_expire": "2016-04-21T14:31:00Z",
+   "ugcs": [
+    "TXC073"
+   ]
+  },
+  {
+   "event_key": "2016-SHV-FF-A-0004",
+   "wfo": "SHV",
+   "phenomena": "FF",
+   "significance": "A",
+   "etn": 4,
+   "name": "Flash Flood Watch",
+   "hvtec_nwsli": "00000",
+   "product_id": "201604200718-KSHV-WGUS64-FFASHV",
+   "available_at": "2016-04-20T07:18:00Z",
+   "begins_at": "2016-04-20T07:18:00Z",
+   "audit_final_expire": "2016-04-21T15:54:00Z",
+   "ugcs": [
+    "TXZ149"
+   ]
+  },
+  {
+   "event_key": "2016-SHV-FL-W-0089",
+   "wfo": "SHV",
+   "phenomena": "FL",
+   "significance": "W",
+   "etn": 89,
+   "name": "Flood Warning",
+   "hvtec_nwsli": "LUFT2",
+   "product_id": "201604252237-KSHV-WGUS44-FLWSHV",
+   "available_at": "2016-04-25T22:37:00Z",
+   "begins_at": "2016-04-25T22:37:00Z",
+   "audit_final_expire": "2016-05-15T15:01:00Z",
+   "ugcs": [
+    "TXC073"
+   ]
+  }
+ ]
+}

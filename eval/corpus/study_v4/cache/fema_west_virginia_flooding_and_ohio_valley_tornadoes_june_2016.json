@@ -1,0 +1,200 @@
+[
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Summers (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "089",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Randolph (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "083",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Fayette (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "019",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Pocahontas (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "075",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Jackson (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "035",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Kanawha (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "039",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Lincoln (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "043",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Nicholas (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "067",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Wayne (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "099",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Roane (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "087",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Upshur (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "097",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Greenbrier (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "025",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Clay (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "015",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Webster (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "101",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Gilmer (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "021",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Lewis (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "041",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Monroe (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "063",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS, FLOODING, LANDSLIDES, AND MUDSLIDES",
+  "declarationType": "DR",
+  "designatedArea": "Braxton (County)",
+  "disasterNumber": 4273,
+  "fipsCountyCode": "007",
+  "fipsStateCode": "54",
+  "incidentBeginDate": "2016-06-22T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "WV"
+ }
+]

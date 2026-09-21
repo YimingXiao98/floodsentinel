@@ -1,0 +1,23 @@
+{
+  "adaptive_acquisitions": 526,
+  "adaptive_current_runtime_logical_report_delivery_opportunities": 526,
+  "adaptive_hypothetical_logical_report_delivery_opportunities_if_materiality_gated": 391,
+  "adaptive_material_acquisitions": 391,
+  "all_county_primary_truth_known_duration_hours": 1102.0,
+  "all_county_primary_truth_known_duration_proportion": 0.7064,
+  "all_county_primary_truth_unknown_duration_hours": 458.0,
+  "analysis_interval_convention": "[analysis_start,analysis_end)",
+  "coverage_pooling_note": "all-county coverage includes coverage-only counties; episode and latency denominators use only analysis_role=episode_evaluation",
+  "episode_evaluation_primary_truth_known_duration_hours": 1102.0,
+  "episode_evaluation_primary_truth_known_duration_proportion": 0.883,
+  "episode_evaluation_primary_truth_unknown_duration_hours": 146.0,
+  "episode_observation_rate": 0.8333,
+  "episodes_observed_by_adaptive_schedule": 5,
+  "evaluation_interval_seconds": 900,
+  "n_counties": 5,
+  "n_coverage_only_counties": 1,
+  "n_episode_evaluation_counties": 4,
+  "observed_flood_episodes": 6,
+  "pooling_note": "descriptive county-episode sums only; common-grid points are not treated as independent inferential samples",
+  "schema": "sentinel-study-aggregate/3"
+}

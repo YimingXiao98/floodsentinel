@@ -1,0 +1,172 @@
+#!/usr/bin/env bash
+# Run analyst cycle from natural-language input; Slack delivery is automatic.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SENTINEL_CLI="${ROOT}/bin/sentinel-cli"
+GEO_DIR="${ROOT}/skills/county-flood-data"
+SERVICES_DIR="${ROOT}/skills/disaster-scout/services"
+export SENTINEL_OUTPUT_ONTOLOGY="${SENTINEL_OUTPUT_ONTOLOGY:-v1}"
+
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: run-analyst <request> [--no-slack]" >&2
+  echo 'Example: run-analyst "Situation report for Miami-Dade County, Florida"' >&2
+  exit 1
+fi
+
+exec "$PYTHON" - "$SENTINEL_CLI" "$GEO_DIR" "$SERVICES_DIR" "$@" <<'PY'
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+sentinel_cli, geo_dir, services_dir = sys.argv[1:4]
+tokens = sys.argv[4:]
+no_slack = False
+if "--no-slack" in tokens:
+    no_slack = True
+    tokens = [t for t in tokens if t != "--no-slack"]
+raw = " ".join(tokens).strip()
+if not raw:
+    print("ERROR: missing request text", file=sys.stderr)
+    sys.exit(1)
+
+FIPS_RE = re.compile(r"(?:--fips\s+|fips[:\s]+)(\d{5})", re.I)
+DISASTER_PREFIX = re.compile(
+    r"^(?:(?:monitor|check|watch|analyze|analyse|run|situation)(?:\s+report)?(?:\s+for)?\s+|report\s+for\s+)?"
+    r"(?:flood(?:ing|s)?\s+)?"
+    r"(?:for\s+)?",
+    re.I,
+)
+
+
+def _resolve_location(text: str):
+    fips_match = FIPS_RE.search(text)
+    if fips_match:
+        return [(None, None, fips_match.group(1))]
+
+    cleaned = DISASTER_PREFIX.sub("", text).strip()
+    geo = Path(geo_dir)
+    if geo.is_dir() and str(geo) not in sys.path:
+        sys.path.insert(0, str(geo))
+    services = Path(services_dir)
+    if services.is_dir() and str(services) not in sys.path:
+        sys.path.insert(0, str(services))
+
+    def _lookup(county: str | None, state: str | None, fips: str | None = None):
+        if fips:
+            return county, state, fips
+        if not county or not state:
+            return None, None, None
+        try:
+            from county_flood.geo import resolve_fips  # type: ignore
+
+            resolved = resolve_fips(county, state)
+            if resolved:
+                return county, state, resolved
+        except Exception:
+            pass
+        try:
+            from county_resolver import resolve_county  # type: ignore
+
+            row = resolve_county(county, state)
+            if row:
+                return (
+                    row.get("county_name") or county,
+                    row.get("state") or state,
+                    row.get("county_fips"),
+                )
+        except Exception:
+            pass
+        return county, state, None
+
+    try:
+        from county_flood.geo import parse_location  # type: ignore
+
+        parsed = parse_location(cleaned)
+        if parsed:
+            county, state = parsed
+            county, state, fips = _lookup(county, state)
+            if fips:
+                return [(county, state, fips)]
+            if " " in county:
+                multi: list[tuple] = []
+                for part in county.split():
+                    c, s, fp = _lookup(part.strip(), state)
+                    if fp:
+                        multi.append((c, s, fp))
+                if multi:
+                    return multi
+            return [(county, state, fips)]
+    except Exception:
+        pass
+
+    try:
+        from county_resolver import resolve_from_prompt, resolve_county  # type: ignore
+
+        resolved = resolve_from_prompt(cleaned)
+        if resolved:
+            return [
+                (
+                    resolved.get("county_name"),
+                    resolved.get("state"),
+                    resolved.get("county_fips"),
+                )
+            ]
+        m = re.match(r"^(.+?)\s+County,\s*(.+)$", cleaned, re.I)
+        if m:
+            resolved = resolve_county(m.group(1).strip(), m.group(2).strip())
+            if resolved:
+                return [
+                    (
+                        resolved.get("county_name"),
+                        resolved.get("state"),
+                        resolved.get("county_fips"),
+                    )
+                ]
+    except Exception:
+        pass
+    return [(None, None, None)]
+
+
+def _run(cmd: list[str]) -> int:
+    return subprocess.run(cmd, check=False).returncode
+
+
+locations = _resolve_location(raw)
+valid = [loc for loc in locations if loc[2] or (loc[0] and loc[1])]
+if not valid or (len(valid) == 1 and not valid[0][2] and not (valid[0][0] and valid[0][1])):
+    print(f"ERROR: could not resolve county/state/FIPS from: {raw!r}", file=sys.stderr)
+    sys.exit(1)
+
+exit_code = 0
+for county, state, fips in valid:
+    cmd = [sentinel_cli, "run-analyst"]
+    if no_slack:
+        cmd.append("--no-slack")
+    if fips:
+        cmd.extend(["--fips", str(fips).zfill(5)])
+        if county and state:
+            cmd.extend(["--county", county, "--state", state])
+    elif county and state:
+        cmd.extend(["--county", county, "--state", state])
+    else:
+        continue
+    if len(valid) > 1:
+        label = county or fips
+        print(f"\n{'=' * 56}\n  County: {label}, {state or ''}\n{'=' * 56}\n", flush=True)
+    rc = _run(cmd)
+    if rc != 0:
+        exit_code = rc
+
+sys.exit(exit_code)
+PY

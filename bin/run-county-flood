@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+# Run county-flood-data from a natural-language location string (+ optional CLI flags).
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SENTINEL_CLI="${ROOT}/bin/sentinel-cli"
+SKILL_DIR="${ROOT}/skills/county-flood-data"
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: run-county-flood <location> [--source-flags...]" >&2
+  echo "Example: run-county-flood \"Harris County, Texas\" --source usgs" >&2
+  exit 1
+fi
+
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+
+# OpenClaw skill dispatch passes "Harris County, Texas --flags..." as one quoted arg.
+# Split location from trailing CLI flags at the first token starting with "--".
+readarray -t _PARSED < <(
+  "$PYTHON" - "$@" <<'PY'
+import shlex
+import sys
+
+tokens = shlex.split(" ".join(sys.argv[1:]))
+flag_idx = next((i for i, token in enumerate(tokens) if token.startswith("--")), len(tokens))
+location = " ".join(tokens[:flag_idx]).strip()
+extras = tokens[flag_idx:]
+print(location)
+for extra in extras:
+    print(extra)
+PY
+)
+
+LOCATION="${_PARSED[0]}"
+EXTRA_ARGS=()
+if ((${#_PARSED[@]} > 1)); then
+  EXTRA_ARGS=("${_PARSED[@]:1}")
+fi
+
+if [[ -z "$LOCATION" ]]; then
+  echo "ERROR: missing location (expected \"County, ST\" before any --flags)" >&2
+  exit 1
+fi
+
+# Default to all sources unless caller passes --source explicitly.
+has_source=false
+for arg in "${EXTRA_ARGS[@]}"; do
+  if [[ "$arg" == "--source" ]]; then
+    has_source=true
+    break
+  fi
+done
+if [[ "$has_source" == false ]]; then
+  EXTRA_ARGS=(--source all "${EXTRA_ARGS[@]}")
+fi
+
+export PYTHONPATH="${SKILL_DIR}${PYTHONPATH:+:$PYTHONPATH}"
+
+exec "$PYTHON" "${SKILL_DIR}/main.py" --location "$LOCATION" --format human "${EXTRA_ARGS[@]}"

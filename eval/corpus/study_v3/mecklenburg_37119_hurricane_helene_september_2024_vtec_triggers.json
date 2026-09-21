@@ -1,0 +1,154 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Mecklenburg",
+  "state": "NC",
+  "fips": "37119",
+  "generated_at": "2026-08-20T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2024-09-22",
+    "end": "2024-10-04"
+  },
+  "fetch_window": {
+    "start": "2024-09-19",
+    "end": "2024-10-04"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "NCC119",
+    "zones": [
+      "NCZ071"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "NCC119": 7,
+    "NCZ071": 3
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 5,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2024-GSP-FA-A-0008",
+      "product_id": "202409261511-KGSP-WGUS62-FFAGSP",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-GSP-FF-W-0066",
+      "product_id": "202409262154-KGSP-WGUS52-FFWGSP",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-GSP-FA-Y-0171",
+      "product_id": "202409270128-KGSP-WGUS82-FLSGSP",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-GSP-FF-W-0099",
+      "product_id": "202409270957-KGSP-WGUS52-FFWGSP",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-GSP-FA-W-0043",
+      "product_id": "202409300146-KGSP-WGUS42-FLWGSP",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 5,
+  "events": [
+    {
+      "event_key": "2024-GSP-FA-A-0008",
+      "wfo": "GSP",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 8,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202409261511-KGSP-WGUS62-FFAGSP",
+      "available_at": "2024-09-26T15:11:00Z",
+      "begins_at": "2024-09-26T15:11:00Z",
+      "audit_final_expire": "2024-09-27T18:00:00Z",
+      "ugcs": [
+        "NCZ071"
+      ]
+    },
+    {
+      "event_key": "2024-GSP-FF-W-0066",
+      "wfo": "GSP",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 66,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202409262154-KGSP-WGUS52-FFWGSP",
+      "available_at": "2024-09-26T21:54:00Z",
+      "begins_at": "2024-09-26T21:54:00Z",
+      "audit_final_expire": "2024-09-30T01:45:00Z",
+      "ugcs": [
+        "NCC119"
+      ]
+    },
+    {
+      "event_key": "2024-GSP-FA-Y-0171",
+      "wfo": "GSP",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 171,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202409270128-KGSP-WGUS82-FLSGSP",
+      "available_at": "2024-09-27T01:28:00Z",
+      "begins_at": "2024-09-27T01:28:00Z",
+      "audit_final_expire": "2024-09-27T08:00:00Z",
+      "ugcs": [
+        "NCC119"
+      ]
+    },
+    {
+      "event_key": "2024-GSP-FF-W-0099",
+      "wfo": "GSP",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 99,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202409270957-KGSP-WGUS52-FFWGSP",
+      "available_at": "2024-09-27T09:57:00Z",
+      "begins_at": "2024-09-27T09:57:00Z",
+      "audit_final_expire": "2024-09-27T18:00:00Z",
+      "ugcs": [
+        "NCC119"
+      ]
+    },
+    {
+      "event_key": "2024-GSP-FA-W-0043",
+      "wfo": "GSP",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 43,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202409300146-KGSP-WGUS42-FLWGSP",
+      "available_at": "2024-09-30T01:46:00Z",
+      "begins_at": "2024-09-30T01:46:00Z",
+      "audit_final_expire": "2024-10-02T06:00:00Z",
+      "ugcs": [
+        "NCC119"
+      ]
+    }
+  ]
+}

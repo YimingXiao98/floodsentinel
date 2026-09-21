@@ -1,0 +1,157 @@
+{
+  "schema": "sentinel-v4-selection-provenance-addendum/1",
+  "purpose": "binds the OpenFEMA DisasterDeclarationsSummaries responses that drove v4 held-out candidate enumeration",
+  "selection": "eval/corpus/study_v4/holdout_selection.json",
+  "selection_sha256": "59eddd828f6bfb2f7716c4bf8edf33483c07f3252ea5a393a26b6bfb285683ef",
+  "ncei_events_csv": "eval/corpus/study_v3/ncei_events_us.csv",
+  "ncei_events_csv_sha256": "fbe9bbcba93bd90e8e49aed9ca6f93869c5d136b1903ea00c50f8bc9ef36b976",
+  "registry_csv": "skills/county-flood-data/nwps_all_gauges_report.csv",
+  "registry_csv_sha256": "a38823604d8b1bef8e211fd422e5ee32a0b7fb3668e1f510de80ac678ea3f964",
+  "fema_query_cache": [
+    {
+      "path": "eval/corpus/study_v4/cache/fema_california_flooding_and_severe_weather_january_2021.json",
+      "sha256": "4341a50ddd5917d3ba58393079e5a268a264201cb0ae5546a1a39261906805ed",
+      "bytes": 1544
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_east_coast_storm_and_flooding_december_2023.json",
+      "sha256": "68fe66c99834fda211053aa699b61c8019da60505f8fab01b25cb689668643a2",
+      "bytes": 7047
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_fort_lauderdale_flash_flood_april_2023.json",
+      "sha256": "39a8ff7c7126c5bdde314fc067eb8817374ea4be1de765ae16d9044f1a67513d",
+      "bytes": 19321
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_houston_flooding_april_2016.json",
+      "sha256": "c41719b35e93b74228849896232cae4ce9075319e4ae639c60dd433932994ea4",
+      "bytes": 9655
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_debby_august_2024.json",
+      "sha256": "a61a459972d923d24b19525b3bcbc166e8d5e26ff3422ff1098ec9a7ea21135e",
+      "bytes": 55398
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_delta_october_2020.json",
+      "sha256": "9a581eec63b69a94c3548803f62fc9aedff055a311b59ac54c09cfcba7afc251",
+      "bytes": 18767
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_dorian_september_2019.json",
+      "sha256": "bfd0c866e04792b9ad5c8775c4672113270d8a9fd7cbeaf1d45c533ed7d2efb1",
+      "bytes": 23729
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_fiona_september_2022.json",
+      "sha256": "744e3a2a2a6c818b57b702b1b640ad291ae3eef715e3fe0309b9946ceaf88c3f",
+      "bytes": 46688
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_francine_september_2024.json",
+      "sha256": "d79e0ce534c2f972d0febe20c49edd8913640df6eedb03de6902f37e71953b53",
+      "bytes": 8435
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_hanna_july_2020.json",
+      "sha256": "090b8e0387803a578a488d74f5d448aed8850c3d6a3b4b7302c3ede6ed176b06",
+      "bytes": 5854
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_ian_september_2022.json",
+      "sha256": "1008e65fbefadb3b34d628f7aa4e2eabb05854b619439b95e07ef2cc1d1cdb9e",
+      "bytes": 35570
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_idalia_august_2023.json",
+      "sha256": "5da9cdfe180460f9512a42fc34d501d942b5f051cf9f6a36da04662cfa0da468",
+      "bytes": 28327
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_isaias_august_2020.json",
+      "sha256": "b2441715c8b9dd83dd987517165e26af2d828724db0467b502e49daadb3a99ca",
+      "bytes": 15864
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_laura_august_2020.json",
+      "sha256": "97623c203ed393b009949374ca7137ac08998280c2369197e816d19f214e70b2",
+      "bytes": 23890
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_maria_september_2017.json",
+      "sha256": "74a23d9a068205dac4524681e63297bcb12e31a7c9852c3ab7d19057a7add0f5",
+      "bytes": 23932
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_nicholas_september_2021.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_nicole_november_2022.json",
+      "sha256": "8f7ab0ddb46fb981ea6c1f8543cf1e76807df3058bb71085e50985f8daced18a",
+      "bytes": 20740
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_hurricane_zeta_october_2020.json",
+      "sha256": "47e6641af060ec1c8a13dc3cc5ee3b7c2b08915103e16af7132bbb14eb23309d",
+      "bytes": 33598
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_kentucky_and_missouri_flooding_july_2022.json",
+      "sha256": "862a13c4cc18c17a150d08622d4be41f7686e43d3736ce242881f7879794ad3c",
+      "bytes": 7917
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_louisiana_flooding_may_2021.json",
+      "sha256": "ab8e4e1ad601247b521250e7ebc9f7102776daa027f8fca78f023928d44f0335",
+      "bytes": 2195
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_northeastern_flooding_and_north_central_severe_weather_july_2023.json",
+      "sha256": "3821af10193f4e49fbe7f1f3e3b4d65ea4804195acf8a6885f6c252e52be010f",
+      "bytes": 18034
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_texas_and_louisiana_flooding_march_2016.json",
+      "sha256": "e6cd0aeeba266acaee69ff5aa8b971c30d904bb3d0a86a6a9c3438460528ba8f",
+      "bytes": 30285
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_tropical_storm_elsa_july_2021.json",
+      "sha256": "f9273dbeca2a0d95a9bcdf5d0a34ba6a75111fe9016d9e9968b498f4ec302bd4",
+      "bytes": 6386
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_tropical_storm_eta_november_2020.json",
+      "sha256": "9f663d17f9a8f7a8a27febfc06cfd5b38d72962b676f52f2635f91d7ef6a2d44",
+      "bytes": 5642
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_tropical_storm_fred_august_2021.json",
+      "sha256": "7ab762243dba0ec5dbb16f9198fdfc53c1e567c1788d007078ec610939217a24",
+      "bytes": 7887
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_tropical_storm_imelda_september_2019.json",
+      "sha256": "a7ef44cae47b23b7b2282e9e99373ed580f89f8eb9a92369216bcdde9aa9a661",
+      "bytes": 2062
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_typhoon_mawar_may_2023.json",
+      "sha256": "1e22e3546d7cec4fbeaf1579b4ab369484ac056a1e4eee21c2704e9dc1d66c41",
+      "bytes": 1195
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_upper_midwest_flooding_june_2024.json",
+      "sha256": "98bfc5187b667551a2de844e8d125586f2ddb180d35fd49c87cdea6817a817d2",
+      "bytes": 40949
+    },
+    {
+      "path": "eval/corpus/study_v4/cache/fema_west_virginia_flooding_and_ohio_valley_tornadoes_june_2016.json",
+      "sha256": "fbc1bd94e80c0b3882ad721bc7bd88834a7112720dbfe005437be5792499aba3",
+      "bytes": 5795
+    }
+  ]
+}

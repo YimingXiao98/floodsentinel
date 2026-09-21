@@ -1,0 +1,111 @@
+marion_12083_2022-09-26: 72 runs in 45s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+caguas_72025_2017-09-17: 72 runs in 34s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+newton_48351_2020-08-25: 72 runs in 31s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+orange_48361_2019-09-15: 72 runs in 97s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+new_castle_10003_2020-08-01: 72 runs in 36s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+harrison_28047_2020-10-26: 72 runs in 57s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+sarasota_12115_2023-08-27: 72 runs in 34s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+cherokee_48073_2016-04-15: 72 runs in 22s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+acadia_22001_2020-10-07: 72 runs in 11s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+ascension_22005_2016-03-06: 72 runs in 53s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+ponce_72113_2022-09-15: 72 runs in 33s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+delaware_36025_2024-08-03: 72 runs in 51s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+washington_50023_2023-07-07: 72 runs in 40s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+berkeley_45015_2019-08-26: 72 runs in 38s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+robeson_37155_2020-11-06: 72 runs in 27s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+ascension_22005_2021-05-15: 72 runs in 65s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+lee_21129_2022-07-24: 72 runs in 30s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+steuben_36101_2021-08-14: 72 runs in 54s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+penobscot_23019_2023-12-14: 72 runs in 48s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+st__tammany_22103_2024-09-09: 72 runs in 60s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+braxton_54007_2016-06-20: 72 runs in 31s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+marshall_27089_2023-04-10: 72 runs in 29s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+douglas_31055_2024-06-14: 72 runs in 114s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+seminole_12117_2022-11-08: 72 runs in 32s; sanity {'hybrid_offset0_matches_frozen': True, 'adaptive_offset0_matches_frozen': True}
+{
+ "county_events": 24,
+ "offsets": 24,
+ "offset_step_seconds": 900,
+ "base_interval_seconds": 21600,
+ "sanity_all_offset0_match_frozen": true,
+ "frozen_reference_pooled": {
+  "matched_median_unobserved": 82.625,
+  "fixed_3h_median_unobserved": 60.625,
+  "matched_median_episodes": 34.0
+ },
+ "across_offsets": {
+  "hybrid": {
+   "pooled_unobserved": {
+    "min": 46.0,
+    "median": 52.625,
+    "max": 64.25
+   },
+   "pooled_episodes": {
+    "min": 33,
+    "median": 35.0,
+    "max": 38
+   },
+   "pooled_acquisitions": {
+    "min": 2114,
+    "median": 2125.5,
+    "max": 2135
+   }
+  },
+  "adaptive": {
+   "pooled_unobserved": {
+    "min": 78.5,
+    "median": 103.875,
+    "max": 120.75
+   },
+   "pooled_episodes": {
+    "min": 31,
+    "median": 33.5,
+    "max": 36
+   },
+   "pooled_acquisitions": {
+    "min": 1601,
+    "median": 1675.5,
+    "max": 1701
+   }
+  },
+  "phase_free": {
+   "pooled_unobserved": {
+    "min": 47.5,
+    "median": 56.0,
+    "max": 64.0
+   },
+   "pooled_episodes": {
+    "min": 32,
+    "median": 33.0,
+    "max": 36
+   },
+   "pooled_acquisitions": {
+    "min": 1674,
+    "median": 1698.5,
+    "max": 1706
+   }
+  }
+ },
+ "hybrid_wins_vs_matched_median_across_offsets": {
+  "min": 18,
+  "median": 20.0,
+  "max": 21
+ },
+ "hybrid_wins_vs_fixed3h_median_across_offsets": {
+  "min": 13,
+  "median": 16.5,
+  "max": 20
+ },
+ "hybrid_wins_vs_phase_free_across_offsets": {
+  "min": 0,
+  "median": 2.0,
+  "max": 3
+ },
+ "hybrid_losses_vs_phase_free_across_offsets": {
+  "min": 0,
+  "median": 0.0,
+  "max": 1
+ },
+ "offsets_where_hybrid_wins_at_least_20_of_24_vs_matched": 15,
+ "seconds_total": 1072.7
+}

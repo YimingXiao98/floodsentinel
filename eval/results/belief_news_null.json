@@ -1,0 +1,897 @@
+{
+  "analysis_label": "analysis-contract architectural null audit",
+  "comparisons": {
+    "full_with_news_vs_full_without_news": {
+      "all_operational_outputs_exact_equal": true,
+      "components": {
+        "acquisition_cadence": {
+          "exact_equal": true,
+          "left_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "right_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7"
+        },
+        "alert_timeline": {
+          "exact_equal": true,
+          "left_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "right_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1"
+        },
+        "flood_verdict_timeline": {
+          "exact_equal": true,
+          "left_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "right_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08"
+        },
+        "phase_timeline": {
+          "exact_equal": true,
+          "left_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "right_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899"
+        },
+        "recovery_timeline": {
+          "exact_equal": true,
+          "left_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "right_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5"
+        },
+        "termination": {
+          "exact_equal": true,
+          "left_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f",
+          "right_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        }
+      },
+      "left": "full_with_news",
+      "right": "full_without_news",
+      "t2_admitted_claim_event_delta_right_minus_left": 0,
+      "unequal_components": []
+    },
+    "full_with_news_vs_no_belief_with_news": {
+      "all_operational_outputs_exact_equal": true,
+      "components": {
+        "acquisition_cadence": {
+          "exact_equal": true,
+          "left_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "right_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7"
+        },
+        "alert_timeline": {
+          "exact_equal": true,
+          "left_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "right_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1"
+        },
+        "flood_verdict_timeline": {
+          "exact_equal": true,
+          "left_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "right_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08"
+        },
+        "phase_timeline": {
+          "exact_equal": true,
+          "left_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "right_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899"
+        },
+        "recovery_timeline": {
+          "exact_equal": true,
+          "left_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "right_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5"
+        },
+        "termination": {
+          "exact_equal": true,
+          "left_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f",
+          "right_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        }
+      },
+      "left": "full_with_news",
+      "right": "no_belief_with_news",
+      "t2_admitted_claim_event_delta_right_minus_left": 590,
+      "unequal_components": []
+    },
+    "full_without_news_vs_no_belief_without_news": {
+      "all_operational_outputs_exact_equal": true,
+      "components": {
+        "acquisition_cadence": {
+          "exact_equal": true,
+          "left_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "right_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7"
+        },
+        "alert_timeline": {
+          "exact_equal": true,
+          "left_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "right_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1"
+        },
+        "flood_verdict_timeline": {
+          "exact_equal": true,
+          "left_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "right_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08"
+        },
+        "phase_timeline": {
+          "exact_equal": true,
+          "left_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "right_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899"
+        },
+        "recovery_timeline": {
+          "exact_equal": true,
+          "left_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "right_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5"
+        },
+        "termination": {
+          "exact_equal": true,
+          "left_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f",
+          "right_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        }
+      },
+      "left": "full_without_news",
+      "right": "no_belief_without_news",
+      "t2_admitted_claim_event_delta_right_minus_left": 0,
+      "unequal_components": []
+    },
+    "no_belief_with_news_vs_no_belief_without_news": {
+      "all_operational_outputs_exact_equal": true,
+      "components": {
+        "acquisition_cadence": {
+          "exact_equal": true,
+          "left_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "right_sha256": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7"
+        },
+        "alert_timeline": {
+          "exact_equal": true,
+          "left_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "right_sha256": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1"
+        },
+        "flood_verdict_timeline": {
+          "exact_equal": true,
+          "left_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "right_sha256": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08"
+        },
+        "phase_timeline": {
+          "exact_equal": true,
+          "left_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "right_sha256": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899"
+        },
+        "recovery_timeline": {
+          "exact_equal": true,
+          "left_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "right_sha256": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5"
+        },
+        "termination": {
+          "exact_equal": true,
+          "left_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f",
+          "right_sha256": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        }
+      },
+      "left": "no_belief_with_news",
+      "right": "no_belief_without_news",
+      "t2_admitted_claim_event_delta_right_minus_left": -590,
+      "unequal_components": []
+    }
+  },
+  "design": {
+    "claim_instrumentation": "non-mutating observer around watcher.claims.validate.filter_claims_by_phase; the original function executes unchanged",
+    "factorial_cells": [
+      "full_with_news",
+      "no_belief_with_news",
+      "full_without_news",
+      "no_belief_without_news"
+    ],
+    "news_construct": {
+      "as_of_field": "GKG_V2_1_DATE",
+      "as_of_semantics": "GKG 2.1 document publication timestamp at 15-minute resolution; not an independently recovered precise page timestamp",
+      "corpus_selected_by": "GDELT location entities matching the frozen Harris/Houston place terms; URLs deduplicated by retaining the first record",
+      "inference_boundary": "article and claim counts characterize this title-only proxy, not general news-evidence quality; operational equality is structurally expected from the downstream T2 veto",
+      "scored_content": "title repeated as title/snippet with the corpus county/state supplied as a synthetic dateline; archived article body absent",
+      "usable_title_filter": "URL-derived title must contain at least four alphabetic words"
+    },
+    "news_feed_reuse": "one immutable parsed ArchivedNewsFeed instance is shared by the two with-news cells; lookup and scoring execute independently at every replay acquisition",
+    "news_source_coverage": {
+      "as_of_field": "GKG_V2_1_DATE",
+      "as_of_semantics": "GKG 2.1 document publication timestamp at 15-minute resolution; not an independently recovered precise page timestamp",
+      "corpus_sha256": "7d5ac76193c9355f1d9143510b0cbade73c001ac6026d0332e71c929d7dc0404",
+      "corpus_window": {
+        "end": "20170907",
+        "start": "20170823"
+      },
+      "maximum_missing_slice_fraction": 0.02,
+      "missing_slices": [
+        "20170823011500",
+        "20170823023000",
+        "20170824224500",
+        "20170825221500",
+        "20170826020000",
+        "20170827231500",
+        "20170828011500",
+        "20170828221500",
+        "20170828230000",
+        "20170829224500",
+        "20170830010000",
+        "20170830030000",
+        "20170831020000",
+        "20170831213000",
+        "20170831220000",
+        "20170901191500",
+        "20170901214500",
+        "20170902073000",
+        "20170904010000",
+        "20170905221500",
+        "20170906040000"
+      ],
+      "required_window": {
+        "end": "2017-09-06T05:00:00Z",
+        "lookback_hours": 24.0,
+        "start": "2017-08-23T05:00:00Z"
+      },
+      "slice_coverage_fraction": 0.985417,
+      "slices_missing": 21,
+      "slices_swept": 1440
+    },
+    "operational_projection_components": [
+      "phase_timeline",
+      "alert_timeline",
+      "flood_verdict_timeline",
+      "acquisition_cadence",
+      "recovery_timeline",
+      "termination"
+    ],
+    "parameters": {
+      "ablated_uniform_confidence_display_only": 0.75,
+      "article_detector_min_page_score_strictly_greater_than": 0.75,
+      "county_flood_min_gauges": 5,
+      "max_staleness_hours": 6.0,
+      "news_candidate_limit": 120,
+      "news_detector_top_n": 5,
+      "news_lookback_hours": 24.0,
+      "nws_system_input": null,
+      "recovery_min_clear_hours": 48.0,
+      "tier_weight": 1.0
+    },
+    "system_path": "eval.run_replay.run (current production extraction/admission/phase path)",
+    "window": {
+      "convention": "half-open [start,end)",
+      "end": "2017-09-06T05:00:00Z",
+      "start": "2017-08-24T05:00:00Z"
+    }
+  },
+  "headline_result": {
+    "all_six_operational_components_exact_equal_in_all_four_comparisons": true,
+    "detector_selected_positive_article_events": 590,
+    "detector_selected_positive_unique_urls": 590,
+    "full_t2_admitted_claim_events": 0,
+    "full_t2_rejected_claim_events": 590,
+    "no_belief_t2_admitted_claim_events": 590,
+    "no_belief_t2_rejected_claim_events": 0,
+    "structurally_valid_t2_claim_events": 590
+  },
+  "interpretation": {
+    "belief_ablation_operational_equality_with_news": true,
+    "belief_ablation_operational_equality_without_news": true,
+    "expected_by_current_architecture": true,
+    "inference_boundary": "Exact equality is expected under the downstream T2 veto. It is a null/negative architecture result and is not evidence that the belief layer improves decision quality, calibration, or efficacy.",
+    "mechanism": "the regional flood verdict is computed from the official gauge payload, while the phase engine independently excludes T2/news/crowd claims from phase transitions, alert level, de-escalation, and recovery",
+    "news_operational_null_observed": true,
+    "outputs_not_claimed_equal": [
+      "accepted/rejected claim inventory",
+      "report body and raw news section",
+      "report-delta materiality counterfactual"
+    ]
+  },
+  "provenance": {
+    "implementation": {
+      "aggregate_sha256": "17e45dfb315dd1109d75faef78e42816097ec75275b8ef6f8b66c41786078fde",
+      "files": {
+        "eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "eval/ground_truth.py": "7d9b551502f91688d56c7fd70c48242174eb0de6b85c0c7e4644d35406c762e3",
+        "eval/news_archive.py": "0958e18be9113b40188a2b2dbbd120b86d367e42c144eb4af31f161f638f644a",
+        "eval/news_gdelt.py": "1d6f49a1ee031c8cb774e36eddcbbe907b67f3c88cc739cc866b1c90c5392ff1",
+        "eval/news_replay.py": "c19666312e1f86fb2b18655fb024564038d1ce3defd29a3279ed70e2d1af7781",
+        "eval/run_belief_null.py": "9f1e2a638e604524e3bef9621f0e0ad39c56a1482996bb9b3833afd5e9b79e4a",
+        "eval/run_replay.py": "93197316d2760058712dba51f2575bbae9b154899068fc4c71f9462f3534193c",
+        "skills/county-flood-data/county_flood/__init__.py": "ed46a2dc46dd81d104e8d2d729655f62de830412ecb31b38aaa67d13550863b4",
+        "skills/county-flood-data/county_flood/aggregator.py": "f1216c7113502f57699ad8761c72c3ca68f537fba2161a98fb5ee7d1e438892f",
+        "skills/county-flood-data/county_flood/api_resolution.py": "f32eeb90dcfda919c1bf1d0dea820292223c207667db09ecb1169f4b3cd3949e",
+        "skills/county-flood-data/county_flood/confidence.py": "003a22c33caf5742e05224351317842781ece20b5d4c56cf9fcc4340285dd754",
+        "skills/county-flood-data/county_flood/geo.py": "328eed4319cec83255cf936621b5ba6cd935572799166941242c639ac2ded160",
+        "skills/county-flood-data/county_flood/models.py": "9951789df4506ccc835ae725d1aa360acb65ccfab7df869a6f6192943c03e8f6",
+        "skills/county-flood-data/county_flood/runner.py": "0d8a3dfbe817a66c1766de9ff6978a611f3782cb562025a0b48afcc00bed65af",
+        "skills/county-flood-data/county_flood/sources/__init__.py": "96709b372aefd3dbf9055871fa0d82f01df78921bfa618eae3b85154577a36ef",
+        "skills/county-flood-data/county_flood/sources/fema_disasters.py": "bd15b3c745d941295013972461648d85c4e67891d95be500d09f370aa66c2582",
+        "skills/county-flood-data/county_flood/sources/gauge_delta.py": "ac3d0cf2d69e5dcd066529061346b417b73f82d496901b87fc2cd600d771ac26",
+        "skills/county-flood-data/county_flood/sources/nwps.py": "2400725ad081dcd584590edd2b3a8f08ca2376d5c00bc85ec47a60a6afd48f3c",
+        "skills/county-flood-data/county_flood/sources/nwps_enrich.py": "56d6ce3641b353570bbaa54f7036e8506212036f80b25d4ad14954f065c64395",
+        "skills/county-flood-data/county_flood/sources/nws_alerts.py": "51dca7e3af285ed32b27624bfac58f1a3ef9da39f9aba2874309a8c5a42d2252",
+        "skills/county-flood-data/county_flood/sources/selection.py": "a151b8052ed57873f960a8436041c0a0658b3e68d6ed28d7ef3984033e009fae",
+        "skills/county-flood-data/county_flood/sources/stages.py": "3cd86dad30fc44ae93674fa9bbb00e590ec5c1e05a29ccb4192dd23ab16836d8",
+        "skills/county-flood-data/county_flood/sources/usgs.py": "782504d6c9e32a2c1e80760d38bd99267449f40670f75602eb281be79b6b6ece",
+        "skills/county-flood-data/county_flood/sources/usgs_ogc.py": "341c6a56cbe59429690034d5ce67680c5d6a6e111febd1bb1a37d5388a420ed3",
+        "skills/flood-article-detector/article_scorer.py": "3669c73842b03c6998604efe623085101c8c06da8ce77d20f6b054ff3aa4f433",
+        "skills/flood-article-detector/article_search.py": "f8dab3db1c2f34cc6989984192e3e621629e06b6a4367679c05489837a8359b1",
+        "skills/flood-article-detector/article_verdict.py": "87d95f4538a1825e8ee385bd2aec21bc5cec12180aa4d2caaf9885d8e2eec4de",
+        "skills/flood-article-detector/main.py": "23ea9dbf5fa6c1995fd9765028ab539630207546fe7cdf1fa4a3ae901ac37a57",
+        "watcher/__init__.py": "9806b402f1f4b93bca7b5efb542b8b9c2a333bab07efc4b7ebbd15912a86ca5c",
+        "watcher/article_evidence_bridge.py": "2c2d5a9c6f03f119cb7efdbf7c5566089fe7a71e9020dc1a24f958a294e07a17",
+        "watcher/claims/__init__.py": "ef17e5a74f0f4361654b5cb8662f22499122e2ad5e082893255c733bac9b62ab",
+        "watcher/claims/confidence.py": "feff0c51d1b34cb2ba8b238f1594e9b9c5db3f1423a8c98c2f93f00d90405321",
+        "watcher/claims/extract.py": "c980ac5b8a8a2b52f4dab9f017f131d9a59241f3261d19ff488364886777c1f7",
+        "watcher/claims/extract_articles.py": "5ca79c168a7574056d5c69709a2b1c8de38681b9d4181fb6e5796c8348da1d45",
+        "watcher/claims/extract_county_flood.py": "d3e793ce6006d8e42c3b8939034896726feaf26984fea5ce0510f05649f615a2",
+        "watcher/claims/extract_nws.py": "a1e36e39deb23fe37de88f395422be60693ee28a74827962b653d27cd0e165c6",
+        "watcher/claims/extract_usgs.py": "b5c874c35594fe8df673a25a83013fd84567ef9d0d4c88c4760a533684ea963e",
+        "watcher/claims/models.py": "87670a17fbc382a7622b1dff994999ac51511111c116c0b5bc38f6c9a266c212",
+        "watcher/claims/validate.py": "ea32cee67053adf22decfa098b78b40580f9c94bbd7dcb0a1a1873e97cdfeac6",
+        "watcher/cli.py": "241318aa231c3bc11e5eb29a84a4e23070eb9b26deb3ca647ed518eb535ec1b6",
+        "watcher/config.py": "98a83b99bb1f36ea4c0a238826498f8c9e0bf0cde648b2ab30479f54de5d8f9e",
+        "watcher/county_flood_bridge.py": "6e9d2ddd95b39d6245a094a80b46daa2994697c74960c0f32f008189742e0cda",
+        "watcher/county_flood_evidence.py": "c0641b119d129fe8b0637054fa825829270c72c0787ecff2983037b10e5b0db8",
+        "watcher/fetch.py": "b8d50ae0e78e168fe905d3dd2efea5125df9d64d1b4d80641cc3eebff87165c1",
+        "watcher/format_analyst.py": "2e814215b9d28ce281923a82d16a6da5e3ad1330a98a56418855e8089671e534",
+        "watcher/format_ontology.py": "bd2427087dd52122301497a27e8f7c25ffb48f5a35fbf30113d058279dce58ac",
+        "watcher/format_report.py": "220d1bd6972108b6adcf6273ca45278fb72f0d1f1fdf95ce15f44fcce060742c",
+        "watcher/format_slack.py": "41a456a3abbfe08ecdbd2507418f9e789c4422f7465efc9386e6c3610453954c",
+        "watcher/geo_util.py": "a5e24cb6ec65c526b72faa032e214a66cf7353eba0e9e2f28234ae84c18d59b7",
+        "watcher/heartbeat_cron.py": "115174daa4461edb8e0b4d8123845ba4e4aa1b12dfc59988ef92c0d44fd8a7c9",
+        "watcher/neo4j_client.py": "8057fdbe46e6cd0e7d281c6330b4d3f1b6fdae29029e80b03995e5876eef2a99",
+        "watcher/ontology/__init__.py": "53b0825a22b43a36ba64259947fc4c55b3e1125a28466dacf4e326f495fa469a",
+        "watcher/ontology/adapters.py": "0ef0292c889c0f6b15dd3c1ece87b9a165837fe8b8482f7de2078560dfb840b3",
+        "watcher/ontology/belief_schema.py": "9246b48f3ac455edcb878d4f8713e11597648e258cd7d64a86ea7c5beb05a5d7",
+        "watcher/ontology/bridge.py": "729cf145d3f5c56b8966db66f76c29e9c235fe99e5a3e65cfa9b615400bd4f22",
+        "watcher/ontology/ledger.py": "a1a297db93f793d7624cfed7b0f84abae7b6d641e21473206ea2299a1de0fce3",
+        "watcher/ontology/output_schema.py": "2cfa4fc1384b9c4fa1e7ae41b2981183fecff33c591a971903d646454dcc870f",
+        "watcher/ontology/stub_monitoring.json": "aecc66ce62f4588195321adb774b7d5f224c313c2ad8753e50e96e891e1305f7",
+        "watcher/ontology/stub_sources.json": "436457e0beecfd1c4062dccf0ba09648284a9d7fe3b6da2eb2fc472be52fe282",
+        "watcher/phase_engine.py": "e291d73df1bcdb5a3ed0dddc49d3a2de8b54096e9d0e2e45cf3c47078e757c1c",
+        "watcher/replay.py": "4483d355666898891e2c3e2f2b52b2a2cd5d4c556aff3229d3b7f8aca5830afd",
+        "watcher/report_delta.py": "9200109eef331c68081b90deff40f9947a7707cdc1e281174bcd297991070c32",
+        "watcher/seen_articles.py": "21d9c409365cdf4a7ae23da66205b504380454f023967bd42af532fb257086fd",
+        "watcher/slack_delivery.py": "49c39af8f56ee6865f0d073026c148ee97702dc2d12834235ff2ccbbc86c60f4",
+        "watcher/slack_logger.py": "e7e90849c77c0409627e855d1d46b5307370df98c0d7cc199efd7186faf2fc43",
+        "watcher/sources/__init__.py": "a9fa66bf5c5aecdd680dfd92ddcfd3cdd5a950d1411c0bbb66fcc664b149d476",
+        "watcher/sources/county_api_resolver.py": "08e9fcd6867312df026de6dbfd1c1f598e79b1323e52badbf758e9501a5be925",
+        "watcher/timezone_util.py": "0070240c8485358c8eab8f16de053c19779ed4de7ee3201470ffe84148ea5467"
+      },
+      "rule": "sorted executed eval modules (run_belief_null, run_replay, news_replay, news_archive, news_gdelt, ground_truth), watcher/**/*.py, watcher/ontology/stub_*.json, skills/county-flood-data/county_flood/**/*.py, and skills/flood-article-detector/*.py; tests/caches/results excluded"
+    },
+    "inputs": {
+      "analysis_contract": {
+        "bytes": 10738,
+        "path": "eval/STUDY_PROTOCOL.md",
+        "sha256": "5e131114d3de6587d0610f64caa5154357998ffd618f3822adcbceffb4ca920c"
+      },
+      "belief_news_manifest": {
+        "bytes": 892,
+        "path": "eval/corpus/study/belief_news_manifest.json",
+        "sha256": "3af7583c973c7d0994d5b4aa314d6116394cc77f2522aed70d71ff3fbaf52947"
+      },
+      "hydrologic_corpus": {
+        "bytes": 1399840,
+        "manifest_sha256": "48c9fd6c0ee26c22be3566916f1ae219a11fc3d8e7fce3f2993388a822a7f9c0",
+        "path": "eval/corpus/study/harris_harvey_2017.json",
+        "sha256": "48c9fd6c0ee26c22be3566916f1ae219a11fc3d8e7fce3f2993388a822a7f9c0"
+      },
+      "news_corpus": {
+        "bytes": 350465356,
+        "path": "eval/corpus/harris_harvey_gdelt.json",
+        "sha256": "7d5ac76193c9355f1d9143510b0cbade73c001ac6026d0332e71c929d7dc0404",
+        "source_coverage": {
+          "as_of_field": "GKG_V2_1_DATE",
+          "as_of_semantics": "GKG 2.1 document publication timestamp at 15-minute resolution; not an independently recovered precise page timestamp",
+          "corpus_sha256": "7d5ac76193c9355f1d9143510b0cbade73c001ac6026d0332e71c929d7dc0404",
+          "corpus_window": {
+            "end": "20170907",
+            "start": "20170823"
+          },
+          "maximum_missing_slice_fraction": 0.02,
+          "missing_slices": [
+            "20170823011500",
+            "20170823023000",
+            "20170824224500",
+            "20170825221500",
+            "20170826020000",
+            "20170827231500",
+            "20170828011500",
+            "20170828221500",
+            "20170828230000",
+            "20170829224500",
+            "20170830010000",
+            "20170830030000",
+            "20170831020000",
+            "20170831213000",
+            "20170831220000",
+            "20170901191500",
+            "20170901214500",
+            "20170902073000",
+            "20170904010000",
+            "20170905221500",
+            "20170906040000"
+          ],
+          "required_window": {
+            "end": "2017-09-06T05:00:00Z",
+            "lookback_hours": 24.0,
+            "start": "2017-08-23T05:00:00Z"
+          },
+          "slice_coverage_fraction": 0.985417,
+          "slices_missing": 21,
+          "slices_swept": 1440
+        },
+        "usable_title_articles": 128984
+      },
+      "news_corpus_builder": {
+        "path": "eval/news_gdelt.py",
+        "sha256": "1d6f49a1ee031c8cb774e36eddcbbe907b67f3c88cc739cc866b1c90c5392ff1"
+      },
+      "study_manifest": {
+        "bytes": 6242,
+        "path": "eval/corpus/study/manifest.json",
+        "sha256": "d711a0bb33e8bcb131028938d4da345b90217aebadd5ffae31151982cb11ead2"
+      }
+    },
+    "python": {
+      "implementation": "CPython",
+      "version": "3.14.6",
+      "version_detail": "3.14.6 | packaged by Anaconda, Inc. | (main, Jun 18 2026, 21:28:09) [GCC 14.3.0]"
+    },
+    "reproduction_command": "python3 eval/run_belief_null.py --out eval/results/belief_news_null.json"
+  },
+  "scenarios": {
+    "full_with_news": {
+      "ablation": "full",
+      "articles": {
+        "counting_unit": "detector-selected article events; repeated selection of one URL at successive acquisitions is counted repeatedly, with unique URLs separate",
+        "positive_indications": [
+          "confirms_flood",
+          "suggests_flood_risk"
+        ],
+        "positive_selected_events": 590,
+        "positive_unique_urls": 590,
+        "selected_events_by_indication": {
+          "confirms_flood": 590,
+          "neutral": 37
+        },
+        "selected_events_total": 627,
+        "selection_boundary": "production detector page/relevance threshold before belief claim admission",
+        "unique_urls_by_indication": {
+          "confirms_flood": 590,
+          "neutral": 37
+        },
+        "unique_urls_total": 627
+      },
+      "claims": {
+        "by_tier_and_type": [
+          {
+            "admitted_events": 1037,
+            "claim_type": "GaugeObservation",
+            "generated_events": 1037,
+            "rejected_events": 0,
+            "structurally_invalid_events": 0,
+            "structurally_valid_events": 1037,
+            "tier": "T0",
+            "unique_claim_ids": {
+              "admitted": 1037,
+              "generated": 1037,
+              "rejected": 0,
+              "structurally_invalid": 0,
+              "structurally_valid": 1037
+            },
+            "valid_but_not_admitted_events": 0
+          },
+          {
+            "admitted_events": 0,
+            "claim_type": "inundation",
+            "generated_events": 590,
+            "rejected_events": 590,
+            "structurally_invalid_events": 0,
+            "structurally_valid_events": 590,
+            "tier": "T2",
+            "unique_claim_ids": {
+              "admitted": 0,
+              "generated": 590,
+              "rejected": 590,
+              "structurally_invalid": 0,
+              "structurally_valid": 590
+            },
+            "valid_but_not_admitted_events": 590
+          }
+        ],
+        "counting_unit": "claim-filter events; the same stable claim_id may recur at multiple acquisitions, so unique claim_id counts are reported separately",
+        "rejection_reasons": {
+          "below minimum_confidence 0.5 (tier-adjusted 0.266 from 0.592)": 52,
+          "below minimum_confidence 0.6 (tier-adjusted 0.266 from 0.592)": 538
+        },
+        "totals": {
+          "admitted_events": 1037,
+          "generated_events": 1627,
+          "rejected_events": 590,
+          "structurally_invalid_events": 0,
+          "structurally_valid_events": 1627,
+          "valid_but_not_admitted_events": 590
+        }
+      },
+      "news_present": true,
+      "operational": {
+        "acquisitions": 130,
+        "alert_transitions": [
+          {
+            "alert_level": "none",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "alert_level": "warning",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "cadence_interval_seconds_counts": {
+          "21600": 13,
+          "7200": 116
+        },
+        "combined_sha256": "682e541658de88d0bca584a378809fd8919854d3307044c1e8d5e27b960dca57",
+        "component_sha256": {
+          "acquisition_cadence": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "alert_timeline": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "flood_verdict_timeline": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "phase_timeline": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "recovery_timeline": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "termination": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        },
+        "first_acquisition": "2017-08-24T05:00:00Z",
+        "folded": false,
+        "last_acquisition": "2017-09-06T03:00:00Z",
+        "phase_transitions": [
+          {
+            "from": "early_watch",
+            "t": "2017-08-27T05:00:00Z",
+            "to": "elevated_watch"
+          },
+          {
+            "from": "elevated_watch",
+            "t": "2017-08-27T11:00:00Z",
+            "to": "imminent"
+          }
+        ],
+        "regional_verdict_transitions": [
+          {
+            "regional_verdict": "no_flooding",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "regional_verdict": "major_flooding",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "termination": {
+          "reason": "window_end",
+          "t": "2017-09-06T03:00:00Z"
+        }
+      },
+      "replay_schema": "sentinel-replay-run/2"
+    },
+    "full_without_news": {
+      "ablation": "full",
+      "articles": {
+        "counting_unit": "detector-selected article events; repeated selection of one URL at successive acquisitions is counted repeatedly, with unique URLs separate",
+        "positive_indications": [
+          "confirms_flood",
+          "suggests_flood_risk"
+        ],
+        "positive_selected_events": 0,
+        "positive_unique_urls": 0,
+        "selected_events_by_indication": {},
+        "selected_events_total": 0,
+        "selection_boundary": "production detector page/relevance threshold before belief claim admission",
+        "unique_urls_by_indication": {},
+        "unique_urls_total": 0
+      },
+      "claims": {
+        "by_tier_and_type": [
+          {
+            "admitted_events": 1037,
+            "claim_type": "GaugeObservation",
+            "generated_events": 1037,
+            "rejected_events": 0,
+            "structurally_invalid_events": 0,
+            "structurally_valid_events": 1037,
+            "tier": "T0",
+            "unique_claim_ids": {
+              "admitted": 1037,
+              "generated": 1037,
+              "rejected": 0,
+              "structurally_invalid": 0,
+              "structurally_valid": 1037
+            },
+            "valid_but_not_admitted_events": 0
+          }
+        ],
+        "counting_unit": "claim-filter events; the same stable claim_id may recur at multiple acquisitions, so unique claim_id counts are reported separately",
+        "rejection_reasons": {},
+        "totals": {
+          "admitted_events": 1037,
+          "generated_events": 1037,
+          "rejected_events": 0,
+          "structurally_invalid_events": 0,
+          "structurally_valid_events": 1037,
+          "valid_but_not_admitted_events": 0
+        }
+      },
+      "news_present": false,
+      "operational": {
+        "acquisitions": 130,
+        "alert_transitions": [
+          {
+            "alert_level": "none",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "alert_level": "warning",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "cadence_interval_seconds_counts": {
+          "21600": 13,
+          "7200": 116
+        },
+        "combined_sha256": "682e541658de88d0bca584a378809fd8919854d3307044c1e8d5e27b960dca57",
+        "component_sha256": {
+          "acquisition_cadence": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "alert_timeline": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "flood_verdict_timeline": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "phase_timeline": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "recovery_timeline": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "termination": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        },
+        "first_acquisition": "2017-08-24T05:00:00Z",
+        "folded": false,
+        "last_acquisition": "2017-09-06T03:00:00Z",
+        "phase_transitions": [
+          {
+            "from": "early_watch",
+            "t": "2017-08-27T05:00:00Z",
+            "to": "elevated_watch"
+          },
+          {
+            "from": "elevated_watch",
+            "t": "2017-08-27T11:00:00Z",
+            "to": "imminent"
+          }
+        ],
+        "regional_verdict_transitions": [
+          {
+            "regional_verdict": "no_flooding",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "regional_verdict": "major_flooding",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "termination": {
+          "reason": "window_end",
+          "t": "2017-09-06T03:00:00Z"
+        }
+      },
+      "replay_schema": "sentinel-replay-run/2"
+    },
+    "no_belief_with_news": {
+      "ablation": "no_belief",
+      "articles": {
+        "counting_unit": "detector-selected article events; repeated selection of one URL at successive acquisitions is counted repeatedly, with unique URLs separate",
+        "positive_indications": [
+          "confirms_flood",
+          "suggests_flood_risk"
+        ],
+        "positive_selected_events": 590,
+        "positive_unique_urls": 590,
+        "selected_events_by_indication": {
+          "confirms_flood": 590,
+          "neutral": 37
+        },
+        "selected_events_total": 627,
+        "selection_boundary": "production detector page/relevance threshold before belief claim admission",
+        "unique_urls_by_indication": {
+          "confirms_flood": 590,
+          "neutral": 37
+        },
+        "unique_urls_total": 627
+      },
+      "claims": {
+        "by_tier_and_type": [
+          {
+            "admitted_events": 1037,
+            "claim_type": "GaugeObservation",
+            "generated_events": 1037,
+            "rejected_events": 0,
+            "structurally_invalid_events": 0,
+            "structurally_valid_events": 1037,
+            "tier": "T0",
+            "unique_claim_ids": {
+              "admitted": 1037,
+              "generated": 1037,
+              "rejected": 0,
+              "structurally_invalid": 0,
+              "structurally_valid": 1037
+            },
+            "valid_but_not_admitted_events": 0
+          },
+          {
+            "admitted_events": 590,
+            "claim_type": "inundation",
+            "generated_events": 590,
+            "rejected_events": 0,
+            "structurally_invalid_events": 0,
+            "structurally_valid_events": 590,
+            "tier": "T2",
+            "unique_claim_ids": {
+              "admitted": 590,
+              "generated": 590,
+              "rejected": 0,
+              "structurally_invalid": 0,
+              "structurally_valid": 590
+            },
+            "valid_but_not_admitted_events": 0
+          }
+        ],
+        "counting_unit": "claim-filter events; the same stable claim_id may recur at multiple acquisitions, so unique claim_id counts are reported separately",
+        "rejection_reasons": {},
+        "totals": {
+          "admitted_events": 1627,
+          "generated_events": 1627,
+          "rejected_events": 0,
+          "structurally_invalid_events": 0,
+          "structurally_valid_events": 1627,
+          "valid_but_not_admitted_events": 0
+        }
+      },
+      "news_present": true,
+      "operational": {
+        "acquisitions": 130,
+        "alert_transitions": [
+          {
+            "alert_level": "none",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "alert_level": "warning",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "cadence_interval_seconds_counts": {
+          "21600": 13,
+          "7200": 116
+        },
+        "combined_sha256": "682e541658de88d0bca584a378809fd8919854d3307044c1e8d5e27b960dca57",
+        "component_sha256": {
+          "acquisition_cadence": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "alert_timeline": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "flood_verdict_timeline": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "phase_timeline": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "recovery_timeline": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "termination": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        },
+        "first_acquisition": "2017-08-24T05:00:00Z",
+        "folded": false,
+        "last_acquisition": "2017-09-06T03:00:00Z",
+        "phase_transitions": [
+          {
+            "from": "early_watch",
+            "t": "2017-08-27T05:00:00Z",
+            "to": "elevated_watch"
+          },
+          {
+            "from": "elevated_watch",
+            "t": "2017-08-27T11:00:00Z",
+            "to": "imminent"
+          }
+        ],
+        "regional_verdict_transitions": [
+          {
+            "regional_verdict": "no_flooding",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "regional_verdict": "major_flooding",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "termination": {
+          "reason": "window_end",
+          "t": "2017-09-06T03:00:00Z"
+        }
+      },
+      "replay_schema": "sentinel-replay-run/2"
+    },
+    "no_belief_without_news": {
+      "ablation": "no_belief",
+      "articles": {
+        "counting_unit": "detector-selected article events; repeated selection of one URL at successive acquisitions is counted repeatedly, with unique URLs separate",
+        "positive_indications": [
+          "confirms_flood",
+          "suggests_flood_risk"
+        ],
+        "positive_selected_events": 0,
+        "positive_unique_urls": 0,
+        "selected_events_by_indication": {},
+        "selected_events_total": 0,
+        "selection_boundary": "production detector page/relevance threshold before belief claim admission",
+        "unique_urls_by_indication": {},
+        "unique_urls_total": 0
+      },
+      "claims": {
+        "by_tier_and_type": [
+          {
+            "admitted_events": 1037,
+            "claim_type": "GaugeObservation",
+            "generated_events": 1037,
+            "rejected_events": 0,
+            "structurally_invalid_events": 0,
+            "structurally_valid_events": 1037,
+            "tier": "T0",
+            "unique_claim_ids": {
+              "admitted": 1037,
+              "generated": 1037,
+              "rejected": 0,
+              "structurally_invalid": 0,
+              "structurally_valid": 1037
+            },
+            "valid_but_not_admitted_events": 0
+          }
+        ],
+        "counting_unit": "claim-filter events; the same stable claim_id may recur at multiple acquisitions, so unique claim_id counts are reported separately",
+        "rejection_reasons": {},
+        "totals": {
+          "admitted_events": 1037,
+          "generated_events": 1037,
+          "rejected_events": 0,
+          "structurally_invalid_events": 0,
+          "structurally_valid_events": 1037,
+          "valid_but_not_admitted_events": 0
+        }
+      },
+      "news_present": false,
+      "operational": {
+        "acquisitions": 130,
+        "alert_transitions": [
+          {
+            "alert_level": "none",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "alert_level": "warning",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "cadence_interval_seconds_counts": {
+          "21600": 13,
+          "7200": 116
+        },
+        "combined_sha256": "682e541658de88d0bca584a378809fd8919854d3307044c1e8d5e27b960dca57",
+        "component_sha256": {
+          "acquisition_cadence": "3cd48de69e50c8a6b2b8a9cda62ed0a0f8d18cc4072b37dcda54a953a5683ed7",
+          "alert_timeline": "7f757a54954111d1f89f0bc24634d826002fd23d0e543ffd7cd43df1c67b8ff1",
+          "flood_verdict_timeline": "88dfe695e5a642d8e0a75e15491a875bc47b1f07becaeb63ca47edd258163b08",
+          "phase_timeline": "fd077ba1d6dd40a213638a765aa94ba82c7d7cebed6e138b6ba9e5e43a1f1899",
+          "recovery_timeline": "dd4edf6328fb23ce318ede419135a13a518dfcda8f2c16cc3eec7d3249eb8cb5",
+          "termination": "5e2ef2b43630a953d883178deb621f9dace545e7b9df003f193c3b1ffad2c99f"
+        },
+        "first_acquisition": "2017-08-24T05:00:00Z",
+        "folded": false,
+        "last_acquisition": "2017-09-06T03:00:00Z",
+        "phase_transitions": [
+          {
+            "from": "early_watch",
+            "t": "2017-08-27T05:00:00Z",
+            "to": "elevated_watch"
+          },
+          {
+            "from": "elevated_watch",
+            "t": "2017-08-27T11:00:00Z",
+            "to": "imminent"
+          }
+        ],
+        "regional_verdict_transitions": [
+          {
+            "regional_verdict": "no_flooding",
+            "t": "2017-08-24T05:00:00Z"
+          },
+          {
+            "regional_verdict": "major_flooding",
+            "t": "2017-08-27T05:00:00Z"
+          }
+        ],
+        "termination": {
+          "reason": "window_end",
+          "t": "2017-09-06T03:00:00Z"
+        }
+      },
+      "replay_schema": "sentinel-replay-run/2"
+    }
+  },
+  "schema": "sentinel-belief-news-architectural-null/2"
+}

@@ -1,0 +1,6 @@
+# Runtime dependencies are in requirements.txt. These are needed only to run the
+# evaluation harness, the post-hoc analyses, the tests, and the figure scripts.
+numpy
+matplotlib
+pyshp
+pytest

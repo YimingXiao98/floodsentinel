@@ -1,0 +1,27 @@
+{
+ "schema": "sentinel-vtec-trigger-corpus/1",
+ "county": "Cherokee",
+ "state": "TX",
+ "fips": "48073",
+ "generated_at": null,
+ "source": {
+  "archive": "frozen GDELT GKG title corpus via production detector",
+  "news_corpus": "/u/yxiao11/Research/openclaw-disaster-sentinel/eval/corpus/study_v5/cherokee_tx_2016_gdelt.json",
+  "news_corpus_sha256": "51fdd0c9b3dbd47e5c3ae5458ae6f2b3eaf1c4c9b4fb91825ae5ae84bf66c3bd",
+  "detector_entry_point": "score_and_filter_articles",
+  "min_page_score": 0.75,
+  "top_n": 5
+ },
+ "window": {
+  "start": "2016-04-15T06:00:00Z",
+  "end": "2016-04-28T06:00:00Z"
+ },
+ "as_of_semantics": "available_at is the first 15-minute poll at which the production detector admitted the article as a positive indication; articles become visible only after their GDELT publication slice, so this errs late, never early. Title-only proxy; exploratory.",
+ "role": "exploratory_t2_trigger_development_only",
+ "poll_interval_seconds": 900,
+ "polls": 1248,
+ "anomalies": {},
+ "raw_product_sample_validation": [],
+ "n_events": 0,
+ "events": []
+}

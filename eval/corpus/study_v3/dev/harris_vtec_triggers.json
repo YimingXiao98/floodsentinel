@@ -1,0 +1,2572 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Harris",
+  "state": "TX",
+  "fips": "48201",
+  "generated_at": "2026-08-20T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2017-08-24",
+    "end": "2017-09-06"
+  },
+  "fetch_window": {
+    "start": "2017-08-21",
+    "end": "2017-09-06"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "TXC201",
+    "zones": [
+      "TXZ213",
+      "TXZ313"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "TXC201": 206,
+    "TXZ213": 7,
+    "TXZ313": 0
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 57,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2017-HGX-FA-Y-0215",
+      "product_id": "201708231648-KHGX-WGUS84-FLSHGX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0060",
+      "product_id": "201708270257-KHGX-WGUS44-FLWHGX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0093",
+      "product_id": "201708270542-KHGX-WGUS44-FLWHGX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0123",
+      "product_id": "201708270840-KHGX-WGUS44-FLWHGX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0168",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 156,
+  "events": [
+    {
+      "event_key": "2017-HGX-FA-Y-0215",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 215,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708231648-KHGX-WGUS84-FLSHGX",
+      "available_at": "2017-08-23T16:48:00Z",
+      "begins_at": "2017-08-23T16:48:00Z",
+      "audit_final_expire": "2017-08-23T17:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-A-0008",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 8,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708242138-KHGX-WGUS64-FFAHGX",
+      "available_at": "2017-08-24T21:38:00Z",
+      "begins_at": "2017-08-25T09:00:00Z",
+      "audit_final_expire": "2017-08-29T08:04:00Z",
+      "ugcs": [
+        "TXZ213"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-Y-0225",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 225,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708260822-KHGX-WGUS84-FLSHGX",
+      "available_at": "2017-08-26T08:22:00Z",
+      "begins_at": "2017-08-26T08:22:00Z",
+      "audit_final_expire": "2017-08-26T09:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-Y-0226",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 226,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708260955-KHGX-WGUS84-FLSHGX",
+      "available_at": "2017-08-26T09:55:00Z",
+      "begins_at": "2017-08-26T09:55:00Z",
+      "audit_final_expire": "2017-08-26T12:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0043",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 43,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708261043-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-26T10:43:00Z",
+      "begins_at": "2017-08-26T10:43:00Z",
+      "audit_final_expire": "2017-08-26T13:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0044",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 44,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708261126-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-26T11:26:00Z",
+      "begins_at": "2017-08-26T11:26:00Z",
+      "audit_final_expire": "2017-08-26T13:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0039",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 39,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SMAT2",
+      "product_id": "201708261148-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-26T11:48:00Z",
+      "begins_at": "2017-08-26T11:48:00Z",
+      "audit_final_expire": "2017-08-26T22:44:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0040",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 40,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "RRKT2",
+      "product_id": "201708261158-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-26T11:58:00Z",
+      "begins_at": "2017-08-26T11:58:00Z",
+      "audit_final_expire": "2017-08-26T22:44:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0045",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 45,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708261252-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-26T12:52:00Z",
+      "begins_at": "2017-08-26T12:52:00Z",
+      "audit_final_expire": "2017-08-26T15:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0047",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 47,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708261327-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-26T13:27:00Z",
+      "begins_at": "2017-08-26T13:27:00Z",
+      "audit_final_expire": "2017-08-26T16:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0041",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 41,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GBHT2",
+      "product_id": "201708261502-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-26T15:02:00Z",
+      "begins_at": "2017-08-26T19:21:00Z",
+      "audit_final_expire": "2017-08-30T09:10:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0048",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 48,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708261548-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-26T15:48:00Z",
+      "begins_at": "2017-08-26T15:48:00Z",
+      "audit_final_expire": "2017-08-26T19:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0053",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 53,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708262149-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-26T21:49:00Z",
+      "begins_at": "2017-08-26T21:49:00Z",
+      "audit_final_expire": "2017-08-26T23:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0044",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 44,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LCHT2",
+      "product_id": "201708262154-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-26T21:54:00Z",
+      "begins_at": "2017-08-26T21:55:00Z",
+      "audit_final_expire": "2017-08-31T23:27:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0046",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 46,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HMMT2",
+      "product_id": "201708262313-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-26T23:13:00Z",
+      "begins_at": "2017-08-27T00:29:00Z",
+      "audit_final_expire": "2017-09-03T01:39:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0047",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 47,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HEGT2",
+      "product_id": "201708262345-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-26T23:45:00Z",
+      "begins_at": "2017-08-27T00:00:00Z",
+      "audit_final_expire": "2017-09-17T00:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0055",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 55,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270022-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T00:22:00Z",
+      "begins_at": "2017-08-27T00:22:00Z",
+      "audit_final_expire": "2017-08-27T02:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0048",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 48,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SMAT2",
+      "product_id": "201708270051-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T00:51:00Z",
+      "begins_at": "2017-08-27T00:51:00Z",
+      "audit_final_expire": "2017-09-17T00:51:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0056",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 56,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270115-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T01:15:00Z",
+      "begins_at": "2017-08-27T01:15:00Z",
+      "audit_final_expire": "2017-08-27T04:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0057",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 57,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270131-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T01:31:00Z",
+      "begins_at": "2017-08-27T01:31:00Z",
+      "audit_final_expire": "2017-08-27T03:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0049",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 49,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "RRKT2",
+      "product_id": "201708270149-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T01:49:00Z",
+      "begins_at": "2017-08-27T01:49:00Z",
+      "audit_final_expire": "2017-08-29T10:49:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0051",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 51,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LMBT2",
+      "product_id": "201708270203-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:03:00Z",
+      "begins_at": "2017-08-27T02:03:00Z",
+      "audit_final_expire": "2017-08-30T01:24:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0052",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 52,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "KEET2",
+      "product_id": "201708270207-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:07:00Z",
+      "begins_at": "2017-08-27T02:07:00Z",
+      "audit_final_expire": "2017-08-29T10:38:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0058",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 58,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270212-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T02:12:00Z",
+      "begins_at": "2017-08-27T02:12:00Z",
+      "audit_final_expire": "2017-08-27T05:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0053",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 53,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WHLT2",
+      "product_id": "201708270212-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:12:00Z",
+      "begins_at": "2017-08-27T02:12:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0054",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 54,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "ASMT2",
+      "product_id": "201708270218-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:18:00Z",
+      "begins_at": "2017-08-27T02:18:00Z",
+      "audit_final_expire": "2017-09-01T22:37:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0055",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 55,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CPBT2",
+      "product_id": "201708270225-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:25:00Z",
+      "begins_at": "2017-08-27T02:25:00Z",
+      "audit_final_expire": "2017-08-29T09:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0059",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 59,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270227-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T02:27:00Z",
+      "begins_at": "2017-08-27T02:27:00Z",
+      "audit_final_expire": "2017-08-27T05:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0056",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 56,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GSST2",
+      "product_id": "201708270241-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:41:00Z",
+      "begins_at": "2017-08-27T02:41:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0057",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 57,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HMCT2",
+      "product_id": "201708270245-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:45:00Z",
+      "begins_at": "2017-08-27T02:45:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0058",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 58,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HBMT2",
+      "product_id": "201708270248-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:48:00Z",
+      "begins_at": "2017-08-27T08:26:00Z",
+      "audit_final_expire": "2017-08-28T02:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0060",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 60,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "RCGT2",
+      "product_id": "201708270257-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T02:57:00Z",
+      "begins_at": "2017-08-27T02:57:00Z",
+      "audit_final_expire": "2017-09-02T04:16:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0062",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 62,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "KHOT2",
+      "product_id": "201708270307-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:07:00Z",
+      "begins_at": "2017-08-27T04:03:00Z",
+      "audit_final_expire": "2017-09-03T09:44:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0063",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 63,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BKHT2",
+      "product_id": "201708270312-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:12:00Z",
+      "begins_at": "2017-08-27T03:24:00Z",
+      "audit_final_expire": "2017-08-28T09:56:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0064",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 64,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HGTT2",
+      "product_id": "201708270315-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:15:00Z",
+      "begins_at": "2017-08-27T07:36:00Z",
+      "audit_final_expire": "2017-08-30T12:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0065",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 65,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HFMT2",
+      "product_id": "201708270324-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:24:00Z",
+      "begins_at": "2017-08-27T03:24:00Z",
+      "audit_final_expire": "2017-09-02T04:16:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0066",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 66,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MCFT2",
+      "product_id": "201708270328-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:28:00Z",
+      "begins_at": "2017-08-27T03:28:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0067",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 67,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LLYT2",
+      "product_id": "201708270328-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:28:00Z",
+      "begins_at": "2017-08-27T03:28:00Z",
+      "audit_final_expire": "2017-09-01T22:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0060",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 60,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270329-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T03:29:00Z",
+      "begins_at": "2017-08-27T03:29:00Z",
+      "audit_final_expire": "2017-08-27T06:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0068",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 68,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CCBT2",
+      "product_id": "201708270342-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:42:00Z",
+      "begins_at": "2017-08-27T03:42:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0069",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 69,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CCWT2",
+      "product_id": "201708270343-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:43:00Z",
+      "begins_at": "2017-08-27T03:43:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0070",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 70,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LWOT2",
+      "product_id": "201708270344-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:44:00Z",
+      "begins_at": "2017-08-27T03:44:00Z",
+      "audit_final_expire": "2017-08-28T09:56:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0061",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 61,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270347-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T03:47:00Z",
+      "begins_at": "2017-08-27T03:47:00Z",
+      "audit_final_expire": "2017-08-27T06:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0071",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 71,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SMWT2",
+      "product_id": "201708270349-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:49:00Z",
+      "begins_at": "2017-08-27T03:49:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0072",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 72,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MYKT2",
+      "product_id": "201708270351-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:51:00Z",
+      "begins_at": "2017-08-27T03:57:00Z",
+      "audit_final_expire": "2017-09-01T22:40:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0073",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 73,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "PPTT2",
+      "product_id": "201708270356-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:56:00Z",
+      "begins_at": "2017-08-27T04:07:00Z",
+      "audit_final_expire": "2017-09-12T02:37:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0074",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 74,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LGCT2",
+      "product_id": "201708270359-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T03:59:00Z",
+      "begins_at": "2017-08-27T03:59:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0062",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 62,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270410-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T04:10:00Z",
+      "begins_at": "2017-08-27T04:10:00Z",
+      "audit_final_expire": "2017-08-27T09:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0076",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 76,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "AIRT2",
+      "product_id": "201708270415-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:15:00Z",
+      "begins_at": "2017-08-27T04:15:00Z",
+      "audit_final_expire": "2017-08-30T05:10:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0080",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 80,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BFOT2",
+      "product_id": "201708270430-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:30:00Z",
+      "begins_at": "2017-08-27T04:30:00Z",
+      "audit_final_expire": "2017-08-29T12:20:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0081",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 81,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "TUKT2",
+      "product_id": "201708270432-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:32:00Z",
+      "begins_at": "2017-08-27T04:32:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0082",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 82,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BMDT2",
+      "product_id": "201708270432-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:32:00Z",
+      "begins_at": "2017-08-27T04:32:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0083",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 83,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GNTT2",
+      "product_id": "201708270438-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:38:00Z",
+      "begins_at": "2017-08-27T04:38:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0063",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 63,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270441-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T04:41:00Z",
+      "begins_at": "2017-08-27T04:41:00Z",
+      "audit_final_expire": "2017-08-27T06:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0084",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 84,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CBAT2",
+      "product_id": "201708270448-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:48:00Z",
+      "begins_at": "2017-08-27T04:48:00Z",
+      "audit_final_expire": "2017-09-01T22:40:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0085",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 85,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HGBT2",
+      "product_id": "201708270459-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T04:59:00Z",
+      "begins_at": "2017-08-27T04:59:00Z",
+      "audit_final_expire": "2017-08-28T09:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0086",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 86,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GBLT2",
+      "product_id": "201708270503-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:03:00Z",
+      "begins_at": "2017-08-27T06:09:00Z",
+      "audit_final_expire": "2017-08-30T21:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0064",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 64,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270522-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T05:22:00Z",
+      "begins_at": "2017-08-27T05:22:00Z",
+      "audit_final_expire": "2017-08-27T11:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0089",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 89,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WSBT2",
+      "product_id": "201708270529-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:29:00Z",
+      "begins_at": "2017-08-27T05:29:00Z",
+      "audit_final_expire": "2017-09-10T21:40:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0090",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 90,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BBST2",
+      "product_id": "201708270532-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:32:00Z",
+      "begins_at": "2017-08-27T12:00:00Z",
+      "audit_final_expire": "2017-08-30T14:11:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0091",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 91,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LWDT2",
+      "product_id": "201708270533-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:33:00Z",
+      "begins_at": "2017-08-27T05:33:00Z",
+      "audit_final_expire": "2017-08-30T01:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0092",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 92,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BNPT2",
+      "product_id": "201708270535-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:35:00Z",
+      "begins_at": "2017-08-27T05:35:00Z",
+      "audit_final_expire": "2017-08-29T12:20:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0093",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 93,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "UCCT2",
+      "product_id": "201708270542-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:42:00Z",
+      "begins_at": "2017-08-27T05:42:00Z",
+      "audit_final_expire": "2017-09-01T00:17:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0094",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 94,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CPWT2",
+      "product_id": "201708270546-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:46:00Z",
+      "begins_at": "2017-08-27T05:46:00Z",
+      "audit_final_expire": "2017-09-01T22:36:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0095",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 95,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WFDT2",
+      "product_id": "201708270548-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:48:00Z",
+      "begins_at": "2017-08-27T05:48:00Z",
+      "audit_final_expire": "2017-09-01T18:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0096",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 96,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "VCBT2",
+      "product_id": "201708270548-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:48:00Z",
+      "begins_at": "2017-08-27T05:48:00Z",
+      "audit_final_expire": "2017-08-29T09:57:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0097",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 97,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BBMT2",
+      "product_id": "201708270554-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T05:54:00Z",
+      "begins_at": "2017-08-27T05:54:00Z",
+      "audit_final_expire": "2017-09-02T16:52:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0066",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 66,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270559-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T05:59:00Z",
+      "begins_at": "2017-08-27T05:59:00Z",
+      "audit_final_expire": "2017-08-27T09:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0098",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 98,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WSFT2",
+      "product_id": "201708270605-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:05:00Z",
+      "begins_at": "2017-08-27T06:05:00Z",
+      "audit_final_expire": "2017-08-30T05:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0099",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 99,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HPBT2",
+      "product_id": "201708270607-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:07:00Z",
+      "begins_at": "2017-08-27T06:07:00Z",
+      "audit_final_expire": "2017-08-30T05:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0100",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 100,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MGBT2",
+      "product_id": "201708270609-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:09:00Z",
+      "begins_at": "2017-08-27T06:09:00Z",
+      "audit_final_expire": "2017-08-30T05:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0101",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 101,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "JVLT2",
+      "product_id": "201708270616-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:16:00Z",
+      "begins_at": "2017-08-27T06:16:00Z",
+      "audit_final_expire": "2017-08-29T07:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0102",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 102,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CCGT2",
+      "product_id": "201708270630-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:30:00Z",
+      "begins_at": "2017-08-27T07:57:00Z",
+      "audit_final_expire": "2017-09-02T04:16:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0067",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 67,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270635-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T06:35:00Z",
+      "begins_at": "2017-08-27T06:35:00Z",
+      "audit_final_expire": "2017-08-27T11:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0103",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 103,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "STUT2",
+      "product_id": "201708270635-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:35:00Z",
+      "begins_at": "2017-08-27T06:35:00Z",
+      "audit_final_expire": "2017-09-01T22:36:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0104",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 104,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GWAT2",
+      "product_id": "201708270640-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:40:00Z",
+      "begins_at": "2017-08-27T06:40:00Z",
+      "audit_final_expire": "2017-08-30T05:20:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0105",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 105,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GJCT2",
+      "product_id": "201708270649-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:49:00Z",
+      "begins_at": "2017-08-27T06:49:00Z",
+      "audit_final_expire": "2017-08-31T23:31:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0106",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 106,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GABT2",
+      "product_id": "201708270649-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:49:00Z",
+      "begins_at": "2017-08-27T06:49:00Z",
+      "audit_final_expire": "2017-08-31T23:31:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0107",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 107,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HBTT2",
+      "product_id": "201708270649-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T06:49:00Z",
+      "begins_at": "2017-08-27T06:49:00Z",
+      "audit_final_expire": "2017-08-30T09:01:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0108",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 108,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LOPT2",
+      "product_id": "201708270701-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:01:00Z",
+      "begins_at": "2017-08-27T07:01:00Z",
+      "audit_final_expire": "2017-08-30T01:24:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0109",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 109,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WABT2",
+      "product_id": "201708270740-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:40:00Z",
+      "begins_at": "2017-08-27T07:40:00Z",
+      "audit_final_expire": "2017-08-29T11:55:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0110",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 110,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LKWT2",
+      "product_id": "201708270753-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:53:00Z",
+      "begins_at": "2017-08-27T07:53:00Z",
+      "audit_final_expire": "2017-08-30T05:43:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0111",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 111,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HTGT2",
+      "product_id": "201708270753-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:53:00Z",
+      "begins_at": "2017-08-27T07:53:00Z",
+      "audit_final_expire": "2017-08-30T05:43:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0112",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 112,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HABT2",
+      "product_id": "201708270754-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:54:00Z",
+      "begins_at": "2017-08-27T07:54:00Z",
+      "audit_final_expire": "2017-08-30T05:10:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0113",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 113,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HPTT2",
+      "product_id": "201708270755-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:55:00Z",
+      "begins_at": "2017-08-27T07:55:00Z",
+      "audit_final_expire": "2017-08-28T09:56:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0114",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 114,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BBWT2",
+      "product_id": "201708270757-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T07:57:00Z",
+      "begins_at": "2017-08-27T07:57:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0115",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 115,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CYRT2",
+      "product_id": "201708270801-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:01:00Z",
+      "begins_at": "2017-08-27T08:01:00Z",
+      "audit_final_expire": "2017-08-29T06:57:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0116",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 116,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CEPT2",
+      "product_id": "201708270803-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:03:00Z",
+      "begins_at": "2017-08-27T08:03:00Z",
+      "audit_final_expire": "2017-09-01T22:34:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0070",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 70,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270808-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T08:08:00Z",
+      "begins_at": "2017-08-27T08:08:00Z",
+      "audit_final_expire": "2017-08-27T11:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0117",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 117,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "KORT2",
+      "product_id": "201708270813-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:13:00Z",
+      "begins_at": "2017-08-27T08:13:00Z",
+      "audit_final_expire": "2017-09-01T22:36:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0118",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 118,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GTDT2",
+      "product_id": "201708270814-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:14:00Z",
+      "begins_at": "2017-08-27T08:14:00Z",
+      "audit_final_expire": "2017-09-02T17:08:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0120",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 120,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "GCBT2",
+      "product_id": "201708270834-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:34:00Z",
+      "begins_at": "2017-08-27T08:34:00Z",
+      "audit_final_expire": "2017-09-01T22:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0121",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 121,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LPOT2",
+      "product_id": "201708270834-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:34:00Z",
+      "begins_at": "2017-08-27T08:34:00Z",
+      "audit_final_expire": "2017-09-01T22:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0123",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 123,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "NCET2",
+      "product_id": "201708270840-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T08:40:00Z",
+      "begins_at": "2017-08-27T13:48:00Z",
+      "audit_final_expire": "2017-09-03T14:08:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0071",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 71,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270900-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T09:00:00Z",
+      "begins_at": "2017-08-27T09:00:00Z",
+      "audit_final_expire": "2017-08-27T11:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0132",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 132,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SPNT2",
+      "product_id": "201708270930-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T09:30:00Z",
+      "begins_at": "2017-08-27T10:06:00Z",
+      "audit_final_expire": "2017-08-31T21:25:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0133",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 133,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "KYKT2",
+      "product_id": "201708270939-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T09:39:00Z",
+      "begins_at": "2017-08-27T09:39:00Z",
+      "audit_final_expire": "2017-08-31T23:01:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0135",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 135,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WOBT2",
+      "product_id": "201708270945-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T09:45:00Z",
+      "begins_at": "2017-08-27T09:45:00Z",
+      "audit_final_expire": "2017-08-28T09:56:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0136",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 136,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WWHT2",
+      "product_id": "201708270947-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T09:47:00Z",
+      "begins_at": "2017-08-27T09:47:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0073",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 73,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708270955-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T09:55:00Z",
+      "begins_at": "2017-08-27T09:55:00Z",
+      "audit_final_expire": "2017-08-27T15:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0137",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 137,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "UWCT2",
+      "product_id": "201708271009-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T10:09:00Z",
+      "begins_at": "2017-08-27T10:09:00Z",
+      "audit_final_expire": "2017-08-31T22:55:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0139",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 139,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "MHPT2",
+      "product_id": "201708271116-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T11:16:00Z",
+      "begins_at": "2017-08-27T11:16:00Z",
+      "audit_final_expire": "2017-08-30T10:09:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0140",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 140,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HCDT2",
+      "product_id": "201708271122-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T11:22:00Z",
+      "begins_at": "2017-08-27T11:22:00Z",
+      "audit_final_expire": "2017-09-02T04:16:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0141",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 141,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SLKT2",
+      "product_id": "201708271125-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T11:25:00Z",
+      "begins_at": "2017-08-27T11:25:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0142",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 142,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "ELBT2",
+      "product_id": "201708271127-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T11:27:00Z",
+      "begins_at": "2017-08-27T11:27:00Z",
+      "audit_final_expire": "2017-08-29T07:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0074",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 74,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708271137-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T11:37:00Z",
+      "begins_at": "2017-08-27T11:37:00Z",
+      "audit_final_expire": "2017-08-27T18:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0143",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 143,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CFKT2",
+      "product_id": "201708271147-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T11:47:00Z",
+      "begins_at": "2017-08-28T04:20:00Z",
+      "audit_final_expire": "2017-08-31T14:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0145",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 145,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LWCT2",
+      "product_id": "201708271234-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T12:34:00Z",
+      "begins_at": "2017-08-27T12:34:00Z",
+      "audit_final_expire": "2017-08-30T21:40:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0146",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 146,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BSFT2",
+      "product_id": "201708271238-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T12:38:00Z",
+      "begins_at": "2017-08-27T12:38:00Z",
+      "audit_final_expire": "2017-08-30T04:20:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0147",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 147,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WOTT2",
+      "product_id": "201708271238-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T12:38:00Z",
+      "begins_at": "2017-08-27T12:38:00Z",
+      "audit_final_expire": "2017-08-29T07:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0148",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 148,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WPOT2",
+      "product_id": "201708271238-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T12:38:00Z",
+      "begins_at": "2017-08-27T12:38:00Z",
+      "audit_final_expire": "2017-08-29T07:05:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0149",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 149,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "TMBT2",
+      "product_id": "201708271245-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T12:45:00Z",
+      "begins_at": "2017-08-27T15:52:00Z",
+      "audit_final_expire": "2017-08-29T18:22:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0078",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 78,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708271544-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T15:44:00Z",
+      "begins_at": "2017-08-27T15:44:00Z",
+      "audit_final_expire": "2017-08-27T18:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0154",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 154,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HOCT2",
+      "product_id": "201708271628-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T16:28:00Z",
+      "begins_at": "2017-08-27T16:28:00Z",
+      "audit_final_expire": "2017-09-08T04:16:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0155",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 155,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HCCT2",
+      "product_id": "201708271708-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T17:08:00Z",
+      "begins_at": "2017-08-27T17:08:00Z",
+      "audit_final_expire": "2017-09-01T22:29:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0079",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 79,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708271826-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T18:26:00Z",
+      "begins_at": "2017-08-27T18:26:00Z",
+      "audit_final_expire": "2017-08-28T06:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0080",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 80,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708271837-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-27T18:37:00Z",
+      "begins_at": "2017-08-27T18:37:00Z",
+      "audit_final_expire": "2017-08-28T12:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0156",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 156,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CLDT2",
+      "product_id": "201708271936-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-27T19:36:00Z",
+      "begins_at": "2017-08-28T04:40:00Z",
+      "audit_final_expire": "2017-08-31T02:26:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0161",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 161,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BBKT2",
+      "product_id": "201708280029-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T00:29:00Z",
+      "begins_at": "2017-08-28T00:29:00Z",
+      "audit_final_expire": "2017-08-30T04:20:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0163",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 163,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SHTT2",
+      "product_id": "201708280118-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:18:00Z",
+      "begins_at": "2017-08-28T01:18:00Z",
+      "audit_final_expire": "2017-08-31T22:52:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0164",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 164,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BBCT2",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:30:00Z",
+      "begins_at": "2017-08-28T01:30:00Z",
+      "audit_final_expire": "2017-09-01T22:38:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0165",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 165,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CIBT2",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:30:00Z",
+      "begins_at": "2017-08-28T01:30:00Z",
+      "audit_final_expire": "2017-08-30T04:20:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0166",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 166,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CIYT2",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:30:00Z",
+      "begins_at": "2017-08-28T01:30:00Z",
+      "audit_final_expire": "2017-09-01T22:38:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0167",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 167,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BSVT2",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:30:00Z",
+      "begins_at": "2017-08-28T01:30:00Z",
+      "audit_final_expire": "2017-09-01T22:37:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0168",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 168,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LKLT2",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:30:00Z",
+      "begins_at": "2017-08-28T01:30:00Z",
+      "audit_final_expire": "2017-08-31T23:04:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0169",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 169,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "CBPT2",
+      "product_id": "201708280130-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T01:30:00Z",
+      "begins_at": "2017-08-28T01:30:00Z",
+      "audit_final_expire": "2017-09-01T22:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0082",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 82,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708280326-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T03:26:00Z",
+      "begins_at": "2017-08-28T03:26:00Z",
+      "audit_final_expire": "2017-08-28T11:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0007",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 7,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708280412-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T04:12:00Z",
+      "begins_at": "2017-08-28T04:12:00Z",
+      "audit_final_expire": "2017-09-04T03:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0177",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 177,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HBMT2",
+      "product_id": "201708280522-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T05:22:00Z",
+      "begins_at": "2017-08-28T05:22:00Z",
+      "audit_final_expire": "2017-08-28T15:35:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0083",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 83,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708280610-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T06:10:00Z",
+      "begins_at": "2017-08-28T06:10:00Z",
+      "audit_final_expire": "2017-08-28T12:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0084",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 84,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708280616-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T06:16:00Z",
+      "begins_at": "2017-08-28T06:16:00Z",
+      "audit_final_expire": "2017-08-28T12:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0008",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 8,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708281159-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T11:59:00Z",
+      "begins_at": "2017-08-28T11:59:00Z",
+      "audit_final_expire": "2017-08-28T17:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0087",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 87,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708281450-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T14:50:00Z",
+      "begins_at": "2017-08-28T14:50:00Z",
+      "audit_final_expire": "2017-08-28T16:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0088",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 88,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708281513-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T15:13:00Z",
+      "begins_at": "2017-08-28T15:13:00Z",
+      "audit_final_expire": "2017-08-29T07:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0009",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 9,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708281754-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T17:54:00Z",
+      "begins_at": "2017-08-28T17:54:00Z",
+      "audit_final_expire": "2017-08-29T05:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0092",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 92,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708281852-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T18:52:00Z",
+      "begins_at": "2017-08-28T18:52:00Z",
+      "audit_final_expire": "2017-08-28T22:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0181",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 181,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "BBAT2",
+      "product_id": "201708282046-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T20:46:00Z",
+      "begins_at": "2017-08-28T20:46:00Z",
+      "audit_final_expire": "2017-09-01T22:43:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FL-W-0182",
+      "wfo": "HGX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 182,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "HBMT2",
+      "product_id": "201708282057-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-28T20:57:00Z",
+      "begins_at": "2017-08-28T20:57:00Z",
+      "audit_final_expire": "2017-08-29T09:41:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0093",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 93,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708282103-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T21:03:00Z",
+      "begins_at": "2017-08-28T21:03:00Z",
+      "audit_final_expire": "2017-08-29T00:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0094",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 94,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708282247-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-28T22:47:00Z",
+      "begins_at": "2017-08-28T22:47:00Z",
+      "audit_final_expire": "2017-08-29T00:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0095",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 95,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708290016-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-29T00:16:00Z",
+      "begins_at": "2017-08-29T00:16:00Z",
+      "audit_final_expire": "2017-08-29T04:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0096",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 96,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708290139-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-29T01:39:00Z",
+      "begins_at": "2017-08-29T01:39:00Z",
+      "audit_final_expire": "2017-08-29T09:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0097",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 97,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708290412-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-29T04:12:00Z",
+      "begins_at": "2017-08-29T04:12:00Z",
+      "audit_final_expire": "2017-08-29T10:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-A-0002",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 2,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708290804-KHGX-WGUS64-FFAHGX",
+      "available_at": "2017-08-29T08:04:00Z",
+      "begins_at": "2017-08-29T08:04:00Z",
+      "audit_final_expire": "2017-08-29T08:22:00Z",
+      "ugcs": [
+        "TXZ213"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-A-0009",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 9,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708290822-KHGX-WGUS64-FFAHGX",
+      "available_at": "2017-08-29T08:22:00Z",
+      "begins_at": "2017-08-29T08:22:00Z",
+      "audit_final_expire": "2017-08-30T04:46:00Z",
+      "ugcs": [
+        "TXZ213"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0010",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 10,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708291041-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-29T10:41:00Z",
+      "begins_at": "2017-08-29T10:41:00Z",
+      "audit_final_expire": "2017-08-29T19:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0011",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 11,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708291944-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-29T19:44:00Z",
+      "begins_at": "2017-08-29T19:44:00Z",
+      "audit_final_expire": "2017-08-30T04:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0103",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 103,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708292026-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-29T20:26:00Z",
+      "begins_at": "2017-08-29T20:26:00Z",
+      "audit_final_expire": "2017-08-29T23:30:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0104",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 104,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708292052-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-29T20:52:00Z",
+      "begins_at": "2017-08-29T20:52:00Z",
+      "audit_final_expire": "2017-08-30T04:45:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0105",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 105,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708292059-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-29T20:59:00Z",
+      "begins_at": "2017-08-29T20:59:00Z",
+      "audit_final_expire": "2017-08-30T05:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0012",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 12,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708300933-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-30T09:33:00Z",
+      "begins_at": "2017-08-30T09:33:00Z",
+      "audit_final_expire": "2017-08-30T15:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0107",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 107,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708301212-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-30T12:12:00Z",
+      "begins_at": "2017-08-30T12:12:00Z",
+      "audit_final_expire": "2017-08-30T20:03:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0013",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 13,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708301504-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-30T15:04:00Z",
+      "begins_at": "2017-08-30T15:04:00Z",
+      "audit_final_expire": "2017-08-31T15:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FF-W-0108",
+      "wfo": "HGX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 108,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708301618-KHGX-WGUS54-FFWHGX",
+      "available_at": "2017-08-30T16:18:00Z",
+      "begins_at": "2017-08-30T16:18:00Z",
+      "audit_final_expire": "2017-08-31T00:15:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0014",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 14,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201708311456-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-08-31T14:56:00Z",
+      "begins_at": "2017-08-31T14:56:00Z",
+      "audit_final_expire": "2017-09-01T15:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    },
+    {
+      "event_key": "2017-HGX-FA-W-0016",
+      "wfo": "HGX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 16,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709042058-KHGX-WGUS44-FLWHGX",
+      "available_at": "2017-09-04T20:58:00Z",
+      "begins_at": "2017-09-04T20:58:00Z",
+      "audit_final_expire": "2017-09-06T21:00:00Z",
+      "ugcs": [
+        "TXC201"
+      ]
+    }
+  ]
+}

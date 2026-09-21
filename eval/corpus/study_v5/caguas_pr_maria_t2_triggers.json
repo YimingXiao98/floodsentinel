@@ -1,0 +1,27 @@
+{
+ "schema": "sentinel-vtec-trigger-corpus/1",
+ "county": "Caguas",
+ "state": "PR",
+ "fips": "72025",
+ "generated_at": null,
+ "source": {
+  "archive": "frozen GDELT GKG title corpus via production detector",
+  "news_corpus": "/u/yxiao11/Research/openclaw-disaster-sentinel/eval/corpus/study_v5/caguas_pr_maria_gdelt.json",
+  "news_corpus_sha256": "1a41b176c999daaa3f25bab79475a0b3e0d76528829647542f24bd8c6e13daac",
+  "detector_entry_point": "score_and_filter_articles",
+  "min_page_score": 0.75,
+  "top_n": 5
+ },
+ "window": {
+  "start": "2017-09-17T04:00:00Z",
+  "end": "2017-09-30T04:00:00Z"
+ },
+ "as_of_semantics": "available_at is the first 15-minute poll at which the production detector admitted the article as a positive indication; articles become visible only after their GDELT publication slice, so this errs late, never early. Title-only proxy; exploratory.",
+ "role": "exploratory_t2_trigger_development_only",
+ "poll_interval_seconds": 900,
+ "polls": 1248,
+ "anomalies": {},
+ "raw_product_sample_validation": [],
+ "n_events": 0,
+ "events": []
+}

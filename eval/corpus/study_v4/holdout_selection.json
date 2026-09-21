@@ -1,0 +1,4496 @@
+{
+  "schema": "sentinel-v4-holdout-selection/1",
+  "protocol": "eval/HYBRID_STUDY_PROTOCOL_V4.md",
+  "policy_outcome_blind": true,
+  "ncei_events_csv": "eval/corpus/study_v3/ncei_events_us.csv",
+  "ncei_events_csv_sha256": "fbe9bbcba93bd90e8e49aed9ca6f93869c5d136b1903ea00c50f8bc9ef36b976",
+  "registry_csv": "skills/county-flood-data/nwps_all_gauges_report.csv",
+  "registry_csv_sha256": "a38823604d8b1bef8e211fd422e5ee32a0b7fb3668e1f510de80ac678ea3f964",
+  "rules": {
+    "event_order": "descending CPI-adjusted cost",
+    "max_impact_period_days": 10,
+    "window_days": [
+      2,
+      10
+    ],
+    "candidates_per_event": 6,
+    "max_passes": 3,
+    "max_counties_per_event": 3,
+    "stop_max_county_events": 24,
+    "min_powered_county_events": 12,
+    "max_coverage_only": 4,
+    "min_acknowledged_truth_coverage": 0.4,
+    "datum_screen_flood_fraction": 0.98,
+    "datum_screen_min_observations": 20,
+    "tidal_datum_names_excluded": [
+      "HAT",
+      "MHHW*",
+      "MHW",
+      "MLLW*",
+      "MSL"
+    ],
+    "development_counties_excluded": [
+      "01003",
+      "12031",
+      "12057",
+      "12086",
+      "12097",
+      "12105",
+      "22033",
+      "34035",
+      "37037",
+      "37119",
+      "37183",
+      "45051",
+      "48201",
+      "48339"
+    ],
+    "development_events_excluded": [
+      "Hurricane Harvey",
+      "Hurricane Irma",
+      "Hurricane Ida (August 2021)",
+      "Hurricane Helene (September 2024)",
+      "Hurricane Milton (October 2024)",
+      "Hurricane Michael (October 2018)",
+      "Hurricane Florence (September 2018)",
+      "Louisiana Flooding (August 2016)",
+      "Hurricane Matthew (October 2016)",
+      "Hurricane Sally (September 2020)",
+      "Hurricane Beryl (July 2024)"
+    ],
+    "territories_reachable": [
+      "PR",
+      "VI",
+      "GU",
+      "AS",
+      "MP"
+    ]
+  },
+  "event_frame": [
+    {
+      "name": "Hurricane Ian (September 2022)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2022-09-28",
+      "end": "2022-09-30",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 119626.0,
+      "storm_token": "IAN",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Maria (September 2017)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2017-09-19",
+      "end": "2017-09-21",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 115200.0,
+      "storm_token": "MARIA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Laura (August 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-08-27",
+      "end": "2020-08-28",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 28090.3,
+      "storm_token": "LAURA",
+      "named_states": []
+    },
+    {
+      "name": "Tropical Storm Imelda (September 2019)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2019-09-17",
+      "end": "2019-09-21",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 6150.0,
+      "storm_token": "IMELDA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Isaias (August 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-08-03",
+      "end": "2020-08-04",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 5756.1,
+      "storm_token": "ISAIAS",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Zeta (October 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-10-28",
+      "end": "2020-10-29",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 5266.0,
+      "storm_token": "ZETA",
+      "named_states": []
+    },
+    {
+      "name": "Typhoon Mawar (May 2023)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2023-05-24",
+      "end": "2023-05-25",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 4420.0,
+      "storm_token": "MAWAR",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Idalia (August 2023)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2023-08-29",
+      "end": "2023-08-31",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 3559.7,
+      "storm_token": "IDALIA",
+      "named_states": []
+    },
+    {
+      "name": "Houston Flooding (April 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-04-17",
+      "end": "2016-04-18",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 3559.1,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Delta (October 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-10-09",
+      "end": "2020-10-11",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 3469.3,
+      "storm_token": "DELTA",
+      "named_states": []
+    },
+    {
+      "name": "Texas and Louisiana Flooding (March 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-03-08",
+      "end": "2016-03-12",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 3052.1,
+      "storm_token": null,
+      "named_states": [
+        "LA",
+        "TX"
+      ]
+    },
+    {
+      "name": "Hurricane Fiona (September 2022)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2022-09-17",
+      "end": "2022-09-18",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 2685.7,
+      "storm_token": "FIONA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Debby (August 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-08-05",
+      "end": "2024-08-09",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 2476.0,
+      "storm_token": "DEBBY",
+      "named_states": []
+    },
+    {
+      "name": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+      "disaster": "Flooding",
+      "begin": "2023-07-09",
+      "end": "2023-07-15",
+      "impact_period_days": 6,
+      "cpi_adjusted_cost_musd": 2230.4,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Dorian (September 2019)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2019-08-28",
+      "end": "2019-09-06",
+      "impact_period_days": 9,
+      "cpi_adjusted_cost_musd": 1980.3,
+      "storm_token": "DORIAN",
+      "named_states": []
+    },
+    {
+      "name": "Tropical Storm Eta (November 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-11-08",
+      "end": "2020-11-12",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 1766.7,
+      "storm_token": "ETA",
+      "named_states": []
+    },
+    {
+      "name": "Louisiana Flooding (May 2021)",
+      "disaster": "Flooding",
+      "begin": "2021-05-17",
+      "end": "2021-05-18",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1569.6,
+      "storm_token": null,
+      "named_states": [
+        "LA"
+      ]
+    },
+    {
+      "name": "Kentucky and Missouri Flooding (July 2022)",
+      "disaster": "Flooding",
+      "begin": "2022-07-26",
+      "end": "2022-07-28",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1567.6,
+      "storm_token": null,
+      "named_states": [
+        "KY",
+        "MO"
+      ]
+    },
+    {
+      "name": "Tropical Storm Fred (August 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-08-16",
+      "end": "2021-08-18",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1481.3,
+      "storm_token": "FRED",
+      "named_states": []
+    },
+    {
+      "name": "Tropical Storm Elsa (July 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-07-07",
+      "end": "2021-07-09",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1407.1,
+      "storm_token": "ELSA",
+      "named_states": []
+    },
+    {
+      "name": "California Flooding and Severe Weather (January 2021)",
+      "disaster": "Flooding",
+      "begin": "2021-01-24",
+      "end": "2021-01-29",
+      "impact_period_days": 5,
+      "cpi_adjusted_cost_musd": 1325.0,
+      "storm_token": null,
+      "named_states": [
+        "CA"
+      ]
+    },
+    {
+      "name": "East Coast Storm and Flooding (December 2023)",
+      "disaster": "Flooding",
+      "begin": "2023-12-16",
+      "end": "2023-12-18",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1314.4,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Hanna (July 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-07-25",
+      "end": "2020-07-26",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1300.8,
+      "storm_token": "HANNA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Francine (September 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-09-11",
+      "end": "2024-09-12",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1291.0,
+      "storm_token": "FRANCINE",
+      "named_states": []
+    },
+    {
+      "name": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-06-22",
+      "end": "2016-06-24",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1288.5,
+      "storm_token": null,
+      "named_states": [
+        "OH",
+        "VA",
+        "WV"
+      ]
+    },
+    {
+      "name": "Hurricane Nicholas (September 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-09-14",
+      "end": "2021-09-18",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 1168.5,
+      "storm_token": "NICHOLAS",
+      "named_states": []
+    },
+    {
+      "name": "Fort Lauderdale Flash Flood (April 2023)",
+      "disaster": "Flooding",
+      "begin": "2023-04-12",
+      "end": "2023-04-13",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1144.0,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Upper Midwest Flooding (June 2024)",
+      "disaster": "Flooding",
+      "begin": "2024-06-16",
+      "end": "2024-06-23",
+      "impact_period_days": 7,
+      "cpi_adjusted_cost_musd": 1113.0,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Nicole (November 2022)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2022-11-10",
+      "end": "2022-11-11",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1081.2,
+      "storm_token": "NICOLE",
+      "named_states": []
+    }
+  ],
+  "event_frame_excluded": [
+    {
+      "name": "Louisiana Flooding (August 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-08-12",
+      "end": "2016-08-15",
+      "impact_period_days": 3,
+      "cpi_adjusted_cost_musd": 13300.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Matthew (October 2016)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2016-10-08",
+      "end": "2016-10-12",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 13100.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "California Flooding (February 2017)",
+      "disaster": "Flooding",
+      "begin": "2017-02-08",
+      "end": "2017-02-22",
+      "impact_period_days": 14,
+      "cpi_adjusted_cost_musd": 1950.0,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Missouri and Arkansas Flooding and Central Severe Weather (May 2017)",
+      "disaster": "Flooding",
+      "begin": "2017-04-25",
+      "end": "2017-05-07",
+      "impact_period_days": 12,
+      "cpi_adjusted_cost_musd": 2156.7,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Hurricane Harvey (August 2017)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2017-08-25",
+      "end": "2017-08-31",
+      "impact_period_days": 6,
+      "cpi_adjusted_cost_musd": 160000.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Irma (September 2017)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2017-09-06",
+      "end": "2017-09-12",
+      "impact_period_days": 6,
+      "cpi_adjusted_cost_musd": 64000.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Florence (September 2018)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2018-09-13",
+      "end": "2018-09-16",
+      "impact_period_days": 3,
+      "cpi_adjusted_cost_musd": 30000.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Michael (October 2018)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2018-10-10",
+      "end": "2018-10-11",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 31218.8,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Missouri River and North Central Flooding (March 2019)",
+      "disaster": "Flooding",
+      "begin": "2019-03-14",
+      "end": "2019-03-31",
+      "impact_period_days": 17,
+      "cpi_adjusted_cost_musd": 13408.9,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Arkansas River Flooding (June 2019)",
+      "disaster": "Flooding",
+      "begin": "2019-05-20",
+      "end": "2019-06-14",
+      "impact_period_days": 25,
+      "cpi_adjusted_cost_musd": 3720.8,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Mississippi River, Midwest and Southern Flooding (July 2019)",
+      "disaster": "Flooding",
+      "begin": "2019-03-15",
+      "end": "2019-07-31",
+      "impact_period_days": 138,
+      "cpi_adjusted_cost_musd": 7649.6,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Hurricane Sally (September 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-09-15",
+      "end": "2020-09-17",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 8801.5,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Ida (August 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-08-29",
+      "end": "2021-09-01",
+      "impact_period_days": 3,
+      "cpi_adjusted_cost_musd": 84608.1,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "California Flooding (December 2022 - March 2023)",
+      "disaster": "Flooding",
+      "begin": "2022-12-26",
+      "end": "2023-03-19",
+      "impact_period_days": 83,
+      "cpi_adjusted_cost_musd": 4725.0,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Hurricane Beryl (July 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-07-08",
+      "end": "2024-07-08",
+      "impact_period_days": 0,
+      "cpi_adjusted_cost_musd": 7219.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Helene (September 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-09-24",
+      "end": "2024-09-29",
+      "impact_period_days": 5,
+      "cpi_adjusted_cost_musd": 78721.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Milton (October 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-10-09",
+      "end": "2024-10-10",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 34250.0,
+      "exclusion": "development_event"
+    }
+  ],
+  "included_episode_evaluation": [
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "12083",
+        "state": "FL",
+        "county": "Marion",
+        "disaster_numbers": [
+          4673
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/marion_12083_hurricane_ian_september_2022.json",
+      "corpus_sha256": "2739d23689aa84e8aaa0f87b3cb08ec6cf665018c6d59a6e978f43338296c83f",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 7,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/marion_12083_hurricane_ian_september_2022.json",
+        "county": "Marion",
+        "state": "FL",
+        "fips": "12083",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "2739d23689aa84e8aaa0f87b3cb08ec6cf665018c6d59a6e978f43338296c83f",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Maria (September 2017)",
+      "candidate": {
+        "fips": "72025",
+        "state": "PR",
+        "county": "Caguas",
+        "disaster_numbers": [
+          4339
+        ],
+        "registry_gauges_with_flood_stage": 5,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/caguas_72025_hurricane_maria_september_2017.json",
+      "corpus_sha256": "3b39f1ded77a5f3940e57a33317e247b72f1fe857cae97e27ae61d7e3ec004e8",
+      "window": {
+        "start": "2017-09-17",
+        "end": "2017-09-29"
+      },
+      "analysis_start": "2017-09-17T04:00:00Z",
+      "analysis_end": "2017-09-30T04:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 4,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/caguas_72025_hurricane_maria_september_2017.json",
+        "county": "Caguas",
+        "state": "PR",
+        "fips": "72025",
+        "event": "Hurricane Maria (September 2017)",
+        "start": "2017-09-17",
+        "end": "2017-09-29",
+        "analysis_start": "2017-09-17T04:00:00Z",
+        "analysis_end": "2017-09-30T04:00:00Z",
+        "sha256": "3b39f1ded77a5f3940e57a33317e247b72f1fe857cae97e27ae61d7e3ec004e8",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "48351",
+        "state": "TX",
+        "county": "Newton",
+        "disaster_numbers": [
+          4572
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v4/newton_48351_hurricane_laura_august_2020.json",
+      "corpus_sha256": "c5cf4fc960834f100d90240926de7d97fbd5ba67185ab5d329a4e25485820519",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 0.496,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.496,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/newton_48351_hurricane_laura_august_2020.json",
+        "county": "Newton",
+        "state": "TX",
+        "fips": "48351",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "c5cf4fc960834f100d90240926de7d97fbd5ba67185ab5d329a4e25485820519",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 50% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Tropical Storm Imelda (September 2019)",
+      "candidate": {
+        "fips": "48361",
+        "state": "TX",
+        "county": "Orange",
+        "disaster_numbers": [
+          4466
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/orange_48361_tropical_storm_imelda_september_2019.json",
+      "corpus_sha256": "ff6628123b48a5ba22d53c8a7f0bdd9108363dadba87d6346183a7da351dd797",
+      "window": {
+        "start": "2019-09-15",
+        "end": "2019-09-27"
+      },
+      "analysis_start": "2019-09-15T06:00:00Z",
+      "analysis_end": "2019-09-28T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.609,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.609,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/orange_48361_tropical_storm_imelda_september_2019.json",
+        "county": "Orange",
+        "state": "TX",
+        "fips": "48361",
+        "event": "Tropical Storm Imelda (September 2019)",
+        "start": "2019-09-15",
+        "end": "2019-09-27",
+        "analysis_start": "2019-09-15T06:00:00Z",
+        "analysis_end": "2019-09-28T06:00:00Z",
+        "sha256": "ff6628123b48a5ba22d53c8a7f0bdd9108363dadba87d6346183a7da351dd797",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 39% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Isaias (August 2020)",
+      "candidate": {
+        "fips": "10003",
+        "state": "DE",
+        "county": "New Castle",
+        "disaster_numbers": [
+          4566
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/new_castle_10003_hurricane_isaias_august_2020.json",
+      "corpus_sha256": "19a62ca5e815b7ddd7b364c2b3ac3bfdd0bcfe8d4b03ba5703ccc39a8d4f49ab",
+      "window": {
+        "start": "2020-08-01",
+        "end": "2020-08-13"
+      },
+      "analysis_start": "2020-08-01T05:00:00Z",
+      "analysis_end": "2020-08-14T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "01480065",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "01480120",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 0.5457,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.5457,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/new_castle_10003_hurricane_isaias_august_2020.json",
+        "county": "New Castle",
+        "state": "DE",
+        "fips": "10003",
+        "event": "Hurricane Isaias (August 2020)",
+        "start": "2020-08-01",
+        "end": "2020-08-13",
+        "analysis_start": "2020-08-01T05:00:00Z",
+        "analysis_end": "2020-08-14T05:00:00Z",
+        "sha256": "19a62ca5e815b7ddd7b364c2b3ac3bfdd0bcfe8d4b03ba5703ccc39a8d4f49ab",
+        "threshold_exclusions": [
+          {
+            "site_no": "01480065",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "01480120",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 45% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Zeta (October 2020)",
+      "candidate": {
+        "fips": "28047",
+        "state": "MS",
+        "county": "Harrison",
+        "disaster_numbers": [
+          4576
+        ],
+        "registry_gauges_with_flood_stage": 12,
+        "registry_gauges_in_service": 12
+      },
+      "corpus_path": "eval/corpus/study_v4/harrison_28047_hurricane_zeta_october_2020.json",
+      "corpus_sha256": "98d2a9b36ee9439e9f4adfc0cf2623deac6173787cb04d2c5b53c9c08a71eb60",
+      "window": {
+        "start": "2020-10-26",
+        "end": "2020-11-07"
+      },
+      "analysis_start": "2020-10-26T06:00:00Z",
+      "analysis_end": "2020-11-08T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 0.9904,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/harrison_28047_hurricane_zeta_october_2020.json",
+        "county": "Harrison",
+        "state": "MS",
+        "fips": "28047",
+        "event": "Hurricane Zeta (October 2020)",
+        "start": "2020-10-26",
+        "end": "2020-11-07",
+        "analysis_start": "2020-10-26T06:00:00Z",
+        "analysis_end": "2020-11-08T06:00:00Z",
+        "sha256": "98d2a9b36ee9439e9f4adfc0cf2623deac6173787cb04d2c5b53c9c08a71eb60",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Idalia (August 2023)",
+      "candidate": {
+        "fips": "12115",
+        "state": "FL",
+        "county": "Sarasota",
+        "disaster_numbers": [
+          4734
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/sarasota_12115_hurricane_idalia_august_2023.json",
+      "corpus_sha256": "89820a9b4505bd190ecf22cf2f438af90edb9d5c4c1d7a056cff60b8cf46100d",
+      "window": {
+        "start": "2023-08-27",
+        "end": "2023-09-08"
+      },
+      "analysis_start": "2023-08-27T05:00:00Z",
+      "analysis_end": "2023-09-09T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02299734",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 7,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/sarasota_12115_hurricane_idalia_august_2023.json",
+        "county": "Sarasota",
+        "state": "FL",
+        "fips": "12115",
+        "event": "Hurricane Idalia (August 2023)",
+        "start": "2023-08-27",
+        "end": "2023-09-08",
+        "analysis_start": "2023-08-27T05:00:00Z",
+        "analysis_end": "2023-09-09T05:00:00Z",
+        "sha256": "89820a9b4505bd190ecf22cf2f438af90edb9d5c4c1d7a056cff60b8cf46100d",
+        "threshold_exclusions": [
+          {
+            "site_no": "02299734",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Houston Flooding (April 2016)",
+      "candidate": {
+        "fips": "48073",
+        "state": "TX",
+        "county": "Cherokee",
+        "disaster_numbers": [
+          4269
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/cherokee_48073_houston_flooding_april_2016.json",
+      "corpus_sha256": "76af56cc1aefaf05bab46666bbaa570d00a48a2f0397d3ae245d747694fa9b43",
+      "window": {
+        "start": "2016-04-15",
+        "end": "2016-04-27"
+      },
+      "analysis_start": "2016-04-15T06:00:00Z",
+      "analysis_end": "2016-04-28T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/cherokee_48073_houston_flooding_april_2016.json",
+        "county": "Cherokee",
+        "state": "TX",
+        "fips": "48073",
+        "event": "Houston Flooding (April 2016)",
+        "start": "2016-04-15",
+        "end": "2016-04-27",
+        "analysis_start": "2016-04-15T06:00:00Z",
+        "analysis_end": "2016-04-28T06:00:00Z",
+        "sha256": "76af56cc1aefaf05bab46666bbaa570d00a48a2f0397d3ae245d747694fa9b43",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Delta (October 2020)",
+      "candidate": {
+        "fips": "22001",
+        "state": "LA",
+        "county": "Acadia",
+        "disaster_numbers": [
+          4570
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/acadia_22001_hurricane_delta_october_2020.json",
+      "corpus_sha256": "7f5a8a0cad5e9c64c7bf7800a6a65efe1357314b5f7c532b7d7b6041f47f32d2",
+      "window": {
+        "start": "2020-10-07",
+        "end": "2020-10-19"
+      },
+      "analysis_start": "2020-10-07T06:00:00Z",
+      "analysis_end": "2020-10-20T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/acadia_22001_hurricane_delta_october_2020.json",
+        "county": "Acadia",
+        "state": "LA",
+        "fips": "22001",
+        "event": "Hurricane Delta (October 2020)",
+        "start": "2020-10-07",
+        "end": "2020-10-19",
+        "analysis_start": "2020-10-07T06:00:00Z",
+        "analysis_end": "2020-10-20T06:00:00Z",
+        "sha256": "7f5a8a0cad5e9c64c7bf7800a6a65efe1357314b5f7c532b7d7b6041f47f32d2",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Texas and Louisiana Flooding (March 2016)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4263
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_texas_and_louisiana_flooding_march_2016.json",
+      "corpus_sha256": "74d659a6fc25d320a5fe6a1d46267ac2c663857b6b23146b551359420eff9111",
+      "window": {
+        "start": "2016-03-06",
+        "end": "2016-03-18"
+      },
+      "analysis_start": "2016-03-06T06:00:00Z",
+      "analysis_end": "2016-03-19T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 0.9696,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_texas_and_louisiana_flooding_march_2016.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Texas and Louisiana Flooding (March 2016)",
+        "start": "2016-03-06",
+        "end": "2016-03-18",
+        "analysis_start": "2016-03-06T06:00:00Z",
+        "analysis_end": "2016-03-19T06:00:00Z",
+        "sha256": "74d659a6fc25d320a5fe6a1d46267ac2c663857b6b23146b551359420eff9111",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Fiona (September 2022)",
+      "candidate": {
+        "fips": "72113",
+        "state": "PR",
+        "county": "Ponce",
+        "disaster_numbers": [
+          4671
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/ponce_72113_hurricane_fiona_september_2022.json",
+      "corpus_sha256": "1d1e849e89babfa8bd6b5435856e7647911e93ad1567652d77638481705cceb6",
+      "window": {
+        "start": "2022-09-15",
+        "end": "2022-09-27"
+      },
+      "analysis_start": "2022-09-15T04:00:00Z",
+      "analysis_end": "2022-09-28T04:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 0.6923,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.6923,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ponce_72113_hurricane_fiona_september_2022.json",
+        "county": "Ponce",
+        "state": "PR",
+        "fips": "72113",
+        "event": "Hurricane Fiona (September 2022)",
+        "start": "2022-09-15",
+        "end": "2022-09-27",
+        "analysis_start": "2022-09-15T04:00:00Z",
+        "analysis_end": "2022-09-28T04:00:00Z",
+        "sha256": "1d1e849e89babfa8bd6b5435856e7647911e93ad1567652d77638481705cceb6",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 31% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Debby (August 2024)",
+      "candidate": {
+        "fips": "36025",
+        "state": "NY",
+        "county": "Delaware",
+        "disaster_numbers": [
+          4825
+        ],
+        "registry_gauges_with_flood_stage": 25,
+        "registry_gauges_in_service": 25
+      },
+      "corpus_path": "eval/corpus/study_v4/delaware_36025_hurricane_debby_august_2024.json",
+      "corpus_sha256": "1f2094a1076abd7222d1c0f8b0df67623b0629a76a2d8032a9d5053a617197c1",
+      "window": {
+        "start": "2024-08-03",
+        "end": "2024-08-15"
+      },
+      "analysis_start": "2024-08-03T05:00:00Z",
+      "analysis_end": "2024-08-16T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.5385,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.5385,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/delaware_36025_hurricane_debby_august_2024.json",
+        "county": "Delaware",
+        "state": "NY",
+        "fips": "36025",
+        "event": "Hurricane Debby (August 2024)",
+        "start": "2024-08-03",
+        "end": "2024-08-15",
+        "analysis_start": "2024-08-03T05:00:00Z",
+        "analysis_end": "2024-08-16T05:00:00Z",
+        "sha256": "1f2094a1076abd7222d1c0f8b0df67623b0629a76a2d8032a9d5053a617197c1",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 46% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+      "candidate": {
+        "fips": "50023",
+        "state": "VT",
+        "county": "Washington",
+        "disaster_numbers": [
+          4720
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/washington_50023_northeastern_flooding_and_north_central_.json",
+      "corpus_sha256": "972db9c57a3e90af905dcfded631ffb01c00b79190e14436359a8f144d0590fb",
+      "window": {
+        "start": "2023-07-07",
+        "end": "2023-07-19"
+      },
+      "analysis_start": "2023-07-07T05:00:00Z",
+      "analysis_end": "2023-07-20T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 0.4143,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.4143,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/washington_50023_northeastern_flooding_and_north_central_.json",
+        "county": "Washington",
+        "state": "VT",
+        "fips": "50023",
+        "event": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+        "start": "2023-07-07",
+        "end": "2023-07-19",
+        "analysis_start": "2023-07-07T05:00:00Z",
+        "analysis_end": "2023-07-20T05:00:00Z",
+        "sha256": "972db9c57a3e90af905dcfded631ffb01c00b79190e14436359a8f144d0590fb",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 59% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Dorian (September 2019)",
+      "candidate": {
+        "fips": "45015",
+        "state": "SC",
+        "county": "Berkeley",
+        "disaster_numbers": [
+          4464
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/berkeley_45015_hurricane_dorian_september_2019.json",
+      "corpus_sha256": "dd3a0c5cbd733b8269c88d8e66e32c208cfb38e53eb8e1ef8d3e91748452e408",
+      "window": {
+        "start": "2019-08-26",
+        "end": "2019-09-07"
+      },
+      "analysis_start": "2019-08-26T05:00:00Z",
+      "analysis_end": "2019-09-08T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/berkeley_45015_hurricane_dorian_september_2019.json",
+        "county": "Berkeley",
+        "state": "SC",
+        "fips": "45015",
+        "event": "Hurricane Dorian (September 2019)",
+        "start": "2019-08-26",
+        "end": "2019-09-07",
+        "analysis_start": "2019-08-26T05:00:00Z",
+        "analysis_end": "2019-09-08T05:00:00Z",
+        "sha256": "dd3a0c5cbd733b8269c88d8e66e32c208cfb38e53eb8e1ef8d3e91748452e408",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Tropical Storm Eta (November 2020)",
+      "candidate": {
+        "fips": "37155",
+        "state": "NC",
+        "county": "Robeson",
+        "disaster_numbers": [
+          4588
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 4
+      },
+      "corpus_path": "eval/corpus/study_v4/robeson_37155_tropical_storm_eta_november_2020.json",
+      "corpus_sha256": "b61a7cdd85874ec3300e87fbcd44080536f0ece48472cc1377a18ed17f0f4448",
+      "window": {
+        "start": "2020-11-06",
+        "end": "2020-11-18"
+      },
+      "analysis_start": "2020-11-06T05:00:00Z",
+      "analysis_end": "2020-11-19T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/robeson_37155_tropical_storm_eta_november_2020.json",
+        "county": "Robeson",
+        "state": "NC",
+        "fips": "37155",
+        "event": "Tropical Storm Eta (November 2020)",
+        "start": "2020-11-06",
+        "end": "2020-11-18",
+        "analysis_start": "2020-11-06T05:00:00Z",
+        "analysis_end": "2020-11-19T05:00:00Z",
+        "sha256": "b61a7cdd85874ec3300e87fbcd44080536f0ece48472cc1377a18ed17f0f4448",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Louisiana Flooding (May 2021)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4606
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_louisiana_flooding_may_2021.json",
+      "corpus_sha256": "fc5f6edf8cb7a2badff96329707230d541f3af6007074f57de7dede384177acd",
+      "window": {
+        "start": "2021-05-15",
+        "end": "2021-05-27"
+      },
+      "analysis_start": "2021-05-15T06:00:00Z",
+      "analysis_end": "2021-05-28T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_louisiana_flooding_may_2021.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Louisiana Flooding (May 2021)",
+        "start": "2021-05-15",
+        "end": "2021-05-27",
+        "analysis_start": "2021-05-15T06:00:00Z",
+        "analysis_end": "2021-05-28T06:00:00Z",
+        "sha256": "fc5f6edf8cb7a2badff96329707230d541f3af6007074f57de7dede384177acd",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Kentucky and Missouri Flooding (July 2022)",
+      "candidate": {
+        "fips": "21129",
+        "state": "KY",
+        "county": "Lee",
+        "disaster_numbers": [
+          4663
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 4
+      },
+      "corpus_path": "eval/corpus/study_v4/lee_21129_kentucky_and_missouri_flooding_july_2022.json",
+      "corpus_sha256": "9d6cbe585043222eb47fa8c9b67f07eafb9588d23bd28dab21a82dbb12fe24c3",
+      "window": {
+        "start": "2022-07-24",
+        "end": "2022-08-05"
+      },
+      "analysis_start": "2022-07-24T05:00:00Z",
+      "analysis_end": "2022-08-06T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/lee_21129_kentucky_and_missouri_flooding_july_2022.json",
+        "county": "Lee",
+        "state": "KY",
+        "fips": "21129",
+        "event": "Kentucky and Missouri Flooding (July 2022)",
+        "start": "2022-07-24",
+        "end": "2022-08-05",
+        "analysis_start": "2022-07-24T05:00:00Z",
+        "analysis_end": "2022-08-06T05:00:00Z",
+        "sha256": "9d6cbe585043222eb47fa8c9b67f07eafb9588d23bd28dab21a82dbb12fe24c3",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Tropical Storm Fred (August 2021)",
+      "candidate": {
+        "fips": "36101",
+        "state": "NY",
+        "county": "Steuben",
+        "disaster_numbers": [
+          4625
+        ],
+        "registry_gauges_with_flood_stage": 12,
+        "registry_gauges_in_service": 12
+      },
+      "corpus_path": "eval/corpus/study_v4/steuben_36101_tropical_storm_fred_august_2021.json",
+      "corpus_sha256": "f0569d7b7f1ef77000769302e2f82d5493cb6eab19d16b8422a8f1ed082268b9",
+      "window": {
+        "start": "2021-08-14",
+        "end": "2021-08-26"
+      },
+      "analysis_start": "2021-08-14T05:00:00Z",
+      "analysis_end": "2021-08-27T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/steuben_36101_tropical_storm_fred_august_2021.json",
+        "county": "Steuben",
+        "state": "NY",
+        "fips": "36101",
+        "event": "Tropical Storm Fred (August 2021)",
+        "start": "2021-08-14",
+        "end": "2021-08-26",
+        "analysis_start": "2021-08-14T05:00:00Z",
+        "analysis_end": "2021-08-27T05:00:00Z",
+        "sha256": "f0569d7b7f1ef77000769302e2f82d5493cb6eab19d16b8422a8f1ed082268b9",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "East Coast Storm and Flooding (December 2023)",
+      "candidate": {
+        "fips": "23019",
+        "state": "ME",
+        "county": "Penobscot",
+        "disaster_numbers": [
+          4754
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/penobscot_23019_east_coast_storm_and_flooding_december_2.json",
+      "corpus_sha256": "398475fc9ffe593115abba5d6798e846dbc09416372c60fce41c9162206e5380",
+      "window": {
+        "start": "2023-12-14",
+        "end": "2023-12-26"
+      },
+      "analysis_start": "2023-12-14T05:00:00Z",
+      "analysis_end": "2023-12-27T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/penobscot_23019_east_coast_storm_and_flooding_december_2.json",
+        "county": "Penobscot",
+        "state": "ME",
+        "fips": "23019",
+        "event": "East Coast Storm and Flooding (December 2023)",
+        "start": "2023-12-14",
+        "end": "2023-12-26",
+        "analysis_start": "2023-12-14T05:00:00Z",
+        "analysis_end": "2023-12-27T05:00:00Z",
+        "sha256": "398475fc9ffe593115abba5d6798e846dbc09416372c60fce41c9162206e5380",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Francine (September 2024)",
+      "candidate": {
+        "fips": "22103",
+        "state": "LA",
+        "county": "St. Tammany",
+        "disaster_numbers": [
+          4817
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v4/st_tammany_22103_hurricane_francine_september_2024.json",
+      "corpus_sha256": "c59f55eeba68b1cc3d914cbc6024e12959efed7a8bbd408c8fccb06d519bf691",
+      "window": {
+        "start": "2024-09-09",
+        "end": "2024-09-21"
+      },
+      "analysis_start": "2024-09-09T06:00:00Z",
+      "analysis_end": "2024-09-22T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_francine_september_2024.json",
+        "county": "St. Tammany",
+        "state": "LA",
+        "fips": "22103",
+        "event": "Hurricane Francine (September 2024)",
+        "start": "2024-09-09",
+        "end": "2024-09-21",
+        "analysis_start": "2024-09-09T06:00:00Z",
+        "analysis_end": "2024-09-22T06:00:00Z",
+        "sha256": "c59f55eeba68b1cc3d914cbc6024e12959efed7a8bbd408c8fccb06d519bf691",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "candidate": {
+        "fips": "54007",
+        "state": "WV",
+        "county": "Braxton",
+        "disaster_numbers": [
+          4273
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/braxton_54007_west_virginia_flooding_and_ohio_valley_t.json",
+      "corpus_sha256": "32a434192e35c344d1ca757f0038e3e13b5b9ece02cf17fde0d048de9cb833b9",
+      "window": {
+        "start": "2016-06-20",
+        "end": "2016-07-02"
+      },
+      "analysis_start": "2016-06-20T05:00:00Z",
+      "analysis_end": "2016-07-03T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/braxton_54007_west_virginia_flooding_and_ohio_valley_t.json",
+        "county": "Braxton",
+        "state": "WV",
+        "fips": "54007",
+        "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+        "start": "2016-06-20",
+        "end": "2016-07-02",
+        "analysis_start": "2016-06-20T05:00:00Z",
+        "analysis_end": "2016-07-03T05:00:00Z",
+        "sha256": "32a434192e35c344d1ca757f0038e3e13b5b9ece02cf17fde0d048de9cb833b9",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Fort Lauderdale Flash Flood (April 2023)",
+      "candidate": {
+        "fips": "27089",
+        "state": "MN",
+        "county": "Marshall",
+        "disaster_numbers": [
+          4722
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/marshall_27089_fort_lauderdale_flash_flood_april_2023.json",
+      "corpus_sha256": "91e6aa7316bddb33347fd32cf87e4b0a2f6121076726db017b0223b1bf09570c",
+      "window": {
+        "start": "2023-04-10",
+        "end": "2023-04-22"
+      },
+      "analysis_start": "2023-04-10T06:00:00Z",
+      "analysis_end": "2023-04-23T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 3,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/marshall_27089_fort_lauderdale_flash_flood_april_2023.json",
+        "county": "Marshall",
+        "state": "MN",
+        "fips": "27089",
+        "event": "Fort Lauderdale Flash Flood (April 2023)",
+        "start": "2023-04-10",
+        "end": "2023-04-22",
+        "analysis_start": "2023-04-10T06:00:00Z",
+        "analysis_end": "2023-04-23T06:00:00Z",
+        "sha256": "91e6aa7316bddb33347fd32cf87e4b0a2f6121076726db017b0223b1bf09570c",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Upper Midwest Flooding (June 2024)",
+      "candidate": {
+        "fips": "31055",
+        "state": "NE",
+        "county": "Douglas",
+        "disaster_numbers": [
+          4822
+        ],
+        "registry_gauges_with_flood_stage": 15,
+        "registry_gauges_in_service": 15
+      },
+      "corpus_path": "eval/corpus/study_v4/douglas_31055_upper_midwest_flooding_june_2024.json",
+      "corpus_sha256": "5115d4b6ce1210a00c1fb2cc64c6e2fa5237e7aa23b2c2ac64f9e964dda8598a",
+      "window": {
+        "start": "2024-06-14",
+        "end": "2024-06-26"
+      },
+      "analysis_start": "2024-06-14T06:00:00Z",
+      "analysis_end": "2024-06-27T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 10,
+      "primary_truth_coverage": 0.6787,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.6787,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/douglas_31055_upper_midwest_flooding_june_2024.json",
+        "county": "Douglas",
+        "state": "NE",
+        "fips": "31055",
+        "event": "Upper Midwest Flooding (June 2024)",
+        "start": "2024-06-14",
+        "end": "2024-06-26",
+        "analysis_start": "2024-06-14T06:00:00Z",
+        "analysis_end": "2024-06-27T06:00:00Z",
+        "sha256": "5115d4b6ce1210a00c1fb2cc64c6e2fa5237e7aa23b2c2ac64f9e964dda8598a",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 32% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Nicole (November 2022)",
+      "candidate": {
+        "fips": "12117",
+        "state": "FL",
+        "county": "Seminole",
+        "disaster_numbers": [
+          4680
+        ],
+        "registry_gauges_with_flood_stage": 5,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/seminole_12117_hurricane_nicole_november_2022.json",
+      "corpus_sha256": "76be0d175f4e4a84ec3a9c52662b7800b765f60ce295a42eca64356a7d028b97",
+      "window": {
+        "start": "2022-11-08",
+        "end": "2022-11-20"
+      },
+      "analysis_start": "2022-11-08T05:00:00Z",
+      "analysis_end": "2022-11-21T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02234000",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 1.0
+        },
+        {
+          "site_no": "02234500",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 1.0
+        }
+      ],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 3,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/seminole_12117_hurricane_nicole_november_2022.json",
+        "county": "Seminole",
+        "state": "FL",
+        "fips": "12117",
+        "event": "Hurricane Nicole (November 2022)",
+        "start": "2022-11-08",
+        "end": "2022-11-20",
+        "analysis_start": "2022-11-08T05:00:00Z",
+        "analysis_end": "2022-11-21T05:00:00Z",
+        "sha256": "76be0d175f4e4a84ec3a9c52662b7800b765f60ce295a42eca64356a7d028b97",
+        "threshold_exclusions": [
+          {
+            "site_no": "02234000",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 1.0
+          },
+          {
+            "site_no": "02234500",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 1.0
+          }
+        ]
+      },
+      "selection_pass": 1
+    }
+  ],
+  "included_coverage_only": [
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45079",
+        "state": "SC",
+        "county": "Richland",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/richland_45079_hurricane_ian_september_2022.json",
+      "corpus_sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/richland_45079_hurricane_ian_september_2022.json",
+        "county": "Richland",
+        "state": "SC",
+        "fips": "45079",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45083",
+        "state": "SC",
+        "county": "Spartanburg",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/spartanburg_45083_hurricane_ian_september_2022.json",
+      "corpus_sha256": "5e03d69433c2bb568a777a02916af509ffdf45d04013ede349f4b1fb3c149429",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/spartanburg_45083_hurricane_ian_september_2022.json",
+        "county": "Spartanburg",
+        "state": "SC",
+        "fips": "45083",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "5e03d69433c2bb568a777a02916af509ffdf45d04013ede349f4b1fb3c149429",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45015",
+        "state": "SC",
+        "county": "Berkeley",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/berkeley_45015_hurricane_ian_september_2022.json",
+      "corpus_sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/berkeley_45015_hurricane_ian_september_2022.json",
+        "county": "Berkeley",
+        "state": "SC",
+        "fips": "45015",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45035",
+        "state": "SC",
+        "county": "Dorchester",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/dorchester_45035_hurricane_ian_september_2022.json",
+      "corpus_sha256": "dbea518607723e4a238c758b3627ad7cd61ab53347522a19f024e7ffe4b316c6",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/dorchester_45035_hurricane_ian_september_2022.json",
+        "county": "Dorchester",
+        "state": "SC",
+        "fips": "45035",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "dbea518607723e4a238c758b3627ad7cd61ab53347522a19f024e7ffe4b316c6",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    }
+  ],
+  "all_candidates_considered": [
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45079",
+        "state": "SC",
+        "county": "Richland",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/richland_45079_hurricane_ian_september_2022.json",
+      "corpus_sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/richland_45079_hurricane_ian_september_2022.json",
+        "county": "Richland",
+        "state": "SC",
+        "fips": "45079",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45083",
+        "state": "SC",
+        "county": "Spartanburg",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/spartanburg_45083_hurricane_ian_september_2022.json",
+      "corpus_sha256": "5e03d69433c2bb568a777a02916af509ffdf45d04013ede349f4b1fb3c149429",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/spartanburg_45083_hurricane_ian_september_2022.json",
+        "county": "Spartanburg",
+        "state": "SC",
+        "fips": "45083",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "5e03d69433c2bb568a777a02916af509ffdf45d04013ede349f4b1fb3c149429",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45015",
+        "state": "SC",
+        "county": "Berkeley",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/berkeley_45015_hurricane_ian_september_2022.json",
+      "corpus_sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/berkeley_45015_hurricane_ian_september_2022.json",
+        "county": "Berkeley",
+        "state": "SC",
+        "fips": "45015",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45035",
+        "state": "SC",
+        "county": "Dorchester",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/dorchester_45035_hurricane_ian_september_2022.json",
+      "corpus_sha256": "dbea518607723e4a238c758b3627ad7cd61ab53347522a19f024e7ffe4b316c6",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/dorchester_45035_hurricane_ian_september_2022.json",
+        "county": "Dorchester",
+        "state": "SC",
+        "fips": "45035",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "dbea518607723e4a238c758b3627ad7cd61ab53347522a19f024e7ffe4b316c6",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45091",
+        "state": "SC",
+        "county": "York",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/york_45091_hurricane_ian_september_2022.json",
+      "corpus_sha256": "ce871c63c44a8981ae6ded5d1ef727e904816aacdd36a5e71020d574de195ba6",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/york_45091_hurricane_ian_september_2022.json",
+        "county": "York",
+        "state": "SC",
+        "fips": "45091",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "ce871c63c44a8981ae6ded5d1ef727e904816aacdd36a5e71020d574de195ba6",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "12083",
+        "state": "FL",
+        "county": "Marion",
+        "disaster_numbers": [
+          4673
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/marion_12083_hurricane_ian_september_2022.json",
+      "corpus_sha256": "2739d23689aa84e8aaa0f87b3cb08ec6cf665018c6d59a6e978f43338296c83f",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 7,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/marion_12083_hurricane_ian_september_2022.json",
+        "county": "Marion",
+        "state": "FL",
+        "fips": "12083",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "2739d23689aa84e8aaa0f87b3cb08ec6cf665018c6d59a6e978f43338296c83f",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Maria (September 2017)",
+      "candidate": {
+        "fips": "72113",
+        "state": "PR",
+        "county": "Ponce",
+        "disaster_numbers": [
+          4339
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/ponce_72113_hurricane_maria_september_2017.json",
+      "corpus_sha256": "af6b7b6d6c29774f1c4757f91edfc61cff2013c1eecf51f5a575687411735b9b",
+      "window": {
+        "start": "2017-09-17",
+        "end": "2017-09-29"
+      },
+      "analysis_start": "2017-09-17T04:00:00Z",
+      "analysis_end": "2017-09-30T04:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 0.262,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.262,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": true,
+      "decision": "excluded",
+      "exclusion_reason": "preflight_blocked:['limited_primary_truth_coverage_unreviewed']",
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Maria (September 2017)",
+      "candidate": {
+        "fips": "72025",
+        "state": "PR",
+        "county": "Caguas",
+        "disaster_numbers": [
+          4339
+        ],
+        "registry_gauges_with_flood_stage": 5,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/caguas_72025_hurricane_maria_september_2017.json",
+      "corpus_sha256": "3b39f1ded77a5f3940e57a33317e247b72f1fe857cae97e27ae61d7e3ec004e8",
+      "window": {
+        "start": "2017-09-17",
+        "end": "2017-09-29"
+      },
+      "analysis_start": "2017-09-17T04:00:00Z",
+      "analysis_end": "2017-09-30T04:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 4,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/caguas_72025_hurricane_maria_september_2017.json",
+        "county": "Caguas",
+        "state": "PR",
+        "fips": "72025",
+        "event": "Hurricane Maria (September 2017)",
+        "start": "2017-09-17",
+        "end": "2017-09-29",
+        "analysis_start": "2017-09-17T04:00:00Z",
+        "analysis_end": "2017-09-30T04:00:00Z",
+        "sha256": "3b39f1ded77a5f3940e57a33317e247b72f1fe857cae97e27ae61d7e3ec004e8",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4559
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_hurricane_laura_august_2020.json",
+      "corpus_sha256": "7e276a50897f6a4fa56cb57d29c19e2c86e8deb1ff99dbabc98ed8f0b46fb31c",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 0,
+      "primary_truth_coverage": 0.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_hurricane_laura_august_2020.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "7e276a50897f6a4fa56cb57d29c19e2c86e8deb1ff99dbabc98ed8f0b46fb31c",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "22103",
+        "state": "LA",
+        "county": "St. Tammany",
+        "disaster_numbers": [
+          4559
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v4/st_tammany_22103_hurricane_laura_august_2020.json",
+      "corpus_sha256": "1972f701766d67fb449bc8fe4ce7de1aff12e43b28a833bede02f46b4067f076",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 0.9992,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_laura_august_2020.json",
+        "county": "St. Tammany",
+        "state": "LA",
+        "fips": "22103",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "1972f701766d67fb449bc8fe4ce7de1aff12e43b28a833bede02f46b4067f076",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "22075",
+        "state": "LA",
+        "county": "Plaquemines",
+        "disaster_numbers": [
+          4559
+        ],
+        "registry_gauges_with_flood_stage": 14,
+        "registry_gauges_in_service": 14
+      },
+      "corpus_path": "eval/corpus/study_v4/plaquemines_22075_hurricane_laura_august_2020.json",
+      "corpus_sha256": "dc4e9afe55f9f23adcc0b909f5b6dabe1442edca6ab50631fadcb3408afaea0e",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 0,
+      "primary_truth_coverage": 0.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/plaquemines_22075_hurricane_laura_august_2020.json",
+        "county": "Plaquemines",
+        "state": "LA",
+        "fips": "22075",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "dc4e9afe55f9f23adcc0b909f5b6dabe1442edca6ab50631fadcb3408afaea0e",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "22051",
+        "state": "LA",
+        "county": "Jefferson",
+        "disaster_numbers": [
+          4559
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/jefferson_22051_hurricane_laura_august_2020.json",
+      "corpus_sha256": "b35c38fb95918e9871e79c2570c3aabb72e1c3aa3a0468eeb574c598ffd80014",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 0,
+      "primary_truth_coverage": 0.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/jefferson_22051_hurricane_laura_august_2020.json",
+        "county": "Jefferson",
+        "state": "LA",
+        "fips": "22051",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "b35c38fb95918e9871e79c2570c3aabb72e1c3aa3a0468eeb574c598ffd80014",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "48361",
+        "state": "TX",
+        "county": "Orange",
+        "disaster_numbers": [
+          4572
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/orange_48361_hurricane_laura_august_2020.json",
+      "corpus_sha256": "c534d43eb21014778f7fb2c7fb7424819ecd8d4ab8d76aa620731a22267abb3a",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.7292,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.7292,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/orange_48361_hurricane_laura_august_2020.json",
+        "county": "Orange",
+        "state": "TX",
+        "fips": "48361",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "c534d43eb21014778f7fb2c7fb7424819ecd8d4ab8d76aa620731a22267abb3a",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 27% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Laura (August 2020)",
+      "candidate": {
+        "fips": "48351",
+        "state": "TX",
+        "county": "Newton",
+        "disaster_numbers": [
+          4572
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v4/newton_48351_hurricane_laura_august_2020.json",
+      "corpus_sha256": "c5cf4fc960834f100d90240926de7d97fbd5ba67185ab5d329a4e25485820519",
+      "window": {
+        "start": "2020-08-25",
+        "end": "2020-09-06"
+      },
+      "analysis_start": "2020-08-25T06:00:00Z",
+      "analysis_end": "2020-09-07T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 0.496,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.496,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/newton_48351_hurricane_laura_august_2020.json",
+        "county": "Newton",
+        "state": "TX",
+        "fips": "48351",
+        "event": "Hurricane Laura (August 2020)",
+        "start": "2020-08-25",
+        "end": "2020-09-06",
+        "analysis_start": "2020-08-25T06:00:00Z",
+        "analysis_end": "2020-09-07T06:00:00Z",
+        "sha256": "c5cf4fc960834f100d90240926de7d97fbd5ba67185ab5d329a4e25485820519",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 50% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Tropical Storm Imelda (September 2019)",
+      "candidate": {
+        "fips": "48361",
+        "state": "TX",
+        "county": "Orange",
+        "disaster_numbers": [
+          4466
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/orange_48361_tropical_storm_imelda_september_2019.json",
+      "corpus_sha256": "ff6628123b48a5ba22d53c8a7f0bdd9108363dadba87d6346183a7da351dd797",
+      "window": {
+        "start": "2019-09-15",
+        "end": "2019-09-27"
+      },
+      "analysis_start": "2019-09-15T06:00:00Z",
+      "analysis_end": "2019-09-28T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.609,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.609,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/orange_48361_tropical_storm_imelda_september_2019.json",
+        "county": "Orange",
+        "state": "TX",
+        "fips": "48361",
+        "event": "Tropical Storm Imelda (September 2019)",
+        "start": "2019-09-15",
+        "end": "2019-09-27",
+        "analysis_start": "2019-09-15T06:00:00Z",
+        "analysis_end": "2019-09-28T06:00:00Z",
+        "sha256": "ff6628123b48a5ba22d53c8a7f0bdd9108363dadba87d6346183a7da351dd797",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 39% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Isaias (August 2020)",
+      "candidate": {
+        "fips": "34027",
+        "state": "NJ",
+        "county": "Morris",
+        "disaster_numbers": [
+          4574
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v4/morris_34027_hurricane_isaias_august_2020.json",
+      "corpus_sha256": "ec3068c3cddfc2ac508ab1036b57efcea7be04087208203875de21d82f2bae97",
+      "window": {
+        "start": "2020-08-01",
+        "end": "2020-08-13"
+      },
+      "analysis_start": "2020-08-01T05:00:00Z",
+      "analysis_end": "2020-08-14T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 10,
+      "primary_truth_coverage": 0.9744,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/morris_34027_hurricane_isaias_august_2020.json",
+        "county": "Morris",
+        "state": "NJ",
+        "fips": "34027",
+        "event": "Hurricane Isaias (August 2020)",
+        "start": "2020-08-01",
+        "end": "2020-08-13",
+        "analysis_start": "2020-08-01T05:00:00Z",
+        "analysis_end": "2020-08-14T05:00:00Z",
+        "sha256": "ec3068c3cddfc2ac508ab1036b57efcea7be04087208203875de21d82f2bae97",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Isaias (August 2020)",
+      "candidate": {
+        "fips": "34003",
+        "state": "NJ",
+        "county": "Bergen",
+        "disaster_numbers": [
+          4574
+        ],
+        "registry_gauges_with_flood_stage": 11,
+        "registry_gauges_in_service": 12
+      },
+      "corpus_path": "eval/corpus/study_v4/bergen_34003_hurricane_isaias_august_2020.json",
+      "corpus_sha256": "f52db95df90690f58272c8d05ec276ff97a2925650cba49e951bbe86b09edcfb",
+      "window": {
+        "start": "2020-08-01",
+        "end": "2020-08-13"
+      },
+      "analysis_start": "2020-08-01T05:00:00Z",
+      "analysis_end": "2020-08-14T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "01378570",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/bergen_34003_hurricane_isaias_august_2020.json",
+        "county": "Bergen",
+        "state": "NJ",
+        "fips": "34003",
+        "event": "Hurricane Isaias (August 2020)",
+        "start": "2020-08-01",
+        "end": "2020-08-13",
+        "analysis_start": "2020-08-01T05:00:00Z",
+        "analysis_end": "2020-08-14T05:00:00Z",
+        "sha256": "f52db95df90690f58272c8d05ec276ff97a2925650cba49e951bbe86b09edcfb",
+        "threshold_exclusions": [
+          {
+            "site_no": "01378570",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Isaias (August 2020)",
+      "candidate": {
+        "fips": "34005",
+        "state": "NJ",
+        "county": "Burlington",
+        "disaster_numbers": [
+          4574
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/burlington_34005_hurricane_isaias_august_2020.json",
+      "corpus_sha256": "b376d5c815d4760a5368baf3c32736f2cd7bc327ccbe653e718c7e5f517e44ec",
+      "window": {
+        "start": "2020-08-01",
+        "end": "2020-08-13"
+      },
+      "analysis_start": "2020-08-01T05:00:00Z",
+      "analysis_end": "2020-08-14T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "01409335",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 0.883,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/burlington_34005_hurricane_isaias_august_2020.json",
+        "county": "Burlington",
+        "state": "NJ",
+        "fips": "34005",
+        "event": "Hurricane Isaias (August 2020)",
+        "start": "2020-08-01",
+        "end": "2020-08-13",
+        "analysis_start": "2020-08-01T05:00:00Z",
+        "analysis_end": "2020-08-14T05:00:00Z",
+        "sha256": "b376d5c815d4760a5368baf3c32736f2cd7bc327ccbe653e718c7e5f517e44ec",
+        "threshold_exclusions": [
+          {
+            "site_no": "01409335",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Isaias (August 2020)",
+      "candidate": {
+        "fips": "34025",
+        "state": "NJ",
+        "county": "Monmouth",
+        "disaster_numbers": [
+          4574
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/monmouth_34025_hurricane_isaias_august_2020.json",
+      "corpus_sha256": "c29c7ad4ab145b4cbe7788f374399668f9513cbf0e26439fb8228feb4a8e0ca8",
+      "window": {
+        "start": "2020-08-01",
+        "end": "2020-08-13"
+      },
+      "analysis_start": "2020-08-01T05:00:00Z",
+      "analysis_end": "2020-08-14T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "01407081",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "01407770",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "01407600",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "01408048",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 4,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/monmouth_34025_hurricane_isaias_august_2020.json",
+        "county": "Monmouth",
+        "state": "NJ",
+        "fips": "34025",
+        "event": "Hurricane Isaias (August 2020)",
+        "start": "2020-08-01",
+        "end": "2020-08-13",
+        "analysis_start": "2020-08-01T05:00:00Z",
+        "analysis_end": "2020-08-14T05:00:00Z",
+        "sha256": "c29c7ad4ab145b4cbe7788f374399668f9513cbf0e26439fb8228feb4a8e0ca8",
+        "threshold_exclusions": [
+          {
+            "site_no": "01407081",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "01407770",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "01407600",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "01408048",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Isaias (August 2020)",
+      "candidate": {
+        "fips": "10003",
+        "state": "DE",
+        "county": "New Castle",
+        "disaster_numbers": [
+          4566
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/new_castle_10003_hurricane_isaias_august_2020.json",
+      "corpus_sha256": "19a62ca5e815b7ddd7b364c2b3ac3bfdd0bcfe8d4b03ba5703ccc39a8d4f49ab",
+      "window": {
+        "start": "2020-08-01",
+        "end": "2020-08-13"
+      },
+      "analysis_start": "2020-08-01T05:00:00Z",
+      "analysis_end": "2020-08-14T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "01480065",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "01480120",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 0.5457,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.5457,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/new_castle_10003_hurricane_isaias_august_2020.json",
+        "county": "New Castle",
+        "state": "DE",
+        "fips": "10003",
+        "event": "Hurricane Isaias (August 2020)",
+        "start": "2020-08-01",
+        "end": "2020-08-13",
+        "analysis_start": "2020-08-01T05:00:00Z",
+        "analysis_end": "2020-08-14T05:00:00Z",
+        "sha256": "19a62ca5e815b7ddd7b364c2b3ac3bfdd0bcfe8d4b03ba5703ccc39a8d4f49ab",
+        "threshold_exclusions": [
+          {
+            "site_no": "01480065",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "01480120",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 45% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Zeta (October 2020)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4577
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_hurricane_zeta_october_2020.json",
+      "corpus_sha256": "b35b6a2d5ca0fdffe355a5944c664210c64f0b5a780c120275811eca5f175df4",
+      "window": {
+        "start": "2020-10-26",
+        "end": "2020-11-07"
+      },
+      "analysis_start": "2020-10-26T06:00:00Z",
+      "analysis_end": "2020-11-08T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_hurricane_zeta_october_2020.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Hurricane Zeta (October 2020)",
+        "start": "2020-10-26",
+        "end": "2020-11-07",
+        "analysis_start": "2020-10-26T06:00:00Z",
+        "analysis_end": "2020-11-08T06:00:00Z",
+        "sha256": "b35b6a2d5ca0fdffe355a5944c664210c64f0b5a780c120275811eca5f175df4",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Zeta (October 2020)",
+      "candidate": {
+        "fips": "22103",
+        "state": "LA",
+        "county": "St. Tammany",
+        "disaster_numbers": [
+          4577
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v4/st_tammany_22103_hurricane_zeta_october_2020.json",
+      "corpus_sha256": "8f78fbef8bfe48c3fefaee93da4f2cf7ef928b23bf7c1761e52e350cb3d358c0",
+      "window": {
+        "start": "2020-10-26",
+        "end": "2020-11-07"
+      },
+      "analysis_start": "2020-10-26T06:00:00Z",
+      "analysis_end": "2020-11-08T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_zeta_october_2020.json",
+        "county": "St. Tammany",
+        "state": "LA",
+        "fips": "22103",
+        "event": "Hurricane Zeta (October 2020)",
+        "start": "2020-10-26",
+        "end": "2020-11-07",
+        "analysis_start": "2020-10-26T06:00:00Z",
+        "analysis_end": "2020-11-08T06:00:00Z",
+        "sha256": "8f78fbef8bfe48c3fefaee93da4f2cf7ef928b23bf7c1761e52e350cb3d358c0",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Zeta (October 2020)",
+      "candidate": {
+        "fips": "22075",
+        "state": "LA",
+        "county": "Plaquemines",
+        "disaster_numbers": [
+          4577
+        ],
+        "registry_gauges_with_flood_stage": 14,
+        "registry_gauges_in_service": 14
+      },
+      "corpus_path": "eval/corpus/study_v4/plaquemines_22075_hurricane_zeta_october_2020.json",
+      "corpus_sha256": "c2a169cffa998e7eb5e43059f4b698fafd095e44fbb80f4fb13c4da9550fe361",
+      "window": {
+        "start": "2020-10-26",
+        "end": "2020-11-07"
+      },
+      "analysis_start": "2020-10-26T06:00:00Z",
+      "analysis_end": "2020-11-08T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 0,
+      "primary_truth_coverage": 0.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/plaquemines_22075_hurricane_zeta_october_2020.json",
+        "county": "Plaquemines",
+        "state": "LA",
+        "fips": "22075",
+        "event": "Hurricane Zeta (October 2020)",
+        "start": "2020-10-26",
+        "end": "2020-11-07",
+        "analysis_start": "2020-10-26T06:00:00Z",
+        "analysis_end": "2020-11-08T06:00:00Z",
+        "sha256": "c2a169cffa998e7eb5e43059f4b698fafd095e44fbb80f4fb13c4da9550fe361",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Zeta (October 2020)",
+      "candidate": {
+        "fips": "28047",
+        "state": "MS",
+        "county": "Harrison",
+        "disaster_numbers": [
+          4576
+        ],
+        "registry_gauges_with_flood_stage": 12,
+        "registry_gauges_in_service": 12
+      },
+      "corpus_path": "eval/corpus/study_v4/harrison_28047_hurricane_zeta_october_2020.json",
+      "corpus_sha256": "98d2a9b36ee9439e9f4adfc0cf2623deac6173787cb04d2c5b53c9c08a71eb60",
+      "window": {
+        "start": "2020-10-26",
+        "end": "2020-11-07"
+      },
+      "analysis_start": "2020-10-26T06:00:00Z",
+      "analysis_end": "2020-11-08T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 0.9904,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/harrison_28047_hurricane_zeta_october_2020.json",
+        "county": "Harrison",
+        "state": "MS",
+        "fips": "28047",
+        "event": "Hurricane Zeta (October 2020)",
+        "start": "2020-10-26",
+        "end": "2020-11-07",
+        "analysis_start": "2020-10-26T06:00:00Z",
+        "analysis_end": "2020-11-08T06:00:00Z",
+        "sha256": "98d2a9b36ee9439e9f4adfc0cf2623deac6173787cb04d2c5b53c9c08a71eb60",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Idalia (August 2023)",
+      "candidate": {
+        "fips": "12083",
+        "state": "FL",
+        "county": "Marion",
+        "disaster_numbers": [
+          4734
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/marion_12083_hurricane_idalia_august_2023.json",
+      "corpus_sha256": "e9a5b8ed7fe6e4f5ac16fc6ac4b7c7a654bbf25ca9f8a7e9cc2d389c359fc642",
+      "window": {
+        "start": "2023-08-27",
+        "end": "2023-09-08"
+      },
+      "analysis_start": "2023-08-27T05:00:00Z",
+      "analysis_end": "2023-09-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 0.9944,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/marion_12083_hurricane_idalia_august_2023.json",
+        "county": "Marion",
+        "state": "FL",
+        "fips": "12083",
+        "event": "Hurricane Idalia (August 2023)",
+        "start": "2023-08-27",
+        "end": "2023-09-08",
+        "analysis_start": "2023-08-27T05:00:00Z",
+        "analysis_end": "2023-09-09T05:00:00Z",
+        "sha256": "e9a5b8ed7fe6e4f5ac16fc6ac4b7c7a654bbf25ca9f8a7e9cc2d389c359fc642",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Idalia (August 2023)",
+      "candidate": {
+        "fips": "12121",
+        "state": "FL",
+        "county": "Suwannee",
+        "disaster_numbers": [
+          4734
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/suwannee_12121_hurricane_idalia_august_2023.json",
+      "corpus_sha256": "0fa1305bf43dfee1b9510ae3fe6f4c74daa8e9fa3b57a7c5e2b6f4f1d8c4a98f",
+      "window": {
+        "start": "2023-08-27",
+        "end": "2023-09-08"
+      },
+      "analysis_start": "2023-08-27T05:00:00Z",
+      "analysis_end": "2023-09-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 0.7468,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.7468,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/suwannee_12121_hurricane_idalia_august_2023.json",
+        "county": "Suwannee",
+        "state": "FL",
+        "fips": "12121",
+        "event": "Hurricane Idalia (August 2023)",
+        "start": "2023-08-27",
+        "end": "2023-09-08",
+        "analysis_start": "2023-08-27T05:00:00Z",
+        "analysis_end": "2023-09-09T05:00:00Z",
+        "sha256": "0fa1305bf43dfee1b9510ae3fe6f4c74daa8e9fa3b57a7c5e2b6f4f1d8c4a98f",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 25% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Idalia (August 2023)",
+      "candidate": {
+        "fips": "12117",
+        "state": "FL",
+        "county": "Seminole",
+        "disaster_numbers": [
+          4734
+        ],
+        "registry_gauges_with_flood_stage": 5,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/seminole_12117_hurricane_idalia_august_2023.json",
+      "corpus_sha256": "40978461025ad725e7258dcf67435a2df94e444d94223ab3fafba038bdf694c5",
+      "window": {
+        "start": "2023-08-27",
+        "end": "2023-09-08"
+      },
+      "analysis_start": "2023-08-27T05:00:00Z",
+      "analysis_end": "2023-09-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/seminole_12117_hurricane_idalia_august_2023.json",
+        "county": "Seminole",
+        "state": "FL",
+        "fips": "12117",
+        "event": "Hurricane Idalia (August 2023)",
+        "start": "2023-08-27",
+        "end": "2023-09-08",
+        "analysis_start": "2023-08-27T05:00:00Z",
+        "analysis_end": "2023-09-09T05:00:00Z",
+        "sha256": "40978461025ad725e7258dcf67435a2df94e444d94223ab3fafba038bdf694c5",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Idalia (August 2023)",
+      "candidate": {
+        "fips": "12123",
+        "state": "FL",
+        "county": "Taylor",
+        "disaster_numbers": [
+          4734
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v4/taylor_12123_hurricane_idalia_august_2023.json",
+      "corpus_sha256": "8c85fc3b3728f8dbceff25eedb463a522e669c275bf91862483e359f8a0cb0a6",
+      "window": {
+        "start": "2023-08-27",
+        "end": "2023-09-08"
+      },
+      "analysis_start": "2023-08-27T05:00:00Z",
+      "analysis_end": "2023-09-09T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02326550",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "02326050",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        },
+        {
+          "site_no": "02324170",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 4,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/taylor_12123_hurricane_idalia_august_2023.json",
+        "county": "Taylor",
+        "state": "FL",
+        "fips": "12123",
+        "event": "Hurricane Idalia (August 2023)",
+        "start": "2023-08-27",
+        "end": "2023-09-08",
+        "analysis_start": "2023-08-27T05:00:00Z",
+        "analysis_end": "2023-09-09T05:00:00Z",
+        "sha256": "8c85fc3b3728f8dbceff25eedb463a522e669c275bf91862483e359f8a0cb0a6",
+        "threshold_exclusions": [
+          {
+            "site_no": "02326550",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "02326050",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          },
+          {
+            "site_no": "02324170",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Idalia (August 2023)",
+      "candidate": {
+        "fips": "12115",
+        "state": "FL",
+        "county": "Sarasota",
+        "disaster_numbers": [
+          4734
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/sarasota_12115_hurricane_idalia_august_2023.json",
+      "corpus_sha256": "89820a9b4505bd190ecf22cf2f438af90edb9d5c4c1d7a056cff60b8cf46100d",
+      "window": {
+        "start": "2023-08-27",
+        "end": "2023-09-08"
+      },
+      "analysis_start": "2023-08-27T05:00:00Z",
+      "analysis_end": "2023-09-09T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02299734",
+          "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+        }
+      ],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 7,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/sarasota_12115_hurricane_idalia_august_2023.json",
+        "county": "Sarasota",
+        "state": "FL",
+        "fips": "12115",
+        "event": "Hurricane Idalia (August 2023)",
+        "start": "2023-08-27",
+        "end": "2023-09-08",
+        "analysis_start": "2023-08-27T05:00:00Z",
+        "analysis_end": "2023-09-09T05:00:00Z",
+        "sha256": "89820a9b4505bd190ecf22cf2f438af90edb9d5c4c1d7a056cff60b8cf46100d",
+        "threshold_exclusions": [
+          {
+            "site_no": "02299734",
+            "reason": "tidal_datum_threshold_not_riverine_flood_stage"
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Houston Flooding (April 2016)",
+      "candidate": {
+        "fips": "30035",
+        "state": "MT",
+        "county": "Glacier",
+        "disaster_numbers": [
+          4271
+        ],
+        "registry_gauges_with_flood_stage": 14,
+        "registry_gauges_in_service": 14
+      },
+      "corpus_path": "eval/corpus/study_v4/glacier_30035_houston_flooding_april_2016.json",
+      "corpus_sha256": "810219e738653b26f2514d9d0fe157aa858f2a2f93c1e246cf8594a5358de83b",
+      "window": {
+        "start": "2016-04-15",
+        "end": "2016-04-27"
+      },
+      "analysis_start": "2016-04-15T07:00:00Z",
+      "analysis_end": "2016-04-28T07:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/glacier_30035_houston_flooding_april_2016.json",
+        "county": "Glacier",
+        "state": "MT",
+        "fips": "30035",
+        "event": "Houston Flooding (April 2016)",
+        "start": "2016-04-15",
+        "end": "2016-04-27",
+        "analysis_start": "2016-04-15T07:00:00Z",
+        "analysis_end": "2016-04-28T07:00:00Z",
+        "sha256": "810219e738653b26f2514d9d0fe157aa858f2a2f93c1e246cf8594a5358de83b",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Houston Flooding (April 2016)",
+      "candidate": {
+        "fips": "48073",
+        "state": "TX",
+        "county": "Cherokee",
+        "disaster_numbers": [
+          4269
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/cherokee_48073_houston_flooding_april_2016.json",
+      "corpus_sha256": "76af56cc1aefaf05bab46666bbaa570d00a48a2f0397d3ae245d747694fa9b43",
+      "window": {
+        "start": "2016-04-15",
+        "end": "2016-04-27"
+      },
+      "analysis_start": "2016-04-15T06:00:00Z",
+      "analysis_end": "2016-04-28T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/cherokee_48073_houston_flooding_april_2016.json",
+        "county": "Cherokee",
+        "state": "TX",
+        "fips": "48073",
+        "event": "Houston Flooding (April 2016)",
+        "start": "2016-04-15",
+        "end": "2016-04-27",
+        "analysis_start": "2016-04-15T06:00:00Z",
+        "analysis_end": "2016-04-28T06:00:00Z",
+        "sha256": "76af56cc1aefaf05bab46666bbaa570d00a48a2f0397d3ae245d747694fa9b43",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Delta (October 2020)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4570
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_hurricane_delta_october_2020.json",
+      "corpus_sha256": "a05c56ccefec9956624d7962fc1b4fb21745a9871fc93c09744afe30dd7475d2",
+      "window": {
+        "start": "2020-10-07",
+        "end": "2020-10-19"
+      },
+      "analysis_start": "2020-10-07T06:00:00Z",
+      "analysis_end": "2020-10-20T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 0.8918,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_hurricane_delta_october_2020.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Hurricane Delta (October 2020)",
+        "start": "2020-10-07",
+        "end": "2020-10-19",
+        "analysis_start": "2020-10-07T06:00:00Z",
+        "analysis_end": "2020-10-20T06:00:00Z",
+        "sha256": "a05c56ccefec9956624d7962fc1b4fb21745a9871fc93c09744afe30dd7475d2",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Delta (October 2020)",
+      "candidate": {
+        "fips": "22103",
+        "state": "LA",
+        "county": "St. Tammany",
+        "disaster_numbers": [
+          4570
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v4/st_tammany_22103_hurricane_delta_october_2020.json",
+      "corpus_sha256": "99daa67576ed3cdf82122f08cc5982a6771777426a6295bd02f47e8d6862c0ca",
+      "window": {
+        "start": "2020-10-07",
+        "end": "2020-10-19"
+      },
+      "analysis_start": "2020-10-07T06:00:00Z",
+      "analysis_end": "2020-10-20T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 0.9992,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_delta_october_2020.json",
+        "county": "St. Tammany",
+        "state": "LA",
+        "fips": "22103",
+        "event": "Hurricane Delta (October 2020)",
+        "start": "2020-10-07",
+        "end": "2020-10-19",
+        "analysis_start": "2020-10-07T06:00:00Z",
+        "analysis_end": "2020-10-20T06:00:00Z",
+        "sha256": "99daa67576ed3cdf82122f08cc5982a6771777426a6295bd02f47e8d6862c0ca",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Delta (October 2020)",
+      "candidate": {
+        "fips": "22075",
+        "state": "LA",
+        "county": "Plaquemines",
+        "disaster_numbers": [
+          4570
+        ],
+        "registry_gauges_with_flood_stage": 14,
+        "registry_gauges_in_service": 14
+      },
+      "corpus_path": "eval/corpus/study_v4/plaquemines_22075_hurricane_delta_october_2020.json",
+      "corpus_sha256": "62ccfe1c88c10f5fa5f4e6c367f5727d19aff1b7d19521fba54fada9cd2ccc6a",
+      "window": {
+        "start": "2020-10-07",
+        "end": "2020-10-19"
+      },
+      "analysis_start": "2020-10-07T06:00:00Z",
+      "analysis_end": "2020-10-20T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 0,
+      "primary_truth_coverage": 0.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/plaquemines_22075_hurricane_delta_october_2020.json",
+        "county": "Plaquemines",
+        "state": "LA",
+        "fips": "22075",
+        "event": "Hurricane Delta (October 2020)",
+        "start": "2020-10-07",
+        "end": "2020-10-19",
+        "analysis_start": "2020-10-07T06:00:00Z",
+        "analysis_end": "2020-10-20T06:00:00Z",
+        "sha256": "62ccfe1c88c10f5fa5f4e6c367f5727d19aff1b7d19521fba54fada9cd2ccc6a",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Delta (October 2020)",
+      "candidate": {
+        "fips": "22051",
+        "state": "LA",
+        "county": "Jefferson",
+        "disaster_numbers": [
+          4570
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/jefferson_22051_hurricane_delta_october_2020.json",
+      "corpus_sha256": "2ab5792c7913b59f1eb69d5f42c87eac8bbfc61b4932fdb83429974540511e7e",
+      "window": {
+        "start": "2020-10-07",
+        "end": "2020-10-19"
+      },
+      "analysis_start": "2020-10-07T06:00:00Z",
+      "analysis_end": "2020-10-20T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 0,
+      "primary_truth_coverage": 0.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/jefferson_22051_hurricane_delta_october_2020.json",
+        "county": "Jefferson",
+        "state": "LA",
+        "fips": "22051",
+        "event": "Hurricane Delta (October 2020)",
+        "start": "2020-10-07",
+        "end": "2020-10-19",
+        "analysis_start": "2020-10-07T06:00:00Z",
+        "analysis_end": "2020-10-20T06:00:00Z",
+        "sha256": "2ab5792c7913b59f1eb69d5f42c87eac8bbfc61b4932fdb83429974540511e7e",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Delta (October 2020)",
+      "candidate": {
+        "fips": "22001",
+        "state": "LA",
+        "county": "Acadia",
+        "disaster_numbers": [
+          4570
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/acadia_22001_hurricane_delta_october_2020.json",
+      "corpus_sha256": "7f5a8a0cad5e9c64c7bf7800a6a65efe1357314b5f7c532b7d7b6041f47f32d2",
+      "window": {
+        "start": "2020-10-07",
+        "end": "2020-10-19"
+      },
+      "analysis_start": "2020-10-07T06:00:00Z",
+      "analysis_end": "2020-10-20T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/acadia_22001_hurricane_delta_october_2020.json",
+        "county": "Acadia",
+        "state": "LA",
+        "fips": "22001",
+        "event": "Hurricane Delta (October 2020)",
+        "start": "2020-10-07",
+        "end": "2020-10-19",
+        "analysis_start": "2020-10-07T06:00:00Z",
+        "analysis_end": "2020-10-20T06:00:00Z",
+        "sha256": "7f5a8a0cad5e9c64c7bf7800a6a65efe1357314b5f7c532b7d7b6041f47f32d2",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Texas and Louisiana Flooding (March 2016)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4263
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_texas_and_louisiana_flooding_march_2016.json",
+      "corpus_sha256": "74d659a6fc25d320a5fe6a1d46267ac2c663857b6b23146b551359420eff9111",
+      "window": {
+        "start": "2016-03-06",
+        "end": "2016-03-18"
+      },
+      "analysis_start": "2016-03-06T06:00:00Z",
+      "analysis_end": "2016-03-19T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 0.9696,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_texas_and_louisiana_flooding_march_2016.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Texas and Louisiana Flooding (March 2016)",
+        "start": "2016-03-06",
+        "end": "2016-03-18",
+        "analysis_start": "2016-03-06T06:00:00Z",
+        "analysis_end": "2016-03-19T06:00:00Z",
+        "sha256": "74d659a6fc25d320a5fe6a1d46267ac2c663857b6b23146b551359420eff9111",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Fiona (September 2022)",
+      "candidate": {
+        "fips": "72113",
+        "state": "PR",
+        "county": "Ponce",
+        "disaster_numbers": [
+          4671
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/ponce_72113_hurricane_fiona_september_2022.json",
+      "corpus_sha256": "1d1e849e89babfa8bd6b5435856e7647911e93ad1567652d77638481705cceb6",
+      "window": {
+        "start": "2022-09-15",
+        "end": "2022-09-27"
+      },
+      "analysis_start": "2022-09-15T04:00:00Z",
+      "analysis_end": "2022-09-28T04:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 0.6923,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.6923,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ponce_72113_hurricane_fiona_september_2022.json",
+        "county": "Ponce",
+        "state": "PR",
+        "fips": "72113",
+        "event": "Hurricane Fiona (September 2022)",
+        "start": "2022-09-15",
+        "end": "2022-09-27",
+        "analysis_start": "2022-09-15T04:00:00Z",
+        "analysis_end": "2022-09-28T04:00:00Z",
+        "sha256": "1d1e849e89babfa8bd6b5435856e7647911e93ad1567652d77638481705cceb6",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 31% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Debby (August 2024)",
+      "candidate": {
+        "fips": "36025",
+        "state": "NY",
+        "county": "Delaware",
+        "disaster_numbers": [
+          4825
+        ],
+        "registry_gauges_with_flood_stage": 25,
+        "registry_gauges_in_service": 25
+      },
+      "corpus_path": "eval/corpus/study_v4/delaware_36025_hurricane_debby_august_2024.json",
+      "corpus_sha256": "1f2094a1076abd7222d1c0f8b0df67623b0629a76a2d8032a9d5053a617197c1",
+      "window": {
+        "start": "2024-08-03",
+        "end": "2024-08-15"
+      },
+      "analysis_start": "2024-08-03T05:00:00Z",
+      "analysis_end": "2024-08-16T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.5385,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.5385,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/delaware_36025_hurricane_debby_august_2024.json",
+        "county": "Delaware",
+        "state": "NY",
+        "fips": "36025",
+        "event": "Hurricane Debby (August 2024)",
+        "start": "2024-08-03",
+        "end": "2024-08-15",
+        "analysis_start": "2024-08-03T05:00:00Z",
+        "analysis_end": "2024-08-16T05:00:00Z",
+        "sha256": "1f2094a1076abd7222d1c0f8b0df67623b0629a76a2d8032a9d5053a617197c1",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 46% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+      "candidate": {
+        "fips": "50023",
+        "state": "VT",
+        "county": "Washington",
+        "disaster_numbers": [
+          4720
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/washington_50023_northeastern_flooding_and_north_central_.json",
+      "corpus_sha256": "972db9c57a3e90af905dcfded631ffb01c00b79190e14436359a8f144d0590fb",
+      "window": {
+        "start": "2023-07-07",
+        "end": "2023-07-19"
+      },
+      "analysis_start": "2023-07-07T05:00:00Z",
+      "analysis_end": "2023-07-20T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 0.4143,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.4143,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/washington_50023_northeastern_flooding_and_north_central_.json",
+        "county": "Washington",
+        "state": "VT",
+        "fips": "50023",
+        "event": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+        "start": "2023-07-07",
+        "end": "2023-07-19",
+        "analysis_start": "2023-07-07T05:00:00Z",
+        "analysis_end": "2023-07-20T05:00:00Z",
+        "sha256": "972db9c57a3e90af905dcfded631ffb01c00b79190e14436359a8f144d0590fb",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 59% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Dorian (September 2019)",
+      "candidate": {
+        "fips": "45015",
+        "state": "SC",
+        "county": "Berkeley",
+        "disaster_numbers": [
+          4464
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v4/berkeley_45015_hurricane_dorian_september_2019.json",
+      "corpus_sha256": "dd3a0c5cbd733b8269c88d8e66e32c208cfb38e53eb8e1ef8d3e91748452e408",
+      "window": {
+        "start": "2019-08-26",
+        "end": "2019-09-07"
+      },
+      "analysis_start": "2019-08-26T05:00:00Z",
+      "analysis_end": "2019-09-08T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/berkeley_45015_hurricane_dorian_september_2019.json",
+        "county": "Berkeley",
+        "state": "SC",
+        "fips": "45015",
+        "event": "Hurricane Dorian (September 2019)",
+        "start": "2019-08-26",
+        "end": "2019-09-07",
+        "analysis_start": "2019-08-26T05:00:00Z",
+        "analysis_end": "2019-09-08T05:00:00Z",
+        "sha256": "dd3a0c5cbd733b8269c88d8e66e32c208cfb38e53eb8e1ef8d3e91748452e408",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Tropical Storm Eta (November 2020)",
+      "candidate": {
+        "fips": "37155",
+        "state": "NC",
+        "county": "Robeson",
+        "disaster_numbers": [
+          4588
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 4
+      },
+      "corpus_path": "eval/corpus/study_v4/robeson_37155_tropical_storm_eta_november_2020.json",
+      "corpus_sha256": "b61a7cdd85874ec3300e87fbcd44080536f0ece48472cc1377a18ed17f0f4448",
+      "window": {
+        "start": "2020-11-06",
+        "end": "2020-11-18"
+      },
+      "analysis_start": "2020-11-06T05:00:00Z",
+      "analysis_end": "2020-11-19T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/robeson_37155_tropical_storm_eta_november_2020.json",
+        "county": "Robeson",
+        "state": "NC",
+        "fips": "37155",
+        "event": "Tropical Storm Eta (November 2020)",
+        "start": "2020-11-06",
+        "end": "2020-11-18",
+        "analysis_start": "2020-11-06T05:00:00Z",
+        "analysis_end": "2020-11-19T05:00:00Z",
+        "sha256": "b61a7cdd85874ec3300e87fbcd44080536f0ece48472cc1377a18ed17f0f4448",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Louisiana Flooding (May 2021)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4606
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_louisiana_flooding_may_2021.json",
+      "corpus_sha256": "fc5f6edf8cb7a2badff96329707230d541f3af6007074f57de7dede384177acd",
+      "window": {
+        "start": "2021-05-15",
+        "end": "2021-05-27"
+      },
+      "analysis_start": "2021-05-15T06:00:00Z",
+      "analysis_end": "2021-05-28T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_louisiana_flooding_may_2021.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Louisiana Flooding (May 2021)",
+        "start": "2021-05-15",
+        "end": "2021-05-27",
+        "analysis_start": "2021-05-15T06:00:00Z",
+        "analysis_end": "2021-05-28T06:00:00Z",
+        "sha256": "fc5f6edf8cb7a2badff96329707230d541f3af6007074f57de7dede384177acd",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Kentucky and Missouri Flooding (July 2022)",
+      "candidate": {
+        "fips": "21129",
+        "state": "KY",
+        "county": "Lee",
+        "disaster_numbers": [
+          4663
+        ],
+        "registry_gauges_with_flood_stage": 4,
+        "registry_gauges_in_service": 4
+      },
+      "corpus_path": "eval/corpus/study_v4/lee_21129_kentucky_and_missouri_flooding_july_2022.json",
+      "corpus_sha256": "9d6cbe585043222eb47fa8c9b67f07eafb9588d23bd28dab21a82dbb12fe24c3",
+      "window": {
+        "start": "2022-07-24",
+        "end": "2022-08-05"
+      },
+      "analysis_start": "2022-07-24T05:00:00Z",
+      "analysis_end": "2022-08-06T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/lee_21129_kentucky_and_missouri_flooding_july_2022.json",
+        "county": "Lee",
+        "state": "KY",
+        "fips": "21129",
+        "event": "Kentucky and Missouri Flooding (July 2022)",
+        "start": "2022-07-24",
+        "end": "2022-08-05",
+        "analysis_start": "2022-07-24T05:00:00Z",
+        "analysis_end": "2022-08-06T05:00:00Z",
+        "sha256": "9d6cbe585043222eb47fa8c9b67f07eafb9588d23bd28dab21a82dbb12fe24c3",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Tropical Storm Fred (August 2021)",
+      "candidate": {
+        "fips": "36101",
+        "state": "NY",
+        "county": "Steuben",
+        "disaster_numbers": [
+          4625
+        ],
+        "registry_gauges_with_flood_stage": 12,
+        "registry_gauges_in_service": 12
+      },
+      "corpus_path": "eval/corpus/study_v4/steuben_36101_tropical_storm_fred_august_2021.json",
+      "corpus_sha256": "f0569d7b7f1ef77000769302e2f82d5493cb6eab19d16b8422a8f1ed082268b9",
+      "window": {
+        "start": "2021-08-14",
+        "end": "2021-08-26"
+      },
+      "analysis_start": "2021-08-14T05:00:00Z",
+      "analysis_end": "2021-08-27T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/steuben_36101_tropical_storm_fred_august_2021.json",
+        "county": "Steuben",
+        "state": "NY",
+        "fips": "36101",
+        "event": "Tropical Storm Fred (August 2021)",
+        "start": "2021-08-14",
+        "end": "2021-08-26",
+        "analysis_start": "2021-08-14T05:00:00Z",
+        "analysis_end": "2021-08-27T05:00:00Z",
+        "sha256": "f0569d7b7f1ef77000769302e2f82d5493cb6eab19d16b8422a8f1ed082268b9",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "East Coast Storm and Flooding (December 2023)",
+      "candidate": {
+        "fips": "23019",
+        "state": "ME",
+        "county": "Penobscot",
+        "disaster_numbers": [
+          4754
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/penobscot_23019_east_coast_storm_and_flooding_december_2.json",
+      "corpus_sha256": "398475fc9ffe593115abba5d6798e846dbc09416372c60fce41c9162206e5380",
+      "window": {
+        "start": "2023-12-14",
+        "end": "2023-12-26"
+      },
+      "analysis_start": "2023-12-14T05:00:00Z",
+      "analysis_end": "2023-12-27T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/penobscot_23019_east_coast_storm_and_flooding_december_2.json",
+        "county": "Penobscot",
+        "state": "ME",
+        "fips": "23019",
+        "event": "East Coast Storm and Flooding (December 2023)",
+        "start": "2023-12-14",
+        "end": "2023-12-26",
+        "analysis_start": "2023-12-14T05:00:00Z",
+        "analysis_end": "2023-12-27T05:00:00Z",
+        "sha256": "398475fc9ffe593115abba5d6798e846dbc09416372c60fce41c9162206e5380",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Francine (September 2024)",
+      "candidate": {
+        "fips": "22005",
+        "state": "LA",
+        "county": "Ascension",
+        "disaster_numbers": [
+          4817
+        ],
+        "registry_gauges_with_flood_stage": 19,
+        "registry_gauges_in_service": 19
+      },
+      "corpus_path": "eval/corpus/study_v4/ascension_22005_hurricane_francine_september_2024.json",
+      "corpus_sha256": "b09845044ffc9a21e8d232e37d0152afbdbfce641e7fe0c25088e43c9059c522",
+      "window": {
+        "start": "2024-09-09",
+        "end": "2024-09-21"
+      },
+      "analysis_start": "2024-09-09T06:00:00Z",
+      "analysis_end": "2024-09-22T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/ascension_22005_hurricane_francine_september_2024.json",
+        "county": "Ascension",
+        "state": "LA",
+        "fips": "22005",
+        "event": "Hurricane Francine (September 2024)",
+        "start": "2024-09-09",
+        "end": "2024-09-21",
+        "analysis_start": "2024-09-09T06:00:00Z",
+        "analysis_end": "2024-09-22T06:00:00Z",
+        "sha256": "b09845044ffc9a21e8d232e37d0152afbdbfce641e7fe0c25088e43c9059c522",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Francine (September 2024)",
+      "candidate": {
+        "fips": "22103",
+        "state": "LA",
+        "county": "St. Tammany",
+        "disaster_numbers": [
+          4817
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v4/st_tammany_22103_hurricane_francine_september_2024.json",
+      "corpus_sha256": "c59f55eeba68b1cc3d914cbc6024e12959efed7a8bbd408c8fccb06d519bf691",
+      "window": {
+        "start": "2024-09-09",
+        "end": "2024-09-21"
+      },
+      "analysis_start": "2024-09-09T06:00:00Z",
+      "analysis_end": "2024-09-22T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_francine_september_2024.json",
+        "county": "St. Tammany",
+        "state": "LA",
+        "fips": "22103",
+        "event": "Hurricane Francine (September 2024)",
+        "start": "2024-09-09",
+        "end": "2024-09-21",
+        "analysis_start": "2024-09-09T06:00:00Z",
+        "analysis_end": "2024-09-22T06:00:00Z",
+        "sha256": "c59f55eeba68b1cc3d914cbc6024e12959efed7a8bbd408c8fccb06d519bf691",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "candidate": {
+        "fips": "54039",
+        "state": "WV",
+        "county": "Kanawha",
+        "disaster_numbers": [
+          4273
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/kanawha_54039_west_virginia_flooding_and_ohio_valley_t.json",
+      "corpus_sha256": "f64a4d23f010beac11dbb902275bf301f037d6d480e73a3eefbf2e237e06a0b0",
+      "window": {
+        "start": "2016-06-20",
+        "end": "2016-07-02"
+      },
+      "analysis_start": "2016-06-20T05:00:00Z",
+      "analysis_end": "2016-07-03T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 0.0801,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.0801,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        },
+        {
+          "code": "near_continuous_flood_reference_requires_datum_review",
+          "blocking": true,
+          "flood_fraction_of_known_duration": 1.0
+        }
+      ],
+      "preflight_blocked": true,
+      "decision": "excluded",
+      "exclusion_reason": "preflight_blocked:['limited_primary_truth_coverage_unreviewed', 'near_continuous_flood_reference_requires_datum_review']",
+      "selection_pass": 1
+    },
+    {
+      "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "candidate": {
+        "fips": "54083",
+        "state": "WV",
+        "county": "Randolph",
+        "disaster_numbers": [
+          4273
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v4/randolph_54083_west_virginia_flooding_and_ohio_valley_t.json",
+      "corpus_sha256": "c55878bdb8f2d80c92c56708476089f729e2cd0f1cc1887c1695201641394eee",
+      "window": {
+        "start": "2016-06-20",
+        "end": "2016-07-02"
+      },
+      "analysis_start": "2016-06-20T05:00:00Z",
+      "analysis_end": "2016-07-03T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 4,
+      "primary_truth_coverage": 0.9992,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/randolph_54083_west_virginia_flooding_and_ohio_valley_t.json",
+        "county": "Randolph",
+        "state": "WV",
+        "fips": "54083",
+        "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+        "start": "2016-06-20",
+        "end": "2016-07-02",
+        "analysis_start": "2016-06-20T05:00:00Z",
+        "analysis_end": "2016-07-03T05:00:00Z",
+        "sha256": "c55878bdb8f2d80c92c56708476089f729e2cd0f1cc1887c1695201641394eee",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "candidate": {
+        "fips": "54007",
+        "state": "WV",
+        "county": "Braxton",
+        "disaster_numbers": [
+          4273
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/braxton_54007_west_virginia_flooding_and_ohio_valley_t.json",
+      "corpus_sha256": "32a434192e35c344d1ca757f0038e3e13b5b9ece02cf17fde0d048de9cb833b9",
+      "window": {
+        "start": "2016-06-20",
+        "end": "2016-07-02"
+      },
+      "analysis_start": "2016-06-20T05:00:00Z",
+      "analysis_end": "2016-07-03T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 3,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/braxton_54007_west_virginia_flooding_and_ohio_valley_t.json",
+        "county": "Braxton",
+        "state": "WV",
+        "fips": "54007",
+        "event": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+        "start": "2016-06-20",
+        "end": "2016-07-02",
+        "analysis_start": "2016-06-20T05:00:00Z",
+        "analysis_end": "2016-07-03T05:00:00Z",
+        "sha256": "32a434192e35c344d1ca757f0038e3e13b5b9ece02cf17fde0d048de9cb833b9",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Fort Lauderdale Flash Flood (April 2023)",
+      "candidate": {
+        "fips": "46029",
+        "state": "SD",
+        "county": "Codington",
+        "disaster_numbers": [
+          4718
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v4/codington_46029_fort_lauderdale_flash_flood_april_2023.json",
+      "corpus_sha256": "a4b75d6c47c2a1f9fa5f4b16bc2c92d2c3cb839582840ecca4f50b8e4cc2789c",
+      "window": {
+        "start": "2023-04-10",
+        "end": "2023-04-22"
+      },
+      "analysis_start": "2023-04-10T06:00:00Z",
+      "analysis_end": "2023-04-23T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.871,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "near_continuous_flood_reference_requires_datum_review",
+          "blocking": true,
+          "flood_fraction_of_known_duration": 1.0
+        }
+      ],
+      "preflight_blocked": true,
+      "decision": "excluded",
+      "exclusion_reason": "preflight_blocked:['near_continuous_flood_reference_requires_datum_review']",
+      "selection_pass": 1
+    },
+    {
+      "event": "Fort Lauderdale Flash Flood (April 2023)",
+      "candidate": {
+        "fips": "27089",
+        "state": "MN",
+        "county": "Marshall",
+        "disaster_numbers": [
+          4722
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/marshall_27089_fort_lauderdale_flash_flood_april_2023.json",
+      "corpus_sha256": "91e6aa7316bddb33347fd32cf87e4b0a2f6121076726db017b0223b1bf09570c",
+      "window": {
+        "start": "2023-04-10",
+        "end": "2023-04-22"
+      },
+      "analysis_start": "2023-04-10T06:00:00Z",
+      "analysis_end": "2023-04-23T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 3,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/marshall_27089_fort_lauderdale_flash_flood_april_2023.json",
+        "county": "Marshall",
+        "state": "MN",
+        "fips": "27089",
+        "event": "Fort Lauderdale Flash Flood (April 2023)",
+        "start": "2023-04-10",
+        "end": "2023-04-22",
+        "analysis_start": "2023-04-10T06:00:00Z",
+        "analysis_end": "2023-04-23T06:00:00Z",
+        "sha256": "91e6aa7316bddb33347fd32cf87e4b0a2f6121076726db017b0223b1bf09570c",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Upper Midwest Flooding (June 2024)",
+      "candidate": {
+        "fips": "31055",
+        "state": "NE",
+        "county": "Douglas",
+        "disaster_numbers": [
+          4822
+        ],
+        "registry_gauges_with_flood_stage": 15,
+        "registry_gauges_in_service": 15
+      },
+      "corpus_path": "eval/corpus/study_v4/douglas_31055_upper_midwest_flooding_june_2024.json",
+      "corpus_sha256": "5115d4b6ce1210a00c1fb2cc64c6e2fa5237e7aa23b2c2ac64f9e964dda8598a",
+      "window": {
+        "start": "2024-06-14",
+        "end": "2024-06-26"
+      },
+      "analysis_start": "2024-06-14T06:00:00Z",
+      "analysis_end": "2024-06-27T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 10,
+      "primary_truth_coverage": 0.6787,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.6787,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        }
+      ],
+      "preflight_blocked": false,
+      "limited_truth_coverage_acknowledged": true,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/douglas_31055_upper_midwest_flooding_june_2024.json",
+        "county": "Douglas",
+        "state": "NE",
+        "fips": "31055",
+        "event": "Upper Midwest Flooding (June 2024)",
+        "start": "2024-06-14",
+        "end": "2024-06-26",
+        "analysis_start": "2024-06-14T06:00:00Z",
+        "analysis_end": "2024-06-27T06:00:00Z",
+        "sha256": "5115d4b6ce1210a00c1fb2cc64c6e2fa5237e7aa23b2c2ac64f9e964dda8598a",
+        "threshold_exclusions": [],
+        "limited_truth_coverage_reviewed": true,
+        "limited_truth_coverage_rationale": "At the prespecified 1 h maximum truth age, archived gauge gaps leave 32% of the window unknown. Per the frozen v3 selection rule (coverage >= 0.4), this expected censoring is retained without imputation and reported in interval-censored episode metrics."
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Nicole (November 2022)",
+      "candidate": {
+        "fips": "12083",
+        "state": "FL",
+        "county": "Marion",
+        "disaster_numbers": [
+          4680
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v4/marion_12083_hurricane_nicole_november_2022.json",
+      "corpus_sha256": "363d3bb0e835351f5fcbdaedb3dc03c379755fa672359313eb53fca9acedc8b2",
+      "window": {
+        "start": "2022-11-08",
+        "end": "2022-11-20"
+      },
+      "analysis_start": "2022-11-08T05:00:00Z",
+      "analysis_end": "2022-11-21T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 0.2804,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "limited_primary_truth_coverage_unreviewed",
+          "blocking": true,
+          "known_duration_proportion": 0.2804,
+          "review_threshold": 0.8,
+          "limited_truth_coverage_reviewed": false,
+          "limited_truth_coverage_rationale": null,
+          "acknowledgement_valid": false
+        },
+        {
+          "code": "near_continuous_flood_reference_requires_datum_review",
+          "blocking": true,
+          "flood_fraction_of_known_duration": 1.0
+        }
+      ],
+      "preflight_blocked": true,
+      "decision": "excluded",
+      "exclusion_reason": "preflight_blocked:['limited_primary_truth_coverage_unreviewed', 'near_continuous_flood_reference_requires_datum_review']",
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Nicole (November 2022)",
+      "candidate": {
+        "fips": "12121",
+        "state": "FL",
+        "county": "Suwannee",
+        "disaster_numbers": [
+          4680
+        ],
+        "registry_gauges_with_flood_stage": 6,
+        "registry_gauges_in_service": 6
+      },
+      "corpus_path": "eval/corpus/study_v4/suwannee_12121_hurricane_nicole_november_2022.json",
+      "corpus_sha256": "0d95e0a36ba353175bdda3096e58911dfeff0c4de8d40367d0c2a1fb103aeec6",
+      "window": {
+        "start": "2022-11-08",
+        "end": "2022-11-20"
+      },
+      "analysis_start": "2022-11-08T05:00:00Z",
+      "analysis_end": "2022-11-21T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/suwannee_12121_hurricane_nicole_november_2022.json",
+        "county": "Suwannee",
+        "state": "FL",
+        "fips": "12121",
+        "event": "Hurricane Nicole (November 2022)",
+        "start": "2022-11-08",
+        "end": "2022-11-20",
+        "analysis_start": "2022-11-08T05:00:00Z",
+        "analysis_end": "2022-11-21T05:00:00Z",
+        "sha256": "0d95e0a36ba353175bdda3096e58911dfeff0c4de8d40367d0c2a1fb103aeec6",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Nicole (November 2022)",
+      "candidate": {
+        "fips": "12117",
+        "state": "FL",
+        "county": "Seminole",
+        "disaster_numbers": [
+          4680
+        ],
+        "registry_gauges_with_flood_stage": 5,
+        "registry_gauges_in_service": 5
+      },
+      "corpus_path": "eval/corpus/study_v4/seminole_12117_hurricane_nicole_november_2022.json",
+      "corpus_sha256": "76be0d175f4e4a84ec3a9c52662b7800b765f60ce295a42eca64356a7d028b97",
+      "window": {
+        "start": "2022-11-08",
+        "end": "2022-11-20"
+      },
+      "analysis_start": "2022-11-08T05:00:00Z",
+      "analysis_end": "2022-11-21T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02234000",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 1.0
+        },
+        {
+          "site_no": "02234500",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 1.0
+        }
+      ],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 3,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v4/seminole_12117_hurricane_nicole_november_2022.json",
+        "county": "Seminole",
+        "state": "FL",
+        "fips": "12117",
+        "event": "Hurricane Nicole (November 2022)",
+        "start": "2022-11-08",
+        "end": "2022-11-20",
+        "analysis_start": "2022-11-08T05:00:00Z",
+        "analysis_end": "2022-11-21T05:00:00Z",
+        "sha256": "76be0d175f4e4a84ec3a9c52662b7800b765f60ce295a42eca64356a7d028b97",
+        "threshold_exclusions": [
+          {
+            "site_no": "02234000",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 1.0
+          },
+          {
+            "site_no": "02234500",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 1.0
+          }
+        ]
+      },
+      "selection_pass": 1
+    }
+  ],
+  "pooled_hydrologic_episodes_1h": 46,
+  "n_events_included": 24,
+  "n_county_events_included": 24,
+  "powered": true
+}

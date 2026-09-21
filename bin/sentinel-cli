@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Wrapper so OpenClaw agents can run watcher.cli without manual PYTHONPATH setup.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONPATH="${ROOT}${PYTHONPATH:+:$PYTHONPATH}"
+export NEO4J_URI="${NEO4J_URI:-bolt://localhost:7687}"
+export NEO4J_USER="${NEO4J_USER:-neo4j}"
+export NEO4J_DATABASE="${NEO4J_DATABASE:-neo4j}"
+export ONTOLOGY_SOURCE="${ONTOLOGY_SOURCE:-stub}"
+# Multi-message Slack rendering (set to off for legacy single truncated message)
+export SENTINEL_OUTPUT_ONTOLOGY="${SENTINEL_OUTPUT_ONTOLOGY:-v1}"
+if [[ -z "${NEO4J_PASSWORD:-}" && -f /mnt/secondary/neo4j/.password ]]; then
+  export NEO4J_PASSWORD="$(cat /mnt/secondary/neo4j/.password)"
+fi
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "$ROOT/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="$ROOT/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+exec "$PYTHON" -m watcher.cli "$@"

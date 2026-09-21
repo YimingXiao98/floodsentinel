@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Enable (or create) the FloodSentinel coordinator heartbeat cron job.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONPATH="${ROOT}${PYTHONPATH:+:$PYTHONPATH}"
+PYTHON="${SENTINEL_PYTHON:-}"
+if [[ -z "$PYTHON" ]]; then
+  if [[ -x "${ROOT}/skills/.venv-build/bin/python3" ]]; then
+    PYTHON="${ROOT}/skills/.venv-build/bin/python3"
+  else
+    PYTHON="python3"
+  fi
+fi
+exec "$PYTHON" - <<'PY'
+from watcher.heartbeat_cron import ensure_heartbeat_cron
+import json
+print(json.dumps(ensure_heartbeat_cron(), indent=2))
+PY

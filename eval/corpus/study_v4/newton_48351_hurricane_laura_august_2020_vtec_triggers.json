@@ -1,0 +1,205 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Newton",
+  "state": "TX",
+  "fips": "48351",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2020-08-25",
+    "end": "2020-09-06"
+  },
+  "fetch_window": {
+    "start": "2020-08-22",
+    "end": "2020-09-06"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "TXC351",
+    "zones": [
+      "TXZ260",
+      "TXZ262"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "TXC351": 15,
+    "TXZ260": 10,
+    "TXZ262": 11
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 27,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2020-LCH-FF-A-0004",
+      "product_id": "202008252023-KLCH-WGUS64-FFALCH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-LCH-FF-W-0018",
+      "product_id": "202008270516-KLCH-WGUS54-FFWLCH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-LCH-FF-W-0019",
+      "product_id": "202008270714-KLCH-WGUS54-FFWLCH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-LCH-FF-W-0021",
+      "product_id": "202008270928-KLCH-WGUS54-FFWLCH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-LCH-FA-W-0001",
+      "product_id": "202008271412-KLCH-WGUS44-FLWLCH",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 8,
+  "events": [
+    {
+      "event_key": "2020-LCH-FF-A-0004",
+      "wfo": "LCH",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 4,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008252023-KLCH-WGUS64-FFALCH",
+      "available_at": "2020-08-25T20:23:00Z",
+      "begins_at": "2020-08-26T18:00:00Z",
+      "audit_final_expire": "2020-08-27T16:15:00Z",
+      "ugcs": [
+        "TXZ260",
+        "TXZ262"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FF-W-0018",
+      "wfo": "LCH",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 18,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008270516-KLCH-WGUS54-FFWLCH",
+      "available_at": "2020-08-27T05:16:00Z",
+      "begins_at": "2020-08-27T05:16:00Z",
+      "audit_final_expire": "2020-08-27T14:15:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FF-W-0019",
+      "wfo": "LCH",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 19,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008270714-KLCH-WGUS54-FFWLCH",
+      "available_at": "2020-08-27T07:14:00Z",
+      "begins_at": "2020-08-27T07:14:00Z",
+      "audit_final_expire": "2020-08-27T15:04:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FF-W-0021",
+      "wfo": "LCH",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 21,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008270928-KLCH-WGUS54-FFWLCH",
+      "available_at": "2020-08-27T09:28:00Z",
+      "begins_at": "2020-08-27T09:28:00Z",
+      "audit_final_expire": "2020-08-27T14:19:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FA-W-0001",
+      "wfo": "LCH",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 1,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008271412-KLCH-WGUS44-FLWLCH",
+      "available_at": "2020-08-27T14:12:00Z",
+      "begins_at": "2020-08-27T14:12:00Z",
+      "audit_final_expire": "2020-08-27T19:54:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FL-W-0059",
+      "wfo": "LCH",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 59,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "RPIL1",
+      "product_id": "202008271454-KLCH-WGUS44-FLWLCH",
+      "available_at": "2020-08-27T14:54:00Z",
+      "begins_at": "2020-08-27T21:38:00Z",
+      "audit_final_expire": "2020-08-28T01:08:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FA-W-0003",
+      "wfo": "LCH",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 3,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202008271504-KLCH-WGUS44-FLWLCH",
+      "available_at": "2020-08-27T15:04:00Z",
+      "begins_at": "2020-08-27T15:04:00Z",
+      "audit_final_expire": "2020-08-27T19:55:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    },
+    {
+      "event_key": "2020-LCH-FL-W-0063",
+      "wfo": "LCH",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 63,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "DWYT2",
+      "product_id": "202008290210-KLCH-WGUS44-FLWLCH",
+      "available_at": "2020-08-29T02:10:00Z",
+      "begins_at": "2020-08-29T21:00:00Z",
+      "audit_final_expire": "2020-09-03T00:36:00Z",
+      "ugcs": [
+        "TXC351"
+      ]
+    }
+  ]
+}

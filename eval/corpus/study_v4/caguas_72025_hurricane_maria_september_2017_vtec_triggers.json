@@ -1,0 +1,263 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Caguas",
+  "state": "PR",
+  "fips": "72025",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2017-09-17",
+    "end": "2017-09-29"
+  },
+  "fetch_window": {
+    "start": "2017-09-14",
+    "end": "2017-09-29"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "PRC025",
+    "zones": []
+  },
+  "per_ugc_raw_event_counts": {
+    "PRC025": 13
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 1,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2017-JSJ-FF-W-0054",
+      "product_id": "201709200834-TJSJ-WGCA52-FFWSJU",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0068",
+      "product_id": "201709201530-TJSJ-WGCA52-FFWSJU",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0083",
+      "product_id": "201709202355-TJSJ-WGCA52-FFWSJU",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0095",
+      "product_id": "201709210352-TJSJ-WGCA52-FFWSJU",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0104",
+      "product_id": "201709210845-TJSJ-WGCA52-FFWSJU",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 12,
+  "events": [
+    {
+      "event_key": "2017-JSJ-FF-W-0054",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 54,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709200834-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-20T08:34:00Z",
+      "begins_at": "2017-09-20T08:34:00Z",
+      "audit_final_expire": "2017-09-20T13:30:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0062",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 62,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709201130-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-20T11:30:00Z",
+      "begins_at": "2017-09-20T11:30:00Z",
+      "audit_final_expire": "2017-09-20T15:30:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0068",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 68,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709201530-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-20T15:30:00Z",
+      "begins_at": "2017-09-20T15:30:00Z",
+      "audit_final_expire": "2017-09-20T23:00:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0081",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 81,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709202341-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-20T23:41:00Z",
+      "begins_at": "2017-09-20T23:41:00Z",
+      "audit_final_expire": "2017-09-21T03:45:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0083",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 83,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709202355-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-20T23:55:00Z",
+      "begins_at": "2017-09-20T23:55:00Z",
+      "audit_final_expire": "2017-09-21T04:00:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0094",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 94,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709210345-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-21T03:45:00Z",
+      "begins_at": "2017-09-21T03:45:00Z",
+      "audit_final_expire": "2017-09-21T08:45:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0095",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 95,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709210352-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-21T03:52:00Z",
+      "begins_at": "2017-09-21T03:52:00Z",
+      "audit_final_expire": "2017-09-21T09:00:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0103",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 103,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709210835-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-21T08:35:00Z",
+      "begins_at": "2017-09-21T08:35:00Z",
+      "audit_final_expire": "2017-09-21T12:00:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0104",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 104,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709210845-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-21T08:45:00Z",
+      "begins_at": "2017-09-21T08:45:00Z",
+      "audit_final_expire": "2017-09-21T12:15:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FF-W-0108",
+      "wfo": "JSJ",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 108,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709211154-TJSJ-WGCA52-FFWSJU",
+      "available_at": "2017-09-21T11:54:00Z",
+      "begins_at": "2017-09-21T11:54:00Z",
+      "audit_final_expire": "2017-09-21T19:00:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FA-W-0033",
+      "wfo": "JSJ",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 33,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709211901-TJSJ-WGCA42-FLWSJU",
+      "available_at": "2017-09-21T19:01:00Z",
+      "begins_at": "2017-09-21T19:01:00Z",
+      "audit_final_expire": "2017-09-22T01:00:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    },
+    {
+      "event_key": "2017-JSJ-FA-W-0035",
+      "wfo": "JSJ",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 35,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201709220058-TJSJ-WGCA42-FLWSJU",
+      "available_at": "2017-09-22T00:58:00Z",
+      "begins_at": "2017-09-22T00:58:00Z",
+      "audit_final_expire": "2017-09-23T09:45:00Z",
+      "ugcs": [
+        "PRC025"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+[
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Colville Indian Reservation",
+  "disasterNumber": 4631,
+  "fipsCountyCode": "000",
+  "fipsStateCode": "53",
+  "incidentBeginDate": "2021-07-12T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "WA"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Washington (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "177",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Hamilton (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "081",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Sarpy (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "153",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "York (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "185",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Grant (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "075",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Sheridan (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "161",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Hall (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "079",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Fillmore (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "059",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Madison (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "119",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Cass (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "025",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Saunders (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "155",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Clay (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "035",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Douglas (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "055",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "SEVERE STORMS AND STRAIGHT-LINE WINDS",
+  "declarationType": "DR",
+  "designatedArea": "Box Butte (County)",
+  "disasterNumber": 4616,
+  "fipsCountyCode": "013",
+  "fipsStateCode": "31",
+  "incidentBeginDate": "2021-07-09T00:00:00.000Z",
+  "incidentType": "Severe Storm",
+  "state": "NE"
+ },
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Tehama (County)",
+  "disasterNumber": 4610,
+  "fipsCountyCode": "103",
+  "fipsStateCode": "06",
+  "incidentBeginDate": "2021-07-14T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "CA"
+ },
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Trinity (County)",
+  "disasterNumber": 4610,
+  "fipsCountyCode": "105",
+  "fipsStateCode": "06",
+  "incidentBeginDate": "2021-07-14T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "CA"
+ },
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Placer (County)",
+  "disasterNumber": 4610,
+  "fipsCountyCode": "061",
+  "fipsStateCode": "06",
+  "incidentBeginDate": "2021-07-14T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "CA"
+ },
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Plumas (County)",
+  "disasterNumber": 4610,
+  "fipsCountyCode": "063",
+  "fipsStateCode": "06",
+  "incidentBeginDate": "2021-07-14T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "CA"
+ },
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Lassen (County)",
+  "disasterNumber": 4610,
+  "fipsCountyCode": "035",
+  "fipsStateCode": "06",
+  "incidentBeginDate": "2021-07-14T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "CA"
+ },
+ {
+  "declarationTitle": "WILDFIRES",
+  "declarationType": "DR",
+  "designatedArea": "Nevada (County)",
+  "disasterNumber": 4610,
+  "fipsCountyCode": "057",
+  "fipsStateCode": "06",
+  "incidentBeginDate": "2021-07-14T00:00:00.000Z",
+  "incidentType": "Fire",
+  "state": "CA"
+ }
+]

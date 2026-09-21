@@ -1,0 +1,2157 @@
+{
+ "note": "Post-hoc, descriptive comparators read from the frozen Study 2 (v3 rev2) and Study 3 (v4) artifacts.\n\nNothing here was prespecified. The frozen per-county result files already contain fixed 1/2/3/6/12 h clocks at\nevery 15-minute offset (the Study 1 comparator set), which the held-out reports never summarized, plus the\nonset-anticipation flags the trigger accounting records per episode. This script only reads those files and\nwrites a summary; the frozen directories are not modified.",
+ "studies": {
+  "study2_v3_rev2": {
+   "anticipation_strata": {
+    "all_anticipated": {
+     "adaptive_observed": 5,
+     "adaptive_unobserved": 17.75,
+     "county_events": 6,
+     "episodes": 7,
+     "fixed_3h_median_observed": 6.0,
+     "fixed_3h_median_unobserved": 10.125,
+     "hybrid_observed": 6,
+     "hybrid_unobserved": 5.5,
+     "members": [
+      "baldwin_01003_2020-09-13",
+      "chatham_37037_2018-10-08",
+      "horry_45051_2018-09-11",
+      "mecklenburg_37119_2024-09-22",
+      "somerset_34035_2021-08-27",
+      "wake_37183_2016-10-06"
+     ]
+    },
+    "none_anticipated": {
+     "adaptive_observed": 3,
+     "adaptive_unobserved": 5.75,
+     "county_events": 3,
+     "episodes": 3,
+     "fixed_3h_median_observed": 3.0,
+     "fixed_3h_median_unobserved": 4.125,
+     "hybrid_observed": 3,
+     "hybrid_unobserved": 3.5,
+     "members": [
+      "east_baton_rouge_22033_2016-08-10",
+      "montgomery_48339_2024-07-06",
+      "osceola_12097_2024-10-07"
+     ]
+    }
+   },
+   "county_events": [
+    {
+     "adaptive": {
+      "acquisitions": 130,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.75
+     },
+     "county_event": "baldwin_01003_2020-09-13",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 19.75,
+       "unobserved_median": 11.75,
+       "unobserved_min": 3.75
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 1.25,
+       "unobserved_median": 0.75,
+       "unobserved_min": 0.25
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 3.25,
+       "unobserved_median": 1.75,
+       "unobserved_min": 0.25
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 4.75,
+       "unobserved_median": 2.75,
+       "unobserved_min": 0.75
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 9.25,
+       "unobserved_median": 5.75,
+       "unobserved_min": 2.25
+      }
+     },
+     "hybrid": {
+      "acquisitions": 136,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.25
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 28,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     },
+     "county_event": "chatham_37037_2018-10-08",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 16.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 183.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 92.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 62.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 31.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 42,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 136,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.25
+     },
+     "county_event": "east_baton_rouge_22033_2016-08-10",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 140,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.25
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 110,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 5.5
+     },
+     "county_event": "horry_45051_2018-09-11",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 128,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 28,
+      "episodes_observed_by_schedule": 0,
+      "unobserved_flood_stage_duration_hours": 2.5
+     },
+     "county_event": "mecklenburg_37119_2024-09-22",
+     "episodes_total": 2,
+     "episodes_with_onset_anticipating_warning": 2,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 0.0,
+       "offsets": 48,
+       "unobserved_max": 2.5,
+       "unobserved_median": 2.5,
+       "unobserved_min": 0.5
+      },
+      "1h": {
+       "acquisitions_median": 182.0,
+       "episodes_observed_median": 1.5,
+       "offsets": 4,
+       "unobserved_max": 1.25,
+       "unobserved_median": 0.75,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 91.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 2.25,
+       "unobserved_median": 1.125,
+       "unobserved_min": 0.5
+      },
+      "3h": {
+       "acquisitions_median": 61.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.5,
+       "unobserved_median": 1.875,
+       "unobserved_min": 0.5
+      },
+      "6h": {
+       "acquisitions_median": 31.0,
+       "episodes_observed_median": 0.0,
+       "offsets": 24,
+       "unobserved_max": 2.5,
+       "unobserved_median": 2.5,
+       "unobserved_min": 0.5
+      }
+     },
+     "hybrid": {
+      "acquisitions": 40,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 38,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     },
+     "county_event": "montgomery_48339_2024-07-06",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 21.5,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 247.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 124.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 83.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 42.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 64,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 5.0
+     },
+     "county_event": "osceola_12097_2024-10-07",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 76,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 59,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 5.0
+     },
+     "county_event": "somerset_34035_2021-08-27",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 22.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 256.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 128.5,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 86.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 43.5,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 64,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 26,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     },
+     "county_event": "wake_37183_2016-10-06",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 12.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 135.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 68.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 46.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 23.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 50,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0
+     }
+    }
+   ],
+   "pooled": {
+    "adaptive": {
+     "acquisitions": 607,
+     "episodes_observed_by_schedule": 8,
+     "unobserved_flood_stage_duration_hours": 23.5
+    },
+    "county_events": 9,
+    "episodes": 10,
+    "fixed": {
+     "12h": {
+      "acquisitions_median": 201.5,
+      "episodes_observed_median": 8.0,
+      "unobserved_max": 104.5,
+      "unobserved_median": 55.375,
+      "unobserved_min": 4.25
+     },
+     "1h": {
+      "acquisitions_median": 2251.0,
+      "episodes_observed_median": 9.5,
+      "unobserved_max": 7.75,
+      "unobserved_median": 4.125,
+      "unobserved_min": 0.25
+     },
+     "2h": {
+      "acquisitions_median": 1127.5,
+      "episodes_observed_median": 9.0,
+      "unobserved_max": 17.75,
+      "unobserved_median": 9.0,
+      "unobserved_min": 0.75
+     },
+     "3h": {
+      "acquisitions_median": 754.0,
+      "episodes_observed_median": 9.0,
+      "unobserved_max": 26.5,
+      "unobserved_median": 14.25,
+      "unobserved_min": 1.25
+     },
+     "6h": {
+      "acquisitions_median": 378.5,
+      "episodes_observed_median": 8.0,
+      "unobserved_max": 52.0,
+      "unobserved_median": 28.375,
+      "unobserved_min": 2.75
+     }
+    },
+    "hybrid": {
+     "acquisitions": 740,
+     "episodes_observed_by_schedule": 9,
+     "unobserved_flood_stage_duration_hours": 9.0
+    },
+    "hybrid_vs_fixed_offset_median": {
+     "12h": {
+      "above": 0,
+      "below": 9,
+      "one_sided_sign_p": 0.001953125,
+      "ties": 0
+     },
+     "1h": {
+      "above": 4,
+      "below": 5,
+      "one_sided_sign_p": 0.5,
+      "ties": 0
+     },
+     "2h": {
+      "above": 3,
+      "below": 6,
+      "one_sided_sign_p": 0.25390625,
+      "ties": 0
+     },
+     "3h": {
+      "above": 3,
+      "below": 6,
+      "one_sided_sign_p": 0.25390625,
+      "ties": 0
+     },
+     "6h": {
+      "above": 0,
+      "below": 9,
+      "one_sided_sign_p": 0.001953125,
+      "ties": 0
+     }
+    }
+   }
+  },
+  "study3_v4_additive": {
+   "anticipation_strata": {
+    "all_anticipated": {
+     "adaptive_observed": 17,
+     "adaptive_unobserved": 48.75,
+     "county_events": 17,
+     "episodes": 19,
+     "fixed_3h_median_observed": 18.0,
+     "fixed_3h_median_unobserved": 25.0,
+     "hybrid_observed": 18,
+     "hybrid_unobserved": 10.5,
+     "members": [
+      "acadia_22001_2020-10-07",
+      "ascension_22005_2016-03-06",
+      "ascension_22005_2021-05-15",
+      "berkeley_45015_2019-08-26",
+      "braxton_54007_2016-06-20",
+      "delaware_36025_2024-08-03",
+      "douglas_31055_2024-06-14",
+      "harrison_28047_2020-10-26",
+      "lee_21129_2022-07-24",
+      "newton_48351_2020-08-25",
+      "orange_48361_2019-09-15",
+      "penobscot_23019_2023-12-14",
+      "ponce_72113_2022-09-15",
+      "robeson_37155_2020-11-06",
+      "st__tammany_22103_2024-09-09",
+      "steuben_36101_2021-08-14",
+      "washington_50023_2023-07-07"
+     ]
+    },
+    "none_anticipated": {
+     "adaptive_observed": 8,
+     "adaptive_unobserved": 27.0,
+     "county_events": 4,
+     "episodes": 18,
+     "fixed_3h_median_observed": 9.0,
+     "fixed_3h_median_unobserved": 15.25,
+     "hybrid_observed": 8,
+     "hybrid_unobserved": 25.0,
+     "members": [
+      "cherokee_48073_2016-04-15",
+      "marion_12083_2022-09-26",
+      "sarasota_12115_2023-08-27",
+      "seminole_12117_2022-11-08"
+     ]
+    },
+    "some_anticipated": {
+     "adaptive_observed": 7,
+     "adaptive_unobserved": 33.75,
+     "county_events": 3,
+     "episodes": 9,
+     "fixed_3h_median_observed": 7.0,
+     "fixed_3h_median_unobserved": 20.375,
+     "hybrid_observed": 7,
+     "hybrid_unobserved": 24.75,
+     "members": [
+      "caguas_72025_2017-09-17",
+      "marshall_27089_2023-04-10",
+      "new_castle_10003_2020-08-01"
+     ]
+    }
+   },
+   "county_events": [
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 4.25
+     },
+     "county_event": "acadia_22001_2020-10-07",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 67,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.25
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 94,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.0
+     },
+     "county_event": "ascension_22005_2016-03-06",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 120,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 2,
+      "unobserved_flood_stage_duration_hours": 4.5
+     },
+     "county_event": "ascension_22005_2021-05-15",
+     "episodes_total": 2,
+     "episodes_with_onset_anticipating_warning": 2,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 48,
+       "unobserved_max": 17.5,
+       "unobserved_median": 11.75,
+       "unobserved_min": 6.0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 4,
+       "unobserved_max": 1.5,
+       "unobserved_median": 0.75,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 8,
+       "unobserved_max": 3.5,
+       "unobserved_median": 1.75,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 12,
+       "unobserved_max": 5.5,
+       "unobserved_median": 2.75,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 24,
+       "unobserved_max": 11.5,
+       "unobserved_median": 5.75,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 88,
+      "episodes_observed_by_schedule": 2,
+      "unobserved_flood_stage_duration_hours": 0.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     },
+     "county_event": "berkeley_45015_2019-08-26",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 66,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.75
+     },
+     "county_event": "braxton_54007_2016-06-20",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 133,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 41,
+      "episodes_observed_by_schedule": 3,
+      "unobserved_flood_stage_duration_hours": 5.5
+     },
+     "county_event": "caguas_72025_2017-09-17",
+     "episodes_total": 4,
+     "episodes_with_onset_anticipating_warning": 3,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 16.5,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 17.25,
+       "unobserved_median": 10.5,
+       "unobserved_min": 4.25
+      },
+      "1h": {
+       "acquisitions_median": 187.0,
+       "episodes_observed_median": 4.0,
+       "offsets": 4,
+       "unobserved_max": 2.5,
+       "unobserved_median": 1.5,
+       "unobserved_min": 0.5
+      },
+      "2h": {
+       "acquisitions_median": 94.0,
+       "episodes_observed_median": 3.5,
+       "offsets": 8,
+       "unobserved_max": 4.5,
+       "unobserved_median": 3.5,
+       "unobserved_min": 1.5
+      },
+      "3h": {
+       "acquisitions_median": 63.0,
+       "episodes_observed_median": 3.0,
+       "offsets": 12,
+       "unobserved_max": 6.75,
+       "unobserved_median": 4.875,
+       "unobserved_min": 2.5
+      },
+      "6h": {
+       "acquisitions_median": 32.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 24,
+       "unobserved_max": 10.25,
+       "unobserved_median": 7.75,
+       "unobserved_min": 3.25
+      }
+     },
+     "hybrid": {
+      "acquisitions": 51,
+      "episodes_observed_by_schedule": 3,
+      "unobserved_flood_stage_duration_hours": 4.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.75
+     },
+     "county_event": "cherokee_48073_2016-04-15",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 74,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 35,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     },
+     "county_event": "delaware_36025_2024-08-03",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 20.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 8.5,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 225.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 113.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 76.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 38.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 47,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.75
+     },
+     "county_event": "douglas_31055_2024-06-14",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 79,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 37,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.5
+     },
+     "county_event": "harrison_28047_2020-10-26",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 47,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 114,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.0
+     },
+     "county_event": "lee_21129_2022-07-24",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 128,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 136,
+      "episodes_observed_by_schedule": 2,
+      "unobserved_flood_stage_duration_hours": 4.75
+     },
+     "county_event": "marion_12083_2022-09-26",
+     "episodes_total": 7,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 13.25,
+       "unobserved_median": 7.375,
+       "unobserved_min": 1.5
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 2.5,
+       "offsets": 4,
+       "unobserved_max": 2.0,
+       "unobserved_median": 1.5,
+       "unobserved_min": 1.0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 2.0,
+       "offsets": 8,
+       "unobserved_max": 3.0,
+       "unobserved_median": 2.125,
+       "unobserved_min": 1.5
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 4.25,
+       "unobserved_median": 2.75,
+       "unobserved_min": 1.25
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 7.25,
+       "unobserved_median": 4.25,
+       "unobserved_min": 1.5
+      }
+     },
+     "hybrid": {
+      "acquisitions": 136,
+      "episodes_observed_by_schedule": 2,
+      "unobserved_flood_stage_duration_hours": 4.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 84,
+      "episodes_observed_by_schedule": 3,
+      "unobserved_flood_stage_duration_hours": 15.0
+     },
+     "county_event": "marshall_27089_2023-04-10",
+     "episodes_total": 3,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 3.0,
+       "offsets": 48,
+       "unobserved_max": 33.0,
+       "unobserved_median": 16.125,
+       "unobserved_min": 3.75
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 3.0,
+       "offsets": 4,
+       "unobserved_max": 2.0,
+       "unobserved_median": 1.0,
+       "unobserved_min": 0.5
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 3.0,
+       "offsets": 8,
+       "unobserved_max": 5.0,
+       "unobserved_median": 2.375,
+       "unobserved_min": 0.5
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 3.0,
+       "offsets": 12,
+       "unobserved_max": 6.0,
+       "unobserved_median": 4.125,
+       "unobserved_min": 1.5
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 3.0,
+       "offsets": 24,
+       "unobserved_max": 15.0,
+       "unobserved_median": 8.25,
+       "unobserved_min": 3.75
+      }
+     },
+     "hybrid": {
+      "acquisitions": 107,
+      "episodes_observed_by_schedule": 3,
+      "unobserved_flood_stage_duration_hours": 8.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 23,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 13.25
+     },
+     "county_event": "new_castle_10003_2020-08-01",
+     "episodes_total": 2,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 13.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 21.75,
+       "unobserved_median": 15.875,
+       "unobserved_min": 10.0
+      },
+      "1h": {
+       "acquisitions_median": 145.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 10.75,
+       "unobserved_median": 10.375,
+       "unobserved_min": 10.0
+      },
+      "2h": {
+       "acquisitions_median": 73.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 11.75,
+       "unobserved_median": 10.875,
+       "unobserved_min": 10.0
+      },
+      "3h": {
+       "acquisitions_median": 49.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 12.75,
+       "unobserved_median": 11.375,
+       "unobserved_min": 10.0
+      },
+      "6h": {
+       "acquisitions_median": 25.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 15.75,
+       "unobserved_median": 12.875,
+       "unobserved_min": 10.0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 45,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 11.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 48,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.0
+     },
+     "county_event": "newton_48351_2020-08-25",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 306.5,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 154.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 103.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 71,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 114,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 4.75
+     },
+     "county_event": "orange_48361_2019-09-15",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 122,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 37,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.0
+     },
+     "county_event": "penobscot_23019_2023-12-14",
+     "episodes_total": 2,
+     "episodes_with_onset_anticipating_warning": 2,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 21.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 12.0,
+       "unobserved_median": 6.125,
+       "unobserved_min": 0.25
+      },
+      "1h": {
+       "acquisitions_median": 237.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 1.0,
+       "unobserved_median": 0.5,
+       "unobserved_min": 0.25
+      },
+      "2h": {
+       "acquisitions_median": 119.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 2.0,
+       "unobserved_median": 1.125,
+       "unobserved_min": 0.25
+      },
+      "3h": {
+       "acquisitions_median": 80.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 3.0,
+       "unobserved_median": 1.625,
+       "unobserved_min": 0.25
+      },
+      "6h": {
+       "acquisitions_median": 40.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 6.0,
+       "unobserved_median": 3.125,
+       "unobserved_min": 0.25
+      }
+     },
+     "hybrid": {
+      "acquisitions": 60,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.5
+     },
+     "county_event": "ponce_72113_2022-09-15",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 0.0,
+       "offsets": 48,
+       "unobserved_max": 3.5,
+       "unobserved_median": 3.5,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 3.5,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 131,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 96,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 5.0
+     },
+     "county_event": "robeson_37155_2020-11-06",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 106,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 132,
+      "episodes_observed_by_schedule": 4,
+      "unobserved_flood_stage_duration_hours": 17.0
+     },
+     "county_event": "sarasota_12115_2023-08-27",
+     "episodes_total": 7,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 4.0,
+       "offsets": 48,
+       "unobserved_max": 36.0,
+       "unobserved_median": 25.875,
+       "unobserved_min": 17.0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 7.0,
+       "offsets": 4,
+       "unobserved_max": 4.5,
+       "unobserved_median": 2.375,
+       "unobserved_min": 1.25
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 7.0,
+       "offsets": 8,
+       "unobserved_max": 9.25,
+       "unobserved_median": 5.625,
+       "unobserved_min": 4.25
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 6.0,
+       "offsets": 12,
+       "unobserved_max": 11.5,
+       "unobserved_median": 9.25,
+       "unobserved_min": 6.25
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 4.0,
+       "offsets": 24,
+       "unobserved_max": 22.0,
+       "unobserved_median": 15.875,
+       "unobserved_min": 10.75
+      }
+     },
+     "hybrid": {
+      "acquisitions": 134,
+      "episodes_observed_by_schedule": 4,
+      "unobserved_flood_stage_duration_hours": 16.0
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.5
+     },
+     "county_event": "seminole_12117_2022-11-08",
+     "episodes_total": 3,
+     "episodes_with_onset_anticipating_warning": 0,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 12.5,
+       "unobserved_median": 6.625,
+       "unobserved_min": 0.75
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.5,
+       "offsets": 4,
+       "unobserved_max": 1.25,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0.5
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 2.5,
+       "unobserved_median": 1.5,
+       "unobserved_min": 0.75
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 3.5,
+       "unobserved_median": 1.875,
+       "unobserved_min": 0.75
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 6.5,
+       "unobserved_median": 3.625,
+       "unobserved_min": 0.75
+      }
+     },
+     "hybrid": {
+      "acquisitions": 61,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 2.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 47,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.5
+     },
+     "county_event": "st__tammany_22103_2024-09-09",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 16.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 184.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 92.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 62.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 31.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 52,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.5
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 30,
+      "episodes_observed_by_schedule": 0,
+      "unobserved_flood_stage_duration_hours": 2.5
+     },
+     "county_event": "steuben_36101_2021-08-14",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 17.0,
+       "episodes_observed_median": 0.0,
+       "offsets": 48,
+       "unobserved_max": 2.5,
+       "unobserved_median": 2.5,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 198.5,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 100.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 67.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.5,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 34.0,
+       "episodes_observed_median": 0.0,
+       "offsets": 24,
+       "unobserved_max": 2.5,
+       "unobserved_median": 2.5,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 53,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 0.75
+     }
+    },
+    {
+     "adaptive": {
+      "acquisitions": 126,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 3.5
+     },
+     "county_event": "washington_50023_2023-07-07",
+     "episodes_total": 1,
+     "episodes_with_onset_anticipating_warning": 1,
+     "fixed": {
+      "12h": {
+       "acquisitions_median": 26.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 48,
+       "unobserved_max": 11.75,
+       "unobserved_median": 5.875,
+       "unobserved_min": 0
+      },
+      "1h": {
+       "acquisitions_median": 312.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 4,
+       "unobserved_max": 0.75,
+       "unobserved_median": 0.375,
+       "unobserved_min": 0
+      },
+      "2h": {
+       "acquisitions_median": 156.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 8,
+       "unobserved_max": 1.75,
+       "unobserved_median": 0.875,
+       "unobserved_min": 0
+      },
+      "3h": {
+       "acquisitions_median": 104.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 12,
+       "unobserved_max": 2.75,
+       "unobserved_median": 1.375,
+       "unobserved_min": 0
+      },
+      "6h": {
+       "acquisitions_median": 52.0,
+       "episodes_observed_median": 1.0,
+       "offsets": 24,
+       "unobserved_max": 5.75,
+       "unobserved_median": 2.875,
+       "unobserved_min": 0
+      }
+     },
+     "hybrid": {
+      "acquisitions": 149,
+      "episodes_observed_by_schedule": 1,
+      "unobserved_flood_stage_duration_hours": 1.5
+     }
+    }
+   ],
+   "pooled": {
+    "adaptive": {
+     "acquisitions": 1610,
+     "episodes_observed_by_schedule": 32,
+     "unobserved_flood_stage_duration_hours": 109.5
+    },
+    "county_events": 24,
+    "episodes": 46,
+    "fixed": {
+     "12h": {
+      "acquisitions_median": 571.5,
+      "episodes_observed_median": 28.0,
+      "unobserved_max": 330.5,
+      "unobserved_median": 188.5,
+      "unobserved_min": 43.5
+     },
+     "1h": {
+      "acquisitions_median": 6787.0,
+      "episodes_observed_median": 38.0,
+      "unobserved_max": 37.5,
+      "unobserved_median": 24.875,
+      "unobserved_min": 14.0
+     },
+     "2h": {
+      "acquisitions_median": 3397.0,
+      "episodes_observed_median": 36.5,
+      "unobserved_max": 69.5,
+      "unobserved_median": 42.875,
+      "unobserved_min": 18.75
+     },
+     "3h": {
+      "acquisitions_median": 2268.0,
+      "episodes_observed_median": 34.0,
+      "unobserved_max": 97.0,
+      "unobserved_median": 60.625,
+      "unobserved_min": 22.5
+     },
+     "6h": {
+      "acquisitions_median": 1136.0,
+      "episodes_observed_median": 30.0,
+      "unobserved_max": 180.75,
+      "unobserved_median": 107.125,
+      "unobserved_min": 30.25
+     }
+    },
+    "hybrid": {
+     "acquisitions": 2127,
+     "episodes_observed_by_schedule": 33,
+     "unobserved_flood_stage_duration_hours": 60.25
+    },
+    "hybrid_vs_fixed_offset_median": {
+     "12h": {
+      "above": 0,
+      "below": 24,
+      "one_sided_sign_p": 5.960464477539063e-08,
+      "ties": 0
+     },
+     "1h": {
+      "above": 19,
+      "below": 5,
+      "one_sided_sign_p": 0.9992280602455139,
+      "ties": 0
+     },
+     "2h": {
+      "above": 10,
+      "below": 14,
+      "one_sided_sign_p": 0.27062809467315674,
+      "ties": 0
+     },
+     "3h": {
+      "above": 7,
+      "below": 17,
+      "one_sided_sign_p": 0.03195732831954956,
+      "ties": 0
+     },
+     "6h": {
+      "above": 3,
+      "below": 21,
+      "one_sided_sign_p": 0.0001385807991027832,
+      "ties": 0
+     }
+    }
+   }
+  }
+ }
+}

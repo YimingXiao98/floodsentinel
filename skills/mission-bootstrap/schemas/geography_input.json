@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "mission-bootstrap geography input",
+  "description": "Input for main.py geography resolution only. Bootstrap workflow is in SKILL.md.",
+  "type": "object",
+  "properties": {
+    "county": { "type": "string" },
+    "state": { "type": "string" },
+    "fips": { "type": "string", "pattern": "^[0-9]{5}$" },
+    "location": { "type": "string" },
+    "prompt": { "type": "string" },
+    "command": { "type": "string" }
+  },
+  "additionalProperties": true
+}

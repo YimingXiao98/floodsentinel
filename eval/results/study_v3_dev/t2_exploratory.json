@@ -1,0 +1,46 @@
+{
+  "arms": {
+    "official": {
+      "acquisitions": 139,
+      "burst_yield": 1.0,
+      "clear_burden": 2,
+      "delays": [
+        0.25
+      ],
+      "episodes": "1/1",
+      "n_trigger_events_seen": 150,
+      "trigger_attributable": 11,
+      "unobserved_hours": 0.25
+    },
+    "official_plus_t2": {
+      "acquisitions": 156,
+      "burst_yield": 0.9359,
+      "clear_burden": 28,
+      "delays": [
+        0.5
+      ],
+      "episodes": "1/1",
+      "n_trigger_events_seen": 4104,
+      "trigger_attributable": 36,
+      "unobserved_hours": 0.5
+    },
+    "t2_only": {
+      "acquisitions": 156,
+      "burst_yield": 0.9335,
+      "clear_burden": 28,
+      "delays": [
+        0.5
+      ],
+      "episodes": "1/1",
+      "n_trigger_events_seen": 3954,
+      "trigger_attributable": 36,
+      "unobserved_hours": 0.5
+    }
+  },
+  "frozen_burst": {
+    "burst_duration_seconds": 86400,
+    "burst_interval_seconds": 7200
+  },
+  "role": "exploratory_development_only_harris",
+  "schema": "sentinel-v3-t2-exploratory/1"
+}

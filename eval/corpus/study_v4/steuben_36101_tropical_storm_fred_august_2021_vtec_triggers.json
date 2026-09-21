@@ -1,0 +1,282 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Steuben",
+  "state": "NY",
+  "fips": "36101",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2021-08-14",
+    "end": "2021-08-26"
+  },
+  "fetch_window": {
+    "start": "2021-08-11",
+    "end": "2021-08-26"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "NYC101",
+    "zones": [
+      "NYZ022"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "NYC101": 16,
+    "NYZ022": 5
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 8,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2021-BGM-FF-A-0007",
+      "product_id": "202108171552-KBGM-WGUS61-FFABGM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0126",
+      "product_id": "202108180806-KBGM-WGUS81-FLSBGM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-BGM-FF-W-0046",
+      "product_id": "202108182238-KBGM-WGUS51-FFWBGM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-BGM-FF-W-0049",
+      "product_id": "202108190228-KBGM-WGUS51-FFWBGM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-BGM-FL-W-0004",
+      "product_id": "202108190844-KBGM-WGUS41-FLWBGM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 13,
+  "events": [
+    {
+      "event_key": "2021-BGM-FF-A-0007",
+      "wfo": "BGM",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 7,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108171552-KBGM-WGUS61-FFABGM",
+      "available_at": "2021-08-17T15:52:00Z",
+      "begins_at": "2021-08-17T21:00:00Z",
+      "audit_final_expire": "2021-08-19T08:05:00Z",
+      "ugcs": [
+        "NYZ022"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0123",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 123,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108172203-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-17T22:03:00Z",
+      "begins_at": "2021-08-17T22:03:00Z",
+      "audit_final_expire": "2021-08-18T00:00:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0126",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 126,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108180806-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-18T08:06:00Z",
+      "begins_at": "2021-08-18T08:06:00Z",
+      "audit_final_expire": "2021-08-18T09:57:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0127",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 127,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108182109-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-18T21:09:00Z",
+      "begins_at": "2021-08-18T21:09:00Z",
+      "audit_final_expire": "2021-08-18T22:38:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FF-W-0046",
+      "wfo": "BGM",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 46,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108182238-KBGM-WGUS51-FFWBGM",
+      "available_at": "2021-08-18T22:38:00Z",
+      "begins_at": "2021-08-18T22:38:00Z",
+      "audit_final_expire": "2021-08-19T04:00:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0129",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 129,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108182300-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-18T23:00:00Z",
+      "begins_at": "2021-08-18T23:00:00Z",
+      "audit_final_expire": "2021-08-19T05:00:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FF-W-0049",
+      "wfo": "BGM",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 49,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108190228-KBGM-WGUS51-FFWBGM",
+      "available_at": "2021-08-19T02:28:00Z",
+      "begins_at": "2021-08-19T02:28:00Z",
+      "audit_final_expire": "2021-08-19T07:44:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-W-0007",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 7,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108190744-KBGM-WGUS41-FLWBGM",
+      "available_at": "2021-08-19T07:44:00Z",
+      "begins_at": "2021-08-19T07:44:00Z",
+      "audit_final_expire": "2021-08-19T14:00:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FL-W-0004",
+      "wfo": "BGM",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 4,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "WCRN6",
+      "product_id": "202108190844-KBGM-WGUS41-FLWBGM",
+      "available_at": "2021-08-19T08:44:00Z",
+      "begins_at": "2021-08-19T08:44:00Z",
+      "audit_final_expire": "2021-08-19T11:26:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0136",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 136,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108210034-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-21T00:34:00Z",
+      "begins_at": "2021-08-21T00:34:00Z",
+      "audit_final_expire": "2021-08-21T02:30:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FF-W-0053",
+      "wfo": "BGM",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 53,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108210209-KBGM-WGUS51-FFWBGM",
+      "available_at": "2021-08-21T02:09:00Z",
+      "begins_at": "2021-08-21T02:09:00Z",
+      "audit_final_expire": "2021-08-21T05:15:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0138",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 138,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108212134-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-21T21:34:00Z",
+      "begins_at": "2021-08-21T21:34:00Z",
+      "audit_final_expire": "2021-08-22T00:30:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    },
+    {
+      "event_key": "2021-BGM-FA-Y-0146",
+      "wfo": "BGM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 146,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202108260030-KBGM-WGUS81-FLSBGM",
+      "available_at": "2021-08-26T00:30:00Z",
+      "begins_at": "2021-08-26T00:30:00Z",
+      "audit_final_expire": "2021-08-26T02:19:00Z",
+      "ugcs": [
+        "NYC101"
+      ]
+    }
+  ]
+}

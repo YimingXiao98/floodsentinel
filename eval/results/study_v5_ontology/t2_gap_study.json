@@ -1,0 +1,654 @@
+{
+  "county_rows": [
+    {
+      "arms": {
+        "official": {
+          "acquisitions": 136,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 135
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 7,
+              "observed": 2,
+              "unobserved_hours": 4.75
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 0,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        },
+        "official_plus_t2": {
+          "acquisitions": 146,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 136,
+            "verification_burst": 7,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 7,
+              "observed": 2,
+              "unobserved_hours": 3.0
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 9,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 1
+        },
+        "t2_only": {
+          "acquisitions": 146,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 136,
+            "verification_burst": 7,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 7,
+              "observed": 2,
+              "unobserved_hours": 3.0
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 9,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 1
+        }
+      },
+      "county": "Marion",
+      "event": "Hurricane Ian (September 2022)",
+      "fips": "12083",
+      "n_unwarned": 7,
+      "state": "FL"
+    },
+    {
+      "arms": {
+        "official": {
+          "acquisitions": 134,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 131,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 7,
+              "observed": 4,
+              "unobserved_hours": 16.0
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 2,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        },
+        "official_plus_t2": {
+          "acquisitions": 134,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 131,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 7,
+              "observed": 4,
+              "unobserved_hours": 16.0
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 2,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        },
+        "t2_only": {
+          "acquisitions": 132,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 131
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 7,
+              "observed": 4,
+              "unobserved_hours": 17.0
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 0,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        }
+      },
+      "county": "Sarasota",
+      "event": "Hurricane Idalia (August 2023)",
+      "fips": "12115",
+      "n_unwarned": 7,
+      "state": "FL"
+    },
+    {
+      "arms": {
+        "official": {
+          "acquisitions": 61,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 51,
+            "verification_burst": 8,
+            "verification_immediate": 1
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 3,
+              "observed": 1,
+              "unobserved_hours": 2.5
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 9,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 3
+        },
+        "official_plus_t2": {
+          "acquisitions": 85,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 51,
+            "verification_burst": 31,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 3,
+              "observed": 1,
+              "unobserved_hours": 2.5
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 33,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 28
+        },
+        "t2_only": {
+          "acquisitions": 77,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 51,
+            "verification_burst": 23,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 3,
+              "observed": 1,
+              "unobserved_hours": 2.5
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 25,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 25
+        }
+      },
+      "county": "Seminole",
+      "event": "Hurricane Nicole (November 2022)",
+      "fips": "12117",
+      "n_unwarned": 3,
+      "state": "FL"
+    },
+    {
+      "arms": {
+        "official": {
+          "acquisitions": 107,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 83,
+            "verification_burst": 20,
+            "verification_immediate": 3
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 2,
+              "observed": 2,
+              "unobserved_hours": 6.75
+            },
+            "warned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 1.75
+            }
+          },
+          "trigger_attributable_acquisitions": 23,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 3
+        },
+        "official_plus_t2": {
+          "acquisitions": 107,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 83,
+            "verification_burst": 20,
+            "verification_immediate": 3
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 2,
+              "observed": 2,
+              "unobserved_hours": 6.75
+            },
+            "warned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 1.75
+            }
+          },
+          "trigger_attributable_acquisitions": 23,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 3
+        },
+        "t2_only": {
+          "acquisitions": 84,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 83
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 2,
+              "observed": 2,
+              "unobserved_hours": 9.25
+            },
+            "warned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 5.75
+            }
+          },
+          "trigger_attributable_acquisitions": 0,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        }
+      },
+      "county": "Marshall",
+      "event": "Fort Lauderdale Flash Flood (April 2023)",
+      "fips": "27089",
+      "n_unwarned": 2,
+      "state": "MN"
+    },
+    {
+      "arms": {
+        "official": {
+          "acquisitions": 51,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 43,
+            "verification_burst": 6,
+            "verification_immediate": 1
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 0.75
+            },
+            "warned": {
+              "episodes": 3,
+              "observed": 2,
+              "unobserved_hours": 3.75
+            }
+          },
+          "trigger_attributable_acquisitions": 7,
+          "trigger_stream_consultations": 746,
+          "verification_acquisitions_during_known_clear": 6
+        },
+        "official_plus_t2": {
+          "acquisitions": 51,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 43,
+            "verification_burst": 6,
+            "verification_immediate": 1
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 0.75
+            },
+            "warned": {
+              "episodes": 3,
+              "observed": 2,
+              "unobserved_hours": 3.75
+            }
+          },
+          "trigger_attributable_acquisitions": 7,
+          "trigger_stream_consultations": 746,
+          "verification_acquisitions_during_known_clear": 6
+        },
+        "t2_only": {
+          "acquisitions": 41,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 40
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 2.0
+            },
+            "warned": {
+              "episodes": 3,
+              "observed": 2,
+              "unobserved_hours": 3.5
+            }
+          },
+          "trigger_attributable_acquisitions": 0,
+          "trigger_stream_consultations": 745,
+          "verification_acquisitions_during_known_clear": 0
+        }
+      },
+      "county": "Caguas",
+      "event": "Hurricane Maria (September 2017)",
+      "fips": "72025",
+      "n_unwarned": 1,
+      "state": "PR"
+    },
+    {
+      "arms": {
+        "official": {
+          "acquisitions": 74,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 51,
+            "verification_burst": 20,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 1.75
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 22,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        },
+        "official_plus_t2": {
+          "acquisitions": 74,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 51,
+            "verification_burst": 20,
+            "verification_immediate": 2
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 1.75
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 22,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        },
+        "t2_only": {
+          "acquisitions": 52,
+          "acquisitions_by_reason": {
+            "first_run": 1,
+            "scheduled": 51
+          },
+          "strata": {
+            "unwarned": {
+              "episodes": 1,
+              "observed": 1,
+              "unobserved_hours": 2.75
+            },
+            "warned": {
+              "episodes": 0,
+              "observed": 0,
+              "unobserved_hours": 0.0
+            }
+          },
+          "trigger_attributable_acquisitions": 0,
+          "trigger_stream_consultations": 1248,
+          "verification_acquisitions_during_known_clear": 0
+        }
+      },
+      "county": "Cherokee",
+      "event": "Houston Flooding (April 2016)",
+      "fips": "48073",
+      "n_unwarned": 1,
+      "state": "TX"
+    }
+  ],
+  "criterion": {
+    "E1_gap_value": {
+      "pass": true,
+      "unwarned_observed_gain": 0,
+      "unwarned_unobserved_delta_hours": -1.75
+    },
+    "E2_no_harm": {
+      "pass": true
+    },
+    "E3_budget": {
+      "pass": true,
+      "pooled_hourly_offset0_acquisitions": 1747,
+      "pooled_official_plus_t2_acquisitions": 597
+    },
+    "criterion_pass": true
+  },
+  "frozen_policy": {
+    "anchor_mode": "additive",
+    "burst_duration_seconds": 86400,
+    "burst_interval_seconds": 7200,
+    "config_id": "warnings_i120m_d24h_additive",
+    "poll_interval_seconds": 900,
+    "qualifying": [
+      "FF.W",
+      "FA.W",
+      "FL.W"
+    ],
+    "selection_rule": {
+      "budget_guard": "pooled hybrid acquisitions <= 2433 (60% of pooled nominal hourly 4056)",
+      "objective": "max pooled episodes observed",
+      "tie_breaks": [
+        "max county-events strictly below offset median",
+        "min pooled margin vs offset median",
+        "min pooled unobserved hours",
+        "min pooled acquisitions",
+        "shorter burst duration",
+        "longer burst cadence",
+        "smaller qualifying set"
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "county": "Marion",
+      "fips": "12083",
+      "merged_corpus": "eval/corpus/study_v5/marion_fl_ian_merged_triggers.json",
+      "merged_corpus_sha256": "505b1a9292df3a3ea53a0e593e031fbb6fc9ee922eb843e99aa117f62112d5a9",
+      "n_news_articles": 178,
+      "n_t2_events": 4,
+      "n_unwarned_episodes": 7,
+      "n_warned_episodes": 0,
+      "news_corpus": "eval/corpus/study_v5/marion_fl_ian_gdelt.json",
+      "news_corpus_sha256": "a04dc87100733e511f97a0aa6e74679cdf56c88f838950d388eb05a0b1c73533",
+      "official_corpus_sha256": "ec2c6cfb6b44099bb638cbb8308fb520fafafbd208594bb56f9747aeb6b6b574",
+      "t2_corpus": "eval/corpus/study_v5/marion_fl_ian_t2_triggers.json",
+      "t2_corpus_sha256": "7dc206a39119f3fa10353673bcdd0e10e73ecd33928ed0c0c1b8f93bbf143a80"
+    },
+    {
+      "county": "Sarasota",
+      "fips": "12115",
+      "merged_corpus": "eval/corpus/study_v5/sarasota_fl_idalia_merged_triggers.json",
+      "merged_corpus_sha256": "b374d21c676457d7cefcfdf614b5afdcb08a6b08d22d4927f88e7ecb2324cc30",
+      "n_news_articles": 12,
+      "n_t2_events": 0,
+      "n_unwarned_episodes": 7,
+      "n_warned_episodes": 0,
+      "news_corpus": "eval/corpus/study_v5/sarasota_fl_idalia_gdelt.json",
+      "news_corpus_sha256": "bd2696503e847c62893fda86bcdecc9e238be877ccf4ca7c901ca026a90dab0e",
+      "official_corpus_sha256": "63528f85ae8804a839294c3ffde77d60a71ac4bbb96fbb41c3e95feb5e80f0ab",
+      "t2_corpus": "eval/corpus/study_v5/sarasota_fl_idalia_t2_triggers.json",
+      "t2_corpus_sha256": "52e2e958acbd87b3694a9e61a7272a621cd10b5d13c81ae0b8131a3bc8bcfb92"
+    },
+    {
+      "county": "Seminole",
+      "fips": "12117",
+      "merged_corpus": "eval/corpus/study_v5/seminole_fl_nicole_merged_triggers.json",
+      "merged_corpus_sha256": "4261f069662702eaac764d0860ec3cf1946b5b8718d9d2d1e04c327e5ed19d19",
+      "n_news_articles": 332,
+      "n_t2_events": 6,
+      "n_unwarned_episodes": 3,
+      "n_warned_episodes": 0,
+      "news_corpus": "eval/corpus/study_v5/seminole_fl_nicole_gdelt.json",
+      "news_corpus_sha256": "f63739ec37addffddf284437ca470202d7fffbde23d9700a4407d7510b2bf21f",
+      "official_corpus_sha256": "ff013f4978dbd8379c94cf2c3cf0a87e18c9febf757a5218976f5957dea7dd25",
+      "t2_corpus": "eval/corpus/study_v5/seminole_fl_nicole_t2_triggers.json",
+      "t2_corpus_sha256": "012d0e3a18073dc907166edf8dffe729c60a4d6632c353cc4c56b6fd6275a753"
+    },
+    {
+      "county": "Marshall",
+      "fips": "27089",
+      "merged_corpus": "eval/corpus/study_v5/marshall_mn_2023_merged_triggers.json",
+      "merged_corpus_sha256": "b4c508bb12678bc8c04e068d8377b3857638cefc0ef4e363b2fa3604ce3249e2",
+      "n_news_articles": 0,
+      "n_t2_events": 0,
+      "n_unwarned_episodes": 2,
+      "n_warned_episodes": 1,
+      "news_corpus": "eval/corpus/study_v5/marshall_mn_2023_gdelt.json",
+      "news_corpus_sha256": "ce2ed46d18f6f086e57777af05ee232aae2c28d0b3e973e00c9688d69bbdf64e",
+      "official_corpus_sha256": "551fd8eaffee256a5a1306ead1bae11fc560c596393dadf8ca46edfe2355311a",
+      "t2_corpus": "eval/corpus/study_v5/marshall_mn_2023_t2_triggers.json",
+      "t2_corpus_sha256": "65725734d8fcb663b3c529a265310d97c9255a828aa95a70e5570d6bc63598b8"
+    },
+    {
+      "county": "Caguas",
+      "fips": "72025",
+      "merged_corpus": "eval/corpus/study_v5/caguas_pr_maria_merged_triggers.json",
+      "merged_corpus_sha256": "571a56750680217345a50d58eefc6df801bc67d8cecfc1e0038da8e64258e372",
+      "n_news_articles": 767,
+      "n_t2_events": 0,
+      "n_unwarned_episodes": 1,
+      "n_warned_episodes": 3,
+      "news_corpus": "eval/corpus/study_v5/caguas_pr_maria_gdelt.json",
+      "news_corpus_sha256": "1a41b176c999daaa3f25bab79475a0b3e0d76528829647542f24bd8c6e13daac",
+      "official_corpus_sha256": "96af282d02451af6442da0eefd7ec53b6c573af5118ffba8c28c1040186858f2",
+      "t2_corpus": "eval/corpus/study_v5/caguas_pr_maria_t2_triggers.json",
+      "t2_corpus_sha256": "15f3124ef625cff3b351a5ecb7fe5334642fe69c46b92737cebdb59224b52a55"
+    },
+    {
+      "county": "Cherokee",
+      "fips": "48073",
+      "merged_corpus": "eval/corpus/study_v5/cherokee_tx_2016_merged_triggers.json",
+      "merged_corpus_sha256": "2e08361a34346c478738c14f6a7a66c65a2c59be54deeb75fe7ad2962e711467",
+      "n_news_articles": 39,
+      "n_t2_events": 0,
+      "n_unwarned_episodes": 1,
+      "n_warned_episodes": 0,
+      "news_corpus": "eval/corpus/study_v5/cherokee_tx_2016_gdelt.json",
+      "news_corpus_sha256": "51fdd0c9b3dbd47e5c3ae5458ae6f2b3eaf1c4c9b4fb91825ae5ae84bf66c3bd",
+      "official_corpus_sha256": "5b2e4dc63ac75133681b7576355e971c16bac78611ff924ea8cbc764fd12485b",
+      "t2_corpus": "eval/corpus/study_v5/cherokee_tx_2016_t2_triggers.json",
+      "t2_corpus_sha256": "f41a10f3c7c145619a516fe59d9ac74756fa98bc997e6a4638cfd42ce7c77567"
+    }
+  ],
+  "pooled": {
+    "official": {
+      "unwarned": {
+        "episodes": 21,
+        "observed": 11,
+        "unobserved_hours": 32.5
+      },
+      "warned": {
+        "episodes": 4,
+        "observed": 3,
+        "unobserved_hours": 5.5
+      }
+    },
+    "official_plus_t2": {
+      "unwarned": {
+        "episodes": 21,
+        "observed": 11,
+        "unobserved_hours": 30.75
+      },
+      "warned": {
+        "episodes": 4,
+        "observed": 3,
+        "unobserved_hours": 5.5
+      }
+    },
+    "t2_only": {
+      "unwarned": {
+        "episodes": 21,
+        "observed": 11,
+        "unobserved_hours": 36.5
+      },
+      "warned": {
+        "episodes": 4,
+        "observed": 3,
+        "unobserved_hours": 9.25
+      }
+    }
+  },
+  "protocol": "eval/ONTOLOGY_STUDY_PROTOCOL.md",
+  "protocol_sha256": "b21d0ccb14bf847c01032ab356f2e2f2f837a899675b595e78a1b0929f9ca702",
+  "role": "prespecified_extension_with_disclosed_provenance",
+  "schema": "sentinel-v5-t2-gap-study/1",
+  "v4_manifest_sha256": "47917d84775fe990b6aa9bb6acf452d10f67b4235d0b7da417832dd6743b78fd"
+}

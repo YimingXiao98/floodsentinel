@@ -1,0 +1,1303 @@
+{
+  "schema": "sentinel-v3-holdout-selection/1",
+  "protocol": "eval/HYBRID_STUDY_PROTOCOL.md",
+  "policy_outcome_blind": true,
+  "ncei_events_csv": "eval/corpus/study_v3/ncei_events_us.csv",
+  "ncei_events_csv_sha256": "fbe9bbcba93bd90e8e49aed9ca6f93869c5d136b1903ea00c50f8bc9ef36b976",
+  "registry_csv": "skills/county-flood-data/nwps_all_gauges_report.csv",
+  "registry_csv_sha256": "a38823604d8b1bef8e211fd422e5ee32a0b7fb3668e1f510de80ac678ea3f964",
+  "rules": {
+    "event_order": "descending CPI-adjusted cost",
+    "max_impact_period_days": 10,
+    "window_days": [
+      2,
+      10
+    ],
+    "candidates_per_event": 3,
+    "stop_min_episodes": 10,
+    "stop_min_events": 5,
+    "stop_max_county_events": 12,
+    "max_coverage_only": 2,
+    "min_acknowledged_truth_coverage": 0.4,
+    "datum_screen_flood_fraction": 0.98,
+    "development_counties_excluded": [
+      "12031",
+      "12057",
+      "12086",
+      "12105",
+      "48201"
+    ]
+  },
+  "event_frame": [
+    {
+      "name": "Hurricane Ian (September 2022)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2022-09-28",
+      "end": "2022-09-30",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 119626.0,
+      "storm_token": "IAN",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Maria (September 2017)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2017-09-19",
+      "end": "2017-09-21",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 115200.0,
+      "storm_token": "MARIA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Ida (August 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-08-29",
+      "end": "2021-09-01",
+      "impact_period_days": 3,
+      "cpi_adjusted_cost_musd": 84608.1,
+      "storm_token": "IDA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Helene (September 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-09-24",
+      "end": "2024-09-29",
+      "impact_period_days": 5,
+      "cpi_adjusted_cost_musd": 78721.0,
+      "storm_token": "HELENE",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Milton (October 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-10-09",
+      "end": "2024-10-10",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 34250.0,
+      "storm_token": "MILTON",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Michael (October 2018)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2018-10-10",
+      "end": "2018-10-11",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 31218.8,
+      "storm_token": "MICHAEL",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Florence (September 2018)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2018-09-13",
+      "end": "2018-09-16",
+      "impact_period_days": 3,
+      "cpi_adjusted_cost_musd": 30000.0,
+      "storm_token": "FLORENCE",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Laura (August 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-08-27",
+      "end": "2020-08-28",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 28090.3,
+      "storm_token": "LAURA",
+      "named_states": []
+    },
+    {
+      "name": "Louisiana Flooding (August 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-08-12",
+      "end": "2016-08-15",
+      "impact_period_days": 3,
+      "cpi_adjusted_cost_musd": 13300.0,
+      "storm_token": null,
+      "named_states": [
+        "LA"
+      ]
+    },
+    {
+      "name": "Hurricane Matthew (October 2016)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2016-10-08",
+      "end": "2016-10-12",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 13100.0,
+      "storm_token": "MATTHEW",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Sally (September 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-09-15",
+      "end": "2020-09-17",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 8801.5,
+      "storm_token": "SALLY",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Beryl (July 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-07-08",
+      "end": "2024-07-08",
+      "impact_period_days": 0,
+      "cpi_adjusted_cost_musd": 7219.0,
+      "storm_token": "BERYL",
+      "named_states": []
+    },
+    {
+      "name": "Tropical Storm Imelda (September 2019)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2019-09-17",
+      "end": "2019-09-21",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 6150.0,
+      "storm_token": "IMELDA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Isaias (August 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-08-03",
+      "end": "2020-08-04",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 5756.1,
+      "storm_token": "ISAIAS",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Zeta (October 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-10-28",
+      "end": "2020-10-29",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 5266.0,
+      "storm_token": "ZETA",
+      "named_states": []
+    },
+    {
+      "name": "Typhoon Mawar (May 2023)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2023-05-24",
+      "end": "2023-05-25",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 4420.0,
+      "storm_token": "MAWAR",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Idalia (August 2023)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2023-08-29",
+      "end": "2023-08-31",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 3559.7,
+      "storm_token": "IDALIA",
+      "named_states": []
+    },
+    {
+      "name": "Houston Flooding (April 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-04-17",
+      "end": "2016-04-18",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 3559.1,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Delta (October 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-10-09",
+      "end": "2020-10-11",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 3469.3,
+      "storm_token": "DELTA",
+      "named_states": []
+    },
+    {
+      "name": "Texas and Louisiana Flooding (March 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-03-08",
+      "end": "2016-03-12",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 3052.1,
+      "storm_token": null,
+      "named_states": [
+        "LA",
+        "TX"
+      ]
+    },
+    {
+      "name": "Hurricane Fiona (September 2022)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2022-09-17",
+      "end": "2022-09-18",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 2685.7,
+      "storm_token": "FIONA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Debby (August 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-08-05",
+      "end": "2024-08-09",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 2476.0,
+      "storm_token": "DEBBY",
+      "named_states": []
+    },
+    {
+      "name": "Northeastern Flooding and North Central Severe Weather (July 2023)",
+      "disaster": "Flooding",
+      "begin": "2023-07-09",
+      "end": "2023-07-15",
+      "impact_period_days": 6,
+      "cpi_adjusted_cost_musd": 2230.4,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Dorian (September 2019)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2019-08-28",
+      "end": "2019-09-06",
+      "impact_period_days": 9,
+      "cpi_adjusted_cost_musd": 1980.3,
+      "storm_token": "DORIAN",
+      "named_states": []
+    },
+    {
+      "name": "Tropical Storm Eta (November 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-11-08",
+      "end": "2020-11-12",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 1766.7,
+      "storm_token": "ETA",
+      "named_states": []
+    },
+    {
+      "name": "Louisiana Flooding (May 2021)",
+      "disaster": "Flooding",
+      "begin": "2021-05-17",
+      "end": "2021-05-18",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1569.6,
+      "storm_token": null,
+      "named_states": [
+        "LA"
+      ]
+    },
+    {
+      "name": "Kentucky and Missouri Flooding (July 2022)",
+      "disaster": "Flooding",
+      "begin": "2022-07-26",
+      "end": "2022-07-28",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1567.6,
+      "storm_token": null,
+      "named_states": [
+        "KY",
+        "MO"
+      ]
+    },
+    {
+      "name": "Tropical Storm Fred (August 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-08-16",
+      "end": "2021-08-18",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1481.3,
+      "storm_token": "FRED",
+      "named_states": []
+    },
+    {
+      "name": "Tropical Storm Elsa (July 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-07-07",
+      "end": "2021-07-09",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1407.1,
+      "storm_token": "ELSA",
+      "named_states": []
+    },
+    {
+      "name": "California Flooding and Severe Weather (January 2021)",
+      "disaster": "Flooding",
+      "begin": "2021-01-24",
+      "end": "2021-01-29",
+      "impact_period_days": 5,
+      "cpi_adjusted_cost_musd": 1325.0,
+      "storm_token": null,
+      "named_states": [
+        "CA"
+      ]
+    },
+    {
+      "name": "East Coast Storm and Flooding (December 2023)",
+      "disaster": "Flooding",
+      "begin": "2023-12-16",
+      "end": "2023-12-18",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1314.4,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Hanna (July 2020)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2020-07-25",
+      "end": "2020-07-26",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1300.8,
+      "storm_token": "HANNA",
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Francine (September 2024)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2024-09-11",
+      "end": "2024-09-12",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1291.0,
+      "storm_token": "FRANCINE",
+      "named_states": []
+    },
+    {
+      "name": "West Virginia Flooding and Ohio Valley Tornadoes (June 2016)",
+      "disaster": "Flooding",
+      "begin": "2016-06-22",
+      "end": "2016-06-24",
+      "impact_period_days": 2,
+      "cpi_adjusted_cost_musd": 1288.5,
+      "storm_token": null,
+      "named_states": [
+        "OH",
+        "VA",
+        "WV"
+      ]
+    },
+    {
+      "name": "Hurricane Nicholas (September 2021)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2021-09-14",
+      "end": "2021-09-18",
+      "impact_period_days": 4,
+      "cpi_adjusted_cost_musd": 1168.5,
+      "storm_token": "NICHOLAS",
+      "named_states": []
+    },
+    {
+      "name": "Fort Lauderdale Flash Flood (April 2023)",
+      "disaster": "Flooding",
+      "begin": "2023-04-12",
+      "end": "2023-04-13",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1144.0,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Upper Midwest Flooding (June 2024)",
+      "disaster": "Flooding",
+      "begin": "2024-06-16",
+      "end": "2024-06-23",
+      "impact_period_days": 7,
+      "cpi_adjusted_cost_musd": 1113.0,
+      "storm_token": null,
+      "named_states": []
+    },
+    {
+      "name": "Hurricane Nicole (November 2022)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2022-11-10",
+      "end": "2022-11-11",
+      "impact_period_days": 1,
+      "cpi_adjusted_cost_musd": 1081.2,
+      "storm_token": "NICOLE",
+      "named_states": []
+    }
+  ],
+  "event_frame_excluded": [
+    {
+      "name": "California Flooding (February 2017)",
+      "disaster": "Flooding",
+      "begin": "2017-02-08",
+      "end": "2017-02-22",
+      "impact_period_days": 14,
+      "cpi_adjusted_cost_musd": 1950.0,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Missouri and Arkansas Flooding and Central Severe Weather (May 2017)",
+      "disaster": "Flooding",
+      "begin": "2017-04-25",
+      "end": "2017-05-07",
+      "impact_period_days": 12,
+      "cpi_adjusted_cost_musd": 2156.7,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Hurricane Harvey (August 2017)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2017-08-25",
+      "end": "2017-08-31",
+      "impact_period_days": 6,
+      "cpi_adjusted_cost_musd": 160000.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Hurricane Irma (September 2017)",
+      "disaster": "Tropical Cyclone",
+      "begin": "2017-09-06",
+      "end": "2017-09-12",
+      "impact_period_days": 6,
+      "cpi_adjusted_cost_musd": 64000.0,
+      "exclusion": "development_event"
+    },
+    {
+      "name": "Missouri River and North Central Flooding (March 2019)",
+      "disaster": "Flooding",
+      "begin": "2019-03-14",
+      "end": "2019-03-31",
+      "impact_period_days": 17,
+      "cpi_adjusted_cost_musd": 13408.9,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Arkansas River Flooding (June 2019)",
+      "disaster": "Flooding",
+      "begin": "2019-05-20",
+      "end": "2019-06-14",
+      "impact_period_days": 25,
+      "cpi_adjusted_cost_musd": 3720.8,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "Mississippi River, Midwest and Southern Flooding (July 2019)",
+      "disaster": "Flooding",
+      "begin": "2019-03-15",
+      "end": "2019-07-31",
+      "impact_period_days": 138,
+      "cpi_adjusted_cost_musd": 7649.6,
+      "exclusion": "impact_period_exceeds_window_convention"
+    },
+    {
+      "name": "California Flooding (December 2022 - March 2023)",
+      "disaster": "Flooding",
+      "begin": "2022-12-26",
+      "end": "2023-03-19",
+      "impact_period_days": 83,
+      "cpi_adjusted_cost_musd": 4725.0,
+      "exclusion": "impact_period_exceeds_window_convention"
+    }
+  ],
+  "included_episode_evaluation": [
+    {
+      "event": "Hurricane Ida (August 2021)",
+      "candidate": {
+        "fips": "34035",
+        "state": "NJ",
+        "county": "Somerset",
+        "disaster_numbers": [
+          4614
+        ],
+        "registry_gauges_with_flood_stage": 24,
+        "registry_gauges_in_service": 24
+      },
+      "corpus_path": "eval/corpus/study_v3/somerset_34035_hurricane_ida_august_2021.json",
+      "corpus_sha256": "122b8f915f1edcf611c6214d93feb69e22c7d3adcb8273097e368ddcce9998a3",
+      "window": {
+        "start": "2021-08-27",
+        "end": "2021-09-08"
+      },
+      "analysis_start": "2021-08-27T05:00:00Z",
+      "analysis_end": "2021-09-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 0.9904,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/somerset_34035_hurricane_ida_august_2021.json",
+        "county": "Somerset",
+        "state": "NJ",
+        "fips": "34035",
+        "event": "Hurricane Ida (August 2021)",
+        "start": "2021-08-27",
+        "end": "2021-09-08",
+        "analysis_start": "2021-08-27T05:00:00Z",
+        "analysis_end": "2021-09-09T05:00:00Z",
+        "sha256": "122b8f915f1edcf611c6214d93feb69e22c7d3adcb8273097e368ddcce9998a3",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Helene (September 2024)",
+      "candidate": {
+        "fips": "37119",
+        "state": "NC",
+        "county": "Mecklenburg",
+        "disaster_numbers": [
+          4827
+        ],
+        "registry_gauges_with_flood_stage": 45,
+        "registry_gauges_in_service": 45
+      },
+      "corpus_path": "eval/corpus/study_v3/mecklenburg_37119_hurricane_helene_september_2024.json",
+      "corpus_sha256": "5687d895250d61c54c66822c0c55307003f8894c2faf0f7fefbc44bac6a9f4a1",
+      "window": {
+        "start": "2024-09-22",
+        "end": "2024-10-04"
+      },
+      "analysis_start": "2024-09-22T05:00:00Z",
+      "analysis_end": "2024-10-05T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.9992,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/mecklenburg_37119_hurricane_helene_september_2024.json",
+        "county": "Mecklenburg",
+        "state": "NC",
+        "fips": "37119",
+        "event": "Hurricane Helene (September 2024)",
+        "start": "2024-09-22",
+        "end": "2024-10-04",
+        "analysis_start": "2024-09-22T05:00:00Z",
+        "analysis_end": "2024-10-05T05:00:00Z",
+        "sha256": "5687d895250d61c54c66822c0c55307003f8894c2faf0f7fefbc44bac6a9f4a1",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Milton (October 2024)",
+      "candidate": {
+        "fips": "12123",
+        "state": "FL",
+        "county": "Taylor",
+        "disaster_numbers": [
+          4834
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v3/taylor_12123_hurricane_milton_october_2024.json",
+      "corpus_sha256": "92f26791688a70fae19062e5cf274920e46868a7aa6ae6fe913b3347721ee517",
+      "window": {
+        "start": "2024-10-07",
+        "end": "2024-10-19"
+      },
+      "analysis_start": "2024-10-07T05:00:00Z",
+      "analysis_end": "2024-10-20T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02326550",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 0.9856
+        }
+      ],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 0.8253,
+      "hydrologic_episodes_1h": 8,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/taylor_12123_hurricane_milton_october_2024.json",
+        "county": "Taylor",
+        "state": "FL",
+        "fips": "12123",
+        "event": "Hurricane Milton (October 2024)",
+        "start": "2024-10-07",
+        "end": "2024-10-19",
+        "analysis_start": "2024-10-07T05:00:00Z",
+        "analysis_end": "2024-10-20T05:00:00Z",
+        "sha256": "92f26791688a70fae19062e5cf274920e46868a7aa6ae6fe913b3347721ee517",
+        "threshold_exclusions": [
+          {
+            "site_no": "02326550",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 0.9856
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Michael (October 2018)",
+      "candidate": {
+        "fips": "37037",
+        "state": "NC",
+        "county": "Chatham",
+        "disaster_numbers": [
+          4412
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v3/chatham_37037_hurricane_michael_october_2018.json",
+      "corpus_sha256": "19f1fb0650c9beb6c59ddb9694d6c649ce505f0a60c116ff9decbfd558c4f25c",
+      "window": {
+        "start": "2018-10-08",
+        "end": "2018-10-20"
+      },
+      "analysis_start": "2018-10-08T05:00:00Z",
+      "analysis_end": "2018-10-21T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/chatham_37037_hurricane_michael_october_2018.json",
+        "county": "Chatham",
+        "state": "NC",
+        "fips": "37037",
+        "event": "Hurricane Michael (October 2018)",
+        "start": "2018-10-08",
+        "end": "2018-10-20",
+        "analysis_start": "2018-10-08T05:00:00Z",
+        "analysis_end": "2018-10-21T05:00:00Z",
+        "sha256": "19f1fb0650c9beb6c59ddb9694d6c649ce505f0a60c116ff9decbfd558c4f25c",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Florence (September 2018)",
+      "candidate": {
+        "fips": "45051",
+        "state": "SC",
+        "county": "Horry",
+        "disaster_numbers": [
+          4394
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v3/horry_45051_hurricane_florence_september_2018.json",
+      "corpus_sha256": "c406df478379f295f0deb48d0015efa3305b6f37adb0cd3fae60b90dc6183caa",
+      "window": {
+        "start": "2018-09-11",
+        "end": "2018-09-23"
+      },
+      "analysis_start": "2018-09-11T05:00:00Z",
+      "analysis_end": "2018-09-24T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/horry_45051_hurricane_florence_september_2018.json",
+        "county": "Horry",
+        "state": "SC",
+        "fips": "45051",
+        "event": "Hurricane Florence (September 2018)",
+        "start": "2018-09-11",
+        "end": "2018-09-23",
+        "analysis_start": "2018-09-11T05:00:00Z",
+        "analysis_end": "2018-09-24T05:00:00Z",
+        "sha256": "c406df478379f295f0deb48d0015efa3305b6f37adb0cd3fae60b90dc6183caa",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    }
+  ],
+  "included_coverage_only": [
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45051",
+        "state": "SC",
+        "county": "Horry",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v3/horry_45051_hurricane_ian_september_2022.json",
+      "corpus_sha256": "70b9f782a924e6ff5ee678e6344c5c755e84d7665e9dc62d6a9b77ef36152f19",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/horry_45051_hurricane_ian_september_2022.json",
+        "county": "Horry",
+        "state": "SC",
+        "fips": "45051",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "70b9f782a924e6ff5ee678e6344c5c755e84d7665e9dc62d6a9b77ef36152f19",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45015",
+        "state": "SC",
+        "county": "Berkeley",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v3/berkeley_45015_hurricane_ian_september_2022.json",
+      "corpus_sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/berkeley_45015_hurricane_ian_september_2022.json",
+        "county": "Berkeley",
+        "state": "SC",
+        "fips": "45015",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    }
+  ],
+  "all_candidates_considered": [
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45051",
+        "state": "SC",
+        "county": "Horry",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v3/horry_45051_hurricane_ian_september_2022.json",
+      "corpus_sha256": "70b9f782a924e6ff5ee678e6344c5c755e84d7665e9dc62d6a9b77ef36152f19",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/horry_45051_hurricane_ian_september_2022.json",
+        "county": "Horry",
+        "state": "SC",
+        "fips": "45051",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "70b9f782a924e6ff5ee678e6344c5c755e84d7665e9dc62d6a9b77ef36152f19",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45015",
+        "state": "SC",
+        "county": "Berkeley",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v3/berkeley_45015_hurricane_ian_september_2022.json",
+      "corpus_sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 2,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/berkeley_45015_hurricane_ian_september_2022.json",
+        "county": "Berkeley",
+        "state": "SC",
+        "fips": "45015",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ian (September 2022)",
+      "candidate": {
+        "fips": "45079",
+        "state": "SC",
+        "county": "Richland",
+        "disaster_numbers": [
+          4677
+        ],
+        "registry_gauges_with_flood_stage": 10,
+        "registry_gauges_in_service": 10
+      },
+      "corpus_path": "eval/corpus/study_v3/richland_45079_hurricane_ian_september_2022.json",
+      "corpus_sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae",
+      "window": {
+        "start": "2022-09-26",
+        "end": "2022-10-08"
+      },
+      "analysis_start": "2022-09-26T05:00:00Z",
+      "analysis_end": "2022-10-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/richland_45079_hurricane_ian_september_2022.json",
+        "county": "Richland",
+        "state": "SC",
+        "fips": "45079",
+        "event": "Hurricane Ian (September 2022)",
+        "start": "2022-09-26",
+        "end": "2022-10-08",
+        "analysis_start": "2022-09-26T05:00:00Z",
+        "analysis_end": "2022-10-09T05:00:00Z",
+        "sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Ida (August 2021)",
+      "candidate": {
+        "fips": "34035",
+        "state": "NJ",
+        "county": "Somerset",
+        "disaster_numbers": [
+          4614
+        ],
+        "registry_gauges_with_flood_stage": 24,
+        "registry_gauges_in_service": 24
+      },
+      "corpus_path": "eval/corpus/study_v3/somerset_34035_hurricane_ida_august_2021.json",
+      "corpus_sha256": "122b8f915f1edcf611c6214d93feb69e22c7d3adcb8273097e368ddcce9998a3",
+      "window": {
+        "start": "2021-08-27",
+        "end": "2021-09-08"
+      },
+      "analysis_start": "2021-08-27T05:00:00Z",
+      "analysis_end": "2021-09-09T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 8,
+      "primary_truth_coverage": 0.9904,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/somerset_34035_hurricane_ida_august_2021.json",
+        "county": "Somerset",
+        "state": "NJ",
+        "fips": "34035",
+        "event": "Hurricane Ida (August 2021)",
+        "start": "2021-08-27",
+        "end": "2021-09-08",
+        "analysis_start": "2021-08-27T05:00:00Z",
+        "analysis_end": "2021-09-09T05:00:00Z",
+        "sha256": "122b8f915f1edcf611c6214d93feb69e22c7d3adcb8273097e368ddcce9998a3",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Helene (September 2024)",
+      "candidate": {
+        "fips": "37119",
+        "state": "NC",
+        "county": "Mecklenburg",
+        "disaster_numbers": [
+          4827
+        ],
+        "registry_gauges_with_flood_stage": 45,
+        "registry_gauges_in_service": 45
+      },
+      "corpus_path": "eval/corpus/study_v3/mecklenburg_37119_hurricane_helene_september_2024.json",
+      "corpus_sha256": "5687d895250d61c54c66822c0c55307003f8894c2faf0f7fefbc44bac6a9f4a1",
+      "window": {
+        "start": "2024-09-22",
+        "end": "2024-10-04"
+      },
+      "analysis_start": "2024-09-22T05:00:00Z",
+      "analysis_end": "2024-10-05T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 9,
+      "primary_truth_coverage": 0.9992,
+      "hydrologic_episodes_1h": 2,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/mecklenburg_37119_hurricane_helene_september_2024.json",
+        "county": "Mecklenburg",
+        "state": "NC",
+        "fips": "37119",
+        "event": "Hurricane Helene (September 2024)",
+        "start": "2024-09-22",
+        "end": "2024-10-04",
+        "analysis_start": "2024-09-22T05:00:00Z",
+        "analysis_end": "2024-10-05T05:00:00Z",
+        "sha256": "5687d895250d61c54c66822c0c55307003f8894c2faf0f7fefbc44bac6a9f4a1",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Milton (October 2024)",
+      "candidate": {
+        "fips": "12083",
+        "state": "FL",
+        "county": "Marion",
+        "disaster_numbers": [
+          4834
+        ],
+        "registry_gauges_with_flood_stage": 8,
+        "registry_gauges_in_service": 8
+      },
+      "corpus_path": "eval/corpus/study_v3/marion_12083_hurricane_milton_october_2024.json",
+      "corpus_sha256": "71bfc8a400b9ab834d1c4df19d89aa1323bccfc6d48906cf605cc579a8eddc7e",
+      "window": {
+        "start": "2024-10-07",
+        "end": "2024-10-19"
+      },
+      "analysis_start": "2024-10-07T05:00:00Z",
+      "analysis_end": "2024-10-20T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02238500",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 0.992
+        }
+      ],
+      "reference_sites_after_exclusion": 7,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [
+        {
+          "code": "near_continuous_flood_reference_requires_datum_review",
+          "blocking": true,
+          "flood_fraction_of_known_duration": 1.0
+        }
+      ],
+      "preflight_blocked": true,
+      "decision": "excluded",
+      "exclusion_reason": "preflight_blocked:['near_continuous_flood_reference_requires_datum_review']",
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Milton (October 2024)",
+      "candidate": {
+        "fips": "12123",
+        "state": "FL",
+        "county": "Taylor",
+        "disaster_numbers": [
+          4834
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v3/taylor_12123_hurricane_milton_october_2024.json",
+      "corpus_sha256": "92f26791688a70fae19062e5cf274920e46868a7aa6ae6fe913b3347721ee517",
+      "window": {
+        "start": "2024-10-07",
+        "end": "2024-10-19"
+      },
+      "analysis_start": "2024-10-07T05:00:00Z",
+      "analysis_end": "2024-10-20T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02326550",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 0.9856
+        }
+      ],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 0.8253,
+      "hydrologic_episodes_1h": 8,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/taylor_12123_hurricane_milton_october_2024.json",
+        "county": "Taylor",
+        "state": "FL",
+        "fips": "12123",
+        "event": "Hurricane Milton (October 2024)",
+        "start": "2024-10-07",
+        "end": "2024-10-19",
+        "analysis_start": "2024-10-07T05:00:00Z",
+        "analysis_end": "2024-10-20T05:00:00Z",
+        "sha256": "92f26791688a70fae19062e5cf274920e46868a7aa6ae6fe913b3347721ee517",
+        "threshold_exclusions": [
+          {
+            "site_no": "02326550",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 0.9856
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Michael (October 2018)",
+      "candidate": {
+        "fips": "01097",
+        "state": "AL",
+        "county": "Mobile",
+        "disaster_numbers": [
+          4406
+        ],
+        "registry_gauges_with_flood_stage": 9,
+        "registry_gauges_in_service": 9
+      },
+      "corpus_path": "eval/corpus/study_v3/mobile_01097_hurricane_michael_october_2018.json",
+      "corpus_sha256": "d7bd5f5c3c8717b5b7418ff9a941d2931823b3719f66f925dcf3777f821f09c4",
+      "window": {
+        "start": "2018-10-08",
+        "end": "2018-10-20"
+      },
+      "analysis_start": "2018-10-08T06:00:00Z",
+      "analysis_end": "2018-10-21T06:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 1,
+      "primary_truth_coverage": 0.9928,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/mobile_01097_hurricane_michael_october_2018.json",
+        "county": "Mobile",
+        "state": "AL",
+        "fips": "01097",
+        "event": "Hurricane Michael (October 2018)",
+        "start": "2018-10-08",
+        "end": "2018-10-20",
+        "analysis_start": "2018-10-08T06:00:00Z",
+        "analysis_end": "2018-10-21T06:00:00Z",
+        "sha256": "d7bd5f5c3c8717b5b7418ff9a941d2931823b3719f66f925dcf3777f821f09c4",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Michael (October 2018)",
+      "candidate": {
+        "fips": "12123",
+        "state": "FL",
+        "county": "Taylor",
+        "disaster_numbers": [
+          4399
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v3/taylor_12123_hurricane_michael_october_2018.json",
+      "corpus_sha256": "563db2d67a1a0f4f9a9506466e99e90f6995441864293b700e10d0c3cb6ef8d3",
+      "window": {
+        "start": "2018-10-08",
+        "end": "2018-10-20"
+      },
+      "analysis_start": "2018-10-08T05:00:00Z",
+      "analysis_end": "2018-10-21T05:00:00Z",
+      "datum_screen_exclusions": [
+        {
+          "site_no": "02326550",
+          "reason": "datum_screen_near_continuous_flood",
+          "fraction_at_or_above_flood_stage": 1.0
+        }
+      ],
+      "reference_sites_after_exclusion": 4,
+      "primary_truth_coverage": 0.9976,
+      "hydrologic_episodes_1h": 0,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "coverage_only_candidate",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/taylor_12123_hurricane_michael_october_2018.json",
+        "county": "Taylor",
+        "state": "FL",
+        "fips": "12123",
+        "event": "Hurricane Michael (October 2018)",
+        "start": "2018-10-08",
+        "end": "2018-10-20",
+        "analysis_start": "2018-10-08T05:00:00Z",
+        "analysis_end": "2018-10-21T05:00:00Z",
+        "sha256": "563db2d67a1a0f4f9a9506466e99e90f6995441864293b700e10d0c3cb6ef8d3",
+        "threshold_exclusions": [
+          {
+            "site_no": "02326550",
+            "reason": "datum_screen_near_continuous_flood",
+            "fraction_at_or_above_flood_stage": 1.0
+          }
+        ]
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Michael (October 2018)",
+      "candidate": {
+        "fips": "37037",
+        "state": "NC",
+        "county": "Chatham",
+        "disaster_numbers": [
+          4412
+        ],
+        "registry_gauges_with_flood_stage": 7,
+        "registry_gauges_in_service": 7
+      },
+      "corpus_path": "eval/corpus/study_v3/chatham_37037_hurricane_michael_october_2018.json",
+      "corpus_sha256": "19f1fb0650c9beb6c59ddb9694d6c649ce505f0a60c116ff9decbfd558c4f25c",
+      "window": {
+        "start": "2018-10-08",
+        "end": "2018-10-20"
+      },
+      "analysis_start": "2018-10-08T05:00:00Z",
+      "analysis_end": "2018-10-21T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 6,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/chatham_37037_hurricane_michael_october_2018.json",
+        "county": "Chatham",
+        "state": "NC",
+        "fips": "37037",
+        "event": "Hurricane Michael (October 2018)",
+        "start": "2018-10-08",
+        "end": "2018-10-20",
+        "analysis_start": "2018-10-08T05:00:00Z",
+        "analysis_end": "2018-10-21T05:00:00Z",
+        "sha256": "19f1fb0650c9beb6c59ddb9694d6c649ce505f0a60c116ff9decbfd558c4f25c",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    },
+    {
+      "event": "Hurricane Florence (September 2018)",
+      "candidate": {
+        "fips": "45051",
+        "state": "SC",
+        "county": "Horry",
+        "disaster_numbers": [
+          4394
+        ],
+        "registry_gauges_with_flood_stage": 16,
+        "registry_gauges_in_service": 16
+      },
+      "corpus_path": "eval/corpus/study_v3/horry_45051_hurricane_florence_september_2018.json",
+      "corpus_sha256": "c406df478379f295f0deb48d0015efa3305b6f37adb0cd3fae60b90dc6183caa",
+      "window": {
+        "start": "2018-09-11",
+        "end": "2018-09-23"
+      },
+      "analysis_start": "2018-09-11T05:00:00Z",
+      "analysis_end": "2018-09-24T05:00:00Z",
+      "datum_screen_exclusions": [],
+      "reference_sites_after_exclusion": 5,
+      "primary_truth_coverage": 1.0,
+      "hydrologic_episodes_1h": 1,
+      "preflight_warnings": [],
+      "preflight_blocked": false,
+      "decision": "episode_evaluation",
+      "manifest_entry": {
+        "path": "eval/corpus/study_v3/horry_45051_hurricane_florence_september_2018.json",
+        "county": "Horry",
+        "state": "SC",
+        "fips": "45051",
+        "event": "Hurricane Florence (September 2018)",
+        "start": "2018-09-11",
+        "end": "2018-09-23",
+        "analysis_start": "2018-09-11T05:00:00Z",
+        "analysis_end": "2018-09-24T05:00:00Z",
+        "sha256": "c406df478379f295f0deb48d0015efa3305b6f37adb0cd3fae60b90dc6183caa",
+        "threshold_exclusions": []
+      },
+      "selection_pass": 1
+    }
+  ],
+  "pooled_hydrologic_episodes_1h": 13,
+  "n_events_included": 5
+}

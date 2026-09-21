@@ -1,0 +1,282 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Braxton",
+  "state": "WV",
+  "fips": "54007",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2016-06-20",
+    "end": "2016-07-02"
+  },
+  "fetch_window": {
+    "start": "2016-06-17",
+    "end": "2016-07-02"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "WVC007",
+    "zones": [
+      "WVZ028"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "WVC007": 17,
+    "WVZ028": 2
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 6,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2016-RLX-FF-A-0008",
+      "product_id": "201606220836-KRLX-WGUS61-FFARLX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0012",
+      "product_id": "201606231414-KRLX-WGUS41-FLWRLX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0014",
+      "product_id": "201606231709-KRLX-WGUS41-FLWRLX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0017",
+      "product_id": "201606232029-KRLX-WGUS41-FLWRLX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0021",
+      "product_id": "201606232328-KRLX-WGUS41-FLWRLX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 13,
+  "events": [
+    {
+      "event_key": "2016-RLX-FF-A-0008",
+      "wfo": "RLX",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 8,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606220836-KRLX-WGUS61-FFARLX",
+      "available_at": "2016-06-22T08:36:00Z",
+      "begins_at": "2016-06-23T03:00:00Z",
+      "audit_final_expire": "2016-06-24T02:43:00Z",
+      "ugcs": [
+        "WVZ028"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0010",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 10,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606231235-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T12:35:00Z",
+      "begins_at": "2016-06-23T12:35:00Z",
+      "audit_final_expire": "2016-06-23T20:30:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0012",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 12,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606231414-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T14:14:00Z",
+      "begins_at": "2016-06-23T14:14:00Z",
+      "audit_final_expire": "2016-06-23T17:15:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0013",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 13,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606231701-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T17:01:00Z",
+      "begins_at": "2016-06-23T17:01:00Z",
+      "audit_final_expire": "2016-06-23T22:00:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0014",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 14,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606231709-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T17:09:00Z",
+      "begins_at": "2016-06-23T17:09:00Z",
+      "audit_final_expire": "2016-06-23T19:15:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0016",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 16,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606231921-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T19:21:00Z",
+      "begins_at": "2016-06-23T19:21:00Z",
+      "audit_final_expire": "2016-06-23T22:15:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0017",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 17,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606232029-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T20:29:00Z",
+      "begins_at": "2016-06-23T20:29:00Z",
+      "audit_final_expire": "2016-06-23T23:30:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0019",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 19,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606232151-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T21:51:00Z",
+      "begins_at": "2016-06-23T21:51:00Z",
+      "audit_final_expire": "2016-06-24T00:45:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0021",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 21,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606232328-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-23T23:28:00Z",
+      "begins_at": "2016-06-23T23:28:00Z",
+      "audit_final_expire": "2016-06-24T00:16:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0023",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 23,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606240043-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-24T00:43:00Z",
+      "begins_at": "2016-06-24T00:43:00Z",
+      "audit_final_expire": "2016-06-24T03:45:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FA-W-0026",
+      "wfo": "RLX",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 26,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606240345-KRLX-WGUS41-FLWRLX",
+      "available_at": "2016-06-24T03:45:00Z",
+      "begins_at": "2016-06-24T03:45:00Z",
+      "audit_final_expire": "2016-06-24T06:45:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FF-A-0009",
+      "wfo": "RLX",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 9,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606261752-KRLX-WGUS61-FFARLX",
+      "available_at": "2016-06-26T17:52:00Z",
+      "begins_at": "2016-06-27T13:00:00Z",
+      "audit_final_expire": "2016-06-27T22:19:00Z",
+      "ugcs": [
+        "WVZ028"
+      ]
+    },
+    {
+      "event_key": "2016-RLX-FF-W-0027",
+      "wfo": "RLX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 27,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "201606271809-KRLX-WGUS51-FFWRLX",
+      "available_at": "2016-06-27T18:09:00Z",
+      "begins_at": "2016-06-27T18:09:00Z",
+      "audit_final_expire": "2016-06-27T21:00:00Z",
+      "ugcs": [
+        "WVC007"
+      ]
+    }
+  ]
+}

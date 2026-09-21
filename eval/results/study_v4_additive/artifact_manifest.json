@@ -1,0 +1,866 @@
+{
+  "artifacts": [
+    {
+      "bytes": 27137,
+      "path": "aggregate.json",
+      "sha256": "3605f7cad873e00f225ef630424ed69f29da73ecf6f51e67155b9ffd07f81203"
+    },
+    {
+      "bytes": 633309,
+      "path": "counties/acadia_22001_2020-10-07/result.json",
+      "sha256": "c5a43c06c6dbc974f257803f95ab978af34c78490b2f39a63630b7296e163121"
+    },
+    {
+      "bytes": 550764,
+      "path": "counties/ascension_22005_2016-03-06/result.json",
+      "sha256": "e4084b5a9b2a18db3be61b942d3a630e6e4d380d18b91897212944d492fc8b17"
+    },
+    {
+      "bytes": 646623,
+      "path": "counties/ascension_22005_2021-05-15/result.json",
+      "sha256": "5f294655d28174d6548b056057ca9fde78484dbf711107a102848cca82cededf"
+    },
+    {
+      "bytes": 553585,
+      "path": "counties/berkeley_45015_2019-08-26/result.json",
+      "sha256": "b4d049097436c2eea913174705251d6ffa745a11f5c1e67bbf08122a179a9018"
+    },
+    {
+      "bytes": 564259,
+      "path": "counties/berkeley_45015_2022-09-26/result.json",
+      "sha256": "1acecfb2e8cc3bc018c1ec811a6c12d927f61d5dec626f43e089608b6d5d4956"
+    },
+    {
+      "bytes": 605995,
+      "path": "counties/braxton_54007_2016-06-20/result.json",
+      "sha256": "d06a68e28811760ea3652e1eaef39b3a76b3331b9378e7dcee19c7a169631437"
+    },
+    {
+      "bytes": 667652,
+      "path": "counties/caguas_72025_2017-09-17/result.json",
+      "sha256": "21d53923281c3638a5be96dfe4c3bb971ed53efc0f3282405c376b90070fb9e0"
+    },
+    {
+      "bytes": 566703,
+      "path": "counties/cherokee_48073_2016-04-15/result.json",
+      "sha256": "6ab473036926a4a7fe5ef1dfb9c107e2102e85c16347c005bb4af9bc54437aea"
+    },
+    {
+      "bytes": 663470,
+      "path": "counties/delaware_36025_2024-08-03/result.json",
+      "sha256": "6d3587fcbd7dd404106a613db9107e8fcd2ada96676bb3dc7bd910118d004a5f"
+    },
+    {
+      "bytes": 547613,
+      "path": "counties/dorchester_45035_2022-09-26/result.json",
+      "sha256": "458495d6c3b9bcfe05a5aba20e469ba71761d102cf1ad254578751d0207ed141"
+    },
+    {
+      "bytes": 556235,
+      "path": "counties/douglas_31055_2024-06-14/result.json",
+      "sha256": "83f1ae0d5a1b920804518c3125d151b505d93c3d745453250395a98d9497f444"
+    },
+    {
+      "bytes": 633560,
+      "path": "counties/harrison_28047_2020-10-26/result.json",
+      "sha256": "18b29df75c1cf26c0c116569576176bbeb9fc4906cfceae9ae812b36b4f19b17"
+    },
+    {
+      "bytes": 540609,
+      "path": "counties/lee_21129_2022-07-24/result.json",
+      "sha256": "f25c3bdbe2fccee70e94234094b527508db650249940d471d2e7771957dbe672"
+    },
+    {
+      "bytes": 487286,
+      "path": "counties/marion_12083_2022-09-26/result.json",
+      "sha256": "0bce9a26a55c748e02b44f8e3f75d4d7fa1dfc56c055c036c806214c015a52c1"
+    },
+    {
+      "bytes": 547203,
+      "path": "counties/marshall_27089_2023-04-10/result.json",
+      "sha256": "4bce664565db411fac4b2425e733de7e43c3b4485ba967456c8cbbc61b383df8"
+    },
+    {
+      "bytes": 742787,
+      "path": "counties/new_castle_10003_2020-08-01/result.json",
+      "sha256": "de54f146baab278ff0e18597ccf8c72e662d8159472383bb1275f67630edc1f8"
+    },
+    {
+      "bytes": 617694,
+      "path": "counties/newton_48351_2020-08-25/result.json",
+      "sha256": "71c4f942c336500496e696ebc3ea2861ecfaac8fe3f5fa98fe7044dc5eb5b399"
+    },
+    {
+      "bytes": 680681,
+      "path": "counties/orange_48361_2019-09-15/result.json",
+      "sha256": "6da58eada4990a19ade66c5b507c2d47a5daa5b62adeb3f90bc6d230696a1496"
+    },
+    {
+      "bytes": 664499,
+      "path": "counties/penobscot_23019_2023-12-14/result.json",
+      "sha256": "e887a398eda404deedcbefad8de22bcbfe5931171c2f0c076c0ed6ca7a809c6d"
+    },
+    {
+      "bytes": 549475,
+      "path": "counties/ponce_72113_2022-09-15/result.json",
+      "sha256": "b7be4302bd45e366e18f5fa59a5059c158572176d21cae63a34d6fd1d0d1432d"
+    },
+    {
+      "bytes": 719998,
+      "path": "counties/richland_45079_2022-09-26/result.json",
+      "sha256": "4c099d7df6d13aa5047ff5ab02055e6fefdb8fead1625be6446f8c997e0bcd85"
+    },
+    {
+      "bytes": 501512,
+      "path": "counties/robeson_37155_2020-11-06/result.json",
+      "sha256": "5d58fa548a182424d5975246b825b514b5fbb260c5eac1a487b0a59dafe2d6db"
+    },
+    {
+      "bytes": 503395,
+      "path": "counties/sarasota_12115_2023-08-27/result.json",
+      "sha256": "abb7255fe76492aff7a21db874911b3fd025ff8dbba5e23069b5e78e0c8faf4b"
+    },
+    {
+      "bytes": 564065,
+      "path": "counties/seminole_12117_2022-11-08/result.json",
+      "sha256": "f9e5eaeaf6202f5dc6a56365e5ea6140e384b5aaecd1415aa21f4659d830159d"
+    },
+    {
+      "bytes": 546270,
+      "path": "counties/spartanburg_45083_2022-09-26/result.json",
+      "sha256": "3e95869c10588bf37cd77a4a1d9da448753a7a389e369ba09ea6dba3766b8195"
+    },
+    {
+      "bytes": 616431,
+      "path": "counties/st__tammany_22103_2024-09-09/result.json",
+      "sha256": "01658db6b916def1bf549f1c1d893f55136713d38a0c9a1b151556e9f47a931d"
+    },
+    {
+      "bytes": 653823,
+      "path": "counties/steuben_36101_2021-08-14/result.json",
+      "sha256": "f63959e292d0c08a3ded36bcf2f760c5fce77ef4785b6d99d1f1cd9132a3c0de"
+    },
+    {
+      "bytes": 610746,
+      "path": "counties/washington_50023_2023-07-07/result.json",
+      "sha256": "2afe2578fed9f49b294fdec14a72558c2f5ea6f514a2fc8eb087e910e75e0114"
+    },
+    {
+      "bytes": 104499,
+      "path": "preflight_qc.json",
+      "sha256": "eb4d54c062926dd281409f9ae5b1aae42c998aebcc344fad25f1dfc9fc0074fe"
+    },
+    {
+      "bytes": 13786592,
+      "path": "tables.json",
+      "sha256": "92856a5f9ef3e1e066bae3a4a1c48bbb38f44484421090b64f45e830d2239d7f"
+    }
+  ],
+  "config": {
+    "analysis_interval_convention": "[analysis_start,analysis_end)",
+    "budget_guard_fraction": 0.6,
+    "cadence_hours": [
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0
+    ],
+    "evaluation_interval_seconds": 900,
+    "frozen_replay_environment": {
+      "COUNTY_FLOOD_FLOW_FALL_PCT": "50.0",
+      "COUNTY_FLOOD_FLOW_RISE_PCT": "50.0",
+      "COUNTY_FLOOD_MAX_GAUGES": "10",
+      "COUNTY_FLOOD_MIN_GAUGES": "5",
+      "COUNTY_FLOOD_STAGE_FALL_FT": "1.0",
+      "COUNTY_FLOOD_STAGE_PERSIST_FT": "0.1",
+      "COUNTY_FLOOD_STAGE_RISE_FT": "1.0",
+      "COUNTY_FLOOD_SUPPLEMENTARY_CONFIDENCE": "0.45",
+      "REPORT_GAUGE_FLOW_THRESHOLD_PCT": "20.0",
+      "REPORT_GAUGE_STAGE_THRESHOLD_FT": "0.1",
+      "SENTINEL_ABLATED_CONFIDENCE": "0.75",
+      "SENTINEL_ABLATION": "full",
+      "SENTINEL_READING_MAX_AGE_HOURS": "6.0",
+      "SENTINEL_TIER_WEIGHT": "1.0",
+      "SENTINEL_WATERSHED_LOCATION_PRECISION": "0.65",
+      "SENTINEL_WATERSHED_NEIGHBOURS": "off"
+    },
+    "frozen_trigger_policy": {
+      "anchor_mode": "additive",
+      "burst_duration_seconds": 86400,
+      "burst_interval_seconds": 7200,
+      "config_id": "warnings_i120m_d24h_additive",
+      "poll_interval_seconds": 900,
+      "qualifying": [
+        "FF.W",
+        "FA.W",
+        "FL.W"
+      ],
+      "selection_rule": {
+        "budget_guard": "pooled hybrid acquisitions <= 2433 (60% of pooled nominal hourly 4056)",
+        "objective": "max pooled episodes observed",
+        "tie_breaks": [
+          "max county-events strictly below offset median",
+          "min pooled margin vs offset median",
+          "min pooled unobserved hours",
+          "min pooled acquisitions",
+          "shorter burst duration",
+          "longer burst cadence",
+          "smaller qualifying set"
+        ]
+      }
+    },
+    "hybrid_poll_offset_sensitivity_seconds": [
+      300,
+      600
+    ],
+    "nws_system_input": "vtec_trigger_stream_scheduling_only",
+    "nws_timing_reference": null,
+    "phase_offset_step_seconds": 900,
+    "primary_policy_staleness_hours": 6.0,
+    "sign_test_alpha": 0.05,
+    "truth_max_age_hours": 1.0
+  },
+  "county_results": [
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Marion",
+      "fips": "12083",
+      "result_path": "counties/marion_12083_2022-09-26/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Caguas",
+      "fips": "72025",
+      "result_path": "counties/caguas_72025_2017-09-17/result.json",
+      "state": "PR"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Newton",
+      "fips": "48351",
+      "result_path": "counties/newton_48351_2020-08-25/result.json",
+      "state": "TX"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Orange",
+      "fips": "48361",
+      "result_path": "counties/orange_48361_2019-09-15/result.json",
+      "state": "TX"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "New Castle",
+      "fips": "10003",
+      "result_path": "counties/new_castle_10003_2020-08-01/result.json",
+      "state": "DE"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Harrison",
+      "fips": "28047",
+      "result_path": "counties/harrison_28047_2020-10-26/result.json",
+      "state": "MS"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Sarasota",
+      "fips": "12115",
+      "result_path": "counties/sarasota_12115_2023-08-27/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Cherokee",
+      "fips": "48073",
+      "result_path": "counties/cherokee_48073_2016-04-15/result.json",
+      "state": "TX"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Acadia",
+      "fips": "22001",
+      "result_path": "counties/acadia_22001_2020-10-07/result.json",
+      "state": "LA"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Ascension",
+      "fips": "22005",
+      "result_path": "counties/ascension_22005_2016-03-06/result.json",
+      "state": "LA"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Ponce",
+      "fips": "72113",
+      "result_path": "counties/ponce_72113_2022-09-15/result.json",
+      "state": "PR"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Delaware",
+      "fips": "36025",
+      "result_path": "counties/delaware_36025_2024-08-03/result.json",
+      "state": "NY"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Washington",
+      "fips": "50023",
+      "result_path": "counties/washington_50023_2023-07-07/result.json",
+      "state": "VT"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Berkeley",
+      "fips": "45015",
+      "result_path": "counties/berkeley_45015_2019-08-26/result.json",
+      "state": "SC"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Robeson",
+      "fips": "37155",
+      "result_path": "counties/robeson_37155_2020-11-06/result.json",
+      "state": "NC"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Ascension",
+      "fips": "22005",
+      "result_path": "counties/ascension_22005_2021-05-15/result.json",
+      "state": "LA"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Lee",
+      "fips": "21129",
+      "result_path": "counties/lee_21129_2022-07-24/result.json",
+      "state": "KY"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Steuben",
+      "fips": "36101",
+      "result_path": "counties/steuben_36101_2021-08-14/result.json",
+      "state": "NY"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Penobscot",
+      "fips": "23019",
+      "result_path": "counties/penobscot_23019_2023-12-14/result.json",
+      "state": "ME"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "St. Tammany",
+      "fips": "22103",
+      "result_path": "counties/st__tammany_22103_2024-09-09/result.json",
+      "state": "LA"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Braxton",
+      "fips": "54007",
+      "result_path": "counties/braxton_54007_2016-06-20/result.json",
+      "state": "WV"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Marshall",
+      "fips": "27089",
+      "result_path": "counties/marshall_27089_2023-04-10/result.json",
+      "state": "MN"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Douglas",
+      "fips": "31055",
+      "result_path": "counties/douglas_31055_2024-06-14/result.json",
+      "state": "NE"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Seminole",
+      "fips": "12117",
+      "result_path": "counties/seminole_12117_2022-11-08/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Richland",
+      "fips": "45079",
+      "result_path": "counties/richland_45079_2022-09-26/result.json",
+      "state": "SC"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Spartanburg",
+      "fips": "45083",
+      "result_path": "counties/spartanburg_45083_2022-09-26/result.json",
+      "state": "SC"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Berkeley",
+      "fips": "45015",
+      "result_path": "counties/berkeley_45015_2022-09-26/result.json",
+      "state": "SC"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Dorchester",
+      "fips": "45035",
+      "result_path": "counties/dorchester_45035_2022-09-26/result.json",
+      "state": "SC"
+    }
+  ],
+  "dev_grid": "eval/results/study_v4_dev/dev_grid.json",
+  "dev_grid_sha256": "5d552b65634c7eec2c0774bd8343179b69a93657d8871a293420a44626358398",
+  "implementation_hashed_before_generation": true,
+  "implementation_manifest_rule": "sorted eval/*.py, watcher/**/*.py, watcher/ontology/stub_*.json, and skills/county-flood-data/county_flood/**/*.py; caches, tests, and results excluded",
+  "implementation_sha256": {
+    "eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eval/analyze_deployment.py": "324af2ca8b66258911d5e35ae711aa5c023f21c616121979134a67f352a107be",
+    "eval/baselines.py": "dee88a949bc180bea9fb1ae132ac4709666b172b5530c4eb512d63add761e6d1",
+    "eval/build_corpus.py": "e79094044a5f05cd90115000b866162276517d2f2af841790d585b1f9b69e3c2",
+    "eval/build_t2_trigger_corpus.py": "8dd344671bf33f921e9d111940347d90e24494a38def9f6e370788efe7789ec3",
+    "eval/calibrate_stage_datums.py": "18bb139e00a99347286e2fde7172f35ede86214b4d0776c55d7587b21be74499",
+    "eval/figures.py": "285970bb9c360dd601606159735ce51d6832bb39b50a9d82872df10c983125f4",
+    "eval/freeze_v3_manifest.py": "5be303ac51b2c9b1deef9d7e010c4706ea001c9de25dea4ee994903655c6deea",
+    "eval/freeze_v4_manifest.py": "a979950282ede585949a7daa58ece081c0fce6956a675850ee506a5f1ec73252",
+    "eval/ground_truth.py": "7d9b551502f91688d56c7fd70c48242174eb0de6b85c0c7e4644d35406c762e3",
+    "eval/metrics.py": "e6c65ec9656216a837b3cb71541f843ba65a8880ec992bdb88b5fcd6f69f55e8",
+    "eval/news_archive.py": "0958e18be9113b40188a2b2dbbd120b86d367e42c144eb4af31f161f638f644a",
+    "eval/news_corpus.py": "d7ad730c387efde9a50c9c126650a4b08cdcce56a324f8aff27b695e00b0aa48",
+    "eval/news_gdelt.py": "1d6f49a1ee031c8cb774e36eddcbbe907b67f3c88cc739cc866b1c90c5392ff1",
+    "eval/news_replay.py": "c19666312e1f86fb2b18655fb024564038d1ce3defd29a3279ed70e2d1af7781",
+    "eval/run_belief_null.py": "9f1e2a638e604524e3bef9621f0e0ad39c56a1482996bb9b3833afd5e9b79e4a",
+    "eval/run_dev_grid.py": "d3b190bd913187fd4cd33726a2c59d7c432f31dd1dea690076e0e1acd3ef7c9d",
+    "eval/run_dev_grid_v4.py": "a34326febfa853991b35bb4791b25b48b552039e287c4e3858ff0090d4ad95cd",
+    "eval/run_replay.py": "59538f02ef0e1e18632f53bfcf7518b958f3fd992131528bfa8b5f2b2a35bfb6",
+    "eval/run_study.py": "c486d3b248302fe3c9d4e17c4768ca94ec5e42906e85128e071cf17ee60e9e07",
+    "eval/run_study_v3.py": "f83a46b76cf6911d115332cccec14e6d7b4c22744f082518bf3cba68195a22cb",
+    "eval/run_study_v4.py": "64596a8cc11048e11f43002d228d72e2fa96c4b07a9ab0a3e8649899ac8ccaea",
+    "eval/select_holdout.py": "540914fd1ca637ed76b8709d147a8baa0effabbd1982c2a762c73739c33741fc",
+    "eval/select_holdout_v4.py": "a86ea3e4e096a41583b3a0f9c94d4ff389cc0eddfbb0eb8f69a2f7470b205a0e",
+    "eval/sensitivity.py": "a064f52e333b54809e1666d4709d26d087ad25a3976de2dd0582cf3224d6ba03",
+    "eval/trigger_metrics.py": "0990d6a1c7a657906885d71130e8a5bf453f498455257e14079b1abab8a1b38b",
+    "eval/vtec_trigger.py": "3f56c251d35f34bd341a60d13156ebea0be35ff449db6700d1b65b77ce328703",
+    "skills/county-flood-data/county_flood/__init__.py": "ed46a2dc46dd81d104e8d2d729655f62de830412ecb31b38aaa67d13550863b4",
+    "skills/county-flood-data/county_flood/aggregator.py": "f1216c7113502f57699ad8761c72c3ca68f537fba2161a98fb5ee7d1e438892f",
+    "skills/county-flood-data/county_flood/api_resolution.py": "f32eeb90dcfda919c1bf1d0dea820292223c207667db09ecb1169f4b3cd3949e",
+    "skills/county-flood-data/county_flood/confidence.py": "003a22c33caf5742e05224351317842781ece20b5d4c56cf9fcc4340285dd754",
+    "skills/county-flood-data/county_flood/geo.py": "328eed4319cec83255cf936621b5ba6cd935572799166941242c639ac2ded160",
+    "skills/county-flood-data/county_flood/models.py": "5021dec1e5485684ba3ee1e6f821e9574cda5e7ac79771899a8cb94a8ae1f915",
+    "skills/county-flood-data/county_flood/runner.py": "0d8a3dfbe817a66c1766de9ff6978a611f3782cb562025a0b48afcc00bed65af",
+    "skills/county-flood-data/county_flood/sources/__init__.py": "96709b372aefd3dbf9055871fa0d82f01df78921bfa618eae3b85154577a36ef",
+    "skills/county-flood-data/county_flood/sources/fema_disasters.py": "bd15b3c745d941295013972461648d85c4e67891d95be500d09f370aa66c2582",
+    "skills/county-flood-data/county_flood/sources/gauge_delta.py": "ac3d0cf2d69e5dcd066529061346b417b73f82d496901b87fc2cd600d771ac26",
+    "skills/county-flood-data/county_flood/sources/nwps.py": "2400725ad081dcd584590edd2b3a8f08ca2376d5c00bc85ec47a60a6afd48f3c",
+    "skills/county-flood-data/county_flood/sources/nwps_enrich.py": "56d6ce3641b353570bbaa54f7036e8506212036f80b25d4ad14954f065c64395",
+    "skills/county-flood-data/county_flood/sources/nws_alerts.py": "e64d3ae3a2936869a269c851aa6e88e04a68f42fdaa60275dca33a104d975615",
+    "skills/county-flood-data/county_flood/sources/selection.py": "a151b8052ed57873f960a8436041c0a0658b3e68d6ed28d7ef3984033e009fae",
+    "skills/county-flood-data/county_flood/sources/stages.py": "3cd86dad30fc44ae93674fa9bbb00e590ec5c1e05a29ccb4192dd23ab16836d8",
+    "skills/county-flood-data/county_flood/sources/usgs.py": "782504d6c9e32a2c1e80760d38bd99267449f40670f75602eb281be79b6b6ece",
+    "skills/county-flood-data/county_flood/sources/usgs_ogc.py": "341c6a56cbe59429690034d5ce67680c5d6a6e111febd1bb1a37d5388a420ed3",
+    "watcher/__init__.py": "9806b402f1f4b93bca7b5efb542b8b9c2a333bab07efc4b7ebbd15912a86ca5c",
+    "watcher/article_evidence_bridge.py": "2c2d5a9c6f03f119cb7efdbf7c5566089fe7a71e9020dc1a24f958a294e07a17",
+    "watcher/claims/__init__.py": "ef17e5a74f0f4361654b5cb8662f22499122e2ad5e082893255c733bac9b62ab",
+    "watcher/claims/confidence.py": "feff0c51d1b34cb2ba8b238f1594e9b9c5db3f1423a8c98c2f93f00d90405321",
+    "watcher/claims/extract.py": "c980ac5b8a8a2b52f4dab9f017f131d9a59241f3261d19ff488364886777c1f7",
+    "watcher/claims/extract_articles.py": "5ca79c168a7574056d5c69709a2b1c8de38681b9d4181fb6e5796c8348da1d45",
+    "watcher/claims/extract_county_flood.py": "d3e793ce6006d8e42c3b8939034896726feaf26984fea5ce0510f05649f615a2",
+    "watcher/claims/extract_nws.py": "a1e36e39deb23fe37de88f395422be60693ee28a74827962b653d27cd0e165c6",
+    "watcher/claims/extract_usgs.py": "b5c874c35594fe8df673a25a83013fd84567ef9d0d4c88c4760a533684ea963e",
+    "watcher/claims/models.py": "87670a17fbc382a7622b1dff994999ac51511111c116c0b5bc38f6c9a266c212",
+    "watcher/claims/validate.py": "ea32cee67053adf22decfa098b78b40580f9c94bbd7dcb0a1a1873e97cdfeac6",
+    "watcher/cli.py": "e12bbc81a8b26a5d78cfc9860c29231d7670d51ed27d2ca6f94ccf0ab1915554",
+    "watcher/config.py": "ba68c18dca09cf5ef16b1c8fc1b6d5de4cff98bc27db1e2143c4dccc73a88b84",
+    "watcher/county_flood_bridge.py": "ff70be797c8a9e34d5ffa04c965d909bf78302cc566eed3959748ce1b9d832ca",
+    "watcher/county_flood_evidence.py": "c0641b119d129fe8b0637054fa825829270c72c0787ecff2983037b10e5b0db8",
+    "watcher/fetch.py": "b8d50ae0e78e168fe905d3dd2efea5125df9d64d1b4d80641cc3eebff87165c1",
+    "watcher/format_analyst.py": "2e814215b9d28ce281923a82d16a6da5e3ad1330a98a56418855e8089671e534",
+    "watcher/format_ontology.py": "bd2427087dd52122301497a27e8f7c25ffb48f5a35fbf30113d058279dce58ac",
+    "watcher/format_report.py": "220d1bd6972108b6adcf6273ca45278fb72f0d1f1fdf95ce15f44fcce060742c",
+    "watcher/format_slack.py": "41a456a3abbfe08ecdbd2507418f9e789c4422f7465efc9386e6c3610453954c",
+    "watcher/geo_util.py": "a5e24cb6ec65c526b72faa032e214a66cf7353eba0e9e2f28234ae84c18d59b7",
+    "watcher/heartbeat_cron.py": "115174daa4461edb8e0b4d8123845ba4e4aa1b12dfc59988ef92c0d44fd8a7c9",
+    "watcher/neo4j_client.py": "7aeb1aae329ef30351b55c176036d472e7a481d3575734a50644cb24db995a7e",
+    "watcher/ontology/__init__.py": "53b0825a22b43a36ba64259947fc4c55b3e1125a28466dacf4e326f495fa469a",
+    "watcher/ontology/adapters.py": "0ef0292c889c0f6b15dd3c1ece87b9a165837fe8b8482f7de2078560dfb840b3",
+    "watcher/ontology/belief_schema.py": "9246b48f3ac455edcb878d4f8713e11597648e258cd7d64a86ea7c5beb05a5d7",
+    "watcher/ontology/bridge.py": "729cf145d3f5c56b8966db66f76c29e9c235fe99e5a3e65cfa9b615400bd4f22",
+    "watcher/ontology/ledger.py": "a1a297db93f793d7624cfed7b0f84abae7b6d641e21473206ea2299a1de0fce3",
+    "watcher/ontology/output_schema.py": "2cfa4fc1384b9c4fa1e7ae41b2981183fecff33c591a971903d646454dcc870f",
+    "watcher/ontology/stub_monitoring.json": "aecc66ce62f4588195321adb774b7d5f224c313c2ad8753e50e96e891e1305f7",
+    "watcher/ontology/stub_sources.json": "436457e0beecfd1c4062dccf0ba09648284a9d7fe3b6da2eb2fc472be52fe282",
+    "watcher/phase_engine.py": "e291d73df1bcdb5a3ed0dddc49d3a2de8b54096e9d0e2e45cf3c47078e757c1c",
+    "watcher/replay.py": "4483d355666898891e2c3e2f2b52b2a2cd5d4c556aff3229d3b7f8aca5830afd",
+    "watcher/report_delta.py": "9200109eef331c68081b90deff40f9947a7707cdc1e281174bcd297991070c32",
+    "watcher/seen_articles.py": "21d9c409365cdf4a7ae23da66205b504380454f023967bd42af532fb257086fd",
+    "watcher/slack_delivery.py": "49c39af8f56ee6865f0d073026c148ee97702dc2d12834235ff2ccbbc86c60f4",
+    "watcher/slack_logger.py": "e7e90849c77c0409627e855d1d46b5307370df98c0d7cc199efd7186faf2fc43",
+    "watcher/sources/__init__.py": "a9fa66bf5c5aecdd680dfd92ddcfd3cdd5a950d1411c0bbb66fcc664b149d476",
+    "watcher/sources/county_api_resolver.py": "08e9fcd6867312df026de6dbfd1c1f598e79b1323e52badbf758e9501a5be925",
+    "watcher/timezone_util.py": "f26a4f35ab7e437a63c1a5eb89c263be10b0786163abd67c937b232dd9e1ff4f",
+    "watcher/verification_trigger.py": "bd9a778460cece11539810a9710500148875b83e5a1547fc505bafc3000283e0"
+  },
+  "input_artifacts": [
+    {
+      "county": "Marion",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/marion_12083_hurricane_ian_september_2022.json",
+      "sha256": "2739d23689aa84e8aaa0f87b3cb08ec6cf665018c6d59a6e978f43338296c83f"
+    },
+    {
+      "county": "Marion",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/marion_12083_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "ec2c6cfb6b44099bb638cbb8308fb520fafafbd208594bb56f9747aeb6b6b574"
+    },
+    {
+      "county": "Caguas",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/caguas_72025_hurricane_maria_september_2017.json",
+      "sha256": "3b39f1ded77a5f3940e57a33317e247b72f1fe857cae97e27ae61d7e3ec004e8"
+    },
+    {
+      "county": "Caguas",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/caguas_72025_hurricane_maria_september_2017_vtec_triggers.json",
+      "sha256": "96af282d02451af6442da0eefd7ec53b6c573af5118ffba8c28c1040186858f2"
+    },
+    {
+      "county": "Newton",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/newton_48351_hurricane_laura_august_2020.json",
+      "sha256": "c5cf4fc960834f100d90240926de7d97fbd5ba67185ab5d329a4e25485820519"
+    },
+    {
+      "county": "Newton",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/newton_48351_hurricane_laura_august_2020_vtec_triggers.json",
+      "sha256": "648048e0ecb1919287b91a9ea04e7b3cd69c3ee3be2466927e1ab5ef9c61105f"
+    },
+    {
+      "county": "Orange",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/orange_48361_tropical_storm_imelda_september_2019.json",
+      "sha256": "ff6628123b48a5ba22d53c8a7f0bdd9108363dadba87d6346183a7da351dd797"
+    },
+    {
+      "county": "Orange",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/orange_48361_tropical_storm_imelda_september_2019_vtec_triggers.json",
+      "sha256": "162fb2dd0fcd246154b1d914ab97b4257b3036e705448a703a9c8dad82b27fc7"
+    },
+    {
+      "county": "New Castle",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/new_castle_10003_hurricane_isaias_august_2020.json",
+      "sha256": "19a62ca5e815b7ddd7b364c2b3ac3bfdd0bcfe8d4b03ba5703ccc39a8d4f49ab"
+    },
+    {
+      "county": "New Castle",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/new_castle_10003_hurricane_isaias_august_2020_vtec_triggers.json",
+      "sha256": "3ffa50386f08cbeb2ef2cbc5589219517c6c0ac3712e10a80771358404406aa8"
+    },
+    {
+      "county": "Harrison",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/harrison_28047_hurricane_zeta_october_2020.json",
+      "sha256": "98d2a9b36ee9439e9f4adfc0cf2623deac6173787cb04d2c5b53c9c08a71eb60"
+    },
+    {
+      "county": "Harrison",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/harrison_28047_hurricane_zeta_october_2020_vtec_triggers.json",
+      "sha256": "ecba7e2e191d541e85a362d3d1f04cf24187a41c3bebf3c4f573985d0cbcba51"
+    },
+    {
+      "county": "Sarasota",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/sarasota_12115_hurricane_idalia_august_2023.json",
+      "sha256": "89820a9b4505bd190ecf22cf2f438af90edb9d5c4c1d7a056cff60b8cf46100d"
+    },
+    {
+      "county": "Sarasota",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/sarasota_12115_hurricane_idalia_august_2023_vtec_triggers.json",
+      "sha256": "63528f85ae8804a839294c3ffde77d60a71ac4bbb96fbb41c3e95feb5e80f0ab"
+    },
+    {
+      "county": "Cherokee",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/cherokee_48073_houston_flooding_april_2016.json",
+      "sha256": "76af56cc1aefaf05bab46666bbaa570d00a48a2f0397d3ae245d747694fa9b43"
+    },
+    {
+      "county": "Cherokee",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/cherokee_48073_houston_flooding_april_2016_vtec_triggers.json",
+      "sha256": "5b2e4dc63ac75133681b7576355e971c16bac78611ff924ea8cbc764fd12485b"
+    },
+    {
+      "county": "Acadia",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/acadia_22001_hurricane_delta_october_2020.json",
+      "sha256": "7f5a8a0cad5e9c64c7bf7800a6a65efe1357314b5f7c532b7d7b6041f47f32d2"
+    },
+    {
+      "county": "Acadia",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/acadia_22001_hurricane_delta_october_2020_vtec_triggers.json",
+      "sha256": "191767e88124bf37dbab83833b176713881779dc34136fc70f2ca22154eacb34"
+    },
+    {
+      "county": "Ascension",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/ascension_22005_texas_and_louisiana_flooding_march_2016.json",
+      "sha256": "74d659a6fc25d320a5fe6a1d46267ac2c663857b6b23146b551359420eff9111"
+    },
+    {
+      "county": "Ascension",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/ascension_22005_texas_and_louisiana_flooding_march_2016_vtec_triggers.json",
+      "sha256": "f34b1a7b38f55744afb23cecd43520914b5f9af35585121974a276753759c49b"
+    },
+    {
+      "county": "Ponce",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/ponce_72113_hurricane_fiona_september_2022.json",
+      "sha256": "1d1e849e89babfa8bd6b5435856e7647911e93ad1567652d77638481705cceb6"
+    },
+    {
+      "county": "Ponce",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/ponce_72113_hurricane_fiona_september_2022_vtec_triggers.json",
+      "sha256": "abe2fa916ff7052f563de44e4eb9257e9f440e11e23bed7791bc2f4a31b3bb5e"
+    },
+    {
+      "county": "Delaware",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/delaware_36025_hurricane_debby_august_2024.json",
+      "sha256": "1f2094a1076abd7222d1c0f8b0df67623b0629a76a2d8032a9d5053a617197c1"
+    },
+    {
+      "county": "Delaware",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/delaware_36025_hurricane_debby_august_2024_vtec_triggers.json",
+      "sha256": "136b195737618df15a65e6ce0bb2d84a2febbbcf7989455e0656a7620ac5458c"
+    },
+    {
+      "county": "Washington",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/washington_50023_northeastern_flooding_and_north_central_.json",
+      "sha256": "972db9c57a3e90af905dcfded631ffb01c00b79190e14436359a8f144d0590fb"
+    },
+    {
+      "county": "Washington",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/washington_50023_northeastern_flooding_and_north_central__vtec_triggers.json",
+      "sha256": "4087b7ebd19aad623101228e6f1af1366257768429b0476dfd9bda239a4fc690"
+    },
+    {
+      "county": "Berkeley",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/berkeley_45015_hurricane_dorian_september_2019.json",
+      "sha256": "dd3a0c5cbd733b8269c88d8e66e32c208cfb38e53eb8e1ef8d3e91748452e408"
+    },
+    {
+      "county": "Berkeley",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/berkeley_45015_hurricane_dorian_september_2019_vtec_triggers.json",
+      "sha256": "eefdd2e549c19dbd95eefb7c187e6edf166789ba768f609992519d1899aa786f"
+    },
+    {
+      "county": "Robeson",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/robeson_37155_tropical_storm_eta_november_2020.json",
+      "sha256": "b61a7cdd85874ec3300e87fbcd44080536f0ece48472cc1377a18ed17f0f4448"
+    },
+    {
+      "county": "Robeson",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/robeson_37155_tropical_storm_eta_november_2020_vtec_triggers.json",
+      "sha256": "c29c3e63d417cc7f14c3569b395eec3997038a3d11d524e8ed73b0e6979da128"
+    },
+    {
+      "county": "Ascension",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/ascension_22005_louisiana_flooding_may_2021.json",
+      "sha256": "fc5f6edf8cb7a2badff96329707230d541f3af6007074f57de7dede384177acd"
+    },
+    {
+      "county": "Ascension",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/ascension_22005_louisiana_flooding_may_2021_vtec_triggers.json",
+      "sha256": "5b890eaac2908a702218f634ef3d980135a6b4db4297596800409a8586026e99"
+    },
+    {
+      "county": "Lee",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/lee_21129_kentucky_and_missouri_flooding_july_2022.json",
+      "sha256": "9d6cbe585043222eb47fa8c9b67f07eafb9588d23bd28dab21a82dbb12fe24c3"
+    },
+    {
+      "county": "Lee",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/lee_21129_kentucky_and_missouri_flooding_july_2022_vtec_triggers.json",
+      "sha256": "8aaad2182d65b4b5b953544bf09082f5ea7caa1a51049b6936a3c3f6cbe3bb5b"
+    },
+    {
+      "county": "Steuben",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/steuben_36101_tropical_storm_fred_august_2021.json",
+      "sha256": "f0569d7b7f1ef77000769302e2f82d5493cb6eab19d16b8422a8f1ed082268b9"
+    },
+    {
+      "county": "Steuben",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/steuben_36101_tropical_storm_fred_august_2021_vtec_triggers.json",
+      "sha256": "87e98a25b93dbb63453481803ca7f27010f42a368d8cc82cd6e830b249ea8d6c"
+    },
+    {
+      "county": "Penobscot",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/penobscot_23019_east_coast_storm_and_flooding_december_2.json",
+      "sha256": "398475fc9ffe593115abba5d6798e846dbc09416372c60fce41c9162206e5380"
+    },
+    {
+      "county": "Penobscot",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/penobscot_23019_east_coast_storm_and_flooding_december_2_vtec_triggers.json",
+      "sha256": "458e6672071c8623b1cf63570019ce9eef45c92ef0b0715217382484475285ba"
+    },
+    {
+      "county": "St. Tammany",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_francine_september_2024.json",
+      "sha256": "c59f55eeba68b1cc3d914cbc6024e12959efed7a8bbd408c8fccb06d519bf691"
+    },
+    {
+      "county": "St. Tammany",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/st_tammany_22103_hurricane_francine_september_2024_vtec_triggers.json",
+      "sha256": "97268a72dc80fafff43c38bf0bee44b08ac7348b8a0b145ef25d1da038ad0a6f"
+    },
+    {
+      "county": "Braxton",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/braxton_54007_west_virginia_flooding_and_ohio_valley_t.json",
+      "sha256": "32a434192e35c344d1ca757f0038e3e13b5b9ece02cf17fde0d048de9cb833b9"
+    },
+    {
+      "county": "Braxton",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/braxton_54007_west_virginia_flooding_and_ohio_valley_t_vtec_triggers.json",
+      "sha256": "7d90e1f36cfc9b888f34767113a235af7822261277ae4680476ddb8d422cee97"
+    },
+    {
+      "county": "Marshall",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/marshall_27089_fort_lauderdale_flash_flood_april_2023.json",
+      "sha256": "91e6aa7316bddb33347fd32cf87e4b0a2f6121076726db017b0223b1bf09570c"
+    },
+    {
+      "county": "Marshall",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/marshall_27089_fort_lauderdale_flash_flood_april_2023_vtec_triggers.json",
+      "sha256": "551fd8eaffee256a5a1306ead1bae11fc560c596393dadf8ca46edfe2355311a"
+    },
+    {
+      "county": "Douglas",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/douglas_31055_upper_midwest_flooding_june_2024.json",
+      "sha256": "5115d4b6ce1210a00c1fb2cc64c6e2fa5237e7aa23b2c2ac64f9e964dda8598a"
+    },
+    {
+      "county": "Douglas",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/douglas_31055_upper_midwest_flooding_june_2024_vtec_triggers.json",
+      "sha256": "570b658029bb4593f9af853ab2aba6064e5542ffaadfa451b6b229e368af0254"
+    },
+    {
+      "county": "Seminole",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/seminole_12117_hurricane_nicole_november_2022.json",
+      "sha256": "76be0d175f4e4a84ec3a9c52662b7800b765f60ce295a42eca64356a7d028b97"
+    },
+    {
+      "county": "Seminole",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/seminole_12117_hurricane_nicole_november_2022_vtec_triggers.json",
+      "sha256": "ff013f4978dbd8379c94cf2c3cf0a87e18c9febf757a5218976f5957dea7dd25"
+    },
+    {
+      "county": "Richland",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/richland_45079_hurricane_ian_september_2022.json",
+      "sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae"
+    },
+    {
+      "county": "Richland",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/richland_45079_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "51dd64da67382f9d908b3ecab44d3b2ecd829bfab86fe1d6f04c848b484b568e"
+    },
+    {
+      "county": "Spartanburg",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/spartanburg_45083_hurricane_ian_september_2022.json",
+      "sha256": "5e03d69433c2bb568a777a02916af509ffdf45d04013ede349f4b1fb3c149429"
+    },
+    {
+      "county": "Spartanburg",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/spartanburg_45083_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "2e60ad1caf267f9f03097dc351533898d9de9fa7468d7a34ea387428f441dd63"
+    },
+    {
+      "county": "Berkeley",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/berkeley_45015_hurricane_ian_september_2022.json",
+      "sha256": "83dfeca467e89c7543eed85711259a273b3634d7ecfc43ec0dc3b13ebff95d70"
+    },
+    {
+      "county": "Berkeley",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/berkeley_45015_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "8c044fbb7e3d65530d699fa165713e9c041c13cd0ae98dd2993a30810de50715"
+    },
+    {
+      "county": "Dorchester",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v4/dorchester_45035_hurricane_ian_september_2022.json",
+      "sha256": "dbea518607723e4a238c758b3627ad7cd61ab53347522a19f024e7ffe4b316c6"
+    },
+    {
+      "county": "Dorchester",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v4/dorchester_45035_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "36ed7287d86accb032fac8610ea8a0032e4d7760c0e05639d7c4064e77b133ff"
+    }
+  ],
+  "protocol": "eval/HYBRID_STUDY_PROTOCOL_V4.md",
+  "protocol_sha256": "fb26dac4549e7e49ed38db420810862addeff7c763b7927404cb02b07fd83a29",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.6",
+    "version_detail": "3.14.6 | packaged by Anaconda, Inc. | (main, Jun 18 2026, 21:28:09) [GCC 14.3.0]"
+  },
+  "reproduction_commands": [
+    "python3 eval/run_study_v4.py --manifest eval/corpus/study_v4/manifest.json --out-dir <empty-dir>"
+  ],
+  "schema": "sentinel-study-v4-artifact-manifest/1",
+  "selection": "eval/corpus/study_v4/holdout_selection.json",
+  "selection_sha256": "59eddd828f6bfb2f7716c4bf8edf33483c07f3252ea5a393a26b6bfb285683ef",
+  "source_manifest": "eval/corpus/study_v4/manifest.json",
+  "source_manifest_sha256": "47917d84775fe990b6aa9bb6acf452d10f67b4235d0b7da417832dd6743b78fd"
+}

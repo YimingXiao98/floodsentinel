@@ -1,0 +1,79 @@
+[
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "Chambers (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "071",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "San Jacinto (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "407",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "Harris (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "201",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "Jefferson (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "245",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "Montgomery (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "339",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "Liberty (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "291",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ },
+ {
+  "declarationTitle": "TROPICAL STORM IMELDA",
+  "declarationType": "DR",
+  "designatedArea": "Orange (County)",
+  "disasterNumber": 4466,
+  "fipsCountyCode": "361",
+  "fipsStateCode": "48",
+  "incidentBeginDate": "2019-09-17T00:00:00.000Z",
+  "incidentType": "Flood",
+  "state": "TX"
+ }
+]

@@ -1,0 +1,116 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Horry",
+  "state": "SC",
+  "fips": "45051",
+  "generated_at": "2026-08-20T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2022-09-26",
+    "end": "2022-10-08"
+  },
+  "fetch_window": {
+    "start": "2022-09-23",
+    "end": "2022-10-08"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "SCC051",
+    "zones": [
+      "SCZ054",
+      "SCZ058",
+      "SCZ059"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "SCC051": 3,
+    "SCZ054": 19,
+    "SCZ058": 4,
+    "SCZ059": 4
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 25,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2022-ILM-FA-A-0001",
+      "product_id": "202209292008-KILM-WGUS62-FFAILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2022-ILM-FA-Y-0058",
+      "product_id": "202209301054-KILM-WGUS82-FLSILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2022-ILM-FF-W-0013",
+      "product_id": "202209301611-KILM-WGUS52-FFWILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 3,
+  "events": [
+    {
+      "event_key": "2022-ILM-FA-A-0001",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 1,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202209292008-KILM-WGUS62-FFAILM",
+      "available_at": "2022-09-29T20:08:00Z",
+      "begins_at": "2022-09-30T06:00:00Z",
+      "audit_final_expire": "2022-09-30T19:55:00Z",
+      "ugcs": [
+        "SCZ054",
+        "SCZ058",
+        "SCZ059"
+      ]
+    },
+    {
+      "event_key": "2022-ILM-FA-Y-0058",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 58,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202209301054-KILM-WGUS82-FLSILM",
+      "available_at": "2022-09-30T10:54:00Z",
+      "begins_at": "2022-09-30T10:54:00Z",
+      "audit_final_expire": "2022-09-30T19:46:00Z",
+      "ugcs": [
+        "SCC051"
+      ]
+    },
+    {
+      "event_key": "2022-ILM-FF-W-0013",
+      "wfo": "ILM",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 13,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202209301611-KILM-WGUS52-FFWILM",
+      "available_at": "2022-09-30T16:11:00Z",
+      "begins_at": "2022-09-30T16:11:00Z",
+      "audit_final_expire": "2022-09-30T19:15:00Z",
+      "ugcs": [
+        "SCC051"
+      ]
+    }
+  ]
+}

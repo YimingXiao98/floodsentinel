@@ -1,0 +1,46 @@
+[
+ {
+  "declarationTitle": "TYPHOON MAWAR",
+  "declarationType": "DR",
+  "designatedArea": "Saipan (Municipality)",
+  "disasterNumber": 4716,
+  "fipsCountyCode": "110",
+  "fipsStateCode": "69",
+  "incidentBeginDate": "2023-05-22T00:00:00.000Z",
+  "incidentType": "Tropical Storm",
+  "state": "MP"
+ },
+ {
+  "declarationTitle": "TYPHOON MAWAR",
+  "declarationType": "DR",
+  "designatedArea": "Rota (Municipality)",
+  "disasterNumber": 4716,
+  "fipsCountyCode": "100",
+  "fipsStateCode": "69",
+  "incidentBeginDate": "2023-05-22T00:00:00.000Z",
+  "incidentType": "Tropical Storm",
+  "state": "MP"
+ },
+ {
+  "declarationTitle": "TYPHOON MAWAR",
+  "declarationType": "DR",
+  "designatedArea": "Tinian (Municipality)",
+  "disasterNumber": 4716,
+  "fipsCountyCode": "120",
+  "fipsStateCode": "69",
+  "incidentBeginDate": "2023-05-22T00:00:00.000Z",
+  "incidentType": "Tropical Storm",
+  "state": "MP"
+ },
+ {
+  "declarationTitle": "TYPHOON MAWAR",
+  "declarationType": "DR",
+  "designatedArea": "Guam (County-equivalent)",
+  "disasterNumber": 4715,
+  "fipsCountyCode": "010",
+  "fipsStateCode": "66",
+  "incidentBeginDate": "2023-05-22T00:00:00.000Z",
+  "incidentType": "Hurricane",
+  "state": "GU"
+ }
+]

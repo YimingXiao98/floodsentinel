@@ -1,0 +1,451 @@
+{
+  "artifacts": [
+    {
+      "bytes": 8117,
+      "path": "aggregate.json",
+      "sha256": "27638de2feb42b62cec82983717909f74c4f8ca25c99bd9ee14a3f5117ee7ef9"
+    },
+    {
+      "bytes": 547336,
+      "path": "counties/baldwin_01003_2020-09-13/result.json",
+      "sha256": "754ff6d0ea3a9f29bfa3ce98e132081cd1aaa8f24bf754e69b6270b0010c5bba"
+    },
+    {
+      "bytes": 667056,
+      "path": "counties/chatham_37037_2018-10-08/result.json",
+      "sha256": "121d0291eaffb5039479554f2b2ac9095d4f517431290249ecba707be21780e6"
+    },
+    {
+      "bytes": 641877,
+      "path": "counties/east_baton_rouge_22033_2016-08-10/result.json",
+      "sha256": "3f9bbf6bb6a9d08194da5f0b68d150e7aca11600744ffc46ac8d4d0452cd61b5"
+    },
+    {
+      "bytes": 556450,
+      "path": "counties/horry_45051_2018-09-11/result.json",
+      "sha256": "9dc508b3bac71b2874db0d67b28bdf3188791cd1422f65d3e4a8f22293549a1b"
+    },
+    {
+      "bytes": 678280,
+      "path": "counties/horry_45051_2022-09-26/result.json",
+      "sha256": "2ec619d68038e2be00502c59ebec674dd2a366bc49c7155e816d5af71dc5b6d5"
+    },
+    {
+      "bytes": 665634,
+      "path": "counties/mecklenburg_37119_2024-09-22/result.json",
+      "sha256": "3ae6221d81f9972c9d3bfc5a4243d14e9c742c8a2658549bda92c5fc0f00f955"
+    },
+    {
+      "bytes": 625084,
+      "path": "counties/montgomery_48339_2024-07-06/result.json",
+      "sha256": "193454ac338499792d5c35165ba027df286b6857ae21dddaaf4f22b369447006"
+    },
+    {
+      "bytes": 583325,
+      "path": "counties/osceola_12097_2024-10-07/result.json",
+      "sha256": "ef75f9c22644c94b4adeadc427244b5873ff95f9f64882ffe35cb515361d5bd5"
+    },
+    {
+      "bytes": 712217,
+      "path": "counties/richland_45079_2022-09-26/result.json",
+      "sha256": "d8765a6704f2a852446d165e42413fc973d4e14744098365f8c103e9b1a7ce5a"
+    },
+    {
+      "bytes": 606177,
+      "path": "counties/somerset_34035_2021-08-27/result.json",
+      "sha256": "37245e997a94dc2d42eddce0eeb81bd5f8733490e880668d3aa40731bb2a8fa1"
+    },
+    {
+      "bytes": 679135,
+      "path": "counties/wake_37183_2016-10-06/result.json",
+      "sha256": "c8120bf737f94292ca5b7c9cc1895a0a7acc81d2449c39c4873ccf58e413b582"
+    },
+    {
+      "bytes": 39149,
+      "path": "preflight_qc.json",
+      "sha256": "1b4bad071a4f8eeae9ed4395576d370fe04cef072e504f6801f03e95739ba25d"
+    },
+    {
+      "bytes": 5796643,
+      "path": "tables.json",
+      "sha256": "d5d51c12ef60d1500b994d99bb331964a90741a96c964b2825b3aa30646e40a0"
+    }
+  ],
+  "config": {
+    "analysis_interval_convention": "[analysis_start,analysis_end)",
+    "budget_guard_fraction": 0.6,
+    "cadence_hours": [
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0
+    ],
+    "evaluation_interval_seconds": 900,
+    "frozen_replay_environment": {
+      "COUNTY_FLOOD_FLOW_FALL_PCT": "50.0",
+      "COUNTY_FLOOD_FLOW_RISE_PCT": "50.0",
+      "COUNTY_FLOOD_MAX_GAUGES": "10",
+      "COUNTY_FLOOD_MIN_GAUGES": "5",
+      "COUNTY_FLOOD_STAGE_FALL_FT": "1.0",
+      "COUNTY_FLOOD_STAGE_PERSIST_FT": "0.1",
+      "COUNTY_FLOOD_STAGE_RISE_FT": "1.0",
+      "COUNTY_FLOOD_SUPPLEMENTARY_CONFIDENCE": "0.45",
+      "REPORT_GAUGE_FLOW_THRESHOLD_PCT": "20.0",
+      "REPORT_GAUGE_STAGE_THRESHOLD_FT": "0.1",
+      "SENTINEL_ABLATED_CONFIDENCE": "0.75",
+      "SENTINEL_ABLATION": "full",
+      "SENTINEL_READING_MAX_AGE_HOURS": "6.0",
+      "SENTINEL_TIER_WEIGHT": "1.0",
+      "SENTINEL_WATERSHED_LOCATION_PRECISION": "0.65",
+      "SENTINEL_WATERSHED_NEIGHBOURS": "off"
+    },
+    "frozen_trigger_policy": {
+      "burst_duration_seconds": 86400,
+      "burst_interval_seconds": 7200,
+      "config_id": "warnings_i120m_d24h",
+      "poll_interval_seconds": 900,
+      "qualifying": [
+        "FF.W",
+        "FA.W",
+        "FL.W"
+      ],
+      "selection_rule": {
+        "budget_guard": "pooled hybrid acquisitions <= 748 (60% of pooled hourly 1248)",
+        "objective": "max pooled episodes observed",
+        "tie_breaks": [
+          "min pooled matched-budget margin (hybrid minus per-county offset median)",
+          "min pooled unobserved hours",
+          "min pooled acquisitions",
+          "shorter burst duration",
+          "longer burst cadence",
+          "smaller qualifying set"
+        ]
+      }
+    },
+    "hybrid_poll_offset_sensitivity_seconds": [
+      300,
+      600
+    ],
+    "nws_system_input": "vtec_trigger_stream_scheduling_only",
+    "nws_timing_reference": null,
+    "phase_offset_step_seconds": 900,
+    "primary_policy_staleness_hours": 6.0,
+    "truth_max_age_hours": 1.0
+  },
+  "county_results": [
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Somerset",
+      "fips": "34035",
+      "result_path": "counties/somerset_34035_2021-08-27/result.json",
+      "state": "NJ"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Mecklenburg",
+      "fips": "37119",
+      "result_path": "counties/mecklenburg_37119_2024-09-22/result.json",
+      "state": "NC"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Osceola",
+      "fips": "12097",
+      "result_path": "counties/osceola_12097_2024-10-07/result.json",
+      "state": "FL"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Chatham",
+      "fips": "37037",
+      "result_path": "counties/chatham_37037_2018-10-08/result.json",
+      "state": "NC"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Horry",
+      "fips": "45051",
+      "result_path": "counties/horry_45051_2018-09-11/result.json",
+      "state": "SC"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "East Baton Rouge",
+      "fips": "22033",
+      "result_path": "counties/east_baton_rouge_22033_2016-08-10/result.json",
+      "state": "LA"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Wake",
+      "fips": "37183",
+      "result_path": "counties/wake_37183_2016-10-06/result.json",
+      "state": "NC"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Baldwin",
+      "fips": "01003",
+      "result_path": "counties/baldwin_01003_2020-09-13/result.json",
+      "state": "AL"
+    },
+    {
+      "analysis_role": "episode_evaluation",
+      "county": "Montgomery",
+      "fips": "48339",
+      "result_path": "counties/montgomery_48339_2024-07-06/result.json",
+      "state": "TX"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Horry",
+      "fips": "45051",
+      "result_path": "counties/horry_45051_2022-09-26/result.json",
+      "state": "SC"
+    },
+    {
+      "analysis_role": "coverage_only",
+      "county": "Richland",
+      "fips": "45079",
+      "result_path": "counties/richland_45079_2022-09-26/result.json",
+      "state": "SC"
+    }
+  ],
+  "dev_grid": "eval/results/study_v3_dev/dev_grid.json",
+  "dev_grid_sha256": "4aa259f9588c8723bac76d1d91572df8d8037dc0b0ecbdbb5ad21a358bafda9c",
+  "implementation_hashed_before_generation": true,
+  "implementation_manifest_rule": "sorted eval/*.py, watcher/**/*.py, watcher/ontology/stub_*.json, and skills/county-flood-data/county_flood/**/*.py; caches, tests, and results excluded",
+  "implementation_sha256": {
+    "eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eval/analyze_deployment.py": "324af2ca8b66258911d5e35ae711aa5c023f21c616121979134a67f352a107be",
+    "eval/baselines.py": "dee88a949bc180bea9fb1ae132ac4709666b172b5530c4eb512d63add761e6d1",
+    "eval/build_corpus.py": "e79094044a5f05cd90115000b866162276517d2f2af841790d585b1f9b69e3c2",
+    "eval/build_t2_trigger_corpus.py": "8dd344671bf33f921e9d111940347d90e24494a38def9f6e370788efe7789ec3",
+    "eval/calibrate_stage_datums.py": "18bb139e00a99347286e2fde7172f35ede86214b4d0776c55d7587b21be74499",
+    "eval/figures.py": "285970bb9c360dd601606159735ce51d6832bb39b50a9d82872df10c983125f4",
+    "eval/freeze_v3_manifest.py": "5be303ac51b2c9b1deef9d7e010c4706ea001c9de25dea4ee994903655c6deea",
+    "eval/ground_truth.py": "7d9b551502f91688d56c7fd70c48242174eb0de6b85c0c7e4644d35406c762e3",
+    "eval/metrics.py": "e6c65ec9656216a837b3cb71541f843ba65a8880ec992bdb88b5fcd6f69f55e8",
+    "eval/news_archive.py": "0958e18be9113b40188a2b2dbbd120b86d367e42c144eb4af31f161f638f644a",
+    "eval/news_corpus.py": "d7ad730c387efde9a50c9c126650a4b08cdcce56a324f8aff27b695e00b0aa48",
+    "eval/news_gdelt.py": "1d6f49a1ee031c8cb774e36eddcbbe907b67f3c88cc739cc866b1c90c5392ff1",
+    "eval/news_replay.py": "c19666312e1f86fb2b18655fb024564038d1ce3defd29a3279ed70e2d1af7781",
+    "eval/run_belief_null.py": "9f1e2a638e604524e3bef9621f0e0ad39c56a1482996bb9b3833afd5e9b79e4a",
+    "eval/run_dev_grid.py": "d3b190bd913187fd4cd33726a2c59d7c432f31dd1dea690076e0e1acd3ef7c9d",
+    "eval/run_replay.py": "0473ac1c810eba97f343173e537a06847b5a3f89912968b58dcafcfff2c522b4",
+    "eval/run_study.py": "c486d3b248302fe3c9d4e17c4768ca94ec5e42906e85128e071cf17ee60e9e07",
+    "eval/run_study_v3.py": "f83a46b76cf6911d115332cccec14e6d7b4c22744f082518bf3cba68195a22cb",
+    "eval/select_holdout.py": "540914fd1ca637ed76b8709d147a8baa0effabbd1982c2a762c73739c33741fc",
+    "eval/sensitivity.py": "a064f52e333b54809e1666d4709d26d087ad25a3976de2dd0582cf3224d6ba03",
+    "eval/trigger_metrics.py": "0990d6a1c7a657906885d71130e8a5bf453f498455257e14079b1abab8a1b38b",
+    "eval/vtec_trigger.py": "3f56c251d35f34bd341a60d13156ebea0be35ff449db6700d1b65b77ce328703",
+    "skills/county-flood-data/county_flood/__init__.py": "ed46a2dc46dd81d104e8d2d729655f62de830412ecb31b38aaa67d13550863b4",
+    "skills/county-flood-data/county_flood/aggregator.py": "f1216c7113502f57699ad8761c72c3ca68f537fba2161a98fb5ee7d1e438892f",
+    "skills/county-flood-data/county_flood/api_resolution.py": "f32eeb90dcfda919c1bf1d0dea820292223c207667db09ecb1169f4b3cd3949e",
+    "skills/county-flood-data/county_flood/confidence.py": "003a22c33caf5742e05224351317842781ece20b5d4c56cf9fcc4340285dd754",
+    "skills/county-flood-data/county_flood/geo.py": "328eed4319cec83255cf936621b5ba6cd935572799166941242c639ac2ded160",
+    "skills/county-flood-data/county_flood/models.py": "5021dec1e5485684ba3ee1e6f821e9574cda5e7ac79771899a8cb94a8ae1f915",
+    "skills/county-flood-data/county_flood/runner.py": "0d8a3dfbe817a66c1766de9ff6978a611f3782cb562025a0b48afcc00bed65af",
+    "skills/county-flood-data/county_flood/sources/__init__.py": "96709b372aefd3dbf9055871fa0d82f01df78921bfa618eae3b85154577a36ef",
+    "skills/county-flood-data/county_flood/sources/fema_disasters.py": "bd15b3c745d941295013972461648d85c4e67891d95be500d09f370aa66c2582",
+    "skills/county-flood-data/county_flood/sources/gauge_delta.py": "ac3d0cf2d69e5dcd066529061346b417b73f82d496901b87fc2cd600d771ac26",
+    "skills/county-flood-data/county_flood/sources/nwps.py": "2400725ad081dcd584590edd2b3a8f08ca2376d5c00bc85ec47a60a6afd48f3c",
+    "skills/county-flood-data/county_flood/sources/nwps_enrich.py": "56d6ce3641b353570bbaa54f7036e8506212036f80b25d4ad14954f065c64395",
+    "skills/county-flood-data/county_flood/sources/nws_alerts.py": "e64d3ae3a2936869a269c851aa6e88e04a68f42fdaa60275dca33a104d975615",
+    "skills/county-flood-data/county_flood/sources/selection.py": "a151b8052ed57873f960a8436041c0a0658b3e68d6ed28d7ef3984033e009fae",
+    "skills/county-flood-data/county_flood/sources/stages.py": "3cd86dad30fc44ae93674fa9bbb00e590ec5c1e05a29ccb4192dd23ab16836d8",
+    "skills/county-flood-data/county_flood/sources/usgs.py": "782504d6c9e32a2c1e80760d38bd99267449f40670f75602eb281be79b6b6ece",
+    "skills/county-flood-data/county_flood/sources/usgs_ogc.py": "341c6a56cbe59429690034d5ce67680c5d6a6e111febd1bb1a37d5388a420ed3",
+    "watcher/__init__.py": "9806b402f1f4b93bca7b5efb542b8b9c2a333bab07efc4b7ebbd15912a86ca5c",
+    "watcher/article_evidence_bridge.py": "2c2d5a9c6f03f119cb7efdbf7c5566089fe7a71e9020dc1a24f958a294e07a17",
+    "watcher/claims/__init__.py": "ef17e5a74f0f4361654b5cb8662f22499122e2ad5e082893255c733bac9b62ab",
+    "watcher/claims/confidence.py": "feff0c51d1b34cb2ba8b238f1594e9b9c5db3f1423a8c98c2f93f00d90405321",
+    "watcher/claims/extract.py": "c980ac5b8a8a2b52f4dab9f017f131d9a59241f3261d19ff488364886777c1f7",
+    "watcher/claims/extract_articles.py": "5ca79c168a7574056d5c69709a2b1c8de38681b9d4181fb6e5796c8348da1d45",
+    "watcher/claims/extract_county_flood.py": "d3e793ce6006d8e42c3b8939034896726feaf26984fea5ce0510f05649f615a2",
+    "watcher/claims/extract_nws.py": "a1e36e39deb23fe37de88f395422be60693ee28a74827962b653d27cd0e165c6",
+    "watcher/claims/extract_usgs.py": "b5c874c35594fe8df673a25a83013fd84567ef9d0d4c88c4760a533684ea963e",
+    "watcher/claims/models.py": "87670a17fbc382a7622b1dff994999ac51511111c116c0b5bc38f6c9a266c212",
+    "watcher/claims/validate.py": "ea32cee67053adf22decfa098b78b40580f9c94bbd7dcb0a1a1873e97cdfeac6",
+    "watcher/cli.py": "929526b480bd2af4065c68dbb4864bf5948e4c19d60256b0b1cc9c556395bf7c",
+    "watcher/config.py": "ba68c18dca09cf5ef16b1c8fc1b6d5de4cff98bc27db1e2143c4dccc73a88b84",
+    "watcher/county_flood_bridge.py": "ff70be797c8a9e34d5ffa04c965d909bf78302cc566eed3959748ce1b9d832ca",
+    "watcher/county_flood_evidence.py": "c0641b119d129fe8b0637054fa825829270c72c0787ecff2983037b10e5b0db8",
+    "watcher/fetch.py": "b8d50ae0e78e168fe905d3dd2efea5125df9d64d1b4d80641cc3eebff87165c1",
+    "watcher/format_analyst.py": "2e814215b9d28ce281923a82d16a6da5e3ad1330a98a56418855e8089671e534",
+    "watcher/format_ontology.py": "bd2427087dd52122301497a27e8f7c25ffb48f5a35fbf30113d058279dce58ac",
+    "watcher/format_report.py": "220d1bd6972108b6adcf6273ca45278fb72f0d1f1fdf95ce15f44fcce060742c",
+    "watcher/format_slack.py": "41a456a3abbfe08ecdbd2507418f9e789c4422f7465efc9386e6c3610453954c",
+    "watcher/geo_util.py": "a5e24cb6ec65c526b72faa032e214a66cf7353eba0e9e2f28234ae84c18d59b7",
+    "watcher/heartbeat_cron.py": "115174daa4461edb8e0b4d8123845ba4e4aa1b12dfc59988ef92c0d44fd8a7c9",
+    "watcher/neo4j_client.py": "7aeb1aae329ef30351b55c176036d472e7a481d3575734a50644cb24db995a7e",
+    "watcher/ontology/__init__.py": "53b0825a22b43a36ba64259947fc4c55b3e1125a28466dacf4e326f495fa469a",
+    "watcher/ontology/adapters.py": "0ef0292c889c0f6b15dd3c1ece87b9a165837fe8b8482f7de2078560dfb840b3",
+    "watcher/ontology/belief_schema.py": "9246b48f3ac455edcb878d4f8713e11597648e258cd7d64a86ea7c5beb05a5d7",
+    "watcher/ontology/bridge.py": "729cf145d3f5c56b8966db66f76c29e9c235fe99e5a3e65cfa9b615400bd4f22",
+    "watcher/ontology/ledger.py": "a1a297db93f793d7624cfed7b0f84abae7b6d641e21473206ea2299a1de0fce3",
+    "watcher/ontology/output_schema.py": "2cfa4fc1384b9c4fa1e7ae41b2981183fecff33c591a971903d646454dcc870f",
+    "watcher/ontology/stub_monitoring.json": "aecc66ce62f4588195321adb774b7d5f224c313c2ad8753e50e96e891e1305f7",
+    "watcher/ontology/stub_sources.json": "436457e0beecfd1c4062dccf0ba09648284a9d7fe3b6da2eb2fc472be52fe282",
+    "watcher/phase_engine.py": "e291d73df1bcdb5a3ed0dddc49d3a2de8b54096e9d0e2e45cf3c47078e757c1c",
+    "watcher/replay.py": "4483d355666898891e2c3e2f2b52b2a2cd5d4c556aff3229d3b7f8aca5830afd",
+    "watcher/report_delta.py": "9200109eef331c68081b90deff40f9947a7707cdc1e281174bcd297991070c32",
+    "watcher/seen_articles.py": "21d9c409365cdf4a7ae23da66205b504380454f023967bd42af532fb257086fd",
+    "watcher/slack_delivery.py": "49c39af8f56ee6865f0d073026c148ee97702dc2d12834235ff2ccbbc86c60f4",
+    "watcher/slack_logger.py": "e7e90849c77c0409627e855d1d46b5307370df98c0d7cc199efd7186faf2fc43",
+    "watcher/sources/__init__.py": "a9fa66bf5c5aecdd680dfd92ddcfd3cdd5a950d1411c0bbb66fcc664b149d476",
+    "watcher/sources/county_api_resolver.py": "08e9fcd6867312df026de6dbfd1c1f598e79b1323e52badbf758e9501a5be925",
+    "watcher/timezone_util.py": "0070240c8485358c8eab8f16de053c19779ed4de7ee3201470ffe84148ea5467",
+    "watcher/verification_trigger.py": "a984c8e013c486fabb419d1b9fb1335db3b90692ba51f6148cf198f0e60306e4"
+  },
+  "input_artifacts": [
+    {
+      "county": "Somerset",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/somerset_34035_hurricane_ida_august_2021.json",
+      "sha256": "122b8f915f1edcf611c6214d93feb69e22c7d3adcb8273097e368ddcce9998a3"
+    },
+    {
+      "county": "Somerset",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/somerset_34035_hurricane_ida_august_2021_vtec_triggers.json",
+      "sha256": "d3f3f78e6de25673eab2fa53888e02250dd81cfac705fad6406f6a29d46c0589"
+    },
+    {
+      "county": "Mecklenburg",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/mecklenburg_37119_hurricane_helene_september_2024.json",
+      "sha256": "5687d895250d61c54c66822c0c55307003f8894c2faf0f7fefbc44bac6a9f4a1"
+    },
+    {
+      "county": "Mecklenburg",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/mecklenburg_37119_hurricane_helene_september_2024_vtec_triggers.json",
+      "sha256": "262c05cd38c0e44be4bf2e9ee16af4366467d90078ab4b40e6a318f396d893a4"
+    },
+    {
+      "county": "Osceola",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/osceola_12097_hurricane_milton_october_2024.json",
+      "sha256": "2e92e040d0d49fd52f8c5b555c69c7950905136c313a040c63b784cf8753940d"
+    },
+    {
+      "county": "Osceola",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/osceola_12097_hurricane_milton_october_2024_vtec_triggers.json",
+      "sha256": "77870df8b7e66faa9579ebbe52b410479434f73a1064e16857ca14576d4c9862"
+    },
+    {
+      "county": "Chatham",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/chatham_37037_hurricane_michael_october_2018.json",
+      "sha256": "19f1fb0650c9beb6c59ddb9694d6c649ce505f0a60c116ff9decbfd558c4f25c"
+    },
+    {
+      "county": "Chatham",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/chatham_37037_hurricane_michael_october_2018_vtec_triggers.json",
+      "sha256": "dbfff9ea1c09c63d414dba61cda00e0b9d1b77407944e1adf11bf0f51353771c"
+    },
+    {
+      "county": "Horry",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/horry_45051_hurricane_florence_september_2018.json",
+      "sha256": "c406df478379f295f0deb48d0015efa3305b6f37adb0cd3fae60b90dc6183caa"
+    },
+    {
+      "county": "Horry",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/horry_45051_hurricane_florence_september_2018_vtec_triggers.json",
+      "sha256": "5190e994e9973c5b056f45ebf6dfd989ffeebd253833aa2c38a0092ba879c93b"
+    },
+    {
+      "county": "East Baton Rouge",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/east_baton_rouge_22033_louisiana_flooding_august_2016.json",
+      "sha256": "a9ea370b2e7510b50cc5671ba3cec15abeee818a0a50e164df26e46c5e1519a0"
+    },
+    {
+      "county": "East Baton Rouge",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/east_baton_rouge_22033_louisiana_flooding_august_2016_vtec_triggers.json",
+      "sha256": "4a4879c8da54240ce5ec06ec133563f58f287f33b377befc992f791a33d0aeea"
+    },
+    {
+      "county": "Wake",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/wake_37183_hurricane_matthew_october_2016.json",
+      "sha256": "e3b63fc39b79fe6a92f354ff5e538beec8f8597d9314cd56d652648c641d77b5"
+    },
+    {
+      "county": "Wake",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/wake_37183_hurricane_matthew_october_2016_vtec_triggers.json",
+      "sha256": "9e4c4e9314f5fcf0dfe3d11dd03e186bf204d8f6b9412ebe5b080baecf282d96"
+    },
+    {
+      "county": "Baldwin",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/baldwin_01003_hurricane_sally_september_2020.json",
+      "sha256": "caca4bb6abfb2a505b0985ce2cf3dee219c28327054940c2416b80b15b3ca635"
+    },
+    {
+      "county": "Baldwin",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/baldwin_01003_hurricane_sally_september_2020_vtec_triggers.json",
+      "sha256": "fd05e69780e117e2ff4f6a35cb3e6978e3c40867784f51a14ad3196461e252d3"
+    },
+    {
+      "county": "Montgomery",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/montgomery_48339_hurricane_beryl_july_2024.json",
+      "sha256": "794260f50f02fe291cfaeccada2e6be75693726f08be1e7ac5e7e9fc7aeb96f3"
+    },
+    {
+      "county": "Montgomery",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/montgomery_48339_hurricane_beryl_july_2024_vtec_triggers.json",
+      "sha256": "782aad14c12647b99249660bd5ce5fbc61fbacd6fb057e07a2174d1315466cc5"
+    },
+    {
+      "county": "Horry",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/horry_45051_hurricane_ian_september_2022.json",
+      "sha256": "70b9f782a924e6ff5ee678e6344c5c755e84d7665e9dc62d6a9b77ef36152f19"
+    },
+    {
+      "county": "Horry",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/horry_45051_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "526a029ad3d2358302dda09204178f805595fa3a63cbcb092ebb0ce6768738c1"
+    },
+    {
+      "county": "Richland",
+      "kind": "gauge_corpus",
+      "path": "eval/corpus/study_v3/richland_45079_hurricane_ian_september_2022.json",
+      "sha256": "58bb0a7a8d1b1a0c9a28e5389620c9a21bacb48405bea5e011edb55c99cd28ae"
+    },
+    {
+      "county": "Richland",
+      "kind": "vtec_trigger_stream",
+      "path": "eval/corpus/study_v3/richland_45079_hurricane_ian_september_2022_vtec_triggers.json",
+      "sha256": "d2cc5045fedc61935e9e506ad4c1e57d5851112f82b7bc9140f4e7b0041b7978"
+    }
+  ],
+  "protocol": "eval/HYBRID_STUDY_PROTOCOL.md",
+  "protocol_sha256": "98e6289d6a4d932c2c9256007fd4b9936c04dd7f71dd3b5ded40dc5aa311bba6",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.6",
+    "version_detail": "3.14.6 | packaged by Anaconda, Inc. | (main, Jun 18 2026, 21:28:09) [GCC 14.3.0]"
+  },
+  "reproduction_commands": [
+    "python3 eval/run_study_v3.py --manifest eval/corpus/study_v3/manifest.json --out-dir <empty-dir>"
+  ],
+  "schema": "sentinel-study-v3-artifact-manifest/1",
+  "selection": "eval/corpus/study_v3/holdout_selection.json",
+  "selection_sha256": "18502e920a32312dba7f140d19e040b37b2d487cd911b0b38b56c3f46140cafc",
+  "source_manifest": "eval/corpus/study_v3/manifest.json",
+  "source_manifest_sha256": "e545a0a396c641142c664f687f842aaecec77db3aa7573b344e98a096890ac8c"
+}

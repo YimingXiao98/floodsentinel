@@ -1,0 +1,348 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Ascension",
+  "state": "LA",
+  "fips": "22005",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2021-05-15",
+    "end": "2021-05-27"
+  },
+  "fetch_window": {
+    "start": "2021-05-12",
+    "end": "2021-05-27"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "LAC005",
+    "zones": [
+      "LAZ085",
+      "LAZ086"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "LAC005": 18,
+    "LAZ085": 0,
+    "LAZ086": 0
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 1,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2021-LIX-FF-W-0032",
+      "product_id": "202105172350-KLIX-WGUS54-FFWLIX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-LIX-FA-Y-0049",
+      "product_id": "202105180425-KLIX-WGUS84-FLSLIX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-LIX-FL-W-0126",
+      "product_id": "202105180717-KLIX-WGUS44-FLWLIX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-LIX-FL-W-0139",
+      "product_id": "202105181624-KLIX-WGUS44-FLWLIX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2021-LIX-FA-Y-0054",
+      "product_id": "202105201337-KLIX-WGUS84-FLSLIX",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 17,
+  "events": [
+    {
+      "event_key": "2021-LIX-FF-W-0032",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 32,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105172350-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-17T23:50:00Z",
+      "begins_at": "2021-05-17T23:50:00Z",
+      "audit_final_expire": "2021-05-18T05:00:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0034",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 34,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105180148-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T01:48:00Z",
+      "begins_at": "2021-05-18T01:48:00Z",
+      "audit_final_expire": "2021-05-18T05:00:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0035",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 35,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105180311-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T03:11:00Z",
+      "begins_at": "2021-05-18T03:11:00Z",
+      "audit_final_expire": "2021-05-18T18:00:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FA-Y-0049",
+      "wfo": "LIX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 49,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105180425-KLIX-WGUS84-FLSLIX",
+      "available_at": "2021-05-18T04:25:00Z",
+      "begins_at": "2021-05-18T04:25:00Z",
+      "audit_final_expire": "2021-05-18T06:30:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0036",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 36,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105180452-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T04:52:00Z",
+      "begins_at": "2021-05-18T04:52:00Z",
+      "audit_final_expire": "2021-05-18T08:00:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0037",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 37,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105180456-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T04:56:00Z",
+      "begins_at": "2021-05-18T04:56:00Z",
+      "audit_final_expire": "2021-05-18T08:00:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FL-W-0126",
+      "wfo": "LIX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 126,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "PVLL1",
+      "product_id": "202105180717-KLIX-WGUS44-FLWLIX",
+      "available_at": "2021-05-18T07:17:00Z",
+      "begins_at": "2021-05-21T11:20:00Z",
+      "audit_final_expire": "2021-05-19T15:21:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0039",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 39,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105180757-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T07:57:00Z",
+      "begins_at": "2021-05-18T07:57:00Z",
+      "audit_final_expire": "2021-05-18T14:00:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0041",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 41,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105181421-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T14:21:00Z",
+      "begins_at": "2021-05-18T14:21:00Z",
+      "audit_final_expire": "2021-05-18T17:30:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FL-W-0139",
+      "wfo": "LIX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 139,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "FSLL1",
+      "product_id": "202105181624-KLIX-WGUS44-FLWLIX",
+      "available_at": "2021-05-18T16:24:00Z",
+      "begins_at": "2021-05-19T16:55:00Z",
+      "audit_final_expire": "2021-05-27T00:41:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0042",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 42,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105182038-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-18T20:38:00Z",
+      "begins_at": "2021-05-18T20:38:00Z",
+      "audit_final_expire": "2021-05-19T00:30:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FA-Y-0053",
+      "wfo": "LIX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 53,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105200219-KLIX-WGUS84-FLSLIX",
+      "available_at": "2021-05-20T02:19:00Z",
+      "begins_at": "2021-05-20T02:19:00Z",
+      "audit_final_expire": "2021-05-20T04:15:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FA-Y-0054",
+      "wfo": "LIX",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 54,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105201337-KLIX-WGUS84-FLSLIX",
+      "available_at": "2021-05-20T13:37:00Z",
+      "begins_at": "2021-05-20T13:37:00Z",
+      "audit_final_expire": "2021-05-20T14:29:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0043",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 43,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105201429-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-20T14:29:00Z",
+      "begins_at": "2021-05-20T14:29:00Z",
+      "audit_final_expire": "2021-05-20T23:30:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0045",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 45,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105201504-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-20T15:04:00Z",
+      "begins_at": "2021-05-20T15:04:00Z",
+      "audit_final_expire": "2021-05-21T03:45:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FL-W-0143",
+      "wfo": "LIX",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 143,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "PVLL1",
+      "product_id": "202105201922-KLIX-WGUS44-FLWLIX",
+      "available_at": "2021-05-20T19:22:00Z",
+      "begins_at": "2021-05-20T23:10:00Z",
+      "audit_final_expire": "2021-05-24T19:38:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    },
+    {
+      "event_key": "2021-LIX-FF-W-0046",
+      "wfo": "LIX",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 46,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202105202342-KLIX-WGUS54-FFWLIX",
+      "available_at": "2021-05-20T23:42:00Z",
+      "begins_at": "2021-05-20T23:42:00Z",
+      "audit_final_expire": "2021-05-21T03:46:00Z",
+      "ugcs": [
+        "LAC005"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "configuration_epochs": {
+    "global": [
+      {
+        "code": {},
+        "cron_interval_minutes": 15,
+        "end_at": "2026-08-17T17:00:01.798467Z",
+        "polls": 2272,
+        "start_at": "2026-07-23T02:15:02.248033Z"
+      }
+    ],
+    "mission_heartbeat": [
+      {
+        "code": {},
+        "county": "Coconino",
+        "end_at": "2026-08-17T17:00:01.798467Z",
+        "fips": "04005",
+        "heartbeat_interval_seconds": 21600,
+        "mission_id": "evt_coconino_flood_20260728T213432Z",
+        "opportunities": 1902,
+        "start_at": "2026-07-28T21:45:01.921572Z",
+        "state": "AZ"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-24T02:15:02.343996Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_escambia_flood_20260723T003944Z",
+        "opportunities": 97,
+        "start_at": "2026-07-23T02:15:02.248033Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-28T14:15:02.212001Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 229,
+        "start_at": "2026-07-26T05:15:02.183979Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-28T14:30:01.905639Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 21600,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 1,
+        "start_at": "2026-07-28T14:30:01.905639Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-28T20:30:01.698206Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 24,
+        "start_at": "2026-07-28T14:45:01.656988Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-28T20:45:02.478547Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 21600,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 1,
+        "start_at": "2026-07-28T20:45:02.478547Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-28T21:00:01.785846Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 1,
+        "start_at": "2026-07-28T21:00:01.785846Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-29T21:00:02.507130Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 43200,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 96,
+        "start_at": "2026-07-28T21:15:02.424383Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Escambia",
+        "end_at": "2026-07-29T21:15:02.228134Z",
+        "fips": "12033",
+        "heartbeat_interval_seconds": 86400,
+        "mission_id": "evt_escambia_flood_20260726T051204Z",
+        "opportunities": 1,
+        "start_at": "2026-07-29T21:15:02.228134Z",
+        "state": "FL"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-24T02:15:02.343996Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_harris_flood_20260723T153125Z",
+        "opportunities": 43,
+        "start_at": "2026-07-23T15:45:01.946227Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-28T14:15:02.212001Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 244,
+        "start_at": "2026-07-26T01:30:02.419258Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-28T14:30:01.905639Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 21600,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 1,
+        "start_at": "2026-07-28T14:30:01.905639Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-28T20:30:01.698206Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 24,
+        "start_at": "2026-07-28T14:45:01.656988Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-28T20:45:02.478547Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 21600,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 1,
+        "start_at": "2026-07-28T20:45:02.478547Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-28T21:00:01.785846Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 800,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 1,
+        "start_at": "2026-07-28T21:00:01.785846Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "Harris",
+        "end_at": "2026-07-29T20:30:02.033149Z",
+        "fips": "48201",
+        "heartbeat_interval_seconds": 43200,
+        "mission_id": "evt_harris_flood_20260726T012445Z",
+        "opportunities": 94,
+        "start_at": "2026-07-28T21:15:02.424383Z",
+        "state": "TX"
+      },
+      {
+        "code": {},
+        "county": "King",
+        "end_at": "2026-08-17T17:00:01.798467Z",
+        "fips": "53033",
+        "heartbeat_interval_seconds": 21600,
+        "mission_id": "evt_king_flood_20260729T213339Z",
+        "opportunities": 1806,
+        "start_at": "2026-07-29T21:45:01.938587Z",
+        "state": "WA"
+      }
+    ],
+    "observed_code_fields": []
+  },
+  "counties": [
+    {
+      "cadence_skips": 1826,
+      "coordinator_fetch_failures": 0,
+      "county": "Coconino",
+      "county_api_fetch_errors": 77,
+      "delivery_failures": 0,
+      "delivery_not_recorded": 0,
+      "due": 76,
+      "extraction_failures": 76,
+      "fips": "04005",
+      "fold_deliveries": 0,
+      "folded": 0,
+      "material_updates": 42,
+      "materiality_assessed": 73,
+      "materiality_skips": 31,
+      "mission_errors": 0,
+      "mission_ids": [
+        "evt_coconino_flood_20260728T213432Z"
+      ],
+      "mission_opportunities": 1902,
+      "no_gauges": 76,
+      "ran": 76,
+      "report_deliveries": 45,
+      "report_messages_sent": 73,
+      "source_fetch_failures": 77,
+      "state": "AZ"
+    },
+    {
+      "cadence_skips": 160,
+      "coordinator_fetch_failures": 25,
+      "county": "Escambia",
+      "county_api_fetch_errors": 7,
+      "delivery_failures": 0,
+      "delivery_not_recorded": 0,
+      "due": 290,
+      "extraction_failures": 6,
+      "fips": "12033",
+      "fold_deliveries": 1,
+      "folded": 1,
+      "material_updates": 1,
+      "materiality_assessed": 1,
+      "materiality_skips": 0,
+      "mission_errors": 0,
+      "mission_ids": [
+        "evt_escambia_flood_20260723T003944Z",
+        "evt_escambia_flood_20260726T051204Z"
+      ],
+      "mission_opportunities": 450,
+      "no_gauges": 6,
+      "ran": 290,
+      "report_deliveries": 290,
+      "report_messages_sent": 373,
+      "source_fetch_failures": 32,
+      "state": "FL"
+    },
+    {
+      "cadence_skips": 157,
+      "coordinator_fetch_failures": 5,
+      "county": "Harris",
+      "county_api_fetch_errors": 1556,
+      "delivery_failures": 0,
+      "delivery_not_recorded": 0,
+      "due": 251,
+      "extraction_failures": 137,
+      "fips": "48201",
+      "fold_deliveries": 0,
+      "folded": 0,
+      "material_updates": 0,
+      "materiality_assessed": 0,
+      "materiality_skips": 0,
+      "mission_errors": 0,
+      "mission_ids": [
+        "evt_harris_flood_20260723T153125Z",
+        "evt_harris_flood_20260726T012445Z"
+      ],
+      "mission_opportunities": 408,
+      "no_gauges": 137,
+      "ran": 251,
+      "report_deliveries": 251,
+      "report_messages_sent": 584,
+      "source_fetch_failures": 1561,
+      "state": "TX"
+    },
+    {
+      "cadence_skips": 1734,
+      "coordinator_fetch_failures": 3,
+      "county": "King",
+      "county_api_fetch_errors": 138,
+      "delivery_failures": 0,
+      "delivery_not_recorded": 0,
+      "due": 72,
+      "extraction_failures": 69,
+      "fips": "53033",
+      "fold_deliveries": 0,
+      "folded": 0,
+      "material_updates": 16,
+      "materiality_assessed": 72,
+      "materiality_skips": 56,
+      "mission_errors": 0,
+      "mission_ids": [
+        "evt_king_flood_20260729T213339Z"
+      ],
+      "mission_opportunities": 1806,
+      "no_gauges": 69,
+      "ran": 72,
+      "report_deliveries": 16,
+      "report_messages_sent": 24,
+      "source_fetch_failures": 141,
+      "state": "WA"
+    }
+  ],
+  "data_quality": {
+    "invalid_or_missing_poll_times": 0,
+    "poll_accounting_mismatches": 0,
+    "unattributed_reported_counts": {
+      "due": 0,
+      "errors": 0,
+      "opportunities": 0,
+      "ran": 0,
+      "skips": 0
+    }
+  },
+  "delivery": {
+    "delivery_failures": 0,
+    "delivery_not_recorded": 0,
+    "fold_deliveries": 1,
+    "material_updates": 59,
+    "materiality_assessed": 146,
+    "materiality_skips": 87,
+    "other_skips_by_reason": {},
+    "report_deliveries": 602,
+    "report_messages_sent": 1054
+  },
+  "extraction_failures": {
+    "by_reason": {
+      "no_gauges": 288
+    },
+    "by_source": {
+      "src_county_flood_usgs_04005": 76,
+      "src_county_flood_usgs_12033": 6,
+      "src_county_flood_usgs_48201": 137,
+      "src_county_flood_usgs_53033": 69
+    },
+    "no_gauges": 288,
+    "total": 288
+  },
+  "input": {
+    "bytes": 86176521,
+    "path": "logs/sentinel-heartbeat-cron.log",
+    "sha256": "403fe1c3d70cec8246b5157444684ab6ad79eea512ddcb8270b4066e54756150"
+  },
+  "mission_activity": {
+    "cadence_skips": 3877,
+    "due": 689,
+    "folded": 1,
+    "mission_errors": 0,
+    "mission_opportunities": 4566,
+    "ran": 689
+  },
+  "polls": {
+    "heartbeat_polls": 2272,
+    "json_objects": 2273,
+    "non_poll_errors_by_type": {
+      "cli_error": 1
+    },
+    "non_poll_objects": 1,
+    "not_ok": 0,
+    "ok": 2272,
+    "time_window": {
+      "duration_days": 25.615,
+      "duration_seconds": 2213099.550434,
+      "end_at": "2026-08-17T17:00:01.798467Z",
+      "start_at": "2026-07-23T02:15:02.248033Z"
+    }
+  },
+  "schema": "disaster-sentinel/deployment-summary/1",
+  "source_fetch_failures": {
+    "by_reason": {
+      "<urlopen error _ssl.c:975: The handshake operation timed out>": 1,
+      "HTTP 503": 3,
+      "HTTP Error 400:": 87,
+      "HTTP Error 503:": 34,
+      "The read operation timed out": 1,
+      "no_iv_data": 1685
+    },
+    "by_source": {
+      "nwps": 2,
+      "nws_alerts": 3,
+      "src_county_flood_12033": 25,
+      "src_county_flood_48201": 5,
+      "src_county_flood_53033": 3,
+      "usgs": 1685,
+      "usgs_iv": 88
+    },
+    "coordinator_failed_fetches": 33,
+    "county_api_fetch_errors": 1778,
+    "total": 1811
+  }
+}

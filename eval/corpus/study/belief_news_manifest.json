@@ -1,0 +1,20 @@
+{
+  "schema": "sentinel-belief-news-corpus-manifest/1",
+  "artifact": {
+    "path": "eval/corpus/harris_harvey_gdelt.json",
+    "sha256": "7d5ac76193c9355f1d9143510b0cbade73c001ac6026d0332e71c929d7dc0404",
+    "corpus_schema": "sentinel-news-corpus/2",
+    "window": {
+      "start": "20170823",
+      "end": "20170907"
+    },
+    "required_lookback_hours": 24.0,
+    "maximum_missing_slice_fraction": 0.02,
+    "as_of_field": "GKG_V2_1_DATE",
+    "slices_swept": 1440,
+    "slices_missing": 21,
+    "slice_coverage_fraction": 0.985417,
+    "articles_before_usable_title_filter": 203038,
+    "reproduction_command": "/work/nvme/bhhj/yxiao11/miniconda3/bin/python3 eval/news_gdelt.py --start 20170823 --end 20170907 --place-term 'Harris County' --place-term 'Houston, Texas' --place-term 'Houston,Texas' --county Harris --state TX --workers 8 --out eval/corpus/harris_harvey_gdelt.json"
+  }
+}

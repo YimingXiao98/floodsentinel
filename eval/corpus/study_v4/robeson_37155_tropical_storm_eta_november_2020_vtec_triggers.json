@@ -1,0 +1,202 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Robeson",
+  "state": "NC",
+  "fips": "37155",
+  "generated_at": "2026-08-28T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2020-11-06",
+    "end": "2020-11-18"
+  },
+  "fetch_window": {
+    "start": "2020-11-03",
+    "end": "2020-11-18"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "NCC155",
+    "zones": [
+      "NCZ087"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "NCC155": 6,
+    "NCZ087": 2
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 0,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2020-ILM-FF-A-0007",
+      "product_id": "202011110820-KILM-WGUS62-FFAILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0135",
+      "product_id": "202011112123-KILM-WGUS82-FLSILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0138",
+      "product_id": "202011120106-KILM-WGUS82-FLSILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-ILM-FL-W-0074",
+      "product_id": "202011120155-KILM-WGUS42-FLWILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0141",
+      "product_id": "202011121640-KILM-WGUS82-FLSILM",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 8,
+  "events": [
+    {
+      "event_key": "2020-ILM-FF-A-0007",
+      "wfo": "ILM",
+      "phenomena": "FF",
+      "significance": "A",
+      "etn": 7,
+      "name": "Flash Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011110820-KILM-WGUS62-FFAILM",
+      "available_at": "2020-11-11T08:20:00Z",
+      "begins_at": "2020-11-12T05:00:00Z",
+      "audit_final_expire": "2020-11-12T20:34:00Z",
+      "ugcs": [
+        "NCZ087"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0135",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 135,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011112123-KILM-WGUS82-FLSILM",
+      "available_at": "2020-11-11T21:23:00Z",
+      "begins_at": "2020-11-11T21:23:00Z",
+      "audit_final_expire": "2020-11-11T23:01:00Z",
+      "ugcs": [
+        "NCC155"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0138",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 138,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011120106-KILM-WGUS82-FLSILM",
+      "available_at": "2020-11-12T01:06:00Z",
+      "begins_at": "2020-11-12T01:06:00Z",
+      "audit_final_expire": "2020-11-12T03:00:00Z",
+      "ugcs": [
+        "NCC155"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FL-W-0074",
+      "wfo": "ILM",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 74,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "LBRN7",
+      "product_id": "202011120155-KILM-WGUS42-FLWILM",
+      "available_at": "2020-11-12T01:55:00Z",
+      "begins_at": "2020-11-12T16:28:00Z",
+      "audit_final_expire": "2020-11-24T14:17:00Z",
+      "ugcs": [
+        "NCC155"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0141",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 141,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011121640-KILM-WGUS82-FLSILM",
+      "available_at": "2020-11-12T16:40:00Z",
+      "begins_at": "2020-11-12T16:40:00Z",
+      "audit_final_expire": "2020-11-12T21:15:00Z",
+      "ugcs": [
+        "NCC155"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FF-W-0010",
+      "wfo": "ILM",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 10,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011121654-KILM-WGUS52-FFWILM",
+      "available_at": "2020-11-12T16:54:00Z",
+      "begins_at": "2020-11-12T16:54:00Z",
+      "audit_final_expire": "2020-11-12T21:30:00Z",
+      "ugcs": [
+        "NCC155"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FA-A-0001",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 1,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011122034-KILM-WGUS62-FFAILM",
+      "available_at": "2020-11-12T20:34:00Z",
+      "begins_at": "2020-11-12T20:34:00Z",
+      "audit_final_expire": "2020-11-13T02:00:00Z",
+      "ugcs": [
+        "NCZ087"
+      ]
+    },
+    {
+      "event_key": "2020-ILM-FA-Y-0144",
+      "wfo": "ILM",
+      "phenomena": "FA",
+      "significance": "Y",
+      "etn": 144,
+      "name": "Flood Advisory",
+      "hvtec_nwsli": "00000",
+      "product_id": "202011122116-KILM-WGUS82-FLSILM",
+      "available_at": "2020-11-12T21:16:00Z",
+      "begins_at": "2020-11-12T21:16:00Z",
+      "audit_final_expire": "2020-11-12T23:34:00Z",
+      "ugcs": [
+        "NCC155"
+      ]
+    }
+  ]
+}

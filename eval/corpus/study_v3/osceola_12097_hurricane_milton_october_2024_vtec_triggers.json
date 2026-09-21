@@ -1,0 +1,218 @@
+{
+  "schema": "sentinel-vtec-trigger-corpus/1",
+  "county": "Osceola",
+  "state": "FL",
+  "fips": "12097",
+  "generated_at": "2026-08-20T00:00:00Z",
+  "source": {
+    "archive": "Iowa Environmental Mesonet VTEC archive",
+    "events_url": "https://mesonet.agron.iastate.edu/json/vtec_events_byugc.py",
+    "ugc_listing_url": "https://mesonet.agron.iastate.edu/api/1/nws/ugcs.json",
+    "raw_product_url": "https://mesonet.agron.iastate.edu/api/1/nwstext/"
+  },
+  "window": {
+    "start": "2024-10-07",
+    "end": "2024-10-19"
+  },
+  "fetch_window": {
+    "start": "2024-10-04",
+    "end": "2024-10-19"
+  },
+  "fetch_lookback_days": 3,
+  "ugcs": {
+    "county": "FLC097",
+    "zones": [
+      "FLZ053"
+    ]
+  },
+  "per_ugc_raw_event_counts": {
+    "FLC097": 16,
+    "FLZ053": 5
+  },
+  "as_of_semantics": "available_at is the product transmission time parsed from the product_id prefix (UTC, minute resolution); begins_at is the hazard begin time published inside that product and may anchor a burst window; audit_final_expire embeds post-hoc cancellations and is retained for audit only, never as a trigger input",
+  "anomalies": {
+    "non_flood_phenomena": 12,
+    "missing_product_timestamp": 0,
+    "missing_event_identity": 0,
+    "available_after_final_expire": 0
+  },
+  "raw_product_sample_validation": [
+    {
+      "event_key": "2024-MLB-FA-A-0003",
+      "product_id": "202410051644-KMLB-WGUS62-FFAMLB",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-MLB-FA-W-0010",
+      "product_id": "202410091441-KMLB-WGUS42-FLWMLB",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0002",
+      "product_id": "202410091928-KMLB-WGUS52-FFWMLB",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0003",
+      "product_id": "202410091957-KMLB-WGUS52-FFWMLB",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0005",
+      "product_id": "202410092243-KMLB-WGUS52-FFWMLB",
+      "raw_product_found": true,
+      "vtec_token_present": true
+    }
+  ],
+  "n_events": 9,
+  "events": [
+    {
+      "event_key": "2024-MLB-FA-A-0003",
+      "wfo": "MLB",
+      "phenomena": "FA",
+      "significance": "A",
+      "etn": 3,
+      "name": "Flood Watch",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410051644-KMLB-WGUS62-FFAMLB",
+      "available_at": "2024-10-05T16:44:00Z",
+      "begins_at": "2024-10-06T15:00:00Z",
+      "audit_final_expire": "2024-10-10T11:57:00Z",
+      "ugcs": [
+        "FLZ053"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FA-W-0010",
+      "wfo": "MLB",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 10,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410091441-KMLB-WGUS42-FLWMLB",
+      "available_at": "2024-10-09T14:41:00Z",
+      "begins_at": "2024-10-09T14:41:00Z",
+      "audit_final_expire": "2024-10-09T16:15:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0002",
+      "wfo": "MLB",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 2,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410091928-KMLB-WGUS52-FFWMLB",
+      "available_at": "2024-10-09T19:28:00Z",
+      "begins_at": "2024-10-09T19:28:00Z",
+      "audit_final_expire": "2024-10-09T22:30:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0003",
+      "wfo": "MLB",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 3,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410091957-KMLB-WGUS52-FFWMLB",
+      "available_at": "2024-10-09T19:57:00Z",
+      "begins_at": "2024-10-09T19:57:00Z",
+      "audit_final_expire": "2024-10-09T23:00:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0005",
+      "wfo": "MLB",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 5,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410092243-KMLB-WGUS52-FFWMLB",
+      "available_at": "2024-10-09T22:43:00Z",
+      "begins_at": "2024-10-09T22:43:00Z",
+      "audit_final_expire": "2024-10-10T03:45:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0006",
+      "wfo": "MLB",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 6,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410100301-KMLB-WGUS52-FFWMLB",
+      "available_at": "2024-10-10T03:01:00Z",
+      "begins_at": "2024-10-10T03:01:00Z",
+      "audit_final_expire": "2024-10-10T06:00:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FF-W-0007",
+      "wfo": "MLB",
+      "phenomena": "FF",
+      "significance": "W",
+      "etn": 7,
+      "name": "Flash Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410100341-KMLB-WGUS52-FFWMLB",
+      "available_at": "2024-10-10T03:41:00Z",
+      "begins_at": "2024-10-10T03:41:00Z",
+      "audit_final_expire": "2024-10-10T10:00:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FA-W-0011",
+      "wfo": "MLB",
+      "phenomena": "FA",
+      "significance": "W",
+      "etn": 11,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "00000",
+      "product_id": "202410101301-KMLB-WGUS42-FLWMLB",
+      "available_at": "2024-10-10T13:01:00Z",
+      "begins_at": "2024-10-10T13:01:00Z",
+      "audit_final_expire": "2024-10-10T16:00:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    },
+    {
+      "event_key": "2024-MLB-FL-W-0008",
+      "wfo": "MLB",
+      "phenomena": "FL",
+      "significance": "W",
+      "etn": 8,
+      "name": "Flood Warning",
+      "hvtec_nwsli": "SHIF1",
+      "product_id": "202410121337-KMLB-WGUS42-FLWMLB",
+      "available_at": "2024-10-12T13:37:00Z",
+      "begins_at": "2024-10-12T13:37:00Z",
+      "audit_final_expire": "2024-10-15T08:58:00Z",
+      "ugcs": [
+        "FLC097"
+      ]
+    }
+  ]
+}
