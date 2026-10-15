@@ -53,7 +53,7 @@ TABLES_PATH = STUDY_DIR / "tables.json"
 PDF_NAME = "fig_acquisition_delay_tradeoff.pdf"
 PNG_NAME = "fig_acquisition_delay_tradeoff.png"
 PNG_DPI = 450
-FIGSIZE = (7.4, 7.0)
+FIGSIZE = (7.4, 6.25)
 
 AGGREGATE_SCHEMA = "sentinel-study-aggregate/3"
 TABLES_SCHEMA = "sentinel-study-tables/3"
@@ -660,8 +660,8 @@ def build_figure(data: StudyData) -> Figure:
         2,
         left=0.090,
         right=0.985,
-        bottom=0.365,
-        top=0.830,
+        bottom=0.362,
+        top=0.885,
         wspace=0.16,
         hspace=0.34,
     )
@@ -782,7 +782,7 @@ def build_figure(data: StudyData) -> Figure:
 
     fig.text(
         0.537,
-        0.314,
+        0.303,
         "Acquisitions during the 312-h county window",
         ha="center",
         va="center",
@@ -791,7 +791,7 @@ def build_figure(data: StudyData) -> Figure:
     )
     fig.text(
         0.020,
-        0.595,
+        0.624,
         "Onset-to-first flood-stage observation (h)",
         ha="center",
         va="center",
@@ -800,7 +800,7 @@ def build_figure(data: StudyData) -> Figure:
         color=INK,
     )
 
-    matrix_ax = fig.add_axes((0.090, 0.070, 0.895, 0.205))
+    matrix_ax = fig.add_axes((0.090, 0.021, 0.895, 0.230))
     _draw_completeness_matrix(
         matrix_ax,
         data=data,
@@ -808,26 +808,6 @@ def build_figure(data: StudyData) -> Figure:
         selected_by_fips=selected_by_fips,
         fixed_by_fips=fixed_by_fips,
         matched_by_fips=matched_by_fips,
-    )
-
-    fig.suptitle(
-        "Acquisition–episode-observation-delay trade-off",
-        x=0.075,
-        y=0.982,
-        ha="left",
-        va="top",
-        fontsize=10.8,
-        fontweight="bold",
-        color=INK,
-    )
-    fig.text(
-        0.075,
-        0.949,
-        "Phase-adaptive replay versus complete fixed-clock offsets and county-specific equal-budget fixed schedules",
-        ha="left",
-        va="top",
-        fontsize=7.1,
-        color=MUTED,
     )
 
     legend_handles = [
@@ -839,7 +819,7 @@ def build_figure(data: StudyData) -> Figure:
     fig.legend(
         handles=legend_handles,
         loc="upper center",
-        bbox_to_anchor=(0.5, 0.925),
+        bbox_to_anchor=(0.5, 0.995),
         ncol=4,
         frameon=False,
         handlelength=1.25,
@@ -847,24 +827,6 @@ def build_figure(data: StudyData) -> Figure:
         handletextpad=0.45,
     )
 
-    coverage_note = ", ".join(data.coverage_only_names)
-    source_note = (
-        "Delay panels include observed episode × run outcomes only; the matrix gives observed/all possible outcomes, so misses remain explicit. "
-        "Bars span min–max and centers are medians. "
-        "The filled orange square is selected only by nearest realized acquisition count (earliest-offset tie-break). "
-        f"{coverage_note} is coverage-only and is omitted. Delays measure threshold-observation timing, not detector accuracy. "
-        f"Sources: {TABLES_SCHEMA} and {AGGREGATE_SCHEMA}."
-    )
-    fig.text(
-        0.075,
-        0.006,
-        source_note,
-        ha="left",
-        va="bottom",
-        fontsize=5.25,
-        color=MUTED,
-        wrap=True,
-    )
     return fig
 
 

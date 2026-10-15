@@ -56,9 +56,25 @@ This repository ships the current implementation, which continued to change afte
 | `eval/robustness_checks.py`, `eval/run_study_v4.py` | not rerun at export (long); shipped results are the frozen originals |
 | `eval/deployment_cost.py` | not rerun; requires the raw log, which is not shipped |
 
+## Update of 15 October 2026
+
+Brought in line with the manuscript as submitted to Computers, Environment and Urban Systems. Changes: the Study 1 figure script no longer draws a title, subtitle, or source note; `eval/figures_v3.py` labels Marshall County by its flood region and now writes into `figures/` (it previously wrote to a `paper/figures/` directory that does not exist in this repository); the Storm Events comparison (`eval/posthoc_storm_events.py`) and the phase-occupancy summary (`eval/posthoc_phase_occupancy.py`) and their results were added; the hand-drawn architecture figure (`figures/overview.svg` and `.png`) replaced an earlier version. None of these files is in any study manifest's implementation set, so every recorded hash above is unaffected.
+
+| Check | Result |
+|---|---|
+| `pytest watcher/tests eval/tests skills/county-flood-data/county_flood/tests skills/flood-article-detector/tests -q` | 400 passed, 5 subtests passed |
+| `figures/make_results_figure.py` | PNG byte-identical to the manuscript's figure; PDF identical after removing `/CreationDate` |
+| `eval/figures_v3.py` and `--v4` | PNGs byte-identical to the manuscript's figures; PDFs identical after removing `/CreationDate` |
+| `eval/posthoc_phase_occupancy.py` | `summary.json` byte-identical to the shipped file |
+| `eval/posthoc_storm_events.py --storm-dir <dir>` | run with the nine bulk files recorded in the shipped `summary.json` (SHA-256 verified); every replay matched its stored summary, and the output differed from the shipped files only in the generation date and the path of the imported figure script. The shipped files are the source of record produced on 23 September 2026. |
+
+Every decimal or thousands-separated number in the manuscript's abstract, body, and tables was searched for in `eval/results/` on 15 October 2026; all 176 are present there, apart from the 2,089.25 reference-positive hours that divide the robustness table's percentages, which is the sum of `observed_flood_duration_hours` over the hybrid's 24 episode-evaluation rows in `eval/results/study_v4_additive/counties/*/result.json`.
+
 ## Known contents that reveal the development environment
 
 - `eval/corpus/study/belief_news_manifest.json` records the exact regeneration command for the Harris GDELT corpus, including the interpreter path on the development machine. The file is hash-bound by `belief_news_null.json`, so it is shipped unchanged.
+- `eval/corpus/study_v5/*_t2_triggers.json` record the path of the GDELT corpus each trigger stream was built from, on the development machine. They are hash-bound and shipped unchanged.
+- `watcher/slack_delivery.py` carries the production Slack channel identifier as its default; it is in the hashed implementation set and is overridable through `SENTINEL_SLACK_CHANNEL`. A channel identifier is not a credential.
 - `watcher/config.py`, `watcher/heartbeat_cron.py`, and `watcher/slack_logger.py` carry default paths from the production host (`/mnt/secondary/...`). They are in the hashed implementation set and are shipped unchanged; every default is overridable through the environment variables documented in `watcher/config.py`, and `bin/sentinel-cli` reads `NEO4J_PASSWORD` or `NEO4J_PASSWORD_FILE` before falling back to that default.
 - Two test files, `watcher/tests/test_format_analyst.py` and `watcher/tests/test_format_slack.py`, compare rendered output against strings that contain the development name; they are unchanged so the tests pass.
 - `skills/flood-article-detector/article_verdict.py` names a language model for an optional article-verdict step that is disabled by default and was not used in any reported result; `watcher/format_analyst.py` does the same for the optional analyst summary.

@@ -1,0 +1,62 @@
+{
+  "schema": "sentinel-posthoc-phase-occupancy/1",
+  "source": "eval/results/study_v4_additive/counties",
+  "policies": {
+    "hybrid": {
+      "county_events": 24,
+      "missions_reaching_phase": {
+        "active_incident": 1,
+        "early_watch": 23,
+        "elevated_watch": 24,
+        "folded": 7,
+        "imminent": 13,
+        "recovery": 9
+      },
+      "hours_by_phase": {
+        "active_incident": 20.25,
+        "early_watch": 2386.0,
+        "elevated_watch": 1834.5,
+        "folded": 691.0,
+        "imminent": 2002.5,
+        "recovery": 553.75
+      },
+      "window_hours": 7488.0,
+      "two_hour_cadence_hours": 2022.75,
+      "two_hour_cadence_share": 0.27013221153846156,
+      "folded_missions": 7,
+      "phase_changes_median": 2.0,
+      "phase_changes_range": [
+        1,
+        6
+      ]
+    },
+    "adaptive": {
+      "county_events": 24,
+      "missions_reaching_phase": {
+        "active_incident": 1,
+        "early_watch": 23,
+        "elevated_watch": 24,
+        "folded": 7,
+        "imminent": 11,
+        "recovery": 9
+      },
+      "hours_by_phase": {
+        "active_incident": 18.0,
+        "early_watch": 2430.0,
+        "elevated_watch": 2262.0,
+        "folded": 698.0,
+        "imminent": 1532.0,
+        "recovery": 548.0
+      },
+      "window_hours": 7488.0,
+      "two_hour_cadence_hours": 1550.0,
+      "two_hour_cadence_share": 0.20699786324786323,
+      "folded_missions": 7,
+      "phase_changes_median": 2.0,
+      "phase_changes_range": [
+        1,
+        6
+      ]
+    }
+  }
+}

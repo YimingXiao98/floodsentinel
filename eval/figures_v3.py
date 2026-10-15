@@ -25,8 +25,8 @@ if str(_ROOT) not in sys.path:
 from eval.figures import GRID, INK, MUTED, _style  # noqa: E402
 
 AGGREGATE = _ROOT / "eval" / "results" / "study_v3_hybrid_rev2" / "aggregate.json"
-OUT_PDF = _ROOT / "paper" / "figures" / "fig_verification_trigger.pdf"
-OUT_PNG = _ROOT / "paper" / "figures" / "fig_verification_trigger.png"
+OUT_PDF = _ROOT / "figures" / "fig_verification_trigger.pdf"
+OUT_PNG = _ROOT / "figures" / "fig_verification_trigger.png"
 
 HYBRID = "#D55E00"
 ADAPTIVE = "#0072B2"
@@ -101,8 +101,8 @@ def main() -> int:
 
 
 V4_AGGREGATE = _ROOT / "eval" / "results" / "study_v4_additive" / "aggregate.json"
-V4_OUT_PDF = _ROOT / "paper" / "figures" / "fig_verification_trigger_v4.pdf"
-V4_OUT_PNG = _ROOT / "paper" / "figures" / "fig_verification_trigger_v4.png"
+V4_OUT_PDF = _ROOT / "figures" / "fig_verification_trigger_v4.pdf"
+V4_OUT_PNG = _ROOT / "figures" / "fig_verification_trigger_v4.png"
 
 
 def main_v4() -> int:
@@ -135,6 +135,11 @@ def main_v4() -> int:
         short = event.replace("Hurricane ", "").replace("Tropical Storm ", "TS ")
         short = short.split(" (")[0]
         year = event.split("(")[-1].rstrip(")").split()[-1][-2:]
+        # The frozen selection-frame label names a concurrent Florida event.
+        # Display Marshall's actual flood region; retain the source label in
+        # the artifact and explain the mapping in the manuscript caption.
+        if row["fips"] == "27089" and "Fort Lauderdale" in event:
+            short = "Upper Midwest Flooding"
         labels.append(f"{row['county']} ({short} '{year})")
     ax.set_yticks(list(ys))
     ax.set_yticklabels(labels)
