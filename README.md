@@ -4,6 +4,10 @@ Code, frozen replay corpora, results, and figure scripts for the manuscript *Flo
 
 FloodSentinel is a deterministic county-scale flood monitor. An event-phase model sets how often it acquires official gauge observations and warnings; official flood warnings (and, in an evaluated extension, admitted news reports) may request an acquisition; only official evidence, gauge observations and, in live operation, official warning claims, may set the flood verdict, alert level, phase, all-clear, and termination. In the replay studies the decision evidence is gauge observations alone, and archived warnings only request acquisitions. The manuscript evaluates its acquisition policies in three historical replay studies under frozen analysis protocols, with post-hoc analyses that explain the results. Everything needed to read, check, and regenerate those results is in this repository.
 
+![FloodSentinel's acquisition and reporting workflow](figures/overview.png)
+
+*FloodSentinel's acquisition and reporting workflow, read clockwise from the top left: the monitoring request and inputs (1), the phase-set schedule and warning response (2), evidence admission and the county assessment (3), and the report and next check (4). The blue loop returns to scheduling until the mission stops. Report contents are illustrative; the county shown is Harris County, Texas.*
+
 ## Name
 
 The Python package and its internal strings use the project's development name, "Disaster Sentinel", and that name appears in nine files under `watcher/`. Those files belong to the implementation set whose SHA-256 hashes the study manifests record (see `REPRODUCIBILITY.md`), so they are shipped byte-identical rather than renamed. FloodSentinel and Disaster Sentinel refer to the same code. Environment variables keep the `SENTINEL_` prefix and Neo4j IRIs keep the `ds:` prefix for the same reason.
