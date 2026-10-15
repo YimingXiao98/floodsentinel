@@ -1,6 +1,6 @@
 # FloodSentinel
 
-Code, frozen replay corpora, results, and figure scripts for the manuscript *FloodSentinel: An Agentic AI Framework for Active Information Acquisition and Evidence Governance in Flood Monitoring* (Xiao, Murugan, Brody, and Mostafavi; submitted to Computers, Environment and Urban Systems, 2026). A preprint link and citation will be added when the arXiv version is available.
+Code, frozen replay corpora, results, and figure scripts for the manuscript *FloodSentinel: An Agentic AI Framework for Active Information Acquisition and Evidence Governance in Flood Monitoring* (Xiao, Murugan, Brody, and Mostafavi; submitted to Computers, Environment and Urban Systems, 2026). A preprint link and citation will be added when the arXiv version is available. The frozen corpora, results, protocols, and the NOAA Storm Events files used here are also archived as a dataset at <https://huggingface.co/datasets/Ymx1025/floodsentinel>.
 
 FloodSentinel is a deterministic county-scale flood monitor. An event-phase model sets how often it acquires official gauge observations and warnings; official flood warnings (and, in an evaluated extension, admitted news reports) may request an acquisition; only official evidence, gauge observations and, in live operation, official warning claims, may set the flood verdict, alert level, phase, all-clear, and termination. In the replay studies the decision evidence is gauge observations alone, and archived warnings only request acquisitions. The manuscript evaluates its acquisition policies in three historical replay studies under frozen analysis protocols, with post-hoc analyses that explain the results. Everything needed to read, check, and regenerate those results is in this repository.
 
@@ -72,7 +72,7 @@ The Harris County admission ablation and the news-verification extension read GD
 
 ## Storm Events files
 
-The Storm Events comparison reads nine NOAA NCEI "details" bulk files, 2016 to 2024, which are not shipped. Their exact names and SHA-256 hashes are recorded in `eval/results/posthoc_storm_events/summary.json`. NCEI replaces these files when it revises the database, so a later download may carry a newer creation date and different contents; the recorded versions were still available on 15 October 2026:
+The Storm Events comparison reads nine NOAA NCEI "details" bulk files, 2016 to 2024, which are not shipped. Their exact names and SHA-256 hashes are recorded in `eval/results/posthoc_storm_events/summary.json`. NCEI replaces these files when it revises the database, so a later download may carry a newer creation date and different contents. The recorded versions are archived in the `storm_events/` folder of the [Hugging Face dataset](https://huggingface.co/datasets/Ymx1025/floodsentinel), and were still available from NCEI on 15 October 2026:
 
 ```bash
 mkdir -p storm && cd storm
